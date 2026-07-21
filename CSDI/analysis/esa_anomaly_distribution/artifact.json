@@ -1,0 +1,1034 @@
+{
+  "surface": "report",
+  "manifest": {
+    "version": 1,
+    "surface": "report",
+    "title": "ESA 子集异常与实验缺失分布",
+    "description": "通道 41–46、2000 年 1 月至 11 月：ESA 标签异常与 CSDI 人工缺失的区分和分布。",
+    "generatedAt": "2026-07-12T16:03:55.660187+08:00",
+    "sources": [
+      {
+        "id": "esa_processed",
+        "label": "ESA Mission 1 预处理数据（通道 41–46，2000-01 至 2000-11）",
+        "query": {
+          "engine": "Python/NumPy",
+          "language": "python",
+          "description": "读取 aligned.npz 的标签、观测、清洁和划分数组，并按通道、月份、划分与连续异常段聚合。",
+          "tables_used": [
+            "ESA Mission 1: mission1_ch41_46_10m_30s/aligned.npz"
+          ],
+          "filters": [
+            "channels 41-46",
+            "2000-01-01 00:00:30 through 2000-11-01 00:00:00",
+            "30-second grid"
+          ],
+          "metric_definitions": [
+            "异常单元 = label_code in {1,2}",
+            "异常单元率 = 异常通道-时间单元 / (878400 × 6)",
+            "受影响时间点 = 任一通道 label_code in {1,2}",
+            "人工缺失 = observed_mask - gt_mask within strict-clean CSDI windows"
+          ],
+          "executed_at": "2026-07-12T16:03:55.660187+08:00"
+        }
+      },
+      {
+        "id": "esa_experiment",
+        "label": "ESA CSDI 实验配置与数据加载逻辑",
+        "query": {
+          "engine": "Python",
+          "language": "python",
+          "description": "复用 dataset_esa.py 的严格清洁窗口和 deterministic_condition_mask 逻辑。",
+          "tables_used": [
+            "esa_csdi_experiment/dataset_esa.py",
+            "esa_csdi_experiment/config.yaml"
+          ],
+          "filters": [
+            "window_length=96",
+            "stride=48",
+            "mask_seed=2026",
+            "test split"
+          ],
+          "metric_definitions": [
+            "每个窗口含 96 × 6 = 576 个通道-时间单元",
+            "掩蔽数 = round(576 × missing_ratio)"
+          ],
+          "executed_at": "2026-07-12T16:03:55.660187+08:00"
+        }
+      },
+      {
+        "id": "monthly_source",
+        "label": "ESA monthly anomaly aggregates",
+        "query": {
+          "engine": "SQLite",
+          "language": "sql",
+          "sql": "SELECT * FROM monthly",
+          "description": "Monthly anomaly and rare-event distribution.",
+          "tables_used": [
+            "analysis.sqlite:monthly"
+          ],
+          "filters": [
+            "ESA Mission 1 channels 41-46",
+            "2000-01 through 2000-11",
+            "30-second grid"
+          ],
+          "executed_at": "2026-07-12T16:03:55.660187+08:00"
+        }
+      },
+      {
+        "id": "channel_source",
+        "label": "ESA channel anomaly aggregates",
+        "query": {
+          "engine": "SQLite",
+          "language": "sql",
+          "sql": "SELECT * FROM channels",
+          "description": "Channel-level anomaly rates and episode statistics.",
+          "tables_used": [
+            "analysis.sqlite:channels"
+          ],
+          "filters": [
+            "ESA Mission 1 channels 41-46",
+            "2000-01 through 2000-11",
+            "30-second grid"
+          ],
+          "executed_at": "2026-07-12T16:03:55.660187+08:00"
+        }
+      },
+      {
+        "id": "split_source",
+        "label": "ESA split anomaly aggregates",
+        "query": {
+          "engine": "SQLite",
+          "language": "sql",
+          "sql": "SELECT * FROM splits",
+          "description": "Anomaly distribution across train, validation, and test ranges.",
+          "tables_used": [
+            "analysis.sqlite:splits"
+          ],
+          "filters": [
+            "ESA Mission 1 channels 41-46",
+            "2000-01 through 2000-11",
+            "30-second grid"
+          ],
+          "executed_at": "2026-07-12T16:03:55.660187+08:00"
+        }
+      },
+      {
+        "id": "window_source",
+        "label": "ESA strict-clean window statistics",
+        "query": {
+          "engine": "SQLite",
+          "language": "sql",
+          "sql": "SELECT * FROM windows",
+          "description": "Candidate-window retention under the current strict-clean loader.",
+          "tables_used": [
+            "analysis.sqlite:windows"
+          ],
+          "filters": [
+            "ESA Mission 1 channels 41-46",
+            "2000-01 through 2000-11",
+            "30-second grid"
+          ],
+          "executed_at": "2026-07-12T16:03:55.660187+08:00"
+        }
+      },
+      {
+        "id": "natural_window_source",
+        "label": "ESA natural-missing window statistics",
+        "query": {
+          "engine": "SQLite",
+          "language": "sql",
+          "sql": "SELECT * FROM natural_windows",
+          "description": "Window missingness when ESA anomalies are treated as natural missing values.",
+          "tables_used": [
+            "analysis.sqlite:natural_windows"
+          ],
+          "filters": [
+            "ESA Mission 1 channels 41-46",
+            "2000-01 through 2000-11",
+            "30-second grid"
+          ],
+          "executed_at": "2026-07-12T16:03:55.660187+08:00"
+        }
+      },
+      {
+        "id": "artificial_source",
+        "label": "ESA artificial masking statistics",
+        "query": {
+          "engine": "SQLite",
+          "language": "sql",
+          "sql": "SELECT * FROM artificial",
+          "description": "Deterministic artificial-mask distribution over test windows.",
+          "tables_used": [
+            "analysis.sqlite:artificial"
+          ],
+          "filters": [
+            "ESA Mission 1 channels 41-46",
+            "2000-01 through 2000-11",
+            "30-second grid"
+          ],
+          "executed_at": "2026-07-12T16:03:55.660187+08:00"
+        }
+      }
+    ],
+    "blocks": [
+      {
+        "id": "title",
+        "type": "markdown",
+        "body": "# ESA 子集异常与实验缺失分布",
+        "layout": "full"
+      },
+      {
+        "id": "summary",
+        "type": "markdown",
+        "sourceId": "esa_processed",
+        "layout": "full",
+        "body": "## Executive Summary\n\n- **原始数据没有真正空值。** `observed_mask` 中未观测单元为 **0**；ESA 标签异常/稀有事件共有 **95,657** 个通道-时间单元，占 **1.81%**。\n- **异常高度同步且集中成段。** 至少一个通道异常的时间点只有 **16,424** 个（**1.87%**），其中 **94.91%** 是六通道同时异常。\n- **时间划分并不均衡。** 验证集没有 ESA 标注异常；测试集异常全部落在 10 月，因此验证损失不能代表模型在真实异常附近的表现。\n- **你设想的训练方式与当前代码不一致。** 你的定义是把 ESA 异常保留为窗口内自然缺失；当前加载器却删除所有含异常窗口，再按 10%/50%/90% 随机遮盖正常值。"
+      },
+      {
+        "id": "definitions",
+        "type": "markdown",
+        "layout": "full",
+        "body": "## 两类“缺失”必须分开理解\n\n**按你的实验定义，ESA 标签异常属于派生自然缺失。** 六个通道原始文件没有空值；标签码 1/2 指示需要剔除的异常或稀有事件，剔除后形成 1.815% 的缺失掩码。\n\n**人工缺失是另一层评价掩码。** 在剩余可观测位置上再随机遮盖 10%/50%/90%，用于计算插补误差。自然缺失没有可信真值，通常不能直接作为 RMSE/MAE 的评价目标。"
+      },
+      {
+        "id": "monthly_text",
+        "type": "markdown",
+        "sourceId": "esa_processed",
+        "layout": "full",
+        "body": "## 异常只集中在少数月份\n\n2 月和 7 月主要是稀有事件，3–4 月主要是异常，6 月有少量异常，10 月同时出现异常和少量稀有事件；1 月、5 月、8 月和9 月没有标签异常。"
+      },
+      {
+        "id": "monthly_chart_block",
+        "type": "chart",
+        "chartId": "monthly_chart",
+        "layout": "full"
+      },
+      {
+        "id": "channel_text",
+        "type": "markdown",
+        "sourceId": "esa_processed",
+        "layout": "full",
+        "body": "## 六个通道的异常比例接近，但并非独立\n\n各通道异常单元率约为 1.78%–1.86%，表面上十分接近。真正重要的是同步性：绝大多数受影响时间点六个通道同时被标注，因此把六个通道的异常数简单相加会夸大独立异常事件数量。"
+      },
+      {
+        "id": "channel_chart_block",
+        "type": "chart",
+        "chartId": "channel_chart",
+        "layout": "full"
+      },
+      {
+        "id": "split_text",
+        "type": "markdown",
+        "sourceId": "esa_processed",
+        "layout": "full",
+        "body": "## 时间切分造成异常覆盖偏斜\n\n训练集承载大部分标签异常，验证集完全没有标签异常，测试集的异常都位于 10 月。严格清洁窗口筛选又会删除任何触碰标签异常的候选窗口，所以模型训练和评价数据本质上来自正常区间。"
+      },
+      {
+        "id": "split_table_block",
+        "type": "table",
+        "tableId": "split_table",
+        "layout": "full"
+      },
+      {
+        "id": "window_table_block",
+        "type": "table",
+        "tableId": "window_table",
+        "layout": "full"
+      },
+      {
+        "id": "natural_window_text",
+        "type": "markdown",
+        "sourceId": "esa_processed",
+        "layout": "full",
+        "body": "## 直接保留异常为窗口内缺失会产生大量全缺失窗口\n\n虽然全局缺失率只有 1.815%，缺失并非随机散点，而是跨通道同步的长块。训练集 285 个含缺失候选窗口中有 254 个完全缺失；测试集 81 个含缺失窗口中有 56 个完全缺失。因此更合适的 Air Quality 式实现是：保留部分缺失窗口，但继续剔除全缺失窗口。"
+      },
+      {
+        "id": "natural_window_table_block",
+        "type": "table",
+        "tableId": "natural_window_table",
+        "layout": "full"
+      },
+      {
+        "id": "mask_text",
+        "type": "markdown",
+        "sourceId": "esa_experiment",
+        "layout": "full",
+        "body": "## 人工缺失近似均匀，但存在整数取整\n\n每个窗口共有 576 个单元。10%、50%、90% 分别实际遮盖 58、288、518 个，所以实际比例是 10.069%、50.000%、89.931%。固定随机种子让结果可复现，六通道获得的遮盖份额都接近 1/6。"
+      },
+      {
+        "id": "mask_table_block",
+        "type": "table",
+        "tableId": "mask_table",
+        "layout": "full"
+      },
+      {
+        "id": "next_steps",
+        "type": "markdown",
+        "layout": "full",
+        "body": "## 建议的实验表述与下一步\n\n1. 将 `label_code in {1,2}` 称为 **ESA 标注异常/排除位置**，不要直接称为原始缺失值。\n2. 在实现中令 `observed_mask = clean_mask`，保留部分缺失窗口；仅剔除观测数为 0 的全缺失窗口。\n3. 将正常位置上的额外随机遮盖称为 **人工缺失/插补目标**，并报告每窗实际遮盖数。\n4. 补充按异常事件或月份分层的验证，避免“验证集无自然缺失、测试集自然缺失集中在10月”带来的分布偏差。"
+      },
+      {
+        "id": "questions",
+        "type": "markdown",
+        "layout": "full",
+        "body": "## 进一步问题\n\n- 论文目标是插补正常遥测中的随机缺测，还是恢复异常期间的遥测值？这两种任务需要不同的数据窗口定义。\n- 是否需要把稀有事件与异常分别作为不可训练位置，还是保留稀有事件用于泛化测试？"
+      },
+      {
+        "id": "caveats",
+        "type": "markdown",
+        "layout": "full",
+        "body": "## Caveats and Assumptions\n\n统计以 30 秒网格上的标签码为准；连续异常段是标签连续段，并不等同于独立根因事件。人工缺失按重叠窗口中的单元计数，因此同一原始时间点可能在不同窗口中重复出现。"
+      }
+    ],
+    "charts": [
+      {
+        "id": "monthly_chart",
+        "title": "月度 ESA 标签分布",
+        "subtitle": "2000 年 1–11 月，按通道-时间单元计数",
+        "type": "stackedBar",
+        "intent": "composition",
+        "dataset": "monthly",
+        "sourceId": "monthly_source",
+        "encodings": {
+          "x": {
+            "field": "month",
+            "type": "ordinal",
+            "label": "月份"
+          },
+          "y": {
+            "fields": [
+              "anomaly_count",
+              "rare_count"
+            ],
+            "type": "quantitative",
+            "aggregate": "none",
+            "label": "标签单元数"
+          },
+          "tooltip": [
+            {
+              "field": "affected_timepoints",
+              "type": "quantitative",
+              "label": "受影响时间点"
+            },
+            {
+              "field": "abnormal_rate",
+              "type": "quantitative",
+              "format": "percent",
+              "label": "异常单元率"
+            }
+          ]
+        },
+        "palette": {
+          "kind": "categorical",
+          "name": "blue-orange"
+        },
+        "valueFormat": "compact",
+        "layout": "full",
+        "surface": {
+          "surface": "card",
+          "viewMode": "both"
+        }
+      },
+      {
+        "id": "channel_chart",
+        "title": "各通道 ESA 标签异常率",
+        "subtitle": "异常与稀有事件合计，占各通道 878,400 个时间点的比例",
+        "type": "horizontalBar",
+        "intent": "comparison",
+        "dataset": "channels",
+        "sourceId": "channel_source",
+        "encodings": {
+          "x": {
+            "field": "channel",
+            "type": "nominal",
+            "label": "通道"
+          },
+          "y": {
+            "field": "abnormal_rate",
+            "type": "quantitative",
+            "format": "percent",
+            "label": "异常率"
+          },
+          "tooltip": [
+            {
+              "field": "abnormal_count",
+              "type": "quantitative",
+              "label": "异常单元数"
+            },
+            {
+              "field": "episode_count",
+              "type": "quantitative",
+              "label": "连续异常段数"
+            }
+          ]
+        },
+        "valueFormat": "percent",
+        "palette": {
+          "kind": "sequential",
+          "name": "blue"
+        },
+        "layout": "full",
+        "surface": {
+          "surface": "card",
+          "viewMode": "both"
+        }
+      }
+    ],
+    "tables": [
+      {
+        "id": "split_table",
+        "title": "训练、验证、测试区间的 ESA 标签分布",
+        "subtitle": "按时间顺序 70%/15%/15% 划分；精确值用于核对分布偏斜",
+        "dataset": "splits",
+        "sourceId": "split_source",
+        "defaultSort": {
+          "field": "timepoints",
+          "direction": "desc"
+        },
+        "density": "spacious",
+        "layout": "full",
+        "columns": [
+          {
+            "field": "split",
+            "label": "划分",
+            "type": "text"
+          },
+          {
+            "field": "timepoints",
+            "label": "时间点",
+            "format": "number"
+          },
+          {
+            "field": "anomaly_count",
+            "label": "异常单元",
+            "format": "number"
+          },
+          {
+            "field": "rare_count",
+            "label": "稀有事件单元",
+            "format": "number"
+          },
+          {
+            "field": "abnormal_rate",
+            "label": "异常单元率",
+            "format": "percent"
+          },
+          {
+            "field": "affected_timepoints",
+            "label": "受影响时间点",
+            "format": "number"
+          }
+        ]
+      },
+      {
+        "id": "window_table",
+        "title": "严格清洁窗口筛选结果",
+        "subtitle": "96 步窗口、48 步步长；触碰任一 ESA 标签异常的候选窗口被排除",
+        "dataset": "windows",
+        "sourceId": "window_source",
+        "defaultSort": {
+          "field": "candidate_windows",
+          "direction": "desc"
+        },
+        "density": "spacious",
+        "layout": "full",
+        "columns": [
+          {
+            "field": "split",
+            "label": "划分",
+            "type": "text"
+          },
+          {
+            "field": "candidate_windows",
+            "label": "候选窗口",
+            "format": "number"
+          },
+          {
+            "field": "usable_clean_windows",
+            "label": "可用正常窗口",
+            "format": "number"
+          },
+          {
+            "field": "excluded_windows",
+            "label": "排除窗口",
+            "format": "number"
+          },
+          {
+            "field": "excluded_rate",
+            "label": "排除率",
+            "format": "percent"
+          }
+        ]
+      },
+      {
+        "id": "mask_table",
+        "title": "测试集人工缺失比例",
+        "subtitle": "2,663 个严格正常窗口；每窗 576 个单元，固定随机种子 2026",
+        "dataset": "artificial_summary",
+        "sourceId": "artificial_source",
+        "defaultSort": {
+          "field": "requested_ratio",
+          "direction": "asc"
+        },
+        "density": "spacious",
+        "layout": "full",
+        "columns": [
+          {
+            "field": "requested_ratio",
+            "label": "设定比例",
+            "format": "percent"
+          },
+          {
+            "field": "actual_ratio",
+            "label": "实际比例",
+            "format": "percent"
+          },
+          {
+            "field": "masked_per_window",
+            "label": "每窗遮盖单元",
+            "format": "number"
+          },
+          {
+            "field": "total_masked_window_cells",
+            "label": "窗口单元总计",
+            "format": "number"
+          },
+          {
+            "field": "min_channel_share",
+            "label": "最小通道份额",
+            "format": "percent"
+          },
+          {
+            "field": "max_channel_share",
+            "label": "最大通道份额",
+            "format": "percent"
+          }
+        ]
+      },
+      {
+        "id": "natural_window_table",
+        "title": "异常作为自然缺失时的窗口分布",
+        "subtitle": "96 步窗口、48 步步长；部分缺失窗口与全缺失窗口分开统计",
+        "dataset": "natural_windows",
+        "sourceId": "natural_window_source",
+        "defaultSort": {
+          "field": "candidate_windows",
+          "direction": "desc"
+        },
+        "density": "spacious",
+        "layout": "full",
+        "columns": [
+          {
+            "field": "split",
+            "label": "划分",
+            "type": "text"
+          },
+          {
+            "field": "candidate_windows",
+            "label": "候选窗口",
+            "format": "number"
+          },
+          {
+            "field": "windows_with_missing",
+            "label": "含缺失窗口",
+            "format": "number"
+          },
+          {
+            "field": "partial_missing_windows",
+            "label": "部分缺失窗口",
+            "format": "number"
+          },
+          {
+            "field": "fully_missing_windows",
+            "label": "全缺失窗口",
+            "format": "number"
+          },
+          {
+            "field": "affected_window_rate",
+            "label": "含缺失窗口占比",
+            "format": "percent"
+          },
+          {
+            "field": "mean_missing_rate_affected",
+            "label": "受影响窗口平均缺失率",
+            "format": "percent"
+          }
+        ]
+      }
+    ]
+  },
+  "snapshot": {
+    "version": 1,
+    "generatedAt": "2026-07-12T16:03:55.660187+08:00",
+    "status": "ready",
+    "datasets": {
+      "monthly": [
+        {
+          "month": "2000-01",
+          "timepoints": 89279,
+          "anomaly_count": 0,
+          "rare_count": 0,
+          "abnormal_count": 0,
+          "abnormal_rate": 0.0,
+          "affected_timepoints": 0,
+          "affected_timepoint_rate": 0.0
+        },
+        {
+          "month": "2000-02",
+          "timepoints": 83520,
+          "anomaly_count": 0,
+          "rare_count": 3463,
+          "abnormal_count": 3463,
+          "abnormal_rate": 0.006910520434227331,
+          "affected_timepoints": 655,
+          "affected_timepoint_rate": 0.007842432950191571
+        },
+        {
+          "month": "2000-03",
+          "timepoints": 89280,
+          "anomaly_count": 29670,
+          "rare_count": 0,
+          "abnormal_count": 29670,
+          "abnormal_rate": 0.05538754480286738,
+          "affected_timepoints": 4945,
+          "affected_timepoint_rate": 0.05538754480286738
+        },
+        {
+          "month": "2000-04",
+          "timepoints": 86400,
+          "anomaly_count": 33870,
+          "rare_count": 0,
+          "abnormal_count": 33870,
+          "abnormal_rate": 0.06533564814814814,
+          "affected_timepoints": 5645,
+          "affected_timepoint_rate": 0.06533564814814814
+        },
+        {
+          "month": "2000-05",
+          "timepoints": 89280,
+          "anomaly_count": 0,
+          "rare_count": 0,
+          "abnormal_count": 0,
+          "abnormal_rate": 0.0,
+          "affected_timepoints": 0,
+          "affected_timepoint_rate": 0.0
+        },
+        {
+          "month": "2000-06",
+          "timepoints": 86400,
+          "anomaly_count": 1658,
+          "rare_count": 0,
+          "abnormal_count": 1658,
+          "abnormal_rate": 0.0031983024691358023,
+          "affected_timepoints": 290,
+          "affected_timepoint_rate": 0.0033564814814814816
+        },
+        {
+          "month": "2000-07",
+          "timepoints": 89280,
+          "anomaly_count": 0,
+          "rare_count": 8525,
+          "abnormal_count": 8525,
+          "abnormal_rate": 0.015914351851851853,
+          "affected_timepoints": 1421,
+          "affected_timepoint_rate": 0.01591621863799283
+        },
+        {
+          "month": "2000-08",
+          "timepoints": 89280,
+          "anomaly_count": 0,
+          "rare_count": 0,
+          "abnormal_count": 0,
+          "abnormal_rate": 0.0,
+          "affected_timepoints": 0,
+          "affected_timepoint_rate": 0.0
+        },
+        {
+          "month": "2000-09",
+          "timepoints": 86400,
+          "anomaly_count": 0,
+          "rare_count": 0,
+          "abnormal_count": 0,
+          "abnormal_rate": 0.0,
+          "affected_timepoints": 0,
+          "affected_timepoint_rate": 0.0
+        },
+        {
+          "month": "2000-10",
+          "timepoints": 89280,
+          "anomaly_count": 18195,
+          "rare_count": 276,
+          "abnormal_count": 18471,
+          "abnormal_rate": 0.03448140681003584,
+          "affected_timepoints": 3468,
+          "affected_timepoint_rate": 0.038844086021505374
+        },
+        {
+          "month": "2000-11",
+          "timepoints": 1,
+          "anomaly_count": 0,
+          "rare_count": 0,
+          "abnormal_count": 0,
+          "abnormal_rate": 0.0,
+          "affected_timepoints": 0,
+          "affected_timepoint_rate": 0.0
+        }
+      ],
+      "channels": [
+        {
+          "channel": "通道 41",
+          "normal_count": 862577,
+          "anomaly_count": 13813,
+          "rare_count": 2010,
+          "abnormal_count": 15823,
+          "abnormal_rate": 0.018013433515482697,
+          "episode_count": 13,
+          "median_duration_minutes": 43.5,
+          "mean_duration_minutes": 608.5769230769231,
+          "max_duration_hours": 47.041666666666664
+        },
+        {
+          "channel": "通道 42",
+          "normal_count": 862737,
+          "anomaly_count": 13625,
+          "rare_count": 2038,
+          "abnormal_count": 15663,
+          "abnormal_rate": 0.017831284153005465,
+          "episode_count": 14,
+          "median_duration_minutes": 25.75,
+          "mean_duration_minutes": 559.3928571428571,
+          "max_duration_hours": 47.041666666666664
+        },
+        {
+          "channel": "通道 43",
+          "normal_count": 862086,
+          "anomaly_count": 14278,
+          "rare_count": 2036,
+          "abnormal_count": 16314,
+          "abnormal_rate": 0.018572404371584698,
+          "episode_count": 15,
+          "median_duration_minutes": 8.5,
+          "mean_duration_minutes": 543.8,
+          "max_duration_hours": 47.041666666666664
+        },
+        {
+          "channel": "通道 44",
+          "normal_count": 862197,
+          "anomaly_count": 14084,
+          "rare_count": 2119,
+          "abnormal_count": 16203,
+          "abnormal_rate": 0.01844603825136612,
+          "episode_count": 13,
+          "median_duration_minutes": 43.5,
+          "mean_duration_minutes": 623.1923076923077,
+          "max_duration_hours": 47.041666666666664
+        },
+        {
+          "channel": "通道 45",
+          "normal_count": 862548,
+          "anomaly_count": 13809,
+          "rare_count": 2043,
+          "abnormal_count": 15852,
+          "abnormal_rate": 0.018046448087431693,
+          "episode_count": 13,
+          "median_duration_minutes": 43.5,
+          "mean_duration_minutes": 609.6923076923077,
+          "max_duration_hours": 47.041666666666664
+        },
+        {
+          "channel": "通道 46",
+          "normal_count": 862598,
+          "anomaly_count": 13784,
+          "rare_count": 2018,
+          "abnormal_count": 15802,
+          "abnormal_rate": 0.017989526411657557,
+          "episode_count": 14,
+          "median_duration_minutes": 27.75,
+          "mean_duration_minutes": 564.3571428571429,
+          "max_duration_hours": 47.041666666666664
+        }
+      ],
+      "splits": [
+        {
+          "split": "训练集",
+          "timepoints": 614880,
+          "anomaly_count": 65198,
+          "rare_count": 11988,
+          "abnormal_count": 77186,
+          "abnormal_rate": 0.020921697458582706,
+          "affected_timepoints": 12956
+        },
+        {
+          "split": "验证集",
+          "timepoints": 131760,
+          "anomaly_count": 0,
+          "rare_count": 0,
+          "abnormal_count": 0,
+          "abnormal_rate": 0.0,
+          "affected_timepoints": 0
+        },
+        {
+          "split": "测试集",
+          "timepoints": 131760,
+          "anomaly_count": 18195,
+          "rare_count": 276,
+          "abnormal_count": 18471,
+          "abnormal_rate": 0.02336445051608986,
+          "affected_timepoints": 3468
+        }
+      ],
+      "windows": [
+        {
+          "split": "训练集",
+          "candidate_windows": 12809,
+          "usable_clean_windows": 12524,
+          "excluded_windows": 285,
+          "excluded_rate": 0.022249980482473286
+        },
+        {
+          "split": "验证集",
+          "candidate_windows": 2744,
+          "usable_clean_windows": 2744,
+          "excluded_windows": 0,
+          "excluded_rate": 0.0
+        },
+        {
+          "split": "测试集",
+          "candidate_windows": 2744,
+          "usable_clean_windows": 2663,
+          "excluded_windows": 81,
+          "excluded_rate": 0.02951895043731778
+        }
+      ],
+      "natural_windows": [
+        {
+          "split": "训练集",
+          "candidate_windows": 12809,
+          "windows_with_missing": 285,
+          "partial_missing_windows": 31,
+          "fully_missing_windows": 254,
+          "affected_window_rate": 0.022249980482473262,
+          "median_missing_rate_affected": 1.0,
+          "mean_missing_rate_affected": 0.9403752436647174,
+          "max_missing_rate": 1.0
+        },
+        {
+          "split": "验证集",
+          "candidate_windows": 2744,
+          "windows_with_missing": 0,
+          "partial_missing_windows": 0,
+          "fully_missing_windows": 0,
+          "affected_window_rate": 0.0,
+          "median_missing_rate_affected": 0.0,
+          "mean_missing_rate_affected": 0.0,
+          "max_missing_rate": 0.0
+        },
+        {
+          "split": "测试集",
+          "candidate_windows": 2744,
+          "windows_with_missing": 81,
+          "partial_missing_windows": 25,
+          "fully_missing_windows": 56,
+          "affected_window_rate": 0.029518950437317785,
+          "median_missing_rate_affected": 1.0,
+          "mean_missing_rate_affected": 0.791795267489712,
+          "max_missing_rate": 1.0
+        }
+      ],
+      "artificial_summary": [
+        {
+          "requested_ratio": 0.1,
+          "actual_ratio": 0.10069444444444445,
+          "masked_per_window": 58,
+          "windows": 2663,
+          "total_masked_window_cells": 154454,
+          "min_channel_share": 0.16584225724163829,
+          "max_channel_share": 0.16907299260621286
+        },
+        {
+          "requested_ratio": 0.5,
+          "actual_ratio": 0.5,
+          "masked_per_window": 288,
+          "windows": 2663,
+          "total_masked_window_cells": 766944,
+          "min_channel_share": 0.16642414570033798,
+          "max_channel_share": 0.16689354111903867
+        },
+        {
+          "requested_ratio": 0.9,
+          "actual_ratio": 0.8993055555555556,
+          "masked_per_window": 518,
+          "windows": 2663,
+          "total_masked_window_cells": 1379434,
+          "min_channel_share": 0.16648204988422788,
+          "max_channel_share": 0.1667944968733553
+        }
+      ]
+    },
+    "accessIssues": []
+  },
+  "sources": [
+    {
+      "id": "esa_processed",
+      "label": "ESA Mission 1 预处理数据（通道 41–46，2000-01 至 2000-11）",
+      "query": {
+        "engine": "Python/NumPy",
+        "language": "python",
+        "description": "读取 aligned.npz 的标签、观测、清洁和划分数组，并按通道、月份、划分与连续异常段聚合。",
+        "tables_used": [
+          "ESA Mission 1: mission1_ch41_46_10m_30s/aligned.npz"
+        ],
+        "filters": [
+          "channels 41-46",
+          "2000-01-01 00:00:30 through 2000-11-01 00:00:00",
+          "30-second grid"
+        ],
+        "metric_definitions": [
+          "异常单元 = label_code in {1,2}",
+          "异常单元率 = 异常通道-时间单元 / (878400 × 6)",
+          "受影响时间点 = 任一通道 label_code in {1,2}",
+          "人工缺失 = observed_mask - gt_mask within strict-clean CSDI windows"
+        ],
+        "executed_at": "2026-07-12T16:03:55.660187+08:00"
+      }
+    },
+    {
+      "id": "esa_experiment",
+      "label": "ESA CSDI 实验配置与数据加载逻辑",
+      "query": {
+        "engine": "Python",
+        "language": "python",
+        "description": "复用 dataset_esa.py 的严格清洁窗口和 deterministic_condition_mask 逻辑。",
+        "tables_used": [
+          "esa_csdi_experiment/dataset_esa.py",
+          "esa_csdi_experiment/config.yaml"
+        ],
+        "filters": [
+          "window_length=96",
+          "stride=48",
+          "mask_seed=2026",
+          "test split"
+        ],
+        "metric_definitions": [
+          "每个窗口含 96 × 6 = 576 个通道-时间单元",
+          "掩蔽数 = round(576 × missing_ratio)"
+        ],
+        "executed_at": "2026-07-12T16:03:55.660187+08:00"
+      }
+    },
+    {
+      "id": "monthly_source",
+      "label": "ESA monthly anomaly aggregates",
+      "query": {
+        "engine": "SQLite",
+        "language": "sql",
+        "sql": "SELECT * FROM monthly",
+        "description": "Monthly anomaly and rare-event distribution.",
+        "tables_used": [
+          "analysis.sqlite:monthly"
+        ],
+        "filters": [
+          "ESA Mission 1 channels 41-46",
+          "2000-01 through 2000-11",
+          "30-second grid"
+        ],
+        "executed_at": "2026-07-12T16:03:55.660187+08:00"
+      }
+    },
+    {
+      "id": "channel_source",
+      "label": "ESA channel anomaly aggregates",
+      "query": {
+        "engine": "SQLite",
+        "language": "sql",
+        "sql": "SELECT * FROM channels",
+        "description": "Channel-level anomaly rates and episode statistics.",
+        "tables_used": [
+          "analysis.sqlite:channels"
+        ],
+        "filters": [
+          "ESA Mission 1 channels 41-46",
+          "2000-01 through 2000-11",
+          "30-second grid"
+        ],
+        "executed_at": "2026-07-12T16:03:55.660187+08:00"
+      }
+    },
+    {
+      "id": "split_source",
+      "label": "ESA split anomaly aggregates",
+      "query": {
+        "engine": "SQLite",
+        "language": "sql",
+        "sql": "SELECT * FROM splits",
+        "description": "Anomaly distribution across train, validation, and test ranges.",
+        "tables_used": [
+          "analysis.sqlite:splits"
+        ],
+        "filters": [
+          "ESA Mission 1 channels 41-46",
+          "2000-01 through 2000-11",
+          "30-second grid"
+        ],
+        "executed_at": "2026-07-12T16:03:55.660187+08:00"
+      }
+    },
+    {
+      "id": "window_source",
+      "label": "ESA strict-clean window statistics",
+      "query": {
+        "engine": "SQLite",
+        "language": "sql",
+        "sql": "SELECT * FROM windows",
+        "description": "Candidate-window retention under the current strict-clean loader.",
+        "tables_used": [
+          "analysis.sqlite:windows"
+        ],
+        "filters": [
+          "ESA Mission 1 channels 41-46",
+          "2000-01 through 2000-11",
+          "30-second grid"
+        ],
+        "executed_at": "2026-07-12T16:03:55.660187+08:00"
+      }
+    },
+    {
+      "id": "natural_window_source",
+      "label": "ESA natural-missing window statistics",
+      "query": {
+        "engine": "SQLite",
+        "language": "sql",
+        "sql": "SELECT * FROM natural_windows",
+        "description": "Window missingness when ESA anomalies are treated as natural missing values.",
+        "tables_used": [
+          "analysis.sqlite:natural_windows"
+        ],
+        "filters": [
+          "ESA Mission 1 channels 41-46",
+          "2000-01 through 2000-11",
+          "30-second grid"
+        ],
+        "executed_at": "2026-07-12T16:03:55.660187+08:00"
+      }
+    },
+    {
+      "id": "artificial_source",
+      "label": "ESA artificial masking statistics",
+      "query": {
+        "engine": "SQLite",
+        "language": "sql",
+        "sql": "SELECT * FROM artificial",
+        "description": "Deterministic artificial-mask distribution over test windows.",
+        "tables_used": [
+          "analysis.sqlite:artificial"
+        ],
+        "filters": [
+          "ESA Mission 1 channels 41-46",
+          "2000-01 through 2000-11",
+          "30-second grid"
+        ],
+        "executed_at": "2026-07-12T16:03:55.660187+08:00"
+      }
+    }
+  ]
+}

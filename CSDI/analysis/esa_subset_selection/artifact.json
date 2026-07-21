@@ -1,0 +1,721 @@
+{
+  "surface": "report",
+  "manifest": {
+    "version": 1,
+    "surface": "report",
+    "title": "ESA 子集选择建议",
+    "description": "比较扩大 Mission 1 与切换 Mission 2 的数据适用性。",
+    "generatedAt": "2026-07-12T16:52:35.630105+08:00",
+    "sources": [
+      {
+        "id": "options_source",
+        "label": "ESA subset option metrics",
+        "query": {
+          "engine": "SQLite",
+          "language": "sql",
+          "sql": "SELECT * FROM options",
+          "description": "ESA subset option metrics",
+          "tables_used": [
+            "analysis.sqlite:options"
+          ],
+          "executed_at": "2026-07-12T16:52:35.630105+08:00"
+        }
+      },
+      {
+        "id": "splits_source",
+        "label": "Chronological split metrics",
+        "query": {
+          "engine": "SQLite",
+          "language": "sql",
+          "sql": "SELECT * FROM splits",
+          "description": "Chronological split metrics",
+          "tables_used": [
+            "analysis.sqlite:splits"
+          ],
+          "executed_at": "2026-07-12T16:52:35.630105+08:00"
+        }
+      },
+      {
+        "id": "corr_source",
+        "label": "Recommended-channel correlations",
+        "query": {
+          "engine": "SQLite",
+          "language": "sql",
+          "sql": "SELECT * FROM correlation",
+          "description": "Recommended-channel correlations",
+          "tables_used": [
+            "analysis.sqlite:correlation"
+          ],
+          "executed_at": "2026-07-12T16:52:35.630105+08:00"
+        }
+      },
+      {
+        "id": "quality_source",
+        "label": "Mission label-quality profile",
+        "query": {
+          "engine": "SQLite",
+          "language": "sql",
+          "sql": "SELECT * FROM mission_quality",
+          "description": "Mission label-quality profile",
+          "tables_used": [
+            "analysis.sqlite:mission_quality"
+          ],
+          "executed_at": "2026-07-12T16:52:35.630105+08:00"
+        }
+      }
+    ],
+    "blocks": [
+      {
+        "id": "title",
+        "type": "markdown",
+        "body": "# ESA 子集选择建议",
+        "layout": "full"
+      },
+      {
+        "id": "summary",
+        "type": "markdown",
+        "sourceId": "options_source",
+        "body": "## Technical Summary\n\n- **建议切换到 Mission 2，而不是只扩大当前 Mission 1。** 推荐通道为 **9、10、13、14、74、86**，时间范围为 **2000年1月1日至2003年6月30日**。\n- **推荐方案有 3,689 个部分缺失窗口、0 个全缺失窗口。** 当前 Mission 1 扩大到14年后仍有约90%的受影响窗口完全缺失。\n- **缺失率在时间划分中更均衡。** 推荐方案训练/验证/测试缺失率约为1.47%/1.47%/2.00%，避免当前验证集缺失率为0。",
+        "layout": "full"
+      },
+      {
+        "id": "option_text",
+        "type": "markdown",
+        "sourceId": "options_source",
+        "body": "## 扩大 Mission 1 不能修复缺失结构\n\n扩大时间范围会增加样本量，但六通道同步长块仍然存在。核心问题不是数据量不足，而是通道组合和事件结构不适合48分钟窗口。",
+        "layout": "full"
+      },
+      {
+        "id": "option_chart_block",
+        "type": "chart",
+        "chartId": "option_chart",
+        "layout": "full"
+      },
+      {
+        "id": "window_text",
+        "type": "markdown",
+        "sourceId": "options_source",
+        "body": "## Mission 2 推荐组合把全部受影响窗口变成部分缺失\n\n通道组合同时保留了可学习的通道对关系，并避免六通道同时完全缺失。自然缺失率仍约1.55%，训练时可继续在正常位置增加人工掩蔽。",
+        "layout": "full"
+      },
+      {
+        "id": "window_chart_block",
+        "type": "chart",
+        "chartId": "window_chart",
+        "layout": "full"
+      },
+      {
+        "id": "split_text",
+        "type": "markdown",
+        "sourceId": "splits_source",
+        "body": "## 推荐方案的验证集不再是零缺失\n\n按时间顺序划分后，三个区间都有自然缺失样本，更适合早停、模型选择和最终测试。",
+        "layout": "full"
+      },
+      {
+        "id": "split_chart_block",
+        "type": "chart",
+        "chartId": "split_chart",
+        "layout": "full"
+      },
+      {
+        "id": "quality_text",
+        "type": "markdown",
+        "sourceId": "quality_source",
+        "body": "## Mission 3 暂不作为首选\n\nMission 3 的通信中断与无效片段更接近自然缺失，但标签包含156条空通道记录和18条结束时间早于开始时间的记录。未先定义全局无效区间的应用规则并修复时间边界前，不适合作为第一选择。",
+        "layout": "full"
+      },
+      {
+        "id": "quality_table_block",
+        "type": "table",
+        "tableId": "quality_table",
+        "layout": "full"
+      },
+      {
+        "id": "method",
+        "type": "markdown",
+        "body": "## Scope, Data, and Method\n\n所有方案统一映射到30秒时间网格，并将异常、稀有事件和通信中断标签视为派生缺失。窗口长度为96步（48分钟），步长为48步（24分钟）。部分缺失窗口定义为缺失单元数介于1和575之间；全缺失窗口为576个单元全部缺失。遥测相关性使用10分钟重采样后的 Pearson 系数，仅用于检查通道间是否存在可学习关系。",
+        "layout": "full"
+      },
+      {
+        "id": "next",
+        "type": "markdown",
+        "body": "## Recommended Next Steps\n\n1. 新建 Mission 2 预处理配置：通道 9、10、13、14、74、86，完整42个月，30秒网格。\n2. 令 `observed_mask = clean_mask`，保留部分缺失窗口，仅删除观测数为0的窗口。\n3. 训练阶段继续使用 random 或 mix 掩蔽，评价只计算人工遮盖的正常值。\n4. 先做1–2个epoch烟雾测试，再决定是否对53k训练窗口采样或减少epoch。",
+        "layout": "full"
+      },
+      {
+        "id": "limits",
+        "type": "markdown",
+        "body": "## Limitations and Further Questions\n\n标签分析不能证明所有通道在物理意义上属于同一子系统；当前证据只确认时间覆盖一致、存在若干强相关通道对、缺失窗口结构更适合插补。正式实验前应结合 channels.csv 或任务文档核对通道语义。完整42个月约为当前子集的4.2倍，训练成本也会相应增加。",
+        "layout": "full"
+      }
+    ],
+    "charts": [
+      {
+        "id": "option_chart",
+        "title": "候选方案总体派生缺失率",
+        "subtitle": "统一6通道、30秒网格",
+        "type": "horizontalBar",
+        "intent": "comparison",
+        "dataset": "options",
+        "sourceId": "options_source",
+        "encodings": {
+          "x": {
+            "field": "option",
+            "type": "nominal",
+            "label": "方案"
+          },
+          "y": {
+            "field": "missing_rate",
+            "type": "quantitative",
+            "format": "percent",
+            "label": "缺失率"
+          },
+          "tooltip": [
+            {
+              "field": "partial_windows",
+              "type": "quantitative",
+              "label": "部分缺失窗口"
+            },
+            {
+              "field": "fully_missing_windows",
+              "type": "quantitative",
+              "label": "全缺失窗口"
+            }
+          ]
+        },
+        "valueFormat": "percent",
+        "layout": "full"
+      },
+      {
+        "id": "window_chart",
+        "title": "候选方案受影响窗口构成",
+        "subtitle": "部分缺失与全缺失窗口数量",
+        "type": "stackedBar",
+        "intent": "composition",
+        "dataset": "options",
+        "sourceId": "options_source",
+        "encodings": {
+          "x": {
+            "field": "option",
+            "type": "nominal",
+            "label": "方案"
+          },
+          "y": {
+            "fields": [
+              "partial_windows",
+              "fully_missing_windows"
+            ],
+            "type": "quantitative",
+            "aggregate": "none",
+            "label": "窗口数"
+          }
+        },
+        "valueFormat": "compact",
+        "layout": "full"
+      },
+      {
+        "id": "split_chart",
+        "title": "当前与推荐方案的时间划分缺失率",
+        "subtitle": "训练/验证/测试按时间顺序70%/15%/15%",
+        "type": "bar",
+        "intent": "comparison",
+        "dataset": "split_wide",
+        "sourceId": "splits_source",
+        "encodings": {
+          "x": {
+            "field": "split",
+            "type": "nominal",
+            "label": "划分"
+          },
+          "y": {
+            "fields": [
+              "current_rate",
+              "recommended_rate"
+            ],
+            "type": "quantitative",
+            "aggregate": "none",
+            "format": "percent",
+            "label": "缺失率"
+          }
+        },
+        "valueFormat": "percent",
+        "layout": "full"
+      }
+    ],
+    "tables": [
+      {
+        "id": "quality_table",
+        "title": "三项 Mission 标签质量概况",
+        "subtitle": "用于判断是否能直接进入缺失分布建模",
+        "dataset": "mission_quality",
+        "sourceId": "quality_source",
+        "defaultSort": {
+          "field": "mission",
+          "direction": "asc"
+        },
+        "density": "spacious",
+        "layout": "full",
+        "columns": [
+          {
+            "field": "mission",
+            "label": "数据集",
+            "type": "text"
+          },
+          {
+            "field": "label_rows",
+            "label": "标签行",
+            "format": "number"
+          },
+          {
+            "field": "events",
+            "label": "事件数",
+            "format": "number"
+          },
+          {
+            "field": "missing_channel_labels",
+            "label": "空通道标签",
+            "format": "number"
+          },
+          {
+            "field": "negative_duration_labels",
+            "label": "负时长标签",
+            "format": "number"
+          },
+          {
+            "field": "assessment",
+            "label": "判断",
+            "type": "text"
+          }
+        ]
+      }
+    ]
+  },
+  "snapshot": {
+    "version": 1,
+    "generatedAt": "2026-07-12T16:52:35.630105+08:00",
+    "status": "ready",
+    "datasets": {
+      "options": [
+        {
+          "timepoints": 878400,
+          "missing_rate": 0.0181483379,
+          "affected_timepoint_rate": 0.0186942168,
+          "all_channel_sync_share": 0.9492113757,
+          "candidate_windows": 18299,
+          "partial_windows": 55,
+          "fully_missing_windows": 310,
+          "affected_windows": 365,
+          "full_share_affected": 0.8493150685,
+          "mean_missing_rate_affected": 0.909902968,
+          "option": "M1 当前 10个月",
+          "channels": "41, 42, 43, 44, 45, 46",
+          "start": "2000-01-01 00:00:30",
+          "end": "2000-11-01 00:00:00",
+          "duration_months": 10.0
+        },
+        {
+          "timepoints": 3677759,
+          "missing_rate": 0.0154157736,
+          "affected_timepoint_rate": 0.0156810166,
+          "all_channel_sync_share": 0.9674706525,
+          "candidate_windows": 76618,
+          "partial_windows": 196,
+          "fully_missing_windows": 1109,
+          "affected_windows": 1305,
+          "full_share_affected": 0.8498084291,
+          "mean_missing_rate_affected": 0.9051005747,
+          "option": "M1 扩至 42个月",
+          "channels": "41, 42, 43, 44, 45, 46",
+          "start": "2000-01-01 00:00:30",
+          "end": "2003-06-30 23:59:30",
+          "duration_months": 41.9
+        },
+        {
+          "timepoints": 14728319,
+          "missing_rate": 0.0154009769,
+          "affected_timepoint_rate": 0.0154922636,
+          "all_channel_sync_share": 0.9885044374,
+          "candidate_windows": 306838,
+          "partial_windows": 504,
+          "fully_missing_windows": 4554,
+          "affected_windows": 5058,
+          "full_share_affected": 0.9003558719,
+          "mean_missing_rate_affected": 0.9342893271,
+          "option": "M1 扩至 14年",
+          "channels": "41, 42, 43, 44, 45, 46",
+          "start": "2000-01-01 00:00:30",
+          "end": "2013-12-31 23:59:30",
+          "duration_months": 168.0
+        },
+        {
+          "timepoints": 3677759,
+          "missing_rate": 0.0220048404,
+          "affected_timepoint_rate": 0.0319825198,
+          "all_channel_sync_share": 0.3176392573,
+          "candidate_windows": 76618,
+          "partial_windows": 3044,
+          "fully_missing_windows": 612,
+          "affected_windows": 3656,
+          "full_share_affected": 0.1673960613,
+          "mean_missing_rate_affected": 0.4611625866,
+          "option": "M2 同组高频通道",
+          "channels": "9, 10, 12, 13, 14, 20",
+          "start": "2000-01-01 00:00:30",
+          "end": "2003-06-30 23:59:30",
+          "duration_months": 41.9
+        },
+        {
+          "timepoints": 3677759,
+          "missing_rate": 0.0155174206,
+          "affected_timepoint_rate": 0.0323479597,
+          "all_channel_sync_share": 0.0055224934,
+          "candidate_windows": 76618,
+          "partial_windows": 3689,
+          "fully_missing_windows": 0,
+          "affected_windows": 3689,
+          "full_share_affected": 0.0,
+          "mean_missing_rate_affected": 0.3222945092,
+          "option": "M2 推荐六通道",
+          "channels": "9, 10, 13, 14, 74, 86",
+          "start": "2000-01-01 00:00:30",
+          "end": "2003-06-30 23:59:30",
+          "duration_months": 41.9
+        }
+      ],
+      "splits": [
+        {
+          "option": "M1 当前 10个月",
+          "split": "训练集",
+          "missing_rate": 0.0209211553,
+          "partial_windows": 30,
+          "fully_missing_windows": 254,
+          "affected_windows": 284
+        },
+        {
+          "option": "M1 当前 10个月",
+          "split": "验证集",
+          "missing_rate": 0.0,
+          "partial_windows": 0,
+          "fully_missing_windows": 0,
+          "affected_windows": 0
+        },
+        {
+          "option": "M1 当前 10个月",
+          "split": "测试集",
+          "missing_rate": 0.023356861,
+          "partial_windows": 25,
+          "fully_missing_windows": 56,
+          "affected_windows": 81
+        },
+        {
+          "option": "M2 推荐六通道",
+          "split": "训练集",
+          "missing_rate": 0.0147222176,
+          "partial_windows": 2556,
+          "fully_missing_windows": 0,
+          "affected_windows": 2556
+        },
+        {
+          "option": "M2 推荐六通道",
+          "split": "验证集",
+          "missing_rate": 0.0147079261,
+          "partial_windows": 547,
+          "fully_missing_windows": 0,
+          "affected_windows": 547
+        },
+        {
+          "option": "M2 推荐六通道",
+          "split": "测试集",
+          "missing_rate": 0.0200378612,
+          "partial_windows": 584,
+          "fully_missing_windows": 0,
+          "affected_windows": 584
+        }
+      ],
+      "split_wide": [
+        {
+          "split": "测试集",
+          "current_rate": 0.023356861,
+          "recommended_rate": 0.0200378612
+        },
+        {
+          "split": "训练集",
+          "current_rate": 0.0209211553,
+          "recommended_rate": 0.0147222176
+        },
+        {
+          "split": "验证集",
+          "current_rate": 0.0,
+          "recommended_rate": 0.0147079261
+        }
+      ],
+      "correlation": [
+        {
+          "channel_x": "通道 9",
+          "channel_y": "通道 9",
+          "correlation": 1.0
+        },
+        {
+          "channel_x": "通道 9",
+          "channel_y": "通道 10",
+          "correlation": 0.309795078
+        },
+        {
+          "channel_x": "通道 9",
+          "channel_y": "通道 13",
+          "correlation": 0.0083753662
+        },
+        {
+          "channel_x": "通道 9",
+          "channel_y": "通道 14",
+          "correlation": -0.0054178948
+        },
+        {
+          "channel_x": "通道 9",
+          "channel_y": "通道 74",
+          "correlation": 0.1332785418
+        },
+        {
+          "channel_x": "通道 9",
+          "channel_y": "通道 86",
+          "correlation": -0.1068430463
+        },
+        {
+          "channel_x": "通道 10",
+          "channel_y": "通道 9",
+          "correlation": 0.309795078
+        },
+        {
+          "channel_x": "通道 10",
+          "channel_y": "通道 10",
+          "correlation": 1.0
+        },
+        {
+          "channel_x": "通道 10",
+          "channel_y": "通道 13",
+          "correlation": -0.0055788209
+        },
+        {
+          "channel_x": "通道 10",
+          "channel_y": "通道 14",
+          "correlation": -0.0099051094
+        },
+        {
+          "channel_x": "通道 10",
+          "channel_y": "通道 74",
+          "correlation": 0.2398514301
+        },
+        {
+          "channel_x": "通道 10",
+          "channel_y": "通道 86",
+          "correlation": -0.2345424887
+        },
+        {
+          "channel_x": "通道 13",
+          "channel_y": "通道 9",
+          "correlation": 0.0083753662
+        },
+        {
+          "channel_x": "通道 13",
+          "channel_y": "通道 10",
+          "correlation": -0.0055788209
+        },
+        {
+          "channel_x": "通道 13",
+          "channel_y": "通道 13",
+          "correlation": 1.0
+        },
+        {
+          "channel_x": "通道 13",
+          "channel_y": "通道 14",
+          "correlation": -0.151395072
+        },
+        {
+          "channel_x": "通道 13",
+          "channel_y": "通道 74",
+          "correlation": -0.0270132475
+        },
+        {
+          "channel_x": "通道 13",
+          "channel_y": "通道 86",
+          "correlation": 0.0277145851
+        },
+        {
+          "channel_x": "通道 14",
+          "channel_y": "通道 9",
+          "correlation": -0.0054178948
+        },
+        {
+          "channel_x": "通道 14",
+          "channel_y": "通道 10",
+          "correlation": -0.0099051094
+        },
+        {
+          "channel_x": "通道 14",
+          "channel_y": "通道 13",
+          "correlation": -0.151395072
+        },
+        {
+          "channel_x": "通道 14",
+          "channel_y": "通道 14",
+          "correlation": 1.0
+        },
+        {
+          "channel_x": "通道 14",
+          "channel_y": "通道 74",
+          "correlation": 0.0171801957
+        },
+        {
+          "channel_x": "通道 14",
+          "channel_y": "通道 86",
+          "correlation": -0.017201543
+        },
+        {
+          "channel_x": "通道 74",
+          "channel_y": "通道 9",
+          "correlation": 0.1332785418
+        },
+        {
+          "channel_x": "通道 74",
+          "channel_y": "通道 10",
+          "correlation": 0.2398514301
+        },
+        {
+          "channel_x": "通道 74",
+          "channel_y": "通道 13",
+          "correlation": -0.0270132475
+        },
+        {
+          "channel_x": "通道 74",
+          "channel_y": "通道 14",
+          "correlation": 0.0171801957
+        },
+        {
+          "channel_x": "通道 74",
+          "channel_y": "通道 74",
+          "correlation": 1.0
+        },
+        {
+          "channel_x": "通道 74",
+          "channel_y": "通道 86",
+          "correlation": -0.973865853
+        },
+        {
+          "channel_x": "通道 86",
+          "channel_y": "通道 9",
+          "correlation": -0.1068430463
+        },
+        {
+          "channel_x": "通道 86",
+          "channel_y": "通道 10",
+          "correlation": -0.2345424887
+        },
+        {
+          "channel_x": "通道 86",
+          "channel_y": "通道 13",
+          "correlation": 0.0277145851
+        },
+        {
+          "channel_x": "通道 86",
+          "channel_y": "通道 14",
+          "correlation": -0.017201543
+        },
+        {
+          "channel_x": "通道 86",
+          "channel_y": "通道 74",
+          "correlation": -0.973865853
+        },
+        {
+          "channel_x": "通道 86",
+          "channel_y": "通道 86",
+          "correlation": 1.0
+        }
+      ],
+      "mission_quality": [
+        {
+          "mission": "Mission 1",
+          "label_rows": 3589,
+          "events": 200,
+          "missing_channel_labels": 0,
+          "negative_duration_labels": 0,
+          "assessment": "标签可用，但当前通道缺失高度同步且长块化"
+        },
+        {
+          "mission": "Mission 2",
+          "label_rows": 11167,
+          "events": 644,
+          "missing_channel_labels": 0,
+          "negative_duration_labels": 0,
+          "assessment": "标签干净，事件密集且多数短于 6 小时"
+        },
+        {
+          "mission": "Mission 3",
+          "label_rows": 2586,
+          "events": 586,
+          "missing_channel_labels": 156,
+          "negative_duration_labels": 18,
+          "assessment": "通信中断丰富，但需先修复标签质量问题"
+        }
+      ]
+    },
+    "accessIssues": []
+  },
+  "sources": [
+    {
+      "id": "options_source",
+      "label": "ESA subset option metrics",
+      "query": {
+        "engine": "SQLite",
+        "language": "sql",
+        "sql": "SELECT * FROM options",
+        "description": "ESA subset option metrics",
+        "tables_used": [
+          "analysis.sqlite:options"
+        ],
+        "executed_at": "2026-07-12T16:52:35.630105+08:00"
+      }
+    },
+    {
+      "id": "splits_source",
+      "label": "Chronological split metrics",
+      "query": {
+        "engine": "SQLite",
+        "language": "sql",
+        "sql": "SELECT * FROM splits",
+        "description": "Chronological split metrics",
+        "tables_used": [
+          "analysis.sqlite:splits"
+        ],
+        "executed_at": "2026-07-12T16:52:35.630105+08:00"
+      }
+    },
+    {
+      "id": "corr_source",
+      "label": "Recommended-channel correlations",
+      "query": {
+        "engine": "SQLite",
+        "language": "sql",
+        "sql": "SELECT * FROM correlation",
+        "description": "Recommended-channel correlations",
+        "tables_used": [
+          "analysis.sqlite:correlation"
+        ],
+        "executed_at": "2026-07-12T16:52:35.630105+08:00"
+      }
+    },
+    {
+      "id": "quality_source",
+      "label": "Mission label-quality profile",
+      "query": {
+        "engine": "SQLite",
+        "language": "sql",
+        "sql": "SELECT * FROM mission_quality",
+        "description": "Mission label-quality profile",
+        "tables_used": [
+          "analysis.sqlite:mission_quality"
+        ],
+        "executed_at": "2026-07-12T16:52:35.630105+08:00"
+      }
+    }
+  ]
+}

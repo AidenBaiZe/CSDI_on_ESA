@@ -1,0 +1,1369 @@
+﻿method,method_label,mask_family,mask_label,channel_index,channel,normalized_rmse,normalized_mae,evaluation_points
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,0,channel_1,0.019555227815799943,0.015083793834244021,5760
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,1,channel_2,0.028171340040131315,0.014951481409465691,5568
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,2,channel_3,0.04846039006868074,0.019867469640512028,6144
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,3,channel_4,0.0020141913450148494,0.0017065512228512,6624
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,4,channel_5,0.002385282768825397,0.0020946634091790527,6336
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,5,channel_6,0.0020425369768759995,0.0017192538448511914,5280
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,6,channel_7,0.00240082795246708,0.0021105007702778896,5856
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,7,channel_8,0.0019886420302423296,0.001443227790402895,5472
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,8,channel_9,0.0018850419863691316,0.0013316201828362673,5856
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,9,channel_10,0.007018130685361805,0.005765637536913441,4416
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,10,channel_11,0.00077508668888981,0.0006557350370417783,6048
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,11,channel_12,0.5176851516694349,0.4328652314858122,6816
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,12,channel_13,0.5326903326254229,0.4338500003198405,4992
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,13,channel_14,0.7992779833084233,0.4860296419866381,6048
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,14,channel_15,0.8715416951284161,0.6146195994606692,5856
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,15,channel_16,0.6344367245140922,0.5260777737527373,6336
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,16,channel_17,0.4868773566076442,0.38738807647680673,5184
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,17,channel_18,0.6097373624443378,0.45112346059250374,6336
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,18,channel_19,0.9038592393214414,0.6853303879389542,5472
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,19,channel_20,0.509616542086825,0.39420571542331245,6720
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,20,channel_21,0.7993755649927586,0.53979809221938,6144
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,21,channel_22,0.746864158623679,0.6079668809808195,5952
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,22,channel_23,0.8454343344934538,0.5949068645229411,6144
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,23,channel_24,0.6185342840879512,0.4977324337052629,6144
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,24,channel_25,0.6140494812688454,0.49806712779482365,5568
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,25,channel_26,0.5103340175927245,0.40913227333844304,5952
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,26,channel_27,0.5708532661341141,0.4528560459227774,6528
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,27,channel_28,0.7539793698109943,0.5581389342147772,6336
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,28,channel_29,0.6876395083764434,0.5259158680197681,6144
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,29,channel_30,0.7278722701758759,0.44425616925807054,5856
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,30,channel_31,0.721896853246985,0.5463807567928459,5952
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,31,channel_32,0.6061879035961781,0.49800673095485304,6624
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,32,channel_33,0.5757294773293772,0.45965077266783827,6240
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,33,channel_34,0.5012543544544948,0.4095217819640541,5760
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,34,channel_35,0.6854609300656446,0.5545889106114901,7104
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,35,channel_36,0.7091107289336097,0.5352660742632398,6624
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,36,channel_37,0.5773004076620036,0.45635268992957606,6912
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,37,channel_38,0.7361068267233715,0.4549043316622836,5952
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,38,channel_39,0.6878669776341606,0.5106657401799276,7104
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,39,channel_40,0.5832901142261468,0.4861114975296749,5856
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,40,channel_41,1.7028429436325356,1.3536273506019258,5568
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,41,channel_42,0.7345230886515897,0.5635211728410594,6912
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,42,channel_43,3.77013532910894,2.7111731219663167,7104
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,43,channel_44,1.6612186034875442,1.3009093357606145,5184
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,44,channel_45,0.8722491270529467,0.698884878874208,5664
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,45,channel_46,1.4911017623087262,1.2006274017270386,5952
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,46,channel_47,0.6253879463000213,0.4972104733015018,5952
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,47,channel_48,0.7022740554362211,0.5617863437733243,5184
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,48,channel_49,0.7162848755093442,0.48101250939694784,7200
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,49,channel_50,0.5827796413302571,0.4561662050305548,7200
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,50,channel_51,0.6317325463119439,0.4905594163660511,6624
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,51,channel_52,0.7717600796899867,0.5446175737784033,6240
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,52,channel_53,0.9692352542425524,0.4894818762406002,6912
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,53,channel_54,1.0284907389514197,0.6222010041334355,7392
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,54,channel_55,0.9797422908483645,0.5859688688592022,6912
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,55,channel_56,0.988399859845901,0.6846119148088065,6432
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,56,channel_57,0.5907234694139213,0.4802983943328663,5568
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,57,channel_58,0.5703999194569486,0.4442078535270913,6144
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,58,channel_59,0.7970823393602984,0.5511395045930094,6048
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,59,channel_60,0.5838456720531854,0.44221996857639306,5952
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,60,channel_61,0.706409398187444,0.5751852897186636,5952
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,61,channel_62,0.6276645881961554,0.4138074731483025,6816
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,62,channel_63,0.6631015071500249,0.4672977126427163,5952
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,63,channel_64,1.436544752891601,0.20014486273338283,6720
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,64,channel_65,0.48046157358738584,0.06110929722433164,6528
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,65,channel_66,0.8970862470368882,0.7611148054623108,7008
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,66,channel_67,0.011543313086260604,0.011030289934373,5664
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,67,channel_68,0.005556826171664797,0.0021169466919009486,6144
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,68,channel_69,0.01508249350210736,0.003230376949649994,6432
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,69,channel_70,0.9382040934549536,0.7648088260622002,5856
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,70,channel_71,0.8706121598125555,0.7559021274934341,6624
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,71,channel_72,0.8569707297871948,0.7140407486751199,5856
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,72,channel_73,0.9503338451095655,0.7914707443529433,4800
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,73,channel_74,0.9296431041984381,0.7411190540820951,6048
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,74,channel_75,0.8070590599966168,0.6194683980846246,6240
+raw_pearson,原值 Pearson Top-8,channel_dropout_50,通道丢失 50%,75,channel_76,0.8418934680604423,0.672179012756029,6144
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,0,channel_1,0.025601773755718267,0.023839430157038807,6868
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,1,channel_2,0.024624692461145854,0.02197437757302477,6868
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,2,channel_3,0.06036279512838386,0.032045047201631094,5848
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,3,channel_4,0.0026446394406323607,0.002480642392881376,6324
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,4,channel_5,0.0029906465812059133,0.002797332779805886,6188
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,5,channel_6,0.0025868894110167334,0.002425657323399997,6120
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,6,channel_7,0.0030615970845010946,0.002859026401021082,5984
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,7,channel_8,0.0023849561941480042,0.0020008563666444605,6936
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,8,channel_9,0.002633549400149485,0.002419674367658051,5440
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,9,channel_10,0.00608369082422437,0.005002403374638194,6528
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,10,channel_11,0.0010585668369659453,0.0009784883929255669,6800
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,11,channel_12,0.6942653104688479,0.6029444357791436,6188
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,12,channel_13,0.6829553717724399,0.604105052654209,5916
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,13,channel_14,1.0370126378941031,0.7253459329968343,5916
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,14,channel_15,0.9946676441682626,0.7705226363710395,6324
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,15,channel_16,0.8129672068561868,0.6965874024334695,5916
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,16,channel_17,0.6775049393952282,0.5610853207429437,6460
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,17,channel_18,0.7350593874433842,0.5956327878605862,5916
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,18,channel_19,1.1532122404351677,0.8378783859486244,6528
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,19,channel_20,0.740695821857862,0.6519421344242633,6324
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,20,channel_21,1.1003665476389846,0.7955452696991049,5712
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,21,channel_22,1.010166422284801,0.9062735582510951,5916
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,22,channel_23,1.0376041892159236,0.8430928454899307,5712
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,23,channel_24,0.8237682481811937,0.7083893600321488,6596
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,24,channel_25,0.7895515053835791,0.6608346046665338,5780
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,25,channel_26,0.7210730927941491,0.609397860406663,6324
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,26,channel_27,0.7535765029705911,0.6537751357213131,6528
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,27,channel_28,0.8768100489135965,0.6826820114892523,6528
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,28,channel_29,1.0012648147156231,0.81030569693723,5916
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,29,channel_30,1.0486103665952773,0.83655343882462,6052
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,30,channel_31,0.964436704881615,0.839545193101694,6528
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,31,channel_32,0.8698045998970279,0.7632809037090418,5440
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,32,channel_33,0.794344576011783,0.6785985237387747,6188
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,33,channel_34,0.6755909508467967,0.5834078493853965,6664
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,34,channel_35,0.7899685244411747,0.6432339507167966,6800
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,35,channel_36,0.8439587944234633,0.664333046535239,6324
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,36,channel_37,0.7411428274998347,0.607934045395755,6460
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,37,channel_38,1.0601020538823436,0.849983905943294,5984
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,38,channel_39,0.9931405569300418,0.880548029967578,6392
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,39,channel_40,0.8154240105565825,0.6945876418418174,5916
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,40,channel_41,1.5533414338109304,1.2550384930272402,6324
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,41,channel_42,0.8801922353471768,0.714557489925956,5644
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,42,channel_43,3.559736330116589,2.647800878898791,6052
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,43,channel_44,1.4681390971219668,1.1794047558218543,5984
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,44,channel_45,0.8432970133451124,0.6828886127787976,6596
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,45,channel_46,1.3822188466528968,1.1388034810898382,6596
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,46,channel_47,0.7609015319071365,0.6421640318370361,5984
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,47,channel_48,0.7603991321440611,0.6247563055320796,6596
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,48,channel_49,0.7680978698221215,0.562772724471719,6120
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,49,channel_50,0.7523054562872367,0.6233771120218845,5984
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,50,channel_51,0.7825789461974331,0.6515380054341224,6120
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,51,channel_52,0.7946293289696567,0.6004050122805713,5712
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,52,channel_53,0.9896220553722446,0.4951551617837581,5916
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,53,channel_54,1.0198196868532072,0.6104120766956653,6188
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,54,channel_55,0.9772414972148323,0.5794897063226867,6392
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,55,channel_56,0.9971382623437031,0.68849298037234,5644
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,56,channel_57,0.801743931619803,0.6842271407021753,6868
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,57,channel_58,0.8365507723386489,0.7281728452521631,5984
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,58,channel_59,1.0267405863282169,0.8507566128908157,6120
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,59,channel_60,0.8032887107511597,0.6635007270719734,6460
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,60,channel_61,0.9054988311308118,0.7390106328667797,5984
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,61,channel_62,0.7086511900247463,0.49356443360364083,6256
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,62,channel_63,0.7523681288385805,0.5603535391458938,5440
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,63,channel_64,0.8666188057627017,0.10195408210510723,6868
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,64,channel_65,0.7699479902181139,0.09804114403321076,5916
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,65,channel_66,1.0325754443594877,0.9121907701305492,6188
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,66,channel_67,0.012253596079133513,0.011834317932980948,5440
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,67,channel_68,0.005252254508948012,0.002087370355226182,6596
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,68,channel_69,0.017225532702273488,0.0034805634000322585,6732
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,69,channel_70,0.9744462170565209,0.7960656692750359,6256
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,70,channel_71,0.9176827446513004,0.8025734330340852,5984
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,71,channel_72,0.9096406176511529,0.7605250135456563,6052
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,72,channel_73,0.9622083560136787,0.8171644093687895,5644
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,73,channel_74,0.9634763980729377,0.7649739147472189,6188
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,74,channel_75,0.8827564013207835,0.6937034888847173,6256
+raw_pearson,原值 Pearson Top-8,rectangle_50,矩形缺失 50%,75,channel_76,0.8879384316684371,0.7049370291681116,5780
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,0,channel_1,0.03142350725424977,0.031423507254249874,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,1,channel_2,0.030934524156832274,0.030934524156832354,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,2,channel_3,0.06174344481737107,0.038189041244065115,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,3,channel_4,0.0035165833493801166,0.003516583349380114,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,4,channel_5,0.004033373638504285,0.004033373638504289,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,5,channel_6,0.0034082887510582935,0.003408288751058299,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,6,channel_7,0.0040356800230663846,0.004035680023066387,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,7,channel_8,0.003057277986814312,0.0030572779868143153,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,8,channel_9,0.0029954621426134744,0.0029954621426134757,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,9,channel_10,0.0007592866139601664,0.0007592866139601671,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,10,channel_11,0.0013909898498271072,0.0013909898498271065,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,11,channel_12,0.9370399483061989,0.8538845517655473,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,12,channel_13,0.8858835786350269,0.8091975388345207,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,13,channel_14,1.3223043400417003,1.1093985090591667,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,14,channel_15,1.2645291754800034,1.2052016615372352,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,15,channel_16,1.1620877355980261,1.0549854559768383,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,16,channel_17,0.9040363405247086,0.8216296850498677,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,17,channel_18,0.9307707891818336,0.840655748807627,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,18,channel_19,0.9323479957563516,0.8261243721372241,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,19,channel_20,0.9084899450377887,0.828003616228857,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,20,channel_21,1.331719399079027,1.1049057932310877,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,21,channel_22,1.215842505157706,1.1535034751496889,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,22,channel_23,1.2636465572576872,1.2041895701386094,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,23,channel_24,1.1631544376464444,1.0560807230033158,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,24,channel_25,0.9508266799788886,0.8583074360654507,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,25,channel_26,0.9337555423076287,0.8507028516941587,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,26,channel_27,0.9319802157558663,0.8492504157418356,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,27,channel_28,0.9637117749512456,0.8625731177738852,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,28,channel_29,1.338051602213533,1.14644485841756,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,29,channel_30,1.2952653587608802,1.1659456072718053,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,30,channel_31,1.2156513601951484,1.1533699801368085,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,31,channel_32,1.1620431294313056,1.0551467881891219,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,32,channel_33,1.159451688562417,1.0538414977445256,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,33,channel_34,0.9472493815449963,0.8640306141712406,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,34,channel_35,0.9702113089102282,0.8694847656468662,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,35,channel_36,0.9183029723065586,0.8254354499362163,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,36,channel_37,0.9205039702636587,0.8307235739903785,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,37,channel_38,1.2967108793586197,1.1676369545405032,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,38,channel_39,1.226158942848665,1.1658128284638454,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,39,channel_40,1.1600049657222404,1.0544402522351917,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,40,channel_41,1.0174129681478608,0.8905237069448798,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,41,channel_42,0.9762475077754759,0.8361923288968138,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,42,channel_43,1.0327251059470681,0.9053182202627718,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,43,channel_44,0.9901226944324949,0.8467296833828604,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,44,channel_45,0.9607734671239261,0.8382320490099372,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,45,channel_46,1.0351927186269458,0.8931843631420854,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,46,channel_47,1.0484120744958605,0.9407381061975314,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,47,channel_48,1.0656144897708715,0.9581606553956566,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,48,channel_49,1.0562314815187892,0.9475149240730177,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,49,channel_50,1.0491796187017963,0.9409787054350046,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,50,channel_51,1.0653552787248528,0.9587786970365881,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,51,channel_52,1.0567140093560599,0.9489456556931287,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,52,channel_53,0.9918318843227023,0.5003277678230126,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,53,channel_54,1.0260714032732967,0.6133627769841545,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,54,channel_55,0.9728946893996885,0.5872604768399413,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,55,channel_56,0.9925970359390579,0.6866680289489685,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,56,channel_57,1.0649129756058864,0.9602853655418301,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,57,channel_58,1.0673763681104047,0.9631829000307698,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,58,channel_59,1.0779146659866625,0.9699457129650879,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,59,channel_60,1.0617839006584422,0.9587186863713577,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,60,channel_61,0.9833400077462887,0.8848244542384577,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,61,channel_62,0.8985113525194615,0.8156644936326902,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,62,channel_63,0.894621668684926,0.8114717823982506,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,63,channel_64,0.9136962426821297,0.06094521352196136,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,64,channel_65,0.7690915001799522,0.10206427469066569,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,65,channel_66,1.2034904104154385,1.0738203044794663,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,66,channel_67,0.013643843317847076,0.013523059031928889,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,67,channel_68,0.006135752302622333,0.0023806068895447716,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,68,channel_69,0.017619132628643615,0.0032801688680132554,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,69,channel_70,0.9963141948065812,0.8143133951764275,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,70,channel_71,0.9895464375259558,0.8743979050992386,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,71,channel_72,1.0230659406452258,0.8743619490204494,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,72,channel_73,0.9788979637088181,0.8448790400252525,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,73,channel_74,0.999374089199958,0.7858337355453595,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,74,channel_75,0.9976512171321891,0.8292590869957769,6144
+raw_pearson,原值 Pearson Top-8,time_block_50,时间块缺失 50%,75,channel_76,0.9864934798798562,0.7880468708393783,6144
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,0,channel_1,0.020676231853082847,0.016012130893794167,5760
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,1,channel_2,0.028849764448973993,0.015543908686766241,5568
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,2,channel_3,0.04855786203266569,0.02051597267312025,6144
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,3,channel_4,0.0020272486026684028,0.0017210072227448533,6624
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,4,channel_5,0.002378459942257655,0.0020924246929914605,6336
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,5,channel_6,0.002053065829996638,0.0017287450769482688,5280
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,6,channel_7,0.00239263227041874,0.0020972986756515456,5856
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,7,channel_8,0.0019886420302423296,0.001443227790402895,5472
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,8,channel_9,0.0018850419863691314,0.0013316201828362673,5856
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,9,channel_10,0.007942366769770753,0.006631938458045069,4416
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,10,channel_11,0.0007750136425970335,0.000655932374760016,6048
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,11,channel_12,0.5801082761580664,0.42481342292738655,6816
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,12,channel_13,0.5648304782601171,0.4412974402723772,4992
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,13,channel_14,0.8657496963847342,0.49574391251927036,6048
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,14,channel_15,1.0410063255744462,1.0083957009069509,5856
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,15,channel_16,1.4192387459737925,1.1581573903478126,6336
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,16,channel_17,0.5866898156127204,0.4241390491256732,5184
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,17,channel_18,0.5721152782961936,0.4136024829737466,6336
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,18,channel_19,0.6035456647138823,0.4840011773989623,5472
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,19,channel_20,0.5426320240219324,0.35983199108751274,6720
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,20,channel_21,1.1839266638479198,0.9618204453049625,6144
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,21,channel_22,0.8118875853200949,0.6287395190816896,5952
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,22,channel_23,0.8519020108675435,0.7381745323031939,6144
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,23,channel_24,1.001653780197886,0.7528536688407677,6144
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,24,channel_25,0.6968506253878327,0.5407710015332735,5568
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,25,channel_26,0.6209078172261007,0.4834764425203738,5952
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,26,channel_27,0.625941043402582,0.501946263833367,6528
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,27,channel_28,0.6570641015905523,0.5118728493589965,6336
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,28,channel_29,0.80833560108443,0.5948933166547324,6144
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,29,channel_30,0.7793434599898587,0.4568976266314289,5856
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,30,channel_31,1.026003911598326,0.8865430934546549,5952
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,31,channel_32,0.7772669903208996,0.5080370495427321,6624
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,32,channel_33,0.651147465319846,0.4898035630935556,6240
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,33,channel_34,0.5960065930581991,0.4669418412242553,5760
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,34,channel_35,0.6892526411926369,0.5258263909836777,7104
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,35,channel_36,0.5730635887372848,0.44716791806735173,6624
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,36,channel_37,0.6560548360004687,0.5109652581503941,6912
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,37,channel_38,0.7732830249803482,0.449949056999046,5952
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,38,channel_39,0.7535869812195688,0.47933214808666436,7104
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,39,channel_40,0.8024167730203086,0.502840982062648,5856
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,40,channel_41,1.4577339988654199,1.1997230436026964,5568
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,41,channel_42,0.729264659748975,0.5607130206906793,6912
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,42,channel_43,0.7239920749306625,0.5695785146758591,7104
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,43,channel_44,0.7534934679903296,0.609362648835841,5184
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,44,channel_45,0.8502059004734893,0.695289161533316,5664
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,45,channel_46,1.1139134613368735,0.960965475798983,5952
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,46,channel_47,0.694930377739617,0.5403575548566832,5952
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,47,channel_48,0.7138684012433183,0.5436750274627623,5184
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,48,channel_49,0.626140995568294,0.48365772065036644,7200
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,49,channel_50,0.6226307844243916,0.47715881585093606,7200
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,50,channel_51,0.6571055843647886,0.4927768312399273,6624
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,51,channel_52,0.7770178812117436,0.5481453255210677,6240
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,52,channel_53,0.9697031477280701,0.48936707106504584,6912
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,53,channel_54,1.0266869741524844,0.6161948761851906,7392
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,54,channel_55,0.979376950240993,0.5848326112349947,6912
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,55,channel_56,0.983702642341643,0.6870202290289064,6432
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,56,channel_57,0.7478479957524365,0.5104955674976321,5568
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,57,channel_58,0.6769312605638121,0.511631350307255,6144
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,58,channel_59,0.6094574958420492,0.45850634550441677,6048
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,59,channel_60,0.5840326017618016,0.42005797240239956,5952
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,60,channel_61,0.7194668293950324,0.5971339390617377,5952
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,61,channel_62,0.6259752378174306,0.41261927334509063,6816
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,62,channel_63,0.666258680300884,0.46883459208914324,5952
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,63,channel_64,1.4363732820448403,0.2021085291698275,6720
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,64,channel_65,0.48056107752787464,0.06226277940509254,6528
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,65,channel_66,1.1622743583174522,1.0219707137614094,7008
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,66,channel_67,0.012957272073540426,0.01269308794648918,5664
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,67,channel_68,0.005571215300012385,0.002215999494956764,6144
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,68,channel_69,0.015081261327431105,0.0032394706848651055,6432
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,69,channel_70,0.94075161331289,0.7716904938947073,5856
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,70,channel_71,0.8698940190082897,0.7553827818501401,6624
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,71,channel_72,0.8571301143192958,0.7138733492453648,5856
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,72,channel_73,0.950011549840296,0.7911276117604279,4800
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,73,channel_74,0.9276973308183469,0.7379096056789348,6048
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,74,channel_75,0.8047434089464088,0.6157848500386254,6240
+diff_pearson,一阶差分 Pearson Top-8,channel_dropout_50,通道丢失 50%,75,channel_76,0.8396442653941122,0.667958757882619,6144
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,0,channel_1,0.026372166727965666,0.024019454576194203,6868
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,1,channel_2,0.024727179693212416,0.021949849466947755,6868
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,2,channel_3,0.0604023865000787,0.032514698734375305,5848
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,3,channel_4,0.0026548203825792994,0.0024905722687612692,6324
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,4,channel_5,0.0029745684988891205,0.0027885403813139842,6188
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,5,channel_6,0.002596851829738972,0.0024336909464354314,6120
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,6,channel_7,0.0030577552098810436,0.002853214525668449,5984
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,7,channel_8,0.0023849561941480042,0.0020008563666444605,6936
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,8,channel_9,0.002633549400149485,0.002419674367658051,5440
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,9,channel_10,0.006813465711430006,0.005677393564626115,6528
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,10,channel_11,0.0010583694639031088,0.0009784461586352427,6800
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,11,channel_12,0.7667878005889254,0.5975455824680082,6188
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,12,channel_13,0.6681209032589074,0.5704315025190471,5916
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,13,channel_14,1.0716677190068484,0.7325018371096294,5916
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,14,channel_15,1.189444812385316,1.1518851572103068,6324
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,15,channel_16,1.3831951113627652,1.089033886279757,5916
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,16,channel_17,0.7288878471038783,0.6103165549226532,6460
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,17,channel_18,0.7883699949985997,0.6399452376183108,5916
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,18,channel_19,0.8037028480323757,0.6582267973779458,6528
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,19,channel_20,0.7739072134698591,0.6343827485113591,6324
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,20,channel_21,1.2715920590528065,1.0514701112259919,5712
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,21,channel_22,1.028375555843316,0.8827262401476088,5916
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,22,channel_23,1.0609120553680695,0.9568807455117626,5712
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,23,channel_24,1.3003268465924465,1.082760563453829,6596
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,24,channel_25,0.9040940987038465,0.7387534486179929,5780
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,25,channel_26,0.7591699737536656,0.6157236356258797,6324
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,26,channel_27,0.7258300418502702,0.6110595159570794,6528
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,27,channel_28,0.8377569358408234,0.6877233246910065,6528
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,28,channel_29,1.054189490840419,0.8312530350749491,5916
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,29,channel_30,1.0841239128296856,0.8478356761257041,6052
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,30,channel_31,1.1998314175541718,1.0828586192042826,6528
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,31,channel_32,0.957922852095295,0.7354675757732452,5440
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,32,channel_33,0.8154133992547464,0.6471526465560444,6188
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,33,channel_34,0.6902306172225923,0.5716812914535734,6664
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,34,channel_35,0.8333482609250374,0.6662906932719826,6800
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,35,channel_36,0.7402619892021718,0.6260263106332722,6324
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,36,channel_37,0.7504111413252705,0.6338069068342794,6460
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,37,channel_38,1.0930090930169518,0.8589352132616718,5984
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,38,channel_39,1.1140270157433274,0.9289577882647913,6392
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,39,channel_40,0.9163062562730482,0.6940386430723361,5916
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,40,channel_41,1.3894462365180082,1.1409599182052401,6324
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,41,channel_42,0.8774076225219024,0.7124873821769658,5644
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,42,channel_43,0.8765446084193178,0.7365329756305833,6052
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,43,channel_44,0.8870619876411374,0.7342448252363091,5984
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,44,channel_45,0.846634432790109,0.6895582763719014,6596
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,45,channel_46,1.061611333422106,0.91043340794435,6596
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,46,channel_47,0.7734139810599265,0.6409746626032299,5984
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,47,channel_48,0.7843749142348857,0.6364587690153338,6596
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,48,channel_49,0.7409669972682265,0.5976040252378667,6120
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,49,channel_50,0.767567672036873,0.6240027279472136,5984
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,50,channel_51,0.797768575748789,0.6563660335553689,6120
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,51,channel_52,0.7913201081117286,0.5975334125972123,5712
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,52,channel_53,0.9895075360256613,0.4937190605440863,5916
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,53,channel_54,1.018925685299398,0.6111218839724046,6188
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,54,channel_55,0.976658714056233,0.5806030791292267,6392
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,55,channel_56,0.9927514649223375,0.6905705231365359,5644
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,56,channel_57,0.9210802575514005,0.7194315945178188,6868
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,57,channel_58,0.9654701303958565,0.7748092497297477,5984
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,58,channel_59,0.8537361151021858,0.669516129431358,6120
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,59,channel_60,0.8240200820811302,0.6788652865287835,6460
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,60,channel_61,0.8857975448586566,0.7704897966908625,5984
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,61,channel_62,0.7072230261388891,0.4925721810752862,6256
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,62,channel_63,0.7555075750539427,0.5625958882547001,5440
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,63,channel_64,0.866273082714782,0.10099611975018657,6868
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,64,channel_65,0.769995146223443,0.09889040381237092,5916
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,65,channel_66,1.2357047732380586,1.1055762000740539,6188
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,66,channel_67,0.013273941801054122,0.013014575973203574,5440
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,67,channel_68,0.005259818636470041,0.0021494160977138985,6596
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,68,channel_69,0.017218617884001586,0.0034980489811294287,6732
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,69,channel_70,0.9756707381656717,0.8007041425936882,6256
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,70,channel_71,0.9172504174403469,0.8019935023028698,5984
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,71,channel_72,0.9099409453712004,0.7598437990202243,6052
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,72,channel_73,0.9606388038045094,0.815721949122786,5644
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,73,channel_74,0.9620627847625051,0.762760802139898,6188
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,74,channel_75,0.8826094077960527,0.6926918894344989,6256
+diff_pearson,一阶差分 Pearson Top-8,rectangle_50,矩形缺失 50%,75,channel_76,0.8888412580095674,0.7057728357744405,5780
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,0,channel_1,0.03131904887241104,0.03131904887241114,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,1,channel_2,0.030823011085358905,0.03082301108535887,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,2,channel_3,0.061776246436793025,0.03826161782568308,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,3,channel_4,0.0035204942553846556,0.00352049425538466,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,4,channel_5,0.003979396141772912,0.0039793961417729,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,5,channel_6,0.0034120894865406937,0.0034120894865406893,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,6,channel_7,0.004034633811514256,0.0040346338115142535,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,7,channel_8,0.003057277986814312,0.0030572779868143153,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,8,channel_9,0.0029954621426134744,0.0029954621426134757,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,9,channel_10,0.00098180755672116,0.0009818075567211567,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,10,channel_11,0.0013906179333756387,0.0013906179333756394,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,11,channel_12,0.9398510772407868,0.8563807416029908,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,12,channel_13,0.8846162254195615,0.8080466748024593,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,13,channel_14,1.32387448491808,1.1106795430569185,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,14,channel_15,1.3900508567346463,1.3363077466065605,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,15,channel_16,1.1974954908778113,1.0894706275913455,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,16,channel_17,0.9026281623752923,0.8203692679065484,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,17,channel_18,0.9269881740243137,0.8372543801425008,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,18,channel_19,0.9207190126493133,0.8158940578099266,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,19,channel_20,0.8997010353174636,0.8202638032634798,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,20,channel_21,1.4005898372317596,1.1634787562258728,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,21,channel_22,1.2573465592663116,1.1965969616751806,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,22,channel_23,1.2887087527150476,1.2304633877063458,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,23,channel_24,1.1877575537674563,1.0800583512792048,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,24,channel_25,0.9210552473412348,0.8322551866603503,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,25,channel_26,0.9302925513708153,0.8477012445194614,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,26,channel_27,0.8947233510304696,0.8160056095417457,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,27,channel_28,0.9623298484567467,0.8612828532989218,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,28,channel_29,1.3339616931013767,1.1426582771864415,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,29,channel_30,1.295705995434571,1.1663610007652894,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,30,channel_31,1.3378284325411485,1.280112262802019,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,31,channel_32,1.1623260164222635,1.0554217179069427,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,32,channel_33,1.1600084519065765,1.0543839613498027,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,33,channel_34,0.9109640942675018,0.8318078102457732,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,34,channel_35,0.9660637697787413,0.8656218156958694,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,35,channel_36,0.9147041168052994,0.8221873555999554,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,36,channel_37,0.9151135237866199,0.8257858563193864,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,37,channel_38,1.2962811273438397,1.167237569901259,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,38,channel_39,1.232581262915023,1.1725082545797418,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,39,channel_40,1.160837825079427,1.055250086546034,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,40,channel_41,1.006204861548023,0.8823895778884103,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,41,channel_42,0.9764293909495837,0.8363361775083437,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,42,channel_43,1.0114766090171543,0.8905736377677101,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,43,channel_44,1.0002684527029664,0.8545463709398301,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,44,channel_45,0.9607396244122186,0.8382011938402191,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,45,channel_46,1.0254434217022745,0.8844529388883381,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,46,channel_47,1.0488088941405913,0.9411249464612972,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,47,channel_48,1.0637703668428888,0.9563670023431392,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,48,channel_49,1.0573849188728794,0.9486587795932677,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,49,channel_50,1.0503206105883582,0.9420944533159953,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,50,channel_51,1.0635367609393138,0.9570105253714818,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,51,channel_52,1.0564330344695112,0.9486685598434548,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,52,channel_53,0.9919061816668434,0.5014660012953337,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,53,channel_54,1.0260767457733513,0.613088121968166,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,54,channel_55,0.9728801344375172,0.5868380304273092,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,55,channel_56,0.9925430477794066,0.6867182558646014,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,56,channel_57,1.0751104808846887,0.9693470744464202,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,57,channel_58,1.0851864853219753,0.9794565498036536,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,58,channel_59,1.056663138635551,0.9508682044038669,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,59,channel_60,1.0586593009593657,0.9558542612359693,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,60,channel_61,0.9739066689748374,0.8775672236963397,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,61,channel_62,0.8979770577667425,0.8152368296720923,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,62,channel_63,0.895825885230617,0.8124359106090377,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,63,channel_64,0.9136959813141404,0.06116043765846484,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,64,channel_65,0.7691259566645641,0.10251260743567904,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,65,channel_66,1.2751310056912009,1.1396515427834164,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,66,channel_67,0.01400679736247325,0.01392548863940553,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,67,channel_68,0.0061387616378562665,0.002403884411194886,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,68,channel_69,0.017618953880670574,0.0032854417776885946,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,69,channel_70,0.9969686149387141,0.817213763048366,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,70,channel_71,0.9893403487081991,0.8743446260469804,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,71,channel_72,1.022970173860713,0.8739354575810371,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,72,channel_73,0.978653638212377,0.8448593516531374,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,73,channel_74,0.9990893390792255,0.7850232307137929,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,74,channel_75,0.9972830012313294,0.8282337894319585,6144
+diff_pearson,一阶差分 Pearson Top-8,time_block_50,时间块缺失 50%,75,channel_76,0.9860676437493517,0.7880133079719512,6144
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,0,channel_1,0.019422996510167816,0.015076114432766649,5760
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,1,channel_2,0.027360318058905406,0.014892123700217832,5568
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,2,channel_3,0.048514724058832316,0.01983511445542879,6144
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,3,channel_4,0.0014090528761955769,0.0013579381901007465,6624
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,4,channel_5,0.0015571817638662887,0.001507964159129937,6336
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,5,channel_6,0.0013837994328137885,0.0013289048594999663,5280
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,6,channel_7,0.0015933140861792362,0.001549144907598844,5856
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,7,channel_8,0.0019891620949211487,0.001443453238195181,5472
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,8,channel_9,0.0018855216255755207,0.0013317502482624137,5856
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,9,channel_10,0.007759086150803921,0.006464769532533488,4416
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,10,channel_11,0.0007749950784623333,0.0006557027956623531,6048
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,11,channel_12,0.517685151669435,0.4328652314858118,6816
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,12,channel_13,0.5281580598814656,0.4287743665066415,4992
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,13,channel_14,0.7986560156070471,0.48558136262775736,6048
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,14,channel_15,0.8723561764971363,0.6167778809513973,5856
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,15,channel_16,0.6341957885628249,0.5264364024706687,6336
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,16,channel_17,0.48687735660764425,0.3873880764768069,5184
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,17,channel_18,0.643432024121697,0.47007720947294035,6336
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,18,channel_19,0.9951611358406404,0.7858186226304393,5472
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,19,channel_20,0.5121292936937465,0.398603347999551,6720
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,20,channel_21,0.7997269348121008,0.5397123176016017,6144
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,21,channel_22,0.7468641586236787,0.6079668809808192,5952
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,22,channel_23,0.845434334493454,0.5949068645229407,6144
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,23,channel_24,0.6196067879761806,0.4993362009246356,6144
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,24,channel_25,0.6140494812688454,0.4980671277948238,5568
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,25,channel_26,0.5103340175927245,0.40913227333844304,5952
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,26,channel_27,0.5708532661341151,0.4528560459227777,6528
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,27,channel_28,0.7539793698109943,0.5581389342147772,6336
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,28,channel_29,0.6886012212918082,0.5273505209823738,6144
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,29,channel_30,0.7278722701758757,0.44425616925807054,5856
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,30,channel_31,0.721896853246985,0.546380756792846,5952
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,31,channel_32,0.606225073721506,0.49871192046960006,6624
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,32,channel_33,0.5758173156174363,0.45994444319765365,6240
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,33,channel_34,0.5012543544544944,0.4095217819640536,5760
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,34,channel_35,0.7885128085706172,0.6035031778164947,7104
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,35,channel_36,0.7091107289336084,0.5352660742632387,6624
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,36,channel_37,0.5773004076620036,0.45635268992957606,6912
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,37,channel_38,0.7361068267233715,0.4549043316622843,5952
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,38,channel_39,0.6878669776341566,0.5106657401799246,7104
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,39,channel_40,0.5862381708333527,0.4897088346183431,5856
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,40,channel_41,1.454289625232479,1.1966260148193715,5568
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,41,channel_42,0.7328622744019551,0.5620338799849803,6912
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,42,channel_43,0.7437667704099146,0.5897396259753339,7104
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,43,channel_44,2.9045883650510214,2.210439206092268,5184
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,44,channel_45,0.8543923054216677,0.6827003799000729,5664
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,45,channel_46,1.1543220275742685,0.9829865250481805,5952
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,46,channel_47,0.6253879463000289,0.4972104733015057,5952
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,47,channel_48,0.7006294574234061,0.5609087182936641,5184
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,48,channel_49,0.7158004733514851,0.48076817632040464,7200
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,49,channel_50,0.5827796413302562,0.45616620503055394,7200
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,50,channel_51,0.6289497788938277,0.48883097704843875,6624
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,51,channel_52,0.7719703431484195,0.5445935022335059,6240
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,52,channel_53,0.9691341246231825,0.4878772251134774,6912
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,53,channel_54,1.028481161551407,0.6220909760088159,7392
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,54,channel_55,0.9794716870530579,0.5826384098534646,6912
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,55,channel_56,0.9883998598459011,0.6846119148088065,6432
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,56,channel_57,0.5907234694139213,0.4802983943328665,5568
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,57,channel_58,0.5703999194569491,0.44420785352709163,6144
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,58,channel_59,0.797082339360298,0.5511395045930089,6048
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,59,channel_60,0.5838456720531854,0.4422199685763929,5952
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,60,channel_61,0.7064093981874445,0.5751852897186644,5952
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,61,channel_62,0.6276645881961553,0.41380747314830246,6816
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,62,channel_63,0.6631015071500248,0.46729771264271625,5952
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,63,channel_64,1.4364011907114176,0.16128974129971946,6720
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,64,channel_65,0.48183457698998705,0.07429078068904645,6528
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,65,channel_66,0.6247258223695692,0.4822503833793789,7008
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,66,channel_67,0.019945496685620307,0.017445817325409212,5664
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,67,channel_68,0.029191981275030723,0.02250811374548681,6144
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,68,channel_69,0.047513821403408575,0.03926891872253762,6432
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,69,channel_70,0.9385183642557772,0.7659735771524927,5856
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,70,channel_71,0.8698984138635325,0.7553671910646588,6624
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,71,channel_72,0.8567694245221313,0.7145209666879496,5856
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,72,channel_73,0.9500302521222947,0.7908035867386787,4800
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,73,channel_74,0.9256637436819805,0.7351286427017737,6048
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,74,channel_75,0.8047823923372341,0.615754166682404,6240
+spearman,Spearman Top-8,channel_dropout_50,通道丢失 50%,75,channel_76,0.8396858591877122,0.6679776966562309,6144
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,0,channel_1,0.025373860287266337,0.023623819992267054,6868
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,1,channel_2,0.024883963197226314,0.022314708781645213,6868
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,2,channel_3,0.06033189676204516,0.03190922002292706,5848
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,3,channel_4,0.0016940208354407882,0.0016627157337441552,6324
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,4,channel_5,0.0017927724715845709,0.0017589678985689384,6188
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,5,channel_6,0.0016329357381813707,0.0016043821723972461,6120
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,6,channel_7,0.0018315267022789843,0.0017969239408332591,5984
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,7,channel_8,0.002385435878535884,0.002001215540994443,6936
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,8,channel_9,0.0026340620120591128,0.002420029198947458,5440
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,9,channel_10,0.00672869805795284,0.005611732314455247,6528
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,10,channel_11,0.0010584867096641649,0.0009784265922393213,6800
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,11,channel_12,0.6942653104688477,0.602944435779143,6188
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,12,channel_13,0.6839345216339485,0.6042170765647858,5916
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,13,channel_14,1.0368961192290014,0.7252535473995353,5916
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,14,channel_15,0.9936702370401879,0.7700443894901392,6324
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,15,channel_16,0.8129505373026643,0.6971061807540814,5916
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,16,channel_17,0.6775049393952287,0.5610853207429438,6460
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,17,channel_18,0.7453163878788092,0.5984646251359529,5916
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,18,channel_19,1.1570691774504018,0.8549325064832939,6528
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,19,channel_20,0.7406990687897531,0.653289186436424,6324
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,20,channel_21,1.100006922760895,0.7953656568209684,5712
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,21,channel_22,1.0101664222848008,0.9062735582510948,5916
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,22,channel_23,1.0376041892159236,0.8430928454899305,5712
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,23,channel_24,0.8238287138125836,0.7088121557260901,6596
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,24,channel_25,0.7895515053835788,0.6608346046665338,5780
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,25,channel_26,0.7210730927941491,0.609397860406663,6324
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,26,channel_27,0.7535765029705915,0.6537751357213132,6528
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,27,channel_28,0.8768100489135965,0.6826820114892523,6528
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,28,channel_29,1.0012373347622365,0.8103878030455421,5916
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,29,channel_30,1.048610366595277,0.8365534388246197,6052
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,30,channel_31,0.9644367048816151,0.8395451931016942,6528
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,31,channel_32,0.8697490576904895,0.763928317079725,5440
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,32,channel_33,0.7962584227693621,0.6806133553631649,6188
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,33,channel_34,0.6755909508467969,0.5834078493853967,6664
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,34,channel_35,0.8031984203459394,0.6485353127178772,6800
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,35,channel_36,0.8439587944234622,0.6643330465352382,6324
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,36,channel_37,0.7411428274998347,0.607934045395755,6460
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,37,channel_38,1.0601020538823436,0.8499839059432939,5984
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,38,channel_39,0.9931405569300472,0.880548029967583,6392
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,39,channel_40,0.8171339488476891,0.6962714401117311,5916
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,40,channel_41,1.387297238083743,1.1379940276257787,6324
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,41,channel_42,0.880031661463392,0.7142323495555628,5644
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,42,channel_43,0.8872139934237042,0.7468950386273405,6052
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,43,channel_44,3.1097813066007083,2.263502504493282,5984
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,44,channel_45,0.8367539847062815,0.674027987227251,6596
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,45,channel_46,1.1254766365127185,0.9508903561979166,6596
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,46,channel_47,0.7609015319071387,0.6421640318370363,5984
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,47,channel_48,0.7615561828507773,0.625235693455646,6596
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,48,channel_49,0.7681397696403955,0.5627600398828777,6120
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,49,channel_50,0.7523054562872388,0.6233771120218857,5984
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,50,channel_51,0.7850736758715532,0.6530781608317799,6120
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,51,channel_52,0.7945722736270412,0.6004661610738347,5712
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,52,channel_53,0.9894854764384213,0.4929502984717353,5916
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,53,channel_54,1.0198218049002417,0.6104972042295249,6188
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,54,channel_55,0.97715672624207,0.5823928395800717,6392
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,55,channel_56,0.9971382623437033,0.6884929803723397,5644
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,56,channel_57,0.801743931619803,0.6842271407021753,6868
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,57,channel_58,0.8365507723386523,0.7281728452521664,5984
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,58,channel_59,1.0267405863282155,0.8507566128908159,6120
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,59,channel_60,0.8032887107511604,0.6635007270719738,6460
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,60,channel_61,0.9054988311308125,0.7390106328667799,5984
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,61,channel_62,0.7086511900247463,0.49356443360364083,6256
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,62,channel_63,0.7523681288385805,0.5603535391458938,5440
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,63,channel_64,0.8644351021033503,0.07080219244818674,6868
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,64,channel_65,0.7703784703350179,0.106541687799038,5916
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,65,channel_66,0.8277244430219103,0.703192045078237,6188
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,66,channel_67,0.019007831520644957,0.017216224897044125,5440
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,67,channel_68,0.02560918284986843,0.018357257703914557,6596
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,68,channel_69,0.04810524369071533,0.035134440181574376,6732
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,69,channel_70,0.9743385825099873,0.7956486740673733,6256
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,70,channel_71,0.9171966404923722,0.8019605919398225,5984
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,71,channel_72,0.9095779230747404,0.7607603025949004,6052
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,72,channel_73,0.9605629187316703,0.8155308854243931,5644
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,73,channel_74,0.9601498669367232,0.7614824908346435,6188
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,74,channel_75,0.8826286505999154,0.6926573003459089,6256
+spearman,Spearman Top-8,rectangle_50,矩形缺失 50%,75,channel_76,0.8888025084796767,0.7057964059011071,5780
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,0,channel_1,0.03136902134070508,0.03136902134070501,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,1,channel_2,0.031104978767277393,0.031104978767277334,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,2,channel_3,0.061728302193860135,0.03815548047584393,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,3,channel_4,0.0020502641537023577,0.002050264153702353,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,4,channel_5,0.002168999909996163,0.0021689999099961583,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,5,channel_6,0.0019692882178671553,0.001969288217867161,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,6,channel_7,0.0022063890524502594,0.0022063890524502607,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,7,channel_8,0.0030577719243560686,0.003057771924356072,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,8,channel_9,0.0029959314552344997,0.0029959314552345036,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,9,channel_10,0.0011164573489570305,0.0011164573489570305,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,10,channel_11,0.0013909046195904582,0.0013909046195904595,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,11,channel_12,0.9370399483061985,0.8538845517655473,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,12,channel_13,0.8858074404876408,0.8091284549960652,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,13,channel_14,1.322322043000644,1.109412959224689,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,14,channel_15,1.264415515250196,1.205082405704024,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,15,channel_16,1.1622852122743412,1.0551774792043147,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,16,channel_17,0.9040363405247086,0.8216296850498677,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,17,channel_18,0.9304057444911259,0.8403280915446452,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,18,channel_19,0.9249153007505364,0.8195640317351596,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,19,channel_20,0.9088228445825702,0.8282952251488961,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,20,channel_21,1.331667809282899,1.1048640918811363,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,21,channel_22,1.215842505157706,1.1535034751496889,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,22,channel_23,1.2636465572576872,1.2041895701386094,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,23,channel_24,1.1633790506153572,1.0562986682700093,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,24,channel_25,0.9508266799788886,0.8583074360654507,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,25,channel_26,0.9337555423076287,0.8507028516941587,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,26,channel_27,0.9319802157558662,0.8492504157418356,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,27,channel_28,0.9637117749512456,0.8625731177738852,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,28,channel_29,1.3378903316675932,1.146295681009455,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,29,channel_30,1.2952653587608802,1.1659456072718053,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,30,channel_31,1.2156513601951486,1.1533699801368085,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,31,channel_32,1.1623167875230622,1.0554127488879836,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,32,channel_33,1.1601171899998666,1.054489898589731,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,33,channel_34,0.9472493815449963,0.8640306141712406,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,34,channel_35,0.9695343581649056,0.8688552806665664,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,35,channel_36,0.9183029723065586,0.8254354499362163,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,36,channel_37,0.9205039702636587,0.8307235739903785,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,37,channel_38,1.2967108793586197,1.1676369545405032,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,38,channel_39,1.226158942848665,1.1658128284638454,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,39,channel_40,1.1606184116538185,1.0550367539610201,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,40,channel_41,1.0153391729247532,0.8891039449215287,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,41,channel_42,0.9762326392777778,0.8361805162815673,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,42,channel_43,1.0108539143652633,0.8900915173532646,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,43,channel_44,1.0453254851887708,0.8837200417485076,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,44,channel_45,0.9608444423425543,0.8382963568939568,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,45,channel_46,1.028034563995448,0.8868486987083438,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,46,channel_47,1.0484120744958607,0.9407381061975314,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,47,channel_48,1.0656190969793902,0.9581651349674837,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,48,channel_49,1.0562318175277534,0.9475152573658074,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,49,channel_50,1.0491796187017963,0.9409787054350046,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,50,channel_51,1.0653638059270112,0.9587869853226793,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,51,channel_52,1.0567147475834635,0.9489463836891162,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,52,channel_53,0.9918057398358193,0.49991913593336906,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,53,channel_54,1.0260712953921105,0.6133684078524656,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,54,channel_55,0.9728991394727287,0.587387596844536,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,55,channel_56,0.9925970359390579,0.6866680289489685,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,56,channel_57,1.0649129756058864,0.9602853655418301,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,57,channel_58,1.0673763681104047,0.9631829000307698,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,58,channel_59,1.0779146659866625,0.9699457129650879,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,59,channel_60,1.061783900658442,0.9587186863713577,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,60,channel_61,0.9833400077462887,0.8848244542384577,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,61,channel_62,0.8985113525194615,0.8156644936326902,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,62,channel_63,0.894621668684926,0.8114717823982506,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,63,channel_64,0.9138064613620569,0.048174071792026395,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,64,channel_65,0.7694430642530582,0.10648957628308085,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,65,channel_66,1.1028983319185963,0.9789255980223265,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,66,channel_67,0.012417904885435406,0.01207242357623971,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,67,channel_68,0.006090195517204897,0.001573790578119322,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,68,channel_69,0.01767190514777948,0.002403465417865028,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,69,channel_70,0.996291095915507,0.8142041580488116,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,70,channel_71,0.9893397503228177,0.874344467345865,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,71,channel_72,1.0230552708125566,0.8743190649300477,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,72,channel_73,0.9786502286310661,0.8448590637130273,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,73,channel_74,0.999095453023049,0.7850415613218726,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,74,channel_75,0.997277474555171,0.8282181880797209,6144
+spearman,Spearman Top-8,time_block_50,时间块缺失 50%,75,channel_76,0.9860717629011895,0.78801366347217,6144
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,0,channel_1,0.05447844958981284,0.045211207364480505,5760
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,1,channel_2,0.026976101492065214,0.02348964212138954,5568
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,2,channel_3,0.1696986249984377,0.14430848310736624,6144
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,3,channel_4,0.002749779678019058,0.0023258700241675524,6624
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,4,channel_5,0.002733420460155957,0.002111866573687001,6336
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,5,channel_6,0.0014870397940045083,0.0012083788907056748,5280
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,6,channel_7,0.002753240457054373,0.0021825487591050218,5856
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,7,channel_8,0.010413065369145854,0.007962801194993216,5472
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,8,channel_9,0.0019974706953030854,0.0013153713494640782,5856
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,9,channel_10,0.006649371391830465,0.005767088148243722,4416
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,10,channel_11,0.0017577957095864579,0.0015531581095897574,6048
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,11,channel_12,0.6244367568901574,0.48398381141907526,6816
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,12,channel_13,0.6229742018672183,0.4742117908336284,4992
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,13,channel_14,0.9642764020801166,0.6989512524727048,6048
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,14,channel_15,0.8858848097644095,0.7940703142878958,5856
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,15,channel_16,1.043629551492853,0.9609743561980504,6336
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,16,channel_17,0.6246069117698207,0.5399227726799646,5184
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,17,channel_18,0.7327771519547915,0.5409196659117352,6336
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,18,channel_19,0.652803230720845,0.5173878130832728,5472
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,19,channel_20,0.5845184879686767,0.4787019939652121,6720
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,20,channel_21,1.1625347450647183,0.950203036975224,6144
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,21,channel_22,0.8260734623821135,0.5696894209888088,5952
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,22,channel_23,0.8956047843169663,0.7412374902081101,6144
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,23,channel_24,0.8438787948539196,0.7009334752199261,6144
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,24,channel_25,0.7280399712753126,0.5543839077495845,5568
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,25,channel_26,0.6148379630672318,0.48177478598515855,5952
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,26,channel_27,0.6916016851932665,0.5865722890166826,6528
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,27,channel_28,0.8062087378009941,0.6749045051941464,6336
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,28,channel_29,1.0239836194366452,0.8087534720916545,6144
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,29,channel_30,0.912777758446729,0.7593362020603251,5856
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,30,channel_31,1.0535219176626776,1.0046447236930631,5952
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,31,channel_32,0.7270945130992924,0.5797306302003831,6624
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,32,channel_33,0.8505619248630725,0.6260433571170029,6240
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,33,channel_34,0.6958762856161774,0.5997313236942252,5760
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,34,channel_35,0.5734062281670067,0.4520260547831786,7104
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,35,channel_36,0.6139554904672029,0.4822982659961432,6624
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,36,channel_37,0.6583622131028658,0.5334272505279951,6912
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,37,channel_38,1.067110768327772,0.9623414994016627,5952
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,38,channel_39,0.8427443156668841,0.6109331441965757,7104
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,39,channel_40,0.870640064211195,0.7521545133212347,5856
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,40,channel_41,2.5929564631009363,2.099016782583399,5568
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,41,channel_42,1.226104162687829,1.048205576491055,6912
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,42,channel_43,1.0049005386194811,0.8677914535695259,7104
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,43,channel_44,1.0121826998000651,0.8647684156295445,5184
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,44,channel_45,1.328259672612559,1.1388774363357228,5664
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,45,channel_46,1.1718892490034933,0.9755882710389938,5952
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,46,channel_47,0.7746760596807875,0.5946172670377887,5952
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,47,channel_48,1.0721691830948439,0.975062839604997,5184
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,48,channel_49,0.7405920357571891,0.6128242733704019,7200
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,49,channel_50,1.0645735350605212,0.8813456628300513,7200
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,50,channel_51,0.7546746061081803,0.5654762837000222,6624
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,51,channel_52,1.5252385333806115,1.2079507192843106,6240
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,52,channel_53,0.9724470465051483,0.49644274712114406,6912
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,53,channel_54,1.0285725348626624,0.6146917366966159,7392
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,54,channel_55,0.9793914425339679,0.5895836360933726,6912
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,55,channel_56,0.9854639612671776,0.6894889472921822,6432
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,56,channel_57,0.7929319228295904,0.7122266959764478,5568
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,57,channel_58,0.6539319949088013,0.4773496015856778,6144
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,58,channel_59,0.812668610412717,0.709910587768936,6048
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,59,channel_60,0.9168782680236338,0.7524991301889002,5952
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,60,channel_61,0.6068678979373796,0.5220575583108924,5952
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,61,channel_62,1.0214839588551463,0.8990585575547483,6816
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,62,channel_63,1.4186526313521928,1.2164454386903727,5952
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,63,channel_64,1.4824301085029792,1.0021756710932463,6720
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,64,channel_65,0.5186754850093523,0.3319942590707883,6528
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,65,channel_66,0.839311803885181,0.6193979313233006,7008
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,66,channel_67,0.012563925608101552,0.012201913548208619,5664
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,67,channel_68,0.0059719813017559764,0.0029911105659236187,6144
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,68,channel_69,0.015538823367995728,0.004472205344440088,6432
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,69,channel_70,0.9893021379432139,0.8127654779666008,5856
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,70,channel_71,0.9894245810153184,0.8724918975440115,6624
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,71,channel_72,1.024536507225447,0.8758062172765861,5856
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,72,channel_73,0.9942769054626583,0.8477279899367247,4800
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,73,channel_74,1.0014481801163941,0.7868439492497995,6048
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,74,channel_75,0.982304400233682,0.8081094405529388,6240
+random,随机 Top-8,channel_dropout_50,通道丢失 50%,75,channel_76,0.9839886618441036,0.7881506162264595,6144
+random,随机 Top-8,rectangle_50,矩形缺失 50%,0,channel_1,0.05058246601770751,0.042601106296520405,6868
+random,随机 Top-8,rectangle_50,矩形缺失 50%,1,channel_2,0.027082342218097244,0.025316184541268032,6868
+random,随机 Top-8,rectangle_50,矩形缺失 50%,2,channel_3,0.14792878478825067,0.11622952157819977,5848
+random,随机 Top-8,rectangle_50,矩形缺失 50%,3,channel_4,0.002423168983605427,0.001808713650200601,6324
+random,随机 Top-8,rectangle_50,矩形缺失 50%,4,channel_5,0.002467613489425892,0.001822745267875376,6188
+random,随机 Top-8,rectangle_50,矩形缺失 50%,5,channel_6,0.001390471589174929,0.0011730805022884625,6120
+random,随机 Top-8,rectangle_50,矩形缺失 50%,6,channel_7,0.002545494692644945,0.0019965710065713497,5984
+random,随机 Top-8,rectangle_50,矩形缺失 50%,7,channel_8,0.009690658308831151,0.007423819652914675,6936
+random,随机 Top-8,rectangle_50,矩形缺失 50%,8,channel_9,0.0027566311248496535,0.0024876452269770523,5440
+random,随机 Top-8,rectangle_50,矩形缺失 50%,9,channel_10,0.006039860067405606,0.005013668681626168,6528
+random,随机 Top-8,rectangle_50,矩形缺失 50%,10,channel_11,0.0016350104795317458,0.0015048923451664456,6800
+random,随机 Top-8,rectangle_50,矩形缺失 50%,11,channel_12,0.7513443798156014,0.6326924846869086,6188
+random,随机 Top-8,rectangle_50,矩形缺失 50%,12,channel_13,0.7704301979433894,0.6549199283378491,5916
+random,随机 Top-8,rectangle_50,矩形缺失 50%,13,channel_14,1.15674531120841,0.9146659497686909,5916
+random,随机 Top-8,rectangle_50,矩形缺失 50%,14,channel_15,1.150893372295244,1.0721540440797552,6324
+random,随机 Top-8,rectangle_50,矩形缺失 50%,15,channel_16,1.0791415562039,0.9797430644915824,5916
+random,随机 Top-8,rectangle_50,矩形缺失 50%,16,channel_17,0.7615855830875087,0.6728961879225613,6460
+random,随机 Top-8,rectangle_50,矩形缺失 50%,17,channel_18,0.8135856814864623,0.6641797135976241,5916
+random,随机 Top-8,rectangle_50,矩形缺失 50%,18,channel_19,0.7940308385543281,0.6540848695538858,6528
+random,随机 Top-8,rectangle_50,矩形缺失 50%,19,channel_20,0.6947064196821361,0.5875173225268483,6324
+random,随机 Top-8,rectangle_50,矩形缺失 50%,20,channel_21,1.2706049275840452,1.0420300783844436,5712
+random,随机 Top-8,rectangle_50,矩形缺失 50%,21,channel_22,1.0117344452826902,0.8238188419572519,5916
+random,随机 Top-8,rectangle_50,矩形缺失 50%,22,channel_23,1.0651038308106657,0.9399999212656913,5712
+random,随机 Top-8,rectangle_50,矩形缺失 50%,23,channel_24,0.9364625243677517,0.7963870266323356,6596
+random,随机 Top-8,rectangle_50,矩形缺失 50%,24,channel_25,0.862818059193277,0.7104359512782211,5780
+random,随机 Top-8,rectangle_50,矩形缺失 50%,25,channel_26,0.7766943501617282,0.6365058441819628,6324
+random,随机 Top-8,rectangle_50,矩形缺失 50%,26,channel_27,0.650891940988723,0.5537195878526028,6528
+random,随机 Top-8,rectangle_50,矩形缺失 50%,27,channel_28,0.8813830946176048,0.7062156809726704,6528
+random,随机 Top-8,rectangle_50,矩形缺失 50%,28,channel_29,1.2131122166432478,1.0233563308835831,5916
+random,随机 Top-8,rectangle_50,矩形缺失 50%,29,channel_30,1.1105315319827775,0.9874673056973675,6052
+random,随机 Top-8,rectangle_50,矩形缺失 50%,30,channel_31,1.2017733209464136,1.1500233141590948,6528
+random,随机 Top-8,rectangle_50,矩形缺失 50%,31,channel_32,1.0065513417704384,0.864807864984266,5440
+random,随机 Top-8,rectangle_50,矩形缺失 50%,32,channel_33,0.9598458510218449,0.7919615773997906,6188
+random,随机 Top-8,rectangle_50,矩形缺失 50%,33,channel_34,0.7323804767112937,0.6068003824924276,6664
+random,随机 Top-8,rectangle_50,矩形缺失 50%,34,channel_35,0.739767721269928,0.6278925378809288,6800
+random,随机 Top-8,rectangle_50,矩形缺失 50%,35,channel_36,0.7578820340245227,0.6041854212473982,6324
+random,随机 Top-8,rectangle_50,矩形缺失 50%,36,channel_37,0.6900648563494796,0.5637297849050023,6460
+random,随机 Top-8,rectangle_50,矩形缺失 50%,37,channel_38,1.2341925612497413,1.116747154383831,5984
+random,随机 Top-8,rectangle_50,矩形缺失 50%,38,channel_39,1.0592410190805,0.8852431062268112,6392
+random,随机 Top-8,rectangle_50,矩形缺失 50%,39,channel_40,0.9260785043219593,0.8035814276745701,5916
+random,随机 Top-8,rectangle_50,矩形缺失 50%,40,channel_41,2.6427744373627933,1.996388264758427,6324
+random,随机 Top-8,rectangle_50,矩形缺失 50%,41,channel_42,1.0810668207582255,0.9229278339970997,5644
+random,随机 Top-8,rectangle_50,矩形缺失 50%,42,channel_43,1.0355348400542381,0.9028729845276711,6052
+random,随机 Top-8,rectangle_50,矩形缺失 50%,43,channel_44,1.0083870509528279,0.865826514778122,5984
+random,随机 Top-8,rectangle_50,矩形缺失 50%,44,channel_45,1.1105179500158817,0.9399523392273499,6596
+random,随机 Top-8,rectangle_50,矩形缺失 50%,45,channel_46,1.172546708728503,0.97536473657851,6596
+random,随机 Top-8,rectangle_50,矩形缺失 50%,46,channel_47,0.8326234313361544,0.6699030021334533,5984
+random,随机 Top-8,rectangle_50,矩形缺失 50%,47,channel_48,1.1305812312994736,1.0211518132867665,6596
+random,随机 Top-8,rectangle_50,矩形缺失 50%,48,channel_49,0.9508242114901162,0.8225562906112271,6120
+random,随机 Top-8,rectangle_50,矩形缺失 50%,49,channel_50,1.2341759827726004,1.066522608875436,5984
+random,随机 Top-8,rectangle_50,矩形缺失 50%,50,channel_51,0.8429927193466898,0.6604068656706332,6120
+random,随机 Top-8,rectangle_50,矩形缺失 50%,51,channel_52,1.441154883695126,1.1772291545649796,5712
+random,随机 Top-8,rectangle_50,矩形缺失 50%,52,channel_53,0.9909189247511976,0.504441694452618,5916
+random,随机 Top-8,rectangle_50,矩形缺失 50%,53,channel_54,1.0200933510747132,0.6133981393972513,6188
+random,随机 Top-8,rectangle_50,矩形缺失 50%,54,channel_55,0.9763510102622103,0.5854383281119149,6392
+random,随机 Top-8,rectangle_50,矩形缺失 50%,55,channel_56,0.9928260210564821,0.6920096469649063,5644
+random,随机 Top-8,rectangle_50,矩形缺失 50%,56,channel_57,0.9935650671639885,0.8857806210420996,6868
+random,随机 Top-8,rectangle_50,矩形缺失 50%,57,channel_58,0.9325505508448585,0.795110012141224,5984
+random,随机 Top-8,rectangle_50,矩形缺失 50%,58,channel_59,1.0007601466344624,0.8841569868507485,6120
+random,随机 Top-8,rectangle_50,矩形缺失 50%,59,channel_60,0.9225332581564385,0.788703790881473,6460
+random,随机 Top-8,rectangle_50,矩形缺失 50%,60,channel_61,0.7722148630095497,0.6871682523883028,5984
+random,随机 Top-8,rectangle_50,矩形缺失 50%,61,channel_62,1.0141886740266637,0.8964415704071229,6256
+random,随机 Top-8,rectangle_50,矩形缺失 50%,62,channel_63,1.1763321958857635,1.0031393209778585,5440
+random,随机 Top-8,rectangle_50,矩形缺失 50%,63,channel_64,1.2332317187109894,0.8377398393155246,6868
+random,随机 Top-8,rectangle_50,矩形缺失 50%,64,channel_65,0.8939458611020701,0.41457967724454303,5916
+random,随机 Top-8,rectangle_50,矩形缺失 50%,65,channel_66,1.0056129509935174,0.7926217279696737,6188
+random,随机 Top-8,rectangle_50,矩形缺失 50%,66,channel_67,0.012731476955854587,0.012415531923572096,5440
+random,随机 Top-8,rectangle_50,矩形缺失 50%,67,channel_68,0.005687926167486293,0.0025724022364202606,6596
+random,随机 Top-8,rectangle_50,矩形缺失 50%,68,channel_69,0.017404444716650834,0.004335156561051563,6732
+random,随机 Top-8,rectangle_50,矩形缺失 50%,69,channel_70,0.9992206083605527,0.8190655836818721,6256
+random,随机 Top-8,rectangle_50,矩形缺失 50%,70,channel_71,0.9913842358368147,0.8745552066201467,5984
+random,随机 Top-8,rectangle_50,矩形缺失 50%,71,channel_72,1.022806913332585,0.8736777356104742,6052
+random,随机 Top-8,rectangle_50,矩形缺失 50%,72,channel_73,0.9817094109269707,0.8446122631159665,5644
+random,随机 Top-8,rectangle_50,矩形缺失 50%,73,channel_74,0.9999383841470222,0.7863840232846719,6188
+random,随机 Top-8,rectangle_50,矩形缺失 50%,74,channel_75,0.994310693268747,0.8162898879758158,6256
+random,随机 Top-8,rectangle_50,矩形缺失 50%,75,channel_76,0.9906655495538416,0.7920003791620864,5780
+random,随机 Top-8,time_block_50,时间块缺失 50%,0,channel_1,0.023625193783813666,0.023625193783813645,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,1,channel_2,0.03130018868082101,0.03130018868082097,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,2,channel_3,0.057083139547629,0.024748664666996434,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,3,channel_4,0.0004349811327893594,0.00043498113278936054,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,4,channel_5,0.0006112367250338717,0.0006112367250338719,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,5,channel_6,0.0008652319524337524,0.0008652319524337518,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,6,channel_7,0.0011235690160267579,0.0011235690160267594,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,7,channel_8,0.0037903019658840024,0.0037903019658840115,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,8,channel_9,0.0030523018214438733,0.003052301821443885,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,9,channel_10,0.0031781465822105725,0.0031781465822105707,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,10,channel_11,0.0012827893308406655,0.0012827893308406623,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,11,channel_12,0.9313762321308064,0.8488350224866186,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,12,channel_13,0.883328319845745,0.8068751012183369,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,13,channel_14,1.3189091346969117,1.1067093084612039,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,14,channel_15,1.3219242094002956,1.265290727355007,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,15,channel_16,1.2721399427332507,1.1632656963730907,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,16,channel_17,0.9171775946732932,0.8332964542254363,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,17,channel_18,0.937512756643286,0.8466848683829666,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,18,channel_19,0.917767974790478,0.8133137866025234,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,19,channel_20,0.8737715798730886,0.7971704443062958,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,20,channel_21,1.3772650745539823,1.1426798633910493,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,21,channel_22,1.2308773172662004,1.1690802181698998,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,22,channel_23,1.2793764265249215,1.2206858481645024,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,23,channel_24,1.1939365955325565,1.0860984543540504,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,24,channel_25,0.9472331148459646,0.8551656624802663,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,25,channel_26,0.9312738786225814,0.848552846982495,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,26,channel_27,0.8316539141267684,0.7580928382828489,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,27,channel_28,0.8781488978891184,0.7830822353442577,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,28,channel_29,1.4145339329192745,1.219210349222559,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,29,channel_30,1.341118172554743,1.2098600216134894,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,30,channel_31,1.359106599310999,1.3021079641032347,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,31,channel_32,1.1788928455202508,1.0714918899451749,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,32,channel_33,1.1187925536067893,1.014336028615547,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,33,channel_34,0.8552208375623412,0.7819229067107609,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,34,channel_35,0.9510599924926284,0.8515186194840142,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,35,channel_36,0.9411295650345209,0.8457327813421104,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,36,channel_37,0.879412005917927,0.7928876022851745,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,37,channel_38,1.423390809586209,1.292221054552824,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,38,channel_39,1.2371755237381425,1.1772952922562694,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,39,channel_40,1.20239936521836,1.0958215830981313,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,40,channel_41,0.9939419236936494,0.8726559878732014,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,41,channel_42,0.969833188650163,0.8299566957169494,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,42,channel_43,1.033187454189424,0.9056098176210203,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,43,channel_44,0.9890425475532904,0.8461342690768915,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,44,channel_45,0.9570801295024653,0.833212400366878,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,45,channel_46,1.0822500793046186,0.9306214028574584,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,46,channel_47,1.040496648264331,0.9330089573788068,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,47,channel_48,1.2060086906637488,1.0999599975770997,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,48,channel_49,1.100122347269559,0.9906976334372396,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,49,channel_50,1.006111920556533,0.899275435293344,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,50,channel_51,1.0553916238499914,0.9490759069966709,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,51,channel_52,1.1445207900084151,1.0355082698558131,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,52,channel_53,0.9920429489017938,0.5034799507633165,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,53,channel_54,1.0260986425243606,0.6120372275209746,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,54,channel_55,0.9729022613962601,0.587476227640222,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,55,channel_56,0.9922170558274572,0.6870279016635266,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,56,channel_57,1.1557939150067587,1.043373936266135,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,57,channel_58,1.0763441231930293,0.971388825117853,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,58,channel_59,1.189961019616541,1.0730398254134421,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,59,channel_60,1.1224511909519763,1.0138342137538272,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,60,channel_61,0.9619499696302727,0.8683413797380384,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,61,channel_62,0.9668922029194927,0.8698588738183197,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,62,channel_63,0.7892159257527965,0.7230014897055197,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,63,channel_64,0.9494674912773211,0.291618441616116,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,64,channel_65,0.7954872192948449,0.25432809585701455,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,65,channel_66,1.1777600182308117,1.0498516963686453,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,66,channel_67,0.013948720928177132,0.013861746733168529,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,67,channel_68,0.006090176320846165,0.0017401191045946782,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,68,channel_69,0.017635744658176664,0.0029115346803598526,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,69,channel_70,0.9965552118940475,0.8154230481712124,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,70,channel_71,0.989438142537444,0.8743702426736443,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,71,channel_72,1.0230839914129002,0.8744324660627317,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,72,channel_73,0.9787259398006609,0.844865366441829,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,73,channel_74,0.9988904498568583,0.7843999982176948,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,74,channel_75,0.9973038983711542,0.8282927220984714,6144
+random,随机 Top-8,time_block_50,时间块缺失 50%,75,channel_76,0.9866661078255629,0.7880590257460908,6144
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,0,channel_1,0.09367915844240401,0.07689216741777347,5760
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,1,channel_2,0.039277540226277434,0.03214158122210879,5568
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,2,channel_3,0.05086504930829788,0.024982089042213277,6144
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,3,channel_4,0.0015069151051410727,0.0012863786261617432,6624
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,4,channel_5,0.001008034053159688,0.0009030912821305968,6336
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,5,channel_6,0.0011084019546934731,0.0010051916448317536,5280
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,6,channel_7,0.0010935756295055064,0.00101733755706519,5856
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,7,channel_8,0.007224865085534777,0.005837766623535055,5472
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,8,channel_9,0.00859377043509592,0.006672923100113744,5856
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,9,channel_10,0.011069437515431128,0.008914053227349814,4416
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,10,channel_11,0.0040815152679898785,0.0033608528594419344,6048
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,11,channel_12,0.5515004854773651,0.44075990943736454,6816
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,12,channel_13,0.560426886671025,0.4354528193886448,4992
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,13,channel_14,1.1845524913306766,0.9296862368553596,6048
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,14,channel_15,0.8609335362124426,0.720428073334978,5856
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,15,channel_16,1.0432851422355418,0.8193040948640617,6336
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,16,channel_17,0.5683004385019294,0.43510537893785056,5184
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,17,channel_18,0.5696132569454913,0.4640177203165366,6336
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,18,channel_19,0.5704023594991615,0.46681167453683686,5472
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,19,channel_20,0.5291520825251741,0.39657996727947264,6720
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,20,channel_21,1.2407966520521438,0.9691607765746911,6144
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,21,channel_22,1.1172558110944861,1.0801753741365858,5952
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,22,channel_23,1.133776578367327,1.088351599240543,6144
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,23,channel_24,0.782591672284263,0.4984875836728537,6144
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,24,channel_25,0.5179805735701916,0.3911790677821179,5568
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,25,channel_26,0.5675962991369519,0.404012750445321,5952
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,26,channel_27,0.6005352898481366,0.4440077721602396,6528
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,27,channel_28,0.6902465694049649,0.5341379498939093,6336
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,28,channel_29,0.7416057332287191,0.5079839166313692,6144
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,29,channel_30,0.8398858347288355,0.6805214841287165,5856
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,30,channel_31,0.8474568898751401,0.6410011924515859,5952
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,31,channel_32,1.020074910865208,0.9205637369476906,6624
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,32,channel_33,0.9869387886861194,0.8950534374504366,6240
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,33,channel_34,0.5393960473754427,0.44155441190999184,5760
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,34,channel_35,0.7295746284146344,0.5901500474178311,7104
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,35,channel_36,0.6224639149899055,0.48289597417566893,6624
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,36,channel_37,0.7202863488232225,0.5763666672989662,6912
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,37,channel_38,0.9982369050520508,0.8571349911495494,5952
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,38,channel_39,0.9238796701084139,0.8206381108152895,7104
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,39,channel_40,0.9351248922160789,0.8411399431840859,5856
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,40,channel_41,1.0230047880372775,0.8874885710341339,5568
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,41,channel_42,1.1842511999147227,1.0147164398409696,6912
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,42,channel_43,1.3344125284076456,1.0955226305757615,7104
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,43,channel_44,1.0324194395196276,0.8558743226207524,5184
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,44,channel_45,1.0276827434357048,0.903612031514309,5664
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,45,channel_46,1.2202277813917806,1.0091537675455375,5952
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,46,channel_47,0.8789736422295268,0.7958228587316515,5952
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,47,channel_48,0.6609776501479679,0.5333312948246477,5184
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,48,channel_49,1.1071651872544497,0.9581806737446119,7200
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,49,channel_50,1.104444883548238,0.8767637261415437,7200
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,50,channel_51,1.8482275077443484,1.4898544374011895,6624
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,51,channel_52,0.6210966890427957,0.5206530894878929,6240
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,52,channel_53,0.9705585887677717,0.48649687941573594,6912
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,53,channel_54,1.0285512584974983,0.6154380057269698,7392
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,54,channel_55,0.9795654722417333,0.591603884014999,6912
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,55,channel_56,0.9867440917065695,0.6858857639775758,6432
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,56,channel_57,0.8765865255834056,0.7214125606782062,5568
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,57,channel_58,0.7322113808448573,0.5583612018023617,6144
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,58,channel_59,0.923785495610324,0.8070102000589461,6048
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,59,channel_60,0.8155736585327391,0.6827286440411531,5952
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,60,channel_61,0.7952138403637066,0.6479747087558396,5952
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,61,channel_62,0.9167806534952171,0.8137115035565455,6816
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,62,channel_63,1.0172088390398737,0.8975249690212306,5952
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,63,channel_64,1.4364140022257263,0.16253114264260957,6720
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,64,channel_65,0.4818103689577772,0.07436321665306973,6528
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,65,channel_66,1.0047331752953141,0.7451715111532986,7008
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,66,channel_67,0.011716896921982847,0.011220141608812767,5664
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,67,channel_68,0.005840128303765096,0.0026443739709151267,6144
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,68,channel_69,0.051447979934851756,0.03850119560070097,6432
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,69,channel_70,0.9974174769215605,0.8122534807004266,5856
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,70,channel_71,0.9891111911867284,0.8719409655800132,6624
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,71,channel_72,1.0253616411964985,0.8781246925613001,5856
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,72,channel_73,0.9850058466642233,0.8458438845439826,4800
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,73,channel_74,1.0046435005892578,0.7897036608447439,6048
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,74,channel_75,0.9722036514735253,0.8004598566295362,6240
+shuffled,打乱原值图,channel_dropout_50,通道丢失 50%,75,channel_76,0.9817994961867018,0.7866884775634495,6144
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,0,channel_1,0.09720228834529565,0.08068633835052812,6868
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,1,channel_2,0.03604396985823634,0.029414421901065278,6868
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,2,channel_3,0.06117973583712067,0.03256413918467197,5848
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,3,channel_4,0.0014687332377683136,0.001311787990886636,6324
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,4,channel_5,0.0012412498061089767,0.0011835018834154855,6188
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,5,channel_6,0.001264737357145243,0.0012033952134719078,6120
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,6,channel_7,0.0011902859729907302,0.0011484718027611968,5984
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,7,channel_8,0.00553943663611247,0.004567299759883746,6936
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,8,channel_9,0.006076271858029929,0.004780764111853765,5440
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,9,channel_10,0.012216688045470573,0.009193422697206402,6528
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,10,channel_11,0.0034401008626386183,0.0027742627175575763,6800
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,11,channel_12,0.7107919279776457,0.6042444111410114,6188
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,12,channel_13,0.7272150475077594,0.6128167129770562,5916
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,13,channel_14,1.2659370740891944,1.0152988113276469,5916
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,14,channel_15,1.1029932771134734,0.9909557415946331,6324
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,15,channel_16,1.1963002353538157,0.9897299854987158,5916
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,16,channel_17,0.7655307932711475,0.6397319651670277,6460
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,17,channel_18,0.6994360200630475,0.5937296434108031,5916
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,18,channel_19,0.7365665930192912,0.6230179215861126,6528
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,19,channel_20,0.7861474016267607,0.6780475524698575,6324
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,20,channel_21,1.326440138627072,1.0481898444995286,5712
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,21,channel_22,1.2457379423998138,1.204228917648005,5916
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,22,channel_23,1.2570364867378256,1.2093086438715352,5712
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,23,channel_24,0.9816126771894054,0.7354324248623172,6596
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,24,channel_25,0.7065623826153398,0.596167701048158,5780
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,25,channel_26,0.7365376241573343,0.6019602144151255,6324
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,26,channel_27,0.8186936934628162,0.6933181913057632,6528
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,27,channel_28,0.7576425302642907,0.6249569898057791,6528
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,28,channel_29,1.0436415232170893,0.8256854879765958,5916
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,29,channel_30,1.027324977903159,0.8920270623260502,6052
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,30,channel_31,1.0582945882778214,0.8970393189924347,6528
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,31,channel_32,1.1888469348845194,1.09640743100275,5440
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,32,channel_33,1.0554849981118464,0.941912944098419,6188
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,33,channel_34,0.6884148040222846,0.5703351563545127,6664
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,34,channel_35,0.7776339302353649,0.6546880431997272,6800
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,35,channel_36,0.7471545084535707,0.6341999846927753,6324
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,36,channel_37,0.831754462494373,0.6989457873499147,6460
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,37,channel_38,1.1650076566136232,1.0248603646958487,5984
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,38,channel_39,1.1789825495386157,1.0491687383340758,6392
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,39,channel_40,1.0481833516348271,0.9292548719337274,5916
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,40,channel_41,1.0291529594556188,0.8961938181041528,6324
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,41,channel_42,1.101347765538579,0.9426168080960117,5644
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,42,channel_43,1.3096108941402234,1.0661385660094604,6052
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,43,channel_44,1.080001234797563,0.8980608400007667,5984
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,44,channel_45,0.9817407744306099,0.8473078352628478,6596
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,45,channel_46,1.1721967494144403,0.9800572385215213,6596
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,46,channel_47,0.9487291993246648,0.8364614365593547,5984
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,47,channel_48,0.8502470521456333,0.7068043394793672,6596
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,48,channel_49,1.1273568256394704,0.9699161626685677,6120
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,49,channel_50,1.1830738058821664,1.0117936588538916,5984
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,50,channel_51,1.4678575529697786,1.1673501586524682,6120
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,51,channel_52,0.8367514693145928,0.7096644729022273,5712
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,52,channel_53,0.9904778668646618,0.496089224529775,5916
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,53,channel_54,1.0200989971727505,0.6138792647594327,6188
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,54,channel_55,0.9766815637223994,0.5866874841987811,6392
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,55,channel_56,0.9928377393615011,0.6889928853970572,5644
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,56,channel_57,0.9746289512602898,0.8389795603480399,6868
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,57,channel_58,0.9123780832498356,0.7652656996359101,5984
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,58,channel_59,1.0478049499053963,0.9348686620515742,6120
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,59,channel_60,0.9080840236712994,0.7563325168524999,6460
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,60,channel_61,0.8739164421774938,0.7102627305759397,5984
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,61,channel_62,0.9847372900218554,0.8929026460526756,6256
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,62,channel_63,1.0495672760967274,0.9315661571684745,5440
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,63,channel_64,0.8644565168070517,0.07143909694267205,6868
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,64,channel_65,0.7703977521567854,0.10632489026834142,5916
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,65,channel_66,1.1634752182378154,0.9604054635912768,6188
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,66,channel_67,0.01257994644951979,0.012217522136208048,5440
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,67,channel_68,0.005551510316495573,0.002237386739727816,6596
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,68,channel_69,0.048373686214416144,0.03147475808396343,6732
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,69,channel_70,1.006287611335462,0.8203385379116748,6256
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,70,channel_71,0.9906948097831889,0.8740983831713403,5984
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,71,channel_72,1.0233839248008845,0.8750669111456258,6052
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,72,channel_73,0.9800094207601915,0.8464899339023972,5644
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,73,channel_74,1.0001657618950757,0.7854168271617344,6188
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,74,channel_75,0.9891683267111746,0.80817026760504,6256
+shuffled,打乱原值图,rectangle_50,矩形缺失 50%,75,channel_76,0.9885228082458172,0.7910691642859952,5780
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,0,channel_1,0.03507471737058438,0.03507471737058427,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,1,channel_2,0.028547062086253808,0.02854706208625381,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,2,channel_3,0.06184873287299084,0.03842141462994413,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,3,channel_4,0.001204700454174179,0.0012047004541741824,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,4,channel_5,0.0014838153953132289,0.0014838153953132293,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,5,channel_6,0.0014362519586096664,0.0014362519586096684,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,6,channel_7,0.0011821683497972156,0.0011821683497972126,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,7,channel_8,0.0027369369129257607,0.0027369369129257586,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,8,channel_9,0.0030836926305846156,0.0030836926305846117,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,9,channel_10,0.002204089897921858,0.0022040898979218656,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,10,channel_11,0.0014342120691696254,0.0014342120691696254,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,11,channel_12,0.9286463206917065,0.84639121761388,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,12,channel_13,0.8720996119024166,0.7968096217188928,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,13,channel_14,1.416351448847908,1.1896345222022744,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,14,channel_15,1.2903661985578205,1.232283220575747,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,15,channel_16,1.1839649731062538,1.0762267695357866,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,16,channel_17,0.9059383106487056,0.8233288544322228,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,17,channel_18,0.8697814496759511,0.7851248641336822,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,18,channel_19,0.8879427131567675,0.786834097506556,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,19,channel_20,0.9068458803428299,0.8265618341088393,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,20,channel_21,1.3166392266320106,1.0929484011250794,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,21,channel_22,1.3951813909706343,1.3393552173072882,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,22,channel_23,1.4239662532042667,1.3714772289126815,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,23,channel_24,1.1634103021287878,1.0563289911758444,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,24,channel_25,0.8981503049402927,0.8122534262572271,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,25,channel_26,0.93643462051297,0.8530181679327365,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,26,channel_27,0.9310794170594686,0.8484512226909632,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,27,channel_28,0.940679528554077,0.8411424756334512,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,28,channel_29,1.3341763746537572,1.1428572116781617,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,29,channel_30,1.3250050816038168,1.1942173682195993,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,30,channel_31,1.2490557120324959,1.1879270057693083,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,31,channel_32,1.2750777246865843,1.1664151408799794,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,32,channel_33,1.2610161260523587,1.1536036710046804,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,33,channel_34,0.9055086212860892,0.8268782128436031,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,34,channel_35,0.8669217750480906,0.7727281552773908,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,35,channel_36,0.8931180044481487,0.8023943453667184,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,36,channel_37,0.9258022215730223,0.8355467929661838,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,37,channel_38,1.3926381354773294,1.2605820157622212,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,38,channel_39,1.3417833097179321,1.2857633072654093,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,39,channel_40,1.260477490093647,1.1531221902230306,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,40,channel_41,1.0339850698443367,0.9008694539688462,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,41,channel_42,0.9724234704797802,0.8328231284667899,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,42,channel_43,1.036922876396357,0.9079478559888247,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,43,channel_44,0.98898367324752,0.8461003590723463,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,44,channel_45,0.9566090849070497,0.8305427723557272,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,45,channel_46,1.083716159094522,0.9317656582088202,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,46,channel_47,1.1208481605019012,1.0119387874486396,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,47,channel_48,1.0851952051280096,0.9772909582179891,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,48,channel_49,1.1833907458830348,1.0743423548139892,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,49,channel_50,1.1770537453185934,1.0686451636861312,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,50,channel_51,1.056780679826105,0.9504308136885746,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,51,channel_52,1.0779621653623763,0.969815502591746,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,52,channel_53,0.991822835005785,0.5001868224639677,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,53,channel_54,1.026088551373432,0.6125078435784327,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,54,channel_55,0.9729247178348429,0.5881010309274003,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,55,channel_56,0.99304444053966,0.6862623497304785,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,56,channel_57,1.1432916274978617,1.0318202150568259,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,57,channel_58,1.089771117556031,0.9836335501176126,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,58,channel_59,1.1958964337621187,1.078668307901417,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,59,channel_60,1.139000234087467,1.0288935060063387,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,60,channel_61,0.9739347167505826,0.8775886154599187,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,61,channel_62,0.9703971749418582,0.8725990564956404,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,62,channel_63,0.9787546646762161,0.8780463486876019,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,63,channel_64,0.9138034951458259,0.0481521630188381,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,64,channel_65,0.769436969860084,0.1064155037426341,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,65,channel_66,1.1277338773007897,1.002670482601782,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,66,channel_67,0.013719947752255662,0.013608269447587059,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,67,channel_68,0.006090543027451819,0.0017622204499469346,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,68,channel_69,0.017749579009344017,0.006017450383632209,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,69,channel_70,0.9968147674068807,0.8165624806151414,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,70,channel_71,0.9895927537154156,0.8744095231177266,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,71,channel_72,1.0231497340286462,0.8746710757828612,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,72,channel_73,0.9786757204012949,0.8448612069442435,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,73,channel_74,0.9989047356116194,0.7844466576859933,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,74,channel_75,0.9968858495083535,0.8270957177623153,6144
+shuffled,打乱原值图,time_block_50,时间块缺失 50%,75,channel_76,0.9866106301519542,0.7880551938606041,6144
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,0,channel_1,0.033205460481435946,0.032601553185829996,5760
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,1,channel_2,0.03056761622428894,0.03056761622428894,5568
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,2,channel_3,0.053465073551818544,0.036271405786320564,6144
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,3,channel_4,0.0035718274302780654,0.003571827430278063,6624
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,4,channel_5,0.0038096560165286064,0.0038096560165286064,6336
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,5,channel_6,0.0036897601094096903,0.00368976010940969,5280
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,6,channel_7,0.0038942142855375996,0.0038942142855376005,5856
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,7,channel_8,0.00308561185374856,0.00308561185374856,5472
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,8,channel_9,0.003086381824687125,0.0030863818246871233,5856
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,9,channel_10,0.0018296014750376352,0.0018296014750376344,4416
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,10,channel_11,0.0012136379955336462,0.0012136379955336452,6048
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,11,channel_12,0.9279165426991943,0.8380464147192922,6816
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,12,channel_13,0.9354617227909695,0.848228266869018,4992
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,13,channel_14,1.2656822251988367,1.0300765919139383,6048
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,14,channel_15,1.277661906541605,1.2222520700589719,5856
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,15,channel_16,1.187787840657331,1.0899879097103051,6336
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,16,channel_17,0.924503749340724,0.8194126959481955,5184
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,17,channel_18,0.9663485675299588,0.8786007678753583,6336
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,18,channel_19,0.915640987946513,0.8390932691144642,5472
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,19,channel_20,0.906413342331891,0.8298883709499413,6720
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,20,channel_21,1.3876877249793724,1.1592837957089916,6144
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,21,channel_22,1.2243647232913715,1.1703628507638049,5952
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,22,channel_23,1.239932725117116,1.1732261613991188,6144
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,23,channel_24,1.1318520151203368,1.0155790090310195,6144
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,24,channel_25,0.9401343230830812,0.8499904777061853,5568
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,25,channel_26,0.912971466740886,0.8308730101008975,5952
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,26,channel_27,0.9411391311438678,0.8430956910784053,6528
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,27,channel_28,0.9554732796991319,0.8425491614287955,6336
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,28,channel_29,1.2129393992262065,1.0262872758627661,6144
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,29,channel_30,1.2791261808079604,1.1294895183373974,5856
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,30,channel_31,1.2293444082732696,1.175006559301388,5952
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,31,channel_32,1.1539112813813241,1.049487387611877,6624
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,32,channel_33,1.1691224720791282,1.0557208362209143,6240
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,33,channel_34,0.9417326450010545,0.8699349635832024,5760
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,34,channel_35,0.9120179985886665,0.8077830321657333,7104
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,35,channel_36,0.9134540105390491,0.8056452651986187,6624
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,36,channel_37,0.9367293278433956,0.8426368416613614,6912
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,37,channel_38,1.2590713582154445,1.1174429404716413,5952
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,38,channel_39,1.2207856057493842,1.1631383884442248,7104
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,39,channel_40,1.1669613190357842,1.0570728199251436,5856
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,40,channel_41,1.002323379165686,0.8762370426041856,5568
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,41,channel_42,1.0033462474351649,0.8609941445487224,6912
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,42,channel_43,0.9864406158136451,0.8617092654935445,7104
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,43,channel_44,1.0191685647766404,0.8714327469207979,5184
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,44,channel_45,1.0087117608259268,0.8908149282070467,5664
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,45,channel_46,1.0229943170183988,0.8846126745931582,5952
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,46,channel_47,1.0947608470958892,0.998948117766294,5952
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,47,channel_48,1.056456003420932,0.945151752949675,5184
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,48,channel_49,1.0694850964293061,0.9631901615697037,7200
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,49,channel_50,1.042809616973766,0.9346542464000069,7200
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,50,channel_51,1.0586160544894565,0.9716258762693393,6624
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,51,channel_52,1.0714314158535327,0.9780688049035141,6240
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,52,channel_53,0.9700571985981142,0.48735499828708945,6912
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,53,channel_54,1.0285845662985702,0.6138686311322373,7392
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,54,channel_55,0.9795650268042262,0.592497144778328,6912
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,55,channel_56,0.9869573323178101,0.6855734273494772,6432
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,56,channel_57,1.0586993517768526,0.9642270433598723,5568
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,57,channel_58,1.018970507712671,0.912503571792513,6144
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,58,channel_59,1.0445191873332775,0.9349922719260643,6048
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,59,channel_60,1.0697138420065582,0.9695346526506167,5952
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,60,channel_61,1.0058222962526107,0.9125658842104096,5952
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,61,channel_62,0.8610248147836627,0.7641491553322041,6816
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,62,channel_63,0.890979860817546,0.8014922213830775,5952
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,63,channel_64,0.8476759580924802,0.04137411961390691,6720
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,64,channel_65,0.34103015531253533,0.06377767189748257,6528
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,65,channel_66,1.059944784362074,0.9180214888114295,7008
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,66,channel_67,0.009266340702999436,0.006170280453338587,5664
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,67,channel_68,0.00911889884559693,0.007301412746528513,6144
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,68,channel_69,0.0173267413433966,0.008536413217262267,6432
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,69,channel_70,0.9940234244493008,0.8118077660786736,5856
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,70,channel_71,0.9877420790958521,0.872237562890286,6624
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,71,channel_72,1.0242084354184866,0.87428718496399,5856
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,72,channel_73,0.9848910798160786,0.8459570191063297,4800
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,73,channel_74,1.0010910062018625,0.7849121335555095,6048
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,74,channel_75,0.9900417463234598,0.8222410198342867,6240
+global_mean,零值基线,channel_dropout_50,通道丢失 50%,75,channel_76,0.979058527608891,0.7854405123119553,6144
+global_mean,零值基线,rectangle_50,矩形缺失 50%,0,channel_1,0.03251920267939571,0.032519202679395676,6868
+global_mean,零值基线,rectangle_50,矩形缺失 50%,1,channel_2,0.03056761622428894,0.03056761622428894,6868
+global_mean,零值基线,rectangle_50,矩形缺失 50%,2,channel_3,0.06255711391944802,0.03787793650209157,5848
+global_mean,零值基线,rectangle_50,矩形缺失 50%,3,channel_4,0.0035718274302780615,0.003571827430278063,6324
+global_mean,零值基线,rectangle_50,矩形缺失 50%,4,channel_5,0.003809656016528602,0.0038096560165286064,6188
+global_mean,零值基线,rectangle_50,矩形缺失 50%,5,channel_6,0.0036897601094096895,0.00368976010940969,6120
+global_mean,零值基线,rectangle_50,矩形缺失 50%,6,channel_7,0.0038942142855376027,0.0038942142855376005,5984
+global_mean,零值基线,rectangle_50,矩形缺失 50%,7,channel_8,0.003085611853748559,0.00308561185374856,6936
+global_mean,零值基线,rectangle_50,矩形缺失 50%,8,channel_9,0.0030863818246871224,0.0030863818246871233,5440
+global_mean,零值基线,rectangle_50,矩形缺失 50%,9,channel_10,0.0018296014750376335,0.0018296014750376344,6528
+global_mean,零值基线,rectangle_50,矩形缺失 50%,10,channel_11,0.001213637995533646,0.0012136379955336452,6800
+global_mean,零值基线,rectangle_50,矩形缺失 50%,11,channel_12,0.9117400003672984,0.8248688712256762,6188
+global_mean,零值基线,rectangle_50,矩形缺失 50%,12,channel_13,0.8907225925957944,0.8088156489033235,5916
+global_mean,零值基线,rectangle_50,矩形缺失 50%,13,channel_14,1.296990538382895,1.067811052169477,5916
+global_mean,零值基线,rectangle_50,矩形缺失 50%,14,channel_15,1.2779754924390434,1.2222650136838678,6324
+global_mean,零值基线,rectangle_50,矩形缺失 50%,15,channel_16,1.1362500570367293,1.0281898146815582,5916
+global_mean,零值基线,rectangle_50,矩形缺失 50%,16,channel_17,0.9136693289391355,0.8223238546902966,6460
+global_mean,零值基线,rectangle_50,矩形缺失 50%,17,channel_18,0.9189428325194454,0.8425292222079914,5916
+global_mean,零值基线,rectangle_50,矩形缺失 50%,18,channel_19,0.9287425859493494,0.8166062227139407,6528
+global_mean,零值基线,rectangle_50,矩形缺失 50%,19,channel_20,0.9461435824294976,0.8706771123266009,6324
+global_mean,零值基线,rectangle_50,矩形缺失 50%,20,channel_21,1.3726501254489907,1.147903587123254,5712
+global_mean,零值基线,rectangle_50,矩形缺失 50%,21,channel_22,1.2286308963553951,1.1795012578771193,5916
+global_mean,零值基线,rectangle_50,矩形缺失 50%,22,channel_23,1.2545799714133599,1.1932069015498756,5712
+global_mean,零值基线,rectangle_50,矩形缺失 50%,23,channel_24,1.1655783168417428,1.056166926110553,6596
+global_mean,零值基线,rectangle_50,矩形缺失 50%,24,channel_25,0.983319158456261,0.8980863901863848,5780
+global_mean,零值基线,rectangle_50,矩形缺失 50%,25,channel_26,0.9275831516991991,0.8371836808215589,6324
+global_mean,零值基线,rectangle_50,矩形缺失 50%,26,channel_27,0.95352259736838,0.8829074963599423,6528
+global_mean,零值基线,rectangle_50,矩形缺失 50%,27,channel_28,0.9690914624300273,0.8678534237927428,6528
+global_mean,零值基线,rectangle_50,矩形缺失 50%,28,channel_29,1.3159255399998602,1.1208779019334278,5916
+global_mean,零值基线,rectangle_50,矩形缺失 50%,29,channel_30,1.3045481508275825,1.2015485154100976,6052
+global_mean,零值基线,rectangle_50,矩形缺失 50%,30,channel_31,1.238444770783185,1.1811310478687136,6528
+global_mean,零值基线,rectangle_50,矩形缺失 50%,31,channel_32,1.2219297127071196,1.1326558553394588,5440
+global_mean,零值基线,rectangle_50,矩形缺失 50%,32,channel_33,1.1261924816219078,1.0138824515020006,6188
+global_mean,零值基线,rectangle_50,矩形缺失 50%,33,channel_34,0.905604382471837,0.8199074480683729,6664
+global_mean,零值基线,rectangle_50,矩形缺失 50%,34,channel_35,0.9678309126135098,0.8729001594096532,6800
+global_mean,零值基线,rectangle_50,矩形缺失 50%,35,channel_36,0.9365248766956029,0.8362634203247702,6324
+global_mean,零值基线,rectangle_50,矩形缺失 50%,36,channel_37,0.9205231199398217,0.821548928444392,6460
+global_mean,零值基线,rectangle_50,矩形缺失 50%,37,channel_38,1.274056318994881,1.1398778711613715,5984
+global_mean,零值基线,rectangle_50,矩形缺失 50%,38,channel_39,1.2518595505401722,1.1935673956934116,6392
+global_mean,零值基线,rectangle_50,矩形缺失 50%,39,channel_40,1.1231871091225258,1.0012255381158994,5916
+global_mean,零值基线,rectangle_50,矩形缺失 50%,40,channel_41,1.0071257794764221,0.8824460098200645,6324
+global_mean,零值基线,rectangle_50,矩形缺失 50%,41,channel_42,1.008711872744491,0.8684050299469473,5644
+global_mean,零值基线,rectangle_50,矩形缺失 50%,42,channel_43,1.0182526464845818,0.8946922364431111,6052
+global_mean,零值基线,rectangle_50,矩形缺失 50%,43,channel_44,1.0190876585445037,0.8740472646098942,5984
+global_mean,零值基线,rectangle_50,矩形缺失 50%,44,channel_45,0.9770742946427812,0.8494312267238247,6596
+global_mean,零值基线,rectangle_50,矩形缺失 50%,45,channel_46,1.0203237828994447,0.8785192614455559,6596
+global_mean,零值基线,rectangle_50,矩形缺失 50%,46,channel_47,1.0475357508686913,0.9324395715643123,5984
+global_mean,零值基线,rectangle_50,矩形缺失 50%,47,channel_48,1.0424262297530806,0.9241655715495538,6596
+global_mean,零值基线,rectangle_50,矩形缺失 50%,48,channel_49,1.0358537488771484,0.9290839150880869,6120
+global_mean,零值基线,rectangle_50,矩形缺失 50%,49,channel_50,1.0273728403182805,0.9106814224166512,5984
+global_mean,零值基线,rectangle_50,矩形缺失 50%,50,channel_51,1.044164814384541,0.9334805230479201,6120
+global_mean,零值基线,rectangle_50,矩形缺失 50%,51,channel_52,1.0345322732357938,0.9231879068808796,5712
+global_mean,零值基线,rectangle_50,矩形缺失 50%,52,channel_53,0.989757048419249,0.49253782905018595,5916
+global_mean,零值基线,rectangle_50,矩形缺失 50%,53,channel_54,1.0200878765233274,0.6128931662914209,6188
+global_mean,零值基线,rectangle_50,矩形缺失 50%,54,channel_55,0.9766855120043118,0.5871286069151382,6392
+global_mean,零值基线,rectangle_50,矩形缺失 50%,55,channel_56,0.9933245792394121,0.6893412165929881,5644
+global_mean,零值基线,rectangle_50,矩形缺失 50%,56,channel_57,1.0870452113704683,0.9834197806343589,6868
+global_mean,零值基线,rectangle_50,矩形缺失 50%,57,channel_58,1.088604128904304,0.9942078724718917,5984
+global_mean,零值基线,rectangle_50,矩形缺失 50%,58,channel_59,1.0749459675789301,0.974718587454165,6120
+global_mean,零值基线,rectangle_50,矩形缺失 50%,59,channel_60,1.0397117458338823,0.9254991432530777,6460
+global_mean,零值基线,rectangle_50,矩形缺失 50%,60,channel_61,0.9969763271053185,0.8936143657774664,5984
+global_mean,零值基线,rectangle_50,矩形缺失 50%,61,channel_62,0.9134644856321631,0.8297262379555437,6256
+global_mean,零值基线,rectangle_50,矩形缺失 50%,62,channel_63,0.8902145735694558,0.7933234058553353,5440
+global_mean,零值基线,rectangle_50,矩形缺失 50%,63,channel_64,0.7558073960732739,0.03289448905523351,6868
+global_mean,零值基线,rectangle_50,矩形缺失 50%,64,channel_65,0.7703456526203741,0.10623105770031127,5916
+global_mean,零值基线,rectangle_50,矩形缺失 50%,65,channel_66,1.1204843235014947,1.0010862172555368,6188
+global_mean,零值基线,rectangle_50,矩形缺失 50%,66,channel_67,0.009856191743870677,0.006524584659457426,5440
+global_mean,零值基线,rectangle_50,矩形缺失 50%,67,channel_68,0.008881974173946764,0.007227869462075018,6596
+global_mean,零值基线,rectangle_50,矩形缺失 50%,68,channel_69,0.019301865627708314,0.008988914965633667,6732
+global_mean,零值基线,rectangle_50,矩形缺失 50%,69,channel_70,1.0017146965040304,0.8165791912455126,6256
+global_mean,零值基线,rectangle_50,矩形缺失 50%,70,channel_71,0.9900505104308706,0.8744059477890418,5984
+global_mean,零值基线,rectangle_50,矩形缺失 50%,71,channel_72,1.0226359125429239,0.8727137227736596,6052
+global_mean,零值基线,rectangle_50,矩形缺失 50%,72,channel_73,0.9795708816883093,0.8464170929016763,5644
+global_mean,零值基线,rectangle_50,矩形缺失 50%,73,channel_74,0.9997078231364978,0.7848552223692306,6188
+global_mean,零值基线,rectangle_50,矩形缺失 50%,74,channel_75,0.9991935450913014,0.821499958091899,6256
+global_mean,零值基线,rectangle_50,矩形缺失 50%,75,channel_76,0.9880431728096685,0.7915123668354276,5780
+global_mean,零值基线,time_block_50,时间块缺失 50%,0,channel_1,0.032519202679395724,0.032519202679395676,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,1,channel_2,0.03056761622428894,0.03056761622428894,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,2,channel_3,0.06153169342670707,0.03771643432235076,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,3,channel_4,0.003571827430278069,0.003571827430278063,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,4,channel_5,0.0038096560165286064,0.0038096560165286064,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,5,channel_6,0.003689760109409686,0.00368976010940969,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,6,channel_7,0.0038942142855376027,0.0038942142855376005,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,7,channel_8,0.0030856118537485656,0.00308561185374856,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,8,channel_9,0.0030863818246871203,0.0030863818246871233,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,9,channel_10,0.0018296014750376348,0.0018296014750376344,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,10,channel_11,0.0012136379955336456,0.0012136379955336452,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,11,channel_12,0.9370765432139696,0.8539170893604174,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,12,channel_13,0.8964140688649971,0.8186853103152316,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,13,channel_14,1.3262311529367037,1.1125999821318449,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,14,channel_15,1.2613991462327387,1.2019171416735237,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,15,channel_16,1.161801748659749,1.0547073511506067,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,16,channel_17,0.9066062499324281,0.8239247018846072,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,17,channel_18,0.9317347441450191,0.8415203719732745,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,18,channel_19,0.9251519880117453,0.8197739572595614,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,19,channel_20,0.9105207822583877,0.8297808404615049,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,20,channel_21,1.3311794222864504,1.104469247192507,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,21,channel_22,1.21141002856268,1.1489165608261374,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,22,channel_23,1.2620811592523922,1.2025467773443477,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,23,channel_24,1.1630192936405488,1.055949585329472,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,24,channel_25,0.9474715539728954,0.8553744439638346,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,25,channel_26,0.9350318849689128,0.851806629149299,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,26,channel_27,0.9269633586507953,0.8447904964703715,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,27,channel_28,0.9580938796432795,0.8573434957469696,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,28,channel_29,1.3319235848513822,1.1408137431852385,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,29,channel_30,1.2923585811493048,1.1632043274847395,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,30,channel_31,1.2160247205994177,1.1537547621311053,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,31,channel_32,1.1619649988133773,1.05507085213776,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,32,channel_33,1.1600140067752176,1.0543893732010663,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,33,channel_34,0.9393414444707539,0.8570742142696872,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,34,channel_35,0.9605420796475403,0.8604555044697312,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,35,channel_36,0.9332304426444297,0.8387639447876912,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,36,channel_37,0.9242841507916617,0.8341678123912667,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,37,channel_38,1.2970675710033615,1.1679684123416034,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,38,channel_39,1.227090010515345,1.1667837535654446,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,39,channel_40,1.1602464411066713,1.0546750677497887,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,40,channel_41,1.0054346122440248,0.8817826564372808,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,41,channel_42,0.9756799753745392,0.8357355105717943,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,42,channel_43,1.015575584412026,0.8936620879624874,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,43,channel_44,1.0037251036435075,0.8567891197065668,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,44,channel_45,0.9621632539171961,0.8401860498042879,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,45,channel_46,1.020723083880262,0.8800582291414685,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,46,channel_47,1.0488596374295869,0.9411744092749359,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,47,channel_48,1.0656753005173485,0.9582197808407121,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,48,channel_49,1.0562397464113236,0.947523122142267,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,49,channel_50,1.0498135829007516,0.9415987052749794,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,50,channel_51,1.0652341893914028,0.9586609975440297,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,51,channel_52,1.055720963792954,0.9479661845260049,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,52,channel_53,0.9914341493456843,0.4935460054548457,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,53,channel_54,1.0260913525000808,0.6123750232266806,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,54,channel_55,0.9729134786635975,0.5877910559696223,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,55,channel_56,0.9917744933360872,0.6874674969197562,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,56,channel_57,1.0651391148403564,0.9604866531256752,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,57,channel_58,1.0692809728881665,0.9649277489212787,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,58,channel_59,1.070623301135031,0.9634162745026819,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,59,channel_60,1.0653801666077112,0.962011756432427,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,60,channel_61,0.9983406403881374,0.8964220521120296,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,61,channel_62,0.8978110000239822,0.8151038131545647,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,62,channel_63,0.8958727960198744,0.8124734184384579,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,63,channel_64,0.9138049870090891,0.048079357234515285,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,64,channel_65,0.7694107153716464,0.10609540347710815,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,65,channel_66,1.1056122510006883,0.9815316952202314,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,66,channel_67,0.009631757748907788,0.0063871983881351,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,67,channel_68,0.009636776484248188,0.007468906660506036,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,68,channel_69,0.019687267465950124,0.009081742382780552,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,69,channel_70,0.9956870399984987,0.8111290974381214,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,70,channel_71,0.9886282165744137,0.8741343353819199,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,71,channel_72,1.02292177428186,0.873667493685692,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,72,channel_73,0.9783383707780915,0.8448307851573796,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,73,channel_74,0.9986039620373798,0.7833851973397638,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,74,channel_75,0.9952958893884266,0.8221306883303138,6144
+global_mean,零值基线,time_block_50,时间块缺失 50%,75,channel_76,0.9857223004433198,0.7879803620938522,6144

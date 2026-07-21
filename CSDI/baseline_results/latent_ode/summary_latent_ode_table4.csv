@@ -1,0 +1,17 @@
+best_epoch,best_valid_crps,crps,eval_points,fold,kind,mae,missing_ratio,num_folds,paper_crps,path,rmse,se_crps,status
+8,0.685527,0.6961431775437398,29732,0,fold,0.5093289017677307,0.1,,0.700(0.002),F:\2026小学期\CSDI\baseline_results\latent_ode\physio_interp_missing0.1_seed1_fold0\metrics.json,0.7416670329560936,,evaluated_checkpoint
+8,0.6902066051135445,0.6907901697604586,28885,1,fold,0.5051763653755188,0.1,,0.700(0.002),F:\2026小学期\CSDI\baseline_results\latent_ode\physio_interp_missing0.1_seed1_fold1\metrics.json,0.7354749193615563,,completed
+8,0.6999320610979969,0.6998751731539817,29513,2,fold,0.504001259803772,0.1,,0.700(0.002),F:\2026小学期\CSDI\baseline_results\latent_ode\physio_interp_missing0.1_seed1_fold2\metrics.json,0.7769832446060397,,completed
+7,0.6881726108076771,0.6832406539995836,29601,3,fold,0.5067669153213501,0.1,,0.700(0.002),F:\2026小学期\CSDI\baseline_results\latent_ode\physio_interp_missing0.1_seed1_fold3\metrics.json,0.9047678962786393,,completed
+8,0.6932470301761332,0.6864015281861939,29700,4,fold,0.49781185388565063,0.1,,0.700(0.002),F:\2026小学期\CSDI\baseline_results\latent_ode\physio_interp_missing0.1_seed1_fold4\metrics.json,0.757038547098837,,completed
+,,,,0,fold,,0.5,,0.676(0.003),F:\2026小学期\CSDI\baseline_results\latent_ode\physio_interp_missing0.5_seed1_fold0\metrics.json,,,missing
+,,,,1,fold,,0.5,,0.676(0.003),F:\2026小学期\CSDI\baseline_results\latent_ode\physio_interp_missing0.5_seed1_fold1\metrics.json,,,missing
+,,,,2,fold,,0.5,,0.676(0.003),F:\2026小学期\CSDI\baseline_results\latent_ode\physio_interp_missing0.5_seed1_fold2\metrics.json,,,missing
+,,,,3,fold,,0.5,,0.676(0.003),F:\2026小学期\CSDI\baseline_results\latent_ode\physio_interp_missing0.5_seed1_fold3\metrics.json,,,missing
+,,,,4,fold,,0.5,,0.676(0.003),F:\2026小学期\CSDI\baseline_results\latent_ode\physio_interp_missing0.5_seed1_fold4\metrics.json,,,missing
+,,,,0,fold,,0.9,,0.761(0.010),F:\2026小学期\CSDI\baseline_results\latent_ode\physio_interp_missing0.9_seed1_fold0\metrics.json,,,missing
+,,,,1,fold,,0.9,,0.761(0.010),F:\2026小学期\CSDI\baseline_results\latent_ode\physio_interp_missing0.9_seed1_fold1\metrics.json,,,missing
+,,,,2,fold,,0.9,,0.761(0.010),F:\2026小学期\CSDI\baseline_results\latent_ode\physio_interp_missing0.9_seed1_fold2\metrics.json,,,missing
+,,,,3,fold,,0.9,,0.761(0.010),F:\2026小学期\CSDI\baseline_results\latent_ode\physio_interp_missing0.9_seed1_fold3\metrics.json,,,missing
+,,,,4,fold,,0.9,,0.761(0.010),F:\2026小学期\CSDI\baseline_results\latent_ode\physio_interp_missing0.9_seed1_fold4\metrics.json,,,missing
+,,0.6912901405287915,,all_available,summary,,0.1,5,0.700(0.002),,,0.003051208680452089,completed

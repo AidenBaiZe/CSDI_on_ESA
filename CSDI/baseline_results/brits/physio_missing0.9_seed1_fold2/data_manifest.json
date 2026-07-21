@@ -1,0 +1,29 @@
+{
+  "missing_ratio": 0.9,
+  "seed": 1,
+  "nfold": 2,
+  "num_records": 3997,
+  "raw_set_a_records": 4000,
+  "skipped_record_ids": [
+    140501,
+    140936,
+    141264
+  ],
+  "splits": {
+    "train": {
+      "num_records": 2797,
+      "eval_points": 823169,
+      "first_record_id": 139954
+    },
+    "valid": {
+      "num_records": 400,
+      "eval_points": 117300,
+      "first_record_id": 138699
+    },
+    "test": {
+      "num_records": 800,
+      "eval_points": 235150,
+      "first_record_id": 136581
+    }
+  }
+}

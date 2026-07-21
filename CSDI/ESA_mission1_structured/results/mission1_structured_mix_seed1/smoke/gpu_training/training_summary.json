@@ -1,0 +1,14 @@
+{
+  "start_step": 0,
+  "final_step": 3,
+  "batch_size": 16,
+  "samples_seen_total": 48,
+  "duration_seconds_this_run": 11.143963799986523,
+  "seconds_per_step_this_run": 3.7146545999955074,
+  "peak_gpu_memory_bytes": 3933933568,
+  "fixed_final_checkpoint": "F:\\2026小学期\\CSDI\\ESA_mission1_structured\\results\\mission1_structured_mix_seed1\\smoke\\gpu_training\\checkpoint_step_000003.pth",
+  "validation_used": false,
+  "best_checkpoint_selection_used": false,
+  "gradient_clip_norm": 1.0,
+  "sanitize_nonfinite_gradients": true
+}

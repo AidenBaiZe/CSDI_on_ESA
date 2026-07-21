@@ -1,0 +1,49 @@
+{
+  "status": "completed",
+  "test": {
+    "mae": 0.38868069648742676,
+    "mse": 0.2902742326259613,
+    "crps": 0.5578293355295426,
+    "eval_points": 68,
+    "num_samples": 20,
+    "num_records": 3,
+    "failures": 0
+  },
+  "per_record": [
+    {
+      "position": 1,
+      "record_index": 200,
+      "train_points": 44,
+      "eval_points": 4,
+      "loss": 0.4584282338619232,
+      "mae": 0.15034164488315582,
+      "mse": 0.02642117068171501
+    },
+    {
+      "position": 2,
+      "record_index": 2861,
+      "train_points": 283,
+      "eval_points": 31,
+      "loss": 1.0360808372497559,
+      "mae": 0.34784623980522156,
+      "mse": 0.23189571499824524
+    },
+    {
+      "position": 3,
+      "record_index": 610,
+      "train_points": 304,
+      "eval_points": 33,
+      "loss": 1.123720645904541,
+      "mae": 0.45592984557151794,
+      "mse": 0.3770968019962311
+    }
+  ],
+  "failures": [],
+  "paper_reference": {
+    "table": "CSDI Table 2",
+    "baseline": "Multitask GP",
+    "healthcare_10_percent_missing": "0.489(0.005)",
+    "healthcare_50_percent_missing": "0.581(0.003)",
+    "healthcare_90_percent_missing": "0.942(0.010)"
+  }
+}

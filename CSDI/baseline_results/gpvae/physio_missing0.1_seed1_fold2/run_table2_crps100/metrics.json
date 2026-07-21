@@ -1,0 +1,28 @@
+{
+  "status": "completed",
+  "run_dir": "F:\\2026\u5c0f\u5b66\u671f\\CSDI\\baseline_results\\gpvae\\physio_missing0.1_seed1_fold2\\run_table2_crps100\\models\\260707_run_table2_crps100",
+  "test": {
+    "mae": 0.45829516649246216,
+    "mse": 0.5372452139854431,
+    "crps": 0.5544167321057202,
+    "eval_points": 25802,
+    "num_samples": 100
+  },
+  "table2_metric": {
+    "name": "CRPS",
+    "value": 0.5544167321057202,
+    "paper_reference": {
+      "table": "CSDI Table 2",
+      "baseline": "GP-VAE",
+      "healthcare_10_percent_missing": "0.574(0.003)",
+      "healthcare_50_percent_missing": "0.774(0.004)",
+      "healthcare_90_percent_missing": "0.998(0.001)"
+    }
+  },
+  "gpvae_results_tsv": {
+    "nll": 1.2260807,
+    "mse": 0.5394236,
+    "auprc": 0.21370410491337488,
+    "auroc": 0.6760725229826354
+  }
+}

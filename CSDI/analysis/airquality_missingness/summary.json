@@ -1,0 +1,56 @@
+{
+  "shape": [
+    8759,
+    36
+  ],
+  "start": "2014-05-01T01:00:00",
+  "end": "2015-04-30T23:00:00",
+  "natural_missing_count": 41771,
+  "natural_missing_rate": 0.13247009425226117,
+  "additional_mask_count": 35737,
+  "additional_mask_rate_of_observed": 0.13064013189400225,
+  "station_rate_min": 0.0626783879438292,
+  "station_rate_median": 0.14505080488640254,
+  "station_rate_max": 0.21246717661833542,
+  "splits": [
+    {
+      "split": "训练集",
+      "months": "2,4,5,7,8,10,11",
+      "timepoints": 5087,
+      "natural_missing_rate": 0.1575639429482559,
+      "evaluation_mask_rate_of_observed": null,
+      "window_count": 4842,
+      "windows_with_missing": 4838,
+      "fully_missing_windows": 0,
+      "median_window_missing_rate": 0.05864197530864197,
+      "p90_window_missing_rate": 0.4652777777777778,
+      "max_window_missing_rate": 0.9722222222222222
+    },
+    {
+      "split": "验证集",
+      "months": "1",
+      "timepoints": 744,
+      "natural_missing_rate": 0.14258512544802868,
+      "evaluation_mask_rate_of_observed": 0.1278902677988243,
+      "window_count": 709,
+      "windows_with_missing": 703,
+      "fully_missing_windows": 0,
+      "median_window_missing_rate": 0.12268518518518519,
+      "p90_window_missing_rate": 0.23117283950617312,
+      "max_window_missing_rate": 0.3387345679012346
+    },
+    {
+      "split": "测试集",
+      "months": "3,6,9,12",
+      "timepoints": 2928,
+      "natural_missing_rate": 0.0863027474195507,
+      "evaluation_mask_rate_of_observed": 0.21216683452565127,
+      "window_count": 82,
+      "windows_with_missing": 82,
+      "fully_missing_windows": 0,
+      "median_window_missing_rate": 0.05131172839506173,
+      "p90_window_missing_rate": 0.1994598765432099,
+      "max_window_missing_rate": 0.4236111111111111
+    }
+  ]
+}

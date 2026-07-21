@@ -1,0 +1,35 @@
+{
+  "missing_ratio": 0.9,
+  "seed": 1,
+  "nfold": 2,
+  "train_mask_mode": "random",
+  "npz_path": "F:\\2026\u5c0f\u5b66\u671f\\CSDI\\baseline_results\\gpvae\\physio_missing0.9_seed1_fold2_trainrandom\\physionet_gpvae.npz",
+  "num_records": 3997,
+  "raw_set_a_records": 4000,
+  "skipped_record_ids": [
+    140501,
+    140936,
+    141264
+  ],
+  "mask_semantics": {
+    "m_*_miss": "1 means missing/hidden from GP-VAE reconstruction loss",
+    "m_*_artificial": "1 means CSDI artificial evaluation target, observed_mask - gt_mask"
+  },
+  "splits": {
+    "train": {
+      "num_records": 2797,
+      "eval_points": 457304,
+      "first_record_id": 139954
+    },
+    "valid": {
+      "num_records": 400,
+      "eval_points": 63950,
+      "first_record_id": 138699
+    },
+    "test": {
+      "num_records": 800,
+      "eval_points": 235150,
+      "first_record_id": 136581
+    }
+  }
+}

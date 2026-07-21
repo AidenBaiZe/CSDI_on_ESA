@@ -1,0 +1,68 @@
+data:
+  archive: "../datasets/ESA Anomaly Dataset/ESA-Mission1.zip"
+  labels_fallback: "../esa_csdi_preprocessing/data/interim/ESA-Mission1/labels.csv"
+  anomaly_types_fallback: "../esa_csdi_preprocessing/data/interim/ESA-Mission1/anomaly_types.csv"
+  processed_dir: "data/processed"
+  interim_dir: "data/interim/channels"
+  split_at: "2007-01-01T00:00:00"
+  official_start: "2000-01-01T00:00:00"
+  official_end: "2014-01-01T00:00:00"
+  expected_timepoints_per_split: 7364161
+  resample_seconds: 30
+  expected_channel_count: 76
+  window_length: 96
+  stride: 48
+  std_floor_threshold: 1.0e-8
+  discrete_unique_threshold: 64
+
+train:
+  seed: 1
+  device: "cuda:0"
+  steps: 32000
+  batch_size: 16
+  lr: 1.0e-3
+  gradient_clip_norm: 1.0
+  sanitize_nonfinite_gradients: true
+  lr_milestones: [24000, 28800]
+  checkpoint_interval: 3200
+  log_interval: 1
+  output_dir: "results/mission1_random_seed1/training"
+
+evaluation:
+  missing_ratios: [0.1, 0.5, 0.9]
+  requested_windows: 256
+  fallback_windows: 128
+  max_projected_hours: 9.0
+  batch_size: 8
+  nsample: 50
+  chunk_candidates: [20, 10, 5]
+  max_peak_memory_bytes: 6979321856
+  quantiles: [0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40, 0.45, 0.50, 0.55, 0.60, 0.65, 0.70, 0.75, 0.80, 0.85, 0.90, 0.95]
+  mask_seeds: [1101, 1501, 1901]
+  output_dir: "results/mission1_random_seed1/evaluation"
+
+smoke:
+  train_steps: 3
+  evaluation_windows: 8
+  nsample: 2
+  chunk_size: 2
+
+diffusion:
+  layers: 4
+  channels: 64
+  nheads: 8
+  diffusion_embedding_dim: 128
+  beta_start: 0.0001
+  beta_end: 0.5
+  num_steps: 50
+  schedule: "quad"
+  is_linear: false
+
+model:
+  is_unconditional: false
+  timeemb: 128
+  featureemb: 16
+  target_strategy: "random"
+  random_mask_min_ratio: 0.0
+  random_mask_max_ratio: 1.0
+  use_provided_hist_mask: false

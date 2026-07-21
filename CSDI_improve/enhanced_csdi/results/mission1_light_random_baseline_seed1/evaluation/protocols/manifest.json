@@ -1,0 +1,82 @@
+{
+  "window_count": 128,
+  "selection": "rounded linspace across all usable official test windows",
+  "same_windows_for_all_ratios": true,
+  "masks_independently_drawn_and_not_designed_as_nested": true,
+  "protocols": {
+    "missing_03": {
+      "path": "F:\\2026小学期\\CSDI_improve\\enhanced_csdi\\results\\mission1_light_random_baseline_seed1\\evaluation\\protocols\\missing_03.npz",
+      "windows": 128,
+      "seed": 1031,
+      "requested_missing_ratio": 0.03,
+      "target_points": 28032,
+      "observed_points": 933888,
+      "actual_missing_ratio": 0.030016447368421052
+    },
+    "missing_05": {
+      "path": "F:\\2026小学期\\CSDI_improve\\enhanced_csdi\\results\\mission1_light_random_baseline_seed1\\evaluation\\protocols\\missing_05.npz",
+      "windows": 128,
+      "seed": 1051,
+      "requested_missing_ratio": 0.05,
+      "target_points": 46720,
+      "observed_points": 933888,
+      "actual_missing_ratio": 0.050027412280701754
+    },
+    "missing_08": {
+      "path": "F:\\2026小学期\\CSDI_improve\\enhanced_csdi\\results\\mission1_light_random_baseline_seed1\\evaluation\\protocols\\missing_08.npz",
+      "windows": 128,
+      "seed": 1081,
+      "requested_missing_ratio": 0.08,
+      "target_points": 74752,
+      "observed_points": 933888,
+      "actual_missing_ratio": 0.0800438596491228
+    },
+    "missing_10": {
+      "path": "F:\\2026小学期\\CSDI_improve\\enhanced_csdi\\results\\mission1_light_random_baseline_seed1\\evaluation\\protocols\\missing_10.npz",
+      "windows": 128,
+      "seed": 1101,
+      "requested_missing_ratio": 0.1,
+      "target_points": 93440,
+      "observed_points": 933888,
+      "actual_missing_ratio": 0.10005482456140351
+    }
+  },
+  "pairwise_mask_checks": {
+    "missing_03_vs_missing_05": {
+      "intersection_points": 1391,
+      "jaccard": 0.018961028339308354,
+      "left_is_subset_of_right": false,
+      "right_is_subset_of_left": false
+    },
+    "missing_03_vs_missing_08": {
+      "intersection_points": 2230,
+      "jaccard": 0.02217713865186865,
+      "left_is_subset_of_right": false,
+      "right_is_subset_of_left": false
+    },
+    "missing_03_vs_missing_10": {
+      "intersection_points": 2801,
+      "jaccard": 0.023603070674385485,
+      "left_is_subset_of_right": false,
+      "right_is_subset_of_left": false
+    },
+    "missing_05_vs_missing_08": {
+      "intersection_points": 3659,
+      "jaccard": 0.03105769312384881,
+      "left_is_subset_of_right": false,
+      "right_is_subset_of_left": false
+    },
+    "missing_05_vs_missing_10": {
+      "intersection_points": 4750,
+      "jaccard": 0.035078650025847424,
+      "left_is_subset_of_right": false,
+      "right_is_subset_of_left": false
+    },
+    "missing_08_vs_missing_10": {
+      "intersection_points": 7608,
+      "jaccard": 0.047377073681064114,
+      "left_is_subset_of_right": false,
+      "right_is_subset_of_left": false
+    }
+  }
+}

@@ -1,0 +1,4 @@
+﻿method,method_label,directed_neighbors_per_channel,undirected_edges,degree_min,degree_median,degree_max,edge_abs_correlation_min,edge_abs_correlation_median,edge_abs_correlation_max
+raw_pearson,原值 Pearson Top-8,8,421,8,9.0,24,0.0015566160436719656,0.7871123552322388,0.9999802112579346
+diff_pearson,一阶差分 Pearson Top-8,8,388,8,9.0,19,0.0003069567319471389,0.00487092393450439,0.9999144077301025
+spearman,Spearman Top-8,8,420,8,10.0,21,0.004220104310661554,0.8318013846874237,1.0

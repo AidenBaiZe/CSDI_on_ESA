@@ -1,0 +1,4 @@
+﻿mission,label_rows,events,missing_channel_labels,negative_duration_labels,assessment
+Mission 1,3589,200,0,0,标签可用，但当前通道缺失高度同步且长块化
+Mission 2,11167,644,0,0,标签干净，事件密集且多数短于 6 小时
+Mission 3,2586,586,156,18,通信中断丰富，但需先修复标签质量问题

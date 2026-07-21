@@ -1,0 +1,221 @@
+{
+  "process_isolation": true,
+  "children": [
+    {
+      "mode": "smoke-cpu",
+      "chunk_size": null,
+      "returncode": 0,
+      "reused": true
+    },
+    {
+      "mode": "smoke-train",
+      "chunk_size": null,
+      "returncode": 0,
+      "reused": true
+    },
+    {
+      "mode": "smoke-eval-chunk",
+      "chunk_size": 5,
+      "returncode": 0,
+      "reused": true
+    },
+    {
+      "mode": "smoke-eval-chunk",
+      "chunk_size": 10,
+      "returncode": 0,
+      "reused": true
+    },
+    {
+      "mode": "smoke-eval-chunk",
+      "chunk_size": 20,
+      "returncode": 0,
+      "reused": true
+    }
+  ],
+  "cpu": {
+    "loss": 0.9677959084510803,
+    "seconds": 1.3645858999998381,
+    "mask_statistics": {
+      "family_counts": {
+        "random": 0,
+        "time_block": 1,
+        "channel_dropout": 0,
+        "rectangle": 0
+      },
+      "family_fractions": {
+        "random": 0.0,
+        "time_block": 1.0,
+        "channel_dropout": 0.0,
+        "rectangle": 0.0
+      },
+      "windows_seen": 1,
+      "sampled_ratio_mean": {
+        "random": 0.0,
+        "time_block": 0.38388651609420776,
+        "channel_dropout": 0.0,
+        "rectangle": 0.0
+      },
+      "observed_points_by_family": {
+        "random": 0,
+        "time_block": 7296,
+        "channel_dropout": 0,
+        "rectangle": 0
+      },
+      "target_points_by_family": {
+        "random": 0,
+        "time_block": 2812,
+        "channel_dropout": 0,
+        "rectangle": 0
+      },
+      "actual_target_fraction_by_family": {
+        "random": 0.0,
+        "time_block": 0.3854166666666667,
+        "channel_dropout": 0.0,
+        "rectangle": 0.0
+      },
+      "observed_points": 7296,
+      "target_points": 2812,
+      "actual_target_fraction": 0.3854166666666667
+    }
+  },
+  "gpu_training": {
+    "training": {
+      "start_step": 0,
+      "final_step": 3,
+      "batch_size": 16,
+      "samples_seen_total": 48,
+      "duration_seconds_this_run": 7.30888109999978,
+      "seconds_per_step_this_run": 2.436293699999927,
+      "peak_gpu_memory_bytes": 3933935616,
+      "fixed_final_checkpoint": "F:\\2026小学期\\CSDI\\ESA_mission1_mix\\results\\mission1_random_structured_mix_seed1\\smoke\\gpu_training\\checkpoint_step_000003.pth",
+      "validation_used": false,
+      "best_checkpoint_selection_used": false,
+      "gradient_clip_norm": 1.0,
+      "sanitize_nonfinite_gradients": true
+    },
+    "mask_statistics": {
+      "family_counts": {
+        "random": 32,
+        "time_block": 7,
+        "channel_dropout": 6,
+        "rectangle": 3
+      },
+      "family_fractions": {
+        "random": 0.6666666666666666,
+        "time_block": 0.14583333333333334,
+        "channel_dropout": 0.125,
+        "rectangle": 0.0625
+      },
+      "windows_seen": 48,
+      "sampled_ratio_mean": {
+        "random": 0.5160961505189334,
+        "time_block": 0.4072717396276338,
+        "channel_dropout": 0.5859770079453787,
+        "rectangle": 0.7156304717063904
+      },
+      "observed_points_by_family": {
+        "random": 233472,
+        "time_block": 51072,
+        "channel_dropout": 43776,
+        "rectangle": 21888
+      },
+      "target_points_by_family": {
+        "random": 120494,
+        "time_block": 20824,
+        "channel_dropout": 25632,
+        "rectangle": 15592
+      },
+      "actual_target_fraction_by_family": {
+        "random": 0.5160961485745614,
+        "time_block": 0.40773809523809523,
+        "channel_dropout": 0.5855263157894737,
+        "rectangle": 0.7123538011695907
+      },
+      "observed_points": 350208,
+      "target_points": 182542,
+      "actual_target_fraction": 0.5212388066520468
+    },
+    "checkpoint": "F:\\2026小学期\\CSDI\\ESA_mission1_mix\\results\\mission1_random_structured_mix_seed1\\smoke\\gpu_training\\checkpoint_step_000003.pth"
+  },
+  "successful_evaluation_chunks": [
+    {
+      "missing_ratio": 0.5,
+      "nsample": 50,
+      "sample_chunk_size": 5,
+      "processed_batches": 1,
+      "processed_windows": 8,
+      "duration_seconds": 205.47674740000002,
+      "seconds_per_window": 25.684593425000003,
+      "projected_seconds_for_256_windows": 6575.255916800001,
+      "peak_gpu_memory_bytes": 1360050176,
+      "headline_normalized": {
+        "missing_ratio": 0.5,
+        "method": "csdi",
+        "scale": "normalized",
+        "bucket": "all",
+        "group": "all_channels",
+        "channels": 76,
+        "eval_points": 29184,
+        "rmse": 37.009269989266635,
+        "mae": 29.405699612801534,
+        "crps": 47.366299619524995
+      },
+      "chunk_size": 5,
+      "within_memory_limit": true
+    },
+    {
+      "missing_ratio": 0.5,
+      "nsample": 50,
+      "sample_chunk_size": 10,
+      "processed_batches": 1,
+      "processed_windows": 8,
+      "duration_seconds": 237.71122430000014,
+      "seconds_per_window": 29.713903037500017,
+      "projected_seconds_for_256_windows": 7606.7591776000045,
+      "peak_gpu_memory_bytes": 2658146304,
+      "headline_normalized": {
+        "missing_ratio": 0.5,
+        "method": "csdi",
+        "scale": "normalized",
+        "bucket": "all",
+        "group": "all_channels",
+        "channels": 76,
+        "eval_points": 29184,
+        "rmse": 36.8366522472098,
+        "mae": 29.197177117330988,
+        "crps": 47.330785267020644
+      },
+      "chunk_size": 10,
+      "within_memory_limit": true
+    },
+    {
+      "missing_ratio": 0.5,
+      "nsample": 50,
+      "sample_chunk_size": 20,
+      "processed_batches": 1,
+      "processed_windows": 8,
+      "duration_seconds": 247.21722020000016,
+      "seconds_per_window": 30.90215252500002,
+      "projected_seconds_for_256_windows": 7910.951046400005,
+      "peak_gpu_memory_bytes": 5254117376,
+      "headline_normalized": {
+        "missing_ratio": 0.5,
+        "method": "csdi",
+        "scale": "normalized",
+        "bucket": "all",
+        "group": "all_channels",
+        "channels": 76,
+        "eval_points": 29184,
+        "rmse": 37.112047283746136,
+        "mae": 29.439679564091197,
+        "crps": 47.36942748283748
+      },
+      "chunk_size": 20,
+      "within_memory_limit": true
+    }
+  ],
+  "failed_evaluation_chunks": [],
+  "selected_chunk_size": 10,
+  "memory_limit_bytes": 6979321856,
+  "vectorized_training_throughput": null
+}

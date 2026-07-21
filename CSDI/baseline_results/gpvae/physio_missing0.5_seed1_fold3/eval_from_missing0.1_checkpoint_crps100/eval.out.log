@@ -1,0 +1,18 @@
+sample 1/100
+sample 10/100
+sample 20/100
+sample 30/100
+sample 40/100
+sample 50/100
+sample 60/100
+sample 70/100
+sample 80/100
+sample 90/100
+sample 100/100
+{
+  "mae": 0.5383692979812622,
+  "mse": 0.7090775966644287,
+  "crps": 0.6214696802283808,
+  "eval_points": 130720,
+  "num_samples": 100
+}

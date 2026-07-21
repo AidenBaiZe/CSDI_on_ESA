@@ -1,0 +1,128 @@
+{
+  "model_kind": "random_csdi",
+  "checkpoint": "F:\\2026小学期\\CSDI\\ESA_mission1\\results\\mission1_random_seed1\\training\\checkpoint_step_032000.pth",
+  "checkpoint_sha256": "be42f3431d112e1da7b3cdd138bc1d2b57b82c4a15fc75a003e8d45f4affc650",
+  "sample_chunk_size": 10,
+  "evaluations": [
+    {
+      "index": 1,
+      "total": 5,
+      "protocol_key": "time_block_missing_50",
+      "path": "F:\\2026小学期\\CSDI\\ESA_mission1_structured\\results\\mission1_structured_only_seed1\\evaluation\\metrics\\random_csdi\\time_block_missing_50.json",
+      "headline_normalized": {
+        "missing_ratio": 0.5,
+        "method": "csdi",
+        "scale": "normalized",
+        "bucket": "all",
+        "group": "all_channels",
+        "channels": 76,
+        "eval_points": 466944,
+        "rmse": 0.9373573747479781,
+        "mae": 0.17963711988999134,
+        "crps": 0.13868528688637205,
+        "model_kind": "random_csdi",
+        "protocol_key": "time_block_missing_50",
+        "mask_family": "time_block",
+        "severity": "50%",
+        "requested_missing_ratio": 0.5,
+        "actual_missing_ratio": 0.5
+      }
+    },
+    {
+      "index": 2,
+      "total": 5,
+      "protocol_key": "channel_dropout_missing_50",
+      "path": "F:\\2026小学期\\CSDI\\ESA_mission1_structured\\results\\mission1_structured_only_seed1\\evaluation\\metrics\\random_csdi\\channel_dropout_missing_50.json",
+      "headline_normalized": {
+        "missing_ratio": 0.5,
+        "method": "csdi",
+        "scale": "normalized",
+        "bucket": "all",
+        "group": "all_channels",
+        "channels": 76,
+        "eval_points": 466944,
+        "rmse": 2.172570486732036,
+        "mae": 0.8252175773723138,
+        "crps": 0.670356048642404,
+        "model_kind": "random_csdi",
+        "protocol_key": "channel_dropout_missing_50",
+        "mask_family": "channel_dropout",
+        "severity": "50%",
+        "requested_missing_ratio": 0.5,
+        "actual_missing_ratio": 0.5
+      }
+    },
+    {
+      "index": 3,
+      "total": 5,
+      "protocol_key": "rectangle_missing_50",
+      "path": "F:\\2026小学期\\CSDI\\ESA_mission1_structured\\results\\mission1_structured_only_seed1\\evaluation\\metrics\\random_csdi\\rectangle_missing_50.json",
+      "headline_normalized": {
+        "missing_ratio": 0.5,
+        "method": "csdi",
+        "scale": "normalized",
+        "bucket": "all",
+        "group": "all_channels",
+        "channels": 76,
+        "eval_points": 470016,
+        "rmse": 1.0545883862462153,
+        "mae": 0.1876929790803343,
+        "crps": 0.15127518533865983,
+        "model_kind": "random_csdi",
+        "protocol_key": "rectangle_missing_50",
+        "mask_family": "rectangle",
+        "severity": "50%",
+        "requested_missing_ratio": 0.5,
+        "actual_missing_ratio": 0.5032894736842105
+      }
+    },
+    {
+      "index": 4,
+      "total": 5,
+      "protocol_key": "gap_onset",
+      "path": "F:\\2026小学期\\CSDI\\ESA_mission1_structured\\results\\mission1_structured_only_seed1\\evaluation\\metrics\\random_csdi\\gap_onset.json",
+      "headline_normalized": {
+        "missing_ratio": 0.34210526315789475,
+        "method": "csdi",
+        "scale": "normalized",
+        "bucket": "all",
+        "group": "all_channels",
+        "channels": 76,
+        "eval_points": 319488,
+        "rmse": 0.963543138561353,
+        "mae": 0.22609465876713586,
+        "crps": 0.1711770695325503,
+        "model_kind": "random_csdi",
+        "protocol_key": "gap_onset",
+        "mask_family": "real_gap_case",
+        "severity": "onset",
+        "requested_missing_ratio": -1.0,
+        "actual_missing_ratio": 0.34210526315789475
+      }
+    },
+    {
+      "index": 5,
+      "total": 5,
+      "protocol_key": "gap_sustained",
+      "path": "F:\\2026小学期\\CSDI\\ESA_mission1_structured\\results\\mission1_structured_only_seed1\\evaluation\\metrics\\random_csdi\\gap_sustained.json",
+      "headline_normalized": {
+        "missing_ratio": 0.6842105263157895,
+        "method": "csdi",
+        "scale": "normalized",
+        "bucket": "all",
+        "group": "all_channels",
+        "channels": 76,
+        "eval_points": 638976,
+        "rmse": 2.715754179875127,
+        "mae": 1.1808424047313821,
+        "crps": 0.9467095460053963,
+        "model_kind": "random_csdi",
+        "protocol_key": "gap_sustained",
+        "mask_family": "real_gap_case",
+        "severity": "sustained",
+        "requested_missing_ratio": -1.0,
+        "actual_missing_ratio": 0.6842105263157895
+      }
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "status": "completed",
+  "recovered_after_runner_encoding_error": true,
+  "recovered_at": "2026-07-07T20:46:49",
+  "run_dir": "F:\\2026\u5c0f\u5b66\u671f\\CSDI\\baseline_results\\gpvae\\physio_missing0.1_seed1_fold0\\run_table2_crps100_decoder_sample\\models\\260707_run_table2_crps100_decoder_sample",
+  "test": {
+    "mae": 0.47699108719825745,
+    "mse": 0.5398728251457214,
+    "crps": 0.5772525205048784,
+    "eval_points": 25718,
+    "num_samples": 100
+  },
+  "table2_metric": {
+    "name": "CRPS",
+    "value": 0.5772525205048784,
+    "paper_reference": {
+      "table": "CSDI Table 2",
+      "baseline": "GP-VAE",
+      "healthcare_10_percent_missing": "0.574(0.003)",
+      "healthcare_50_percent_missing": "0.774(0.004)",
+      "healthcare_90_percent_missing": "0.998(0.001)"
+    }
+  },
+  "gpvae_results_tsv": {
+    "seed": 1.0,
+    "model": "gp-vae",
+    "data": "physionet",
+    "kernel": "cauchy",
+    "beta": 0.2,
+    "z_size": 35.0,
+    "num_epochs": 40.0,
+    "batch_size": 64.0,
+    "learning_rate": 0.001,
+    "window_size": 24.0,
+    "kernel_scales": 1.0,
+    "sigma": 1.005,
+    "length_scale": 7.0,
+    "encoder_depth": 2.0,
+    "encoder_width": 128.0,
+    "decoder_depth": 2.0,
+    "decoder_width": 256.0,
+    "cnn_kernel_size": 3.0,
+    "cnn_sizes": "[256]",
+    "NLL": 1.2085028,
+    "MSE": 0.5246779,
+    "last_train_loss": 21524.379,
+    "last_val_loss": 21527.025,
+    "AUPRC": 0.3653801710957779,
+    "AUROC": 0.7380088473582187,
+    "testing": "False",
+    "data_dir": "F:\\2026\u0421\u0467\ufffd\ufffd\\CSDI\\baseline_results\\gpvae\\physio_missing0.1_seed1_fold0\\physionet_gpvae.npz"
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "experiment": "ESA Mission 1 pure structured masking",
+  "training_mask_families": [
+    "time_block",
+    "channel_dropout",
+    "rectangle"
+  ],
+  "random_point_masks_used_for_training": false,
+  "structured_model_protocols": 14,
+  "random_model_new_structured_protocols": 5,
+  "paired_model_comparisons": [
+    {
+      "protocol_key": "channel_dropout_missing_50",
+      "mask_family": "channel_dropout",
+      "severity": "50%",
+      "random_rmse": 2.172570486732036,
+      "structured_rmse": 1.9780658672552671,
+      "rmse_improvement_fraction": 0.08952741495137456,
+      "random_mae": 0.8252175773723138,
+      "structured_mae": 0.5124951221168047,
+      "mae_improvement_fraction": 0.37895757898334004,
+      "interpretation": "structured_training_benefit"
+    },
+    {
+      "protocol_key": "gap_onset",
+      "mask_family": "real_gap_case",
+      "severity": "onset",
+      "random_rmse": 0.963543138561353,
+      "structured_rmse": 0.8910464798998531,
+      "rmse_improvement_fraction": 0.07523966054051634,
+      "random_mae": 0.22609465876713586,
+      "structured_mae": 0.22239356271725577,
+      "mae_improvement_fraction": 0.016369674852390024,
+      "interpretation": "structured_training_benefit"
+    },
+    {
+      "protocol_key": "gap_sustained",
+      "mask_family": "real_gap_case",
+      "severity": "sustained",
+      "random_rmse": 2.715754179875127,
+      "structured_rmse": 2.666738744347284,
+      "rmse_improvement_fraction": 0.01804855383858664,
+      "random_mae": 1.1808424047313821,
+      "structured_mae": 1.0904862714501529,
+      "mae_improvement_fraction": 0.07651836766633009,
+      "interpretation": "structured_training_benefit"
+    },
+    {
+      "protocol_key": "random_missing_10",
+      "mask_family": "random",
+      "severity": "10%",
+      "random_rmse": 0.839450574980923,
+      "structured_rmse": 2.073963796699682,
+      "rmse_improvement_fraction": -1.470620496920636,
+      "random_mae": 0.14899602869141024,
+      "structured_mae": 0.30691141929291665,
+      "mae_improvement_fraction": -1.059863084864962,
+      "interpretation": "random_missing_cost"
+    },
+    {
+      "protocol_key": "random_missing_50",
+      "mask_family": "random",
+      "severity": "50%",
+      "random_rmse": 0.8104056537874413,
+      "structured_rmse": 0.8250302742012526,
+      "rmse_improvement_fraction": -0.018046049340182835,
+      "random_mae": 0.14859313025945403,
+      "structured_mae": 0.1698022191990236,
+      "mae_improvement_fraction": -0.14273263442621484,
+      "interpretation": "random_missing_cost"
+    },
+    {
+      "protocol_key": "random_missing_90",
+      "mask_family": "random",
+      "severity": "90%",
+      "random_rmse": 1.0628453834927416,
+      "structured_rmse": 0.9357581565720436,
+      "rmse_improvement_fraction": 0.11957263859307704,
+      "random_mae": 0.20027342763312347,
+      "structured_mae": 0.2369931349627888,
+      "mae_improvement_fraction": -0.18334787477114212,
+      "interpretation": "random_missing_cost"
+    },
+    {
+      "protocol_key": "rectangle_missing_50",
+      "mask_family": "rectangle",
+      "severity": "50%",
+      "random_rmse": 1.0545883862462153,
+      "structured_rmse": 0.8163009609192523,
+      "rmse_improvement_fraction": 0.22595301487734185,
+      "random_mae": 0.1876929790803343,
+      "structured_mae": 0.17980586616793948,
+      "mae_improvement_fraction": 0.042021352908566026,
+      "interpretation": "structured_training_benefit"
+    },
+    {
+      "protocol_key": "time_block_missing_50",
+      "mask_family": "time_block",
+      "severity": "50%",
+      "random_rmse": 0.9373573747479781,
+      "structured_rmse": 0.7952175695208706,
+      "rmse_improvement_fraction": 0.15163886160849138,
+      "random_mae": 0.17963711988999134,
+      "structured_mae": 0.17942638029804434,
+      "mae_improvement_fraction": 0.0011731405629085035,
+      "interpretation": "structured_training_benefit"
+    }
+  ],
+  "random_missing_cost_protocols": [
+    {
+      "protocol_key": "random_missing_10",
+      "mask_family": "random",
+      "severity": "10%",
+      "random_rmse": 0.839450574980923,
+      "structured_rmse": 2.073963796699682,
+      "rmse_improvement_fraction": -1.470620496920636,
+      "random_mae": 0.14899602869141024,
+      "structured_mae": 0.30691141929291665,
+      "mae_improvement_fraction": -1.059863084864962,
+      "interpretation": "random_missing_cost"
+    },
+    {
+      "protocol_key": "random_missing_50",
+      "mask_family": "random",
+      "severity": "50%",
+      "random_rmse": 0.8104056537874413,
+      "structured_rmse": 0.8250302742012526,
+      "rmse_improvement_fraction": -0.018046049340182835,
+      "random_mae": 0.14859313025945403,
+      "structured_mae": 0.1698022191990236,
+      "mae_improvement_fraction": -0.14273263442621484,
+      "interpretation": "random_missing_cost"
+    },
+    {
+      "protocol_key": "random_missing_90",
+      "mask_family": "random",
+      "severity": "90%",
+      "random_rmse": 1.0628453834927416,
+      "structured_rmse": 0.9357581565720436,
+      "rmse_improvement_fraction": 0.11957263859307704,
+      "random_mae": 0.20027342763312347,
+      "structured_mae": 0.2369931349627888,
+      "mae_improvement_fraction": -0.18334787477114212,
+      "interpretation": "random_missing_cost"
+    }
+  ],
+  "structured_training_benefit_protocols": [
+    {
+      "protocol_key": "channel_dropout_missing_50",
+      "mask_family": "channel_dropout",
+      "severity": "50%",
+      "random_rmse": 2.172570486732036,
+      "structured_rmse": 1.9780658672552671,
+      "rmse_improvement_fraction": 0.08952741495137456,
+      "random_mae": 0.8252175773723138,
+      "structured_mae": 0.5124951221168047,
+      "mae_improvement_fraction": 0.37895757898334004,
+      "interpretation": "structured_training_benefit"
+    },
+    {
+      "protocol_key": "gap_onset",
+      "mask_family": "real_gap_case",
+      "severity": "onset",
+      "random_rmse": 0.963543138561353,
+      "structured_rmse": 0.8910464798998531,
+      "rmse_improvement_fraction": 0.07523966054051634,
+      "random_mae": 0.22609465876713586,
+      "structured_mae": 0.22239356271725577,
+      "mae_improvement_fraction": 0.016369674852390024,
+      "interpretation": "structured_training_benefit"
+    },
+    {
+      "protocol_key": "gap_sustained",
+      "mask_family": "real_gap_case",
+      "severity": "sustained",
+      "random_rmse": 2.715754179875127,
+      "structured_rmse": 2.666738744347284,
+      "rmse_improvement_fraction": 0.01804855383858664,
+      "random_mae": 1.1808424047313821,
+      "structured_mae": 1.0904862714501529,
+      "mae_improvement_fraction": 0.07651836766633009,
+      "interpretation": "structured_training_benefit"
+    },
+    {
+      "protocol_key": "rectangle_missing_50",
+      "mask_family": "rectangle",
+      "severity": "50%",
+      "random_rmse": 1.0545883862462153,
+      "structured_rmse": 0.8163009609192523,
+      "rmse_improvement_fraction": 0.22595301487734185,
+      "random_mae": 0.1876929790803343,
+      "structured_mae": 0.17980586616793948,
+      "mae_improvement_fraction": 0.042021352908566026,
+      "interpretation": "structured_training_benefit"
+    },
+    {
+      "protocol_key": "time_block_missing_50",
+      "mask_family": "time_block",
+      "severity": "50%",
+      "random_rmse": 0.9373573747479781,
+      "structured_rmse": 0.7952175695208706,
+      "rmse_improvement_fraction": 0.15163886160849138,
+      "random_mae": 0.17963711988999134,
+      "structured_mae": 0.17942638029804434,
+      "mae_improvement_fraction": 0.0011731405629085035,
+      "interpretation": "structured_training_benefit"
+    }
+  ],
+  "artifacts": {
+    "report": "F:\\2026小学期\\CSDI\\ESA_mission1_structured\\results\\mission1_structured_only_seed1\\report_zh.md",
+    "headline_csv": "F:\\2026小学期\\CSDI\\ESA_mission1_structured\\results\\mission1_structured_only_seed1\\evaluation\\headline_metrics.csv",
+    "paired_comparison_csv": "F:\\2026小学期\\CSDI\\ESA_mission1_structured\\results\\mission1_structured_only_seed1\\evaluation\\paired_model_comparisons.csv",
+    "channel_csv": "F:\\2026小学期\\CSDI\\ESA_mission1_structured\\results\\mission1_structured_only_seed1\\evaluation\\channel_metrics.csv",
+    "group_csv": "F:\\2026小学期\\CSDI\\ESA_mission1_structured\\results\\mission1_structured_only_seed1\\evaluation\\group_metrics.csv"
+  }
+}

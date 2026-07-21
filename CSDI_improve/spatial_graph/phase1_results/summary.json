@@ -1,0 +1,57 @@
+{
+  "generated_at": "2026-07-19T14:26:20.339828+08:00",
+  "source": {
+    "split": "train",
+    "channels": 76,
+    "timestamps": 7364161,
+    "build_timestamps": 5891328,
+    "validation_timestamps": 1472833,
+    "grid_seconds": 30
+  },
+  "parameters": {
+    "top_k": 8,
+    "stability_blocks": 4,
+    "spearman_sample": 160000,
+    "ridge_sample": 200000,
+    "validation_windows": 128,
+    "window_length": 96,
+    "seed": 20260719
+  },
+  "stability": {
+    "raw_mean_edge_jaccard": 0.4315455183654772,
+    "diff_mean_edge_jaccard": 0.3879839736413677,
+    "raw_mean_channel_neighbor_jaccard": 0.5136087596613913,
+    "diff_mean_channel_neighbor_jaccard": 0.4752627002627003
+  },
+  "edge_diagnostics": {
+    "raw_edges": 421,
+    "raw_only_suspect_edges": 126,
+    "raw_only_suspect_fraction": 0.2992874109263658,
+    "raw_edges_in_diff_top8_fraction": 0.3824228028503563,
+    "raw_edges_in_spearman_top8_fraction": 0.7719714964370546
+  },
+  "reconstruction": {
+    "raw_vs_random_channel_dropout_pct": -2.053775035123395,
+    "diff_vs_random_channel_dropout_pct": -14.518369399582298,
+    "raw_vs_random_rectangle_pct": -2.4950979425059527,
+    "diff_vs_random_rectangle_pct": -9.98979666782418,
+    "diff_dropout_ci95_low_pct": -15.979407898949384,
+    "diff_dropout_ci95_high_pct": -11.655038184619118,
+    "diff_rectangle_ci95_low_pct": -10.190204890438224,
+    "diff_rectangle_ci95_high_pct": -7.567182366810297
+  },
+  "decision": {
+    "headline": "原值图证据不足，优先使用一阶差分图进入小规模 Graph-CSDI 筛选",
+    "actions": [
+      "暂不把当前原值 Pearson Top-8 图作为主图。",
+      "以一阶差分 Top-8 图做 Graph-only 3k–5k 步筛选，并配随机/打乱图。",
+      "保留原值图作为消融，以检验状态相关与变化相关哪种更适合遥测恢复。"
+    ],
+    "criteria": {
+      "raw_proxy_useful": true,
+      "diff_proxy_useful": true,
+      "raw_stability_pass": true,
+      "raw_suspect_fraction_pass": false
+    }
+  }
+}

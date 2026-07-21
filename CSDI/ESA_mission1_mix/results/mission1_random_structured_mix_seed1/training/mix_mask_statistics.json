@@ -1,0 +1,42 @@
+{
+  "family_counts": {
+    "random": 256398,
+    "time_block": 85393,
+    "channel_dropout": 84968,
+    "rectangle": 85241
+  },
+  "family_fractions": {
+    "random": 0.50077734375,
+    "time_block": 0.166783203125,
+    "channel_dropout": 0.165953125,
+    "rectangle": 0.166486328125
+  },
+  "windows_seen": 512000,
+  "sampled_ratio_mean": {
+    "random": 0.4995316023193085,
+    "time_block": 0.4988262602140031,
+    "channel_dropout": 0.49979912245304314,
+    "rectangle": 0.5006591467731195
+  },
+  "observed_points_by_family": {
+    "random": 1869884477,
+    "time_block": 622758253,
+    "channel_dropout": 619586944,
+    "rectangle": 621689578
+  },
+  "target_points_by_family": {
+    "random": 934093977,
+    "time_block": 310643549,
+    "channel_dropout": 309665308,
+    "rectangle": 311271162
+  },
+  "actual_target_fraction_by_family": {
+    "random": 0.49954635619984344,
+    "time_block": 0.49881883941889726,
+    "channel_dropout": 0.4997931460608699,
+    "rectangle": 0.5006858294156573
+  },
+  "observed_points": 3733919252,
+  "target_points": 1865673996,
+  "actual_target_fraction": 0.4996556888584799
+}

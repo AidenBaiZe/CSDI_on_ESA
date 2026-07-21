@@ -1,0 +1,4 @@
+﻿split,candidate_windows,usable_clean_windows,excluded_windows,excluded_rate
+训练集,12809,12524,285,0.022249980482473286
+验证集,2744,2744,0,0.0
+测试集,2744,2663,81,0.02951895043731778

@@ -1,0 +1,4892 @@
+{
+  "surface": "report",
+  "manifest": {
+    "version": 1,
+    "surface": "report",
+    "title": "ESA Mission 1 空间通道图第一阶段验证",
+    "description": "静态通道图的时段稳定性、零阶保持伪相关与邻居重建价值",
+    "generatedAt": "2026-07-19T14:26:20.339828+08:00",
+    "sources": [
+      {
+        "id": "stability_source",
+        "label": "连续时段图稳定性",
+        "query": {
+          "engine": "SQLite",
+          "language": "sql",
+          "sql": "SELECT * FROM graph_stability",
+          "description": "连续时段图稳定性",
+          "tables_used": [
+            "phase1_analysis.sqlite:graph_stability"
+          ],
+          "filters": [
+            "ESA Mission 1 training split only",
+            "first 80% chronological build partition",
+            "last 20% chronological validation partition"
+          ],
+          "executed_at": "2026-07-19T14:26:20.339828+08:00"
+        }
+      },
+      {
+        "id": "edge_source",
+        "label": "原值图边的差分与秩相关诊断",
+        "query": {
+          "engine": "SQLite",
+          "language": "sql",
+          "sql": "SELECT * FROM edge_diagnostics",
+          "description": "原值图边的差分与秩相关诊断",
+          "tables_used": [
+            "phase1_analysis.sqlite:edge_diagnostics"
+          ],
+          "filters": [
+            "ESA Mission 1 training split only",
+            "first 80% chronological build partition",
+            "last 20% chronological validation partition"
+          ],
+          "executed_at": "2026-07-19T14:26:20.339828+08:00"
+        }
+      },
+      {
+        "id": "reconstruction_source",
+        "label": "训练集留出段邻居重建代理",
+        "query": {
+          "engine": "SQLite",
+          "language": "sql",
+          "sql": "SELECT * FROM reconstruction_metrics",
+          "description": "训练集留出段邻居重建代理",
+          "tables_used": [
+            "phase1_analysis.sqlite:reconstruction_metrics"
+          ],
+          "filters": [
+            "ESA Mission 1 training split only",
+            "first 80% chronological build partition",
+            "last 20% chronological validation partition"
+          ],
+          "executed_at": "2026-07-19T14:26:20.339828+08:00"
+        }
+      },
+      {
+        "id": "graph_source",
+        "label": "候选图结构统计",
+        "query": {
+          "engine": "SQLite",
+          "language": "sql",
+          "sql": "SELECT * FROM graph_method_summary",
+          "description": "候选图结构统计",
+          "tables_used": [
+            "phase1_analysis.sqlite:graph_method_summary"
+          ],
+          "filters": [
+            "ESA Mission 1 training split only",
+            "first 80% chronological build partition",
+            "last 20% chronological validation partition"
+          ],
+          "executed_at": "2026-07-19T14:26:20.339828+08:00"
+        }
+      }
+    ],
+    "blocks": [
+      {
+        "id": "title",
+        "type": "markdown",
+        "body": "# ESA Mission 1 空间通道图第一阶段验证",
+        "layout": "full"
+      },
+      {
+        "id": "summary",
+        "type": "markdown",
+        "body": "## 技术摘要\n\n**结论：原值图证据不足，优先使用一阶差分图进入小规模 Graph-CSDI 筛选**\n\n- 原值 Pearson 图的跨时段平均边 Jaccard 为 **0.432**，一阶差分图为 **0.388**。\n- 原值图中 **126 / 421** 条边符合“高原值相关、弱差分支持且不在差分 Top-8”判据。\n- 在通道丢失 50% 代理实验中，原值图相对随机图 RMSE 变化为 **-2.05%**；差分图为 **-14.52%**。差分图按窗口配对变化的 95% Bootstrap 区间为 **[-15.98%, -11.66%]**。\n- 这些结果只能验证统计图的稳定性与线性邻居预测价值，不能证明物理因果关系，也不能替代 Graph-CSDI 正式消融。",
+        "layout": "full"
+      },
+      {
+        "id": "stability_text",
+        "type": "markdown",
+        "sourceId": "stability_source",
+        "body": "## 静态图在连续时段中有多稳定\n\n边 Jaccard 衡量不同时间块的无向 Top-8 边重合，通道邻居 Jaccard 衡量每个目标通道的定向邻居重合。权重排序一致但 Top-8 重合较低，意味着相关结构整体相近但边界邻居不稳定。",
+        "layout": "full"
+      },
+      {
+        "id": "stability_chart_block",
+        "type": "chart",
+        "chartId": "stability_chart",
+        "layout": "full"
+      },
+      {
+        "id": "edge_text",
+        "type": "markdown",
+        "sourceId": "edge_source",
+        "body": "## 原值相关中存在多少平台段风险\n\n横轴是原始归一化数值的 Pearson 相关，纵轴是一阶差分相关。右下区域代表原值高度同步、变化量却缺少同步支持的边，应视为零阶保持或共同状态造成的候选伪相关，而不是直接解释为物理连接。",
+        "layout": "full"
+      },
+      {
+        "id": "edge_chart_block",
+        "type": "chart",
+        "chartId": "edge_chart",
+        "layout": "full"
+      },
+      {
+        "id": "suspect_text",
+        "type": "markdown",
+        "sourceId": "edge_source",
+        "body": "## 优先人工检查的原值图边\n\n下表把满足候选伪相关判据的边排在前面，并保留差分、Spearman 与最低更新率用于复核。",
+        "layout": "full"
+      },
+      {
+        "id": "suspect_table_block",
+        "type": "table",
+        "tableId": "suspect_table",
+        "layout": "full"
+      },
+      {
+        "id": "reconstruction_text",
+        "type": "markdown",
+        "sourceId": "reconstruction_source",
+        "body": "## 图邻居能否恢复被遮挡通道\n\n每种候选图用前 80% 训练段拟合逐通道 Ridge，在后 20% 连续留出段的 128 个窗口上施加三类 50% 结构化遮挡。真实图只有稳定优于随机图和打乱图，才说明具体边结构具有增量价值。",
+        "layout": "full"
+      },
+      {
+        "id": "reconstruction_chart_block",
+        "type": "chart",
+        "chartId": "reconstruction_chart",
+        "layout": "full"
+      },
+      {
+        "id": "graph_text",
+        "type": "markdown",
+        "sourceId": "graph_source",
+        "body": "## 三种候选图的结构差异\n\n所有方法都固定每个目标通道选择 8 个定向邻居，再做无向并集统计；因此节点度数可以大于 8。",
+        "layout": "full"
+      },
+      {
+        "id": "graph_table_block",
+        "type": "table",
+        "tableId": "graph_table",
+        "layout": "full"
+      },
+      {
+        "id": "scope",
+        "type": "markdown",
+        "body": "## 范围、数据与指标定义\n\n分析对象为 ESA Mission 1 的 76 个归一化遥测通道，30 秒时间网格。训练段前 80% 用于建图和拟合代理模型，后 20% 用作连续留出验证。Pearson 使用成对完整观测；一阶差分要求相邻两个时间点均有观测。Top-8 按相关系数绝对值选择，因此正相关和负相关都被视为可用依赖。",
+        "layout": "full"
+      },
+      {
+        "id": "method",
+        "type": "markdown",
+        "body": "## 方法\n\n稳定性使用建图段内四个连续等长块，共比较 6 个块对。候选伪相关判据为：原值图边的 |Pearson|≥0.8、|差分 Pearson|<0.1，且该边不属于差分 Top-8 无向并集。代理重建在每个通道上使用固定 8 邻居的 Ridge 回归；被遮挡或自然缺失的邻居在归一化空间置零。随机图与打乱图使用固定种子 20260719。",
+        "layout": "full"
+      },
+      {
+        "id": "limitations",
+        "type": "markdown",
+        "body": "## 限制、稳健性与不确定性\n\n- 所有建图、参数选择和代理验证均限制在 Mission 1 训练段；最后 20% 只是训练集内部的连续留出段。\n- 邻居重建使用 Ridge 线性代理和归一化零值处理不可用邻居，只回答“同一时刻图邻居是否提供预测信号”，不等价于扩散模型能力。\n- Spearman 图使用均匀抽取的 160k 个训练时间点；Pearson 与差分 Pearson 使用完整连续数据。\n- 30 秒零阶保持会放大长期平台段的一致性；差分图和通道更新率用于识别该风险，但不能完全排除共同工况造成的非因果相关。",
+        "layout": "full"
+      },
+      {
+        "id": "recommendation",
+        "type": "markdown",
+        "body": "## 是否进入 Graph-CSDI\n\n- 暂不把当前原值 Pearson Top-8 图作为主图。\n- 以一阶差分 Top-8 图做 Graph-only 3k–5k 步筛选，并配随机/打乱图。\n- 保留原值图作为消融，以检验状态相关与变化相关哪种更适合遥测恢复。",
+        "layout": "full"
+      },
+      {
+        "id": "questions",
+        "type": "markdown",
+        "body": "## 后续问题\n\n- 如果原值图和差分图各有优势，Graph Encoder 应使用单图、双关系图还是可学习混合？\n- 通道更新率极低时，邻居关系应按状态相关还是变化相关定义？\n- 图通过代理验证后，真实 Graph-CSDI 的提升是否来自边结构，而不是新增参数？这需要随机图和打乱图消融回答。",
+        "layout": "full"
+      }
+    ],
+    "charts": [
+      {
+        "id": "stability_chart",
+        "title": "连续时段 Top-8 图稳定性",
+        "subtitle": "建图段四等分的 6 个块对均值；1 表示完全一致",
+        "type": "bar",
+        "intent": "comparison",
+        "dataset": "stability_chart",
+        "sourceId": "stability_source",
+        "encodings": {
+          "x": {
+            "field": "method_label",
+            "type": "nominal",
+            "label": "候选图"
+          },
+          "y": {
+            "fields": [
+              "mean_edge_jaccard",
+              "mean_channel_neighbor_jaccard"
+            ],
+            "type": "quantitative",
+            "aggregate": "none",
+            "label": "Jaccard"
+          }
+        },
+        "valueFormat": "number",
+        "layout": "full"
+      },
+      {
+        "id": "edge_chart",
+        "title": "原值图边的原值相关与差分相关",
+        "subtitle": "每个点是一条原值 Pearson Top-8 无向边；颜色标记候选伪相关",
+        "type": "scatter",
+        "intent": "relationship",
+        "dataset": "edge_diagnostics",
+        "sourceId": "edge_source",
+        "encodings": {
+          "x": {
+            "field": "abs_raw_pearson",
+            "type": "quantitative",
+            "label": "|原值 Pearson|"
+          },
+          "y": {
+            "field": "abs_diff_pearson",
+            "type": "quantitative",
+            "label": "|一阶差分 Pearson|"
+          },
+          "color": {
+            "field": "raw_only_suspect",
+            "type": "nominal",
+            "label": "候选伪相关"
+          },
+          "tooltip": [
+            {
+              "field": "edge",
+              "type": "nominal",
+              "label": "通道边"
+            },
+            {
+              "field": "spearman",
+              "type": "quantitative",
+              "label": "Spearman"
+            },
+            {
+              "field": "min_update_fraction",
+              "type": "quantitative",
+              "format": "percent",
+              "label": "最低更新率"
+            }
+          ]
+        },
+        "valueFormat": "number",
+        "layout": "full"
+      },
+      {
+        "id": "reconstruction_chart",
+        "title": "训练集连续留出段的邻居重建 RMSE",
+        "subtitle": "128 个 96 步窗口；越低越好；所有数值在通道归一化空间计算",
+        "type": "bar",
+        "intent": "comparison",
+        "dataset": "reconstruction_wide",
+        "sourceId": "reconstruction_source",
+        "encodings": {
+          "x": {
+            "field": "mask_label",
+            "type": "nominal",
+            "label": "遮挡协议"
+          },
+          "y": {
+            "fields": [
+              "Spearman Top-8",
+              "一阶差分 Pearson Top-8",
+              "原值 Pearson Top-8",
+              "打乱原值图",
+              "随机 Top-8",
+              "零值基线"
+            ],
+            "type": "quantitative",
+            "aggregate": "none",
+            "label": "归一化 RMSE"
+          }
+        },
+        "valueFormat": "number",
+        "layout": "full"
+      }
+    ],
+    "tables": [
+      {
+        "id": "suspect_table",
+        "title": "原值图边诊断（前 15 条）",
+        "subtitle": "候选伪相关优先，再按 |原值 Pearson| 降序",
+        "dataset": "suspect_edges",
+        "sourceId": "edge_source",
+        "defaultSort": {
+          "field": "raw_only_suspect",
+          "direction": "desc"
+        },
+        "density": "spacious",
+        "layout": "full",
+        "columns": [
+          {
+            "field": "edge",
+            "label": "通道边"
+          },
+          {
+            "field": "raw_pearson",
+            "label": "原值 Pearson",
+            "format": "number"
+          },
+          {
+            "field": "diff_pearson",
+            "label": "差分 Pearson",
+            "format": "number"
+          },
+          {
+            "field": "spearman",
+            "label": "Spearman",
+            "format": "number"
+          },
+          {
+            "field": "min_update_fraction",
+            "label": "最低更新率",
+            "format": "percent"
+          },
+          {
+            "field": "raw_only_suspect",
+            "label": "候选伪相关",
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "id": "graph_table",
+        "title": "候选图结构统计",
+        "subtitle": "建图段前 80%；Top-8 定向邻居的无向并集",
+        "dataset": "graph_summary",
+        "sourceId": "graph_source",
+        "defaultSort": {
+          "field": "method_label",
+          "direction": "asc"
+        },
+        "density": "spacious",
+        "layout": "full",
+        "columns": [
+          {
+            "field": "method_label",
+            "label": "方法"
+          },
+          {
+            "field": "undirected_edges",
+            "label": "无向边",
+            "format": "number"
+          },
+          {
+            "field": "degree_min",
+            "label": "最小度",
+            "format": "number"
+          },
+          {
+            "field": "degree_median",
+            "label": "中位度",
+            "format": "number"
+          },
+          {
+            "field": "degree_max",
+            "label": "最大度",
+            "format": "number"
+          },
+          {
+            "field": "edge_abs_correlation_median",
+            "label": "边 |r| 中位数",
+            "format": "number"
+          }
+        ]
+      }
+    ]
+  },
+  "snapshot": {
+    "version": 1,
+    "generatedAt": "2026-07-19T14:26:20.339828+08:00",
+    "status": "ready",
+    "datasets": {
+      "stability_chart": [
+        {
+          "method_label": "一阶差分 Pearson Top-8",
+          "mean_edge_jaccard": 0.387984,
+          "mean_channel_neighbor_jaccard": 0.475263
+        },
+        {
+          "method_label": "原值 Pearson Top-8",
+          "mean_edge_jaccard": 0.431546,
+          "mean_channel_neighbor_jaccard": 0.513609
+        }
+      ],
+      "edge_diagnostics": [
+        {
+          "edge": "channel_62 ↔ channel_63",
+          "raw_pearson": 0.99998,
+          "abs_raw_pearson": 0.99998,
+          "diff_pearson": 0.999914,
+          "abs_diff_pearson": 0.999914,
+          "spearman": 0.999917,
+          "min_update_fraction": 0.033278,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_64 ↔ channel_65",
+          "raw_pearson": 0.999903,
+          "abs_raw_pearson": 0.999903,
+          "diff_pearson": 0.999306,
+          "abs_diff_pearson": 0.999306,
+          "spearman": 0.032097,
+          "min_update_fraction": 0.200592,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_8 ↔ channel_9",
+          "raw_pearson": 0.99967,
+          "abs_raw_pearson": 0.99967,
+          "diff_pearson": 0.997955,
+          "abs_diff_pearson": 0.997955,
+          "spearman": 1.0,
+          "min_update_fraction": 0.19985,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_64 ↔ channel_68",
+          "raw_pearson": 0.999555,
+          "abs_raw_pearson": 0.999555,
+          "diff_pearson": 0.99715,
+          "abs_diff_pearson": 0.99715,
+          "spearman": 0.005188,
+          "min_update_fraction": 0.200592,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_65 ↔ channel_68",
+          "raw_pearson": 0.999516,
+          "abs_raw_pearson": 0.999516,
+          "diff_pearson": 0.996857,
+          "abs_diff_pearson": 0.996857,
+          "spearman": -0.000392,
+          "min_update_fraction": 0.200592,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_5 ↔ channel_7",
+          "raw_pearson": 0.999198,
+          "abs_raw_pearson": 0.999198,
+          "diff_pearson": 0.998106,
+          "abs_diff_pearson": 0.998106,
+          "spearman": 0.866027,
+          "min_update_fraction": 0.19985,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_64 ↔ channel_69",
+          "raw_pearson": 0.998829,
+          "abs_raw_pearson": 0.998829,
+          "diff_pearson": 0.994284,
+          "abs_diff_pearson": 0.994284,
+          "spearman": -0.003885,
+          "min_update_fraction": 0.200592,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_65 ↔ channel_69",
+          "raw_pearson": 0.998792,
+          "abs_raw_pearson": 0.998792,
+          "diff_pearson": 0.993989,
+          "abs_diff_pearson": 0.993989,
+          "spearman": -0.004541,
+          "min_update_fraction": 0.200592,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_64 ↔ channel_67",
+          "raw_pearson": 0.998581,
+          "abs_raw_pearson": 0.998581,
+          "diff_pearson": 0.99336,
+          "abs_diff_pearson": 0.99336,
+          "spearman": 0.000636,
+          "min_update_fraction": 0.200592,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_65 ↔ channel_67",
+          "raw_pearson": 0.99854,
+          "abs_raw_pearson": 0.99854,
+          "diff_pearson": 0.993067,
+          "abs_diff_pearson": 0.993067,
+          "spearman": -0.000624,
+          "min_update_fraction": 0.200592,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_68 ↔ channel_69",
+          "raw_pearson": 0.998467,
+          "abs_raw_pearson": 0.998467,
+          "diff_pearson": 0.991876,
+          "abs_diff_pearson": 0.991876,
+          "spearman": -0.023882,
+          "min_update_fraction": 0.200592,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_67 ↔ channel_68",
+          "raw_pearson": 0.998404,
+          "abs_raw_pearson": 0.998404,
+          "diff_pearson": 0.991385,
+          "abs_diff_pearson": 0.991385,
+          "spearman": 0.109482,
+          "min_update_fraction": 0.200592,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_33 ↔ channel_40",
+          "raw_pearson": 0.99827,
+          "abs_raw_pearson": 0.99827,
+          "diff_pearson": 0.004567,
+          "abs_diff_pearson": 0.004567,
+          "spearman": 0.997716,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_16 ↔ channel_32",
+          "raw_pearson": 0.998112,
+          "abs_raw_pearson": 0.998112,
+          "diff_pearson": -0.000832,
+          "abs_diff_pearson": 0.000832,
+          "spearman": 0.997838,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_24 ↔ channel_32",
+          "raw_pearson": 0.998059,
+          "abs_raw_pearson": 0.998059,
+          "diff_pearson": -0.00049,
+          "abs_diff_pearson": 0.00049,
+          "spearman": 0.997844,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_22 ↔ channel_31",
+          "raw_pearson": 0.998014,
+          "abs_raw_pearson": 0.998014,
+          "diff_pearson": -0.003465,
+          "abs_diff_pearson": 0.003465,
+          "spearman": 0.996791,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_16 ↔ channel_24",
+          "raw_pearson": 0.997989,
+          "abs_raw_pearson": 0.997989,
+          "diff_pearson": -0.000122,
+          "abs_diff_pearson": 0.000122,
+          "spearman": 0.997773,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_32 ↔ channel_40",
+          "raw_pearson": 0.997959,
+          "abs_raw_pearson": 0.997959,
+          "diff_pearson": 0.000332,
+          "abs_diff_pearson": 0.000332,
+          "spearman": 0.997512,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_16 ↔ channel_40",
+          "raw_pearson": 0.997941,
+          "abs_raw_pearson": 0.997941,
+          "diff_pearson": -0.001308,
+          "abs_diff_pearson": 0.001308,
+          "spearman": 0.997476,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_16 ↔ channel_33",
+          "raw_pearson": 0.997939,
+          "abs_raw_pearson": 0.997939,
+          "diff_pearson": 0.002051,
+          "abs_diff_pearson": 0.002051,
+          "spearman": 0.997557,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_32 ↔ channel_33",
+          "raw_pearson": 0.997875,
+          "abs_raw_pearson": 0.997875,
+          "diff_pearson": -0.045134,
+          "abs_diff_pearson": 0.045134,
+          "spearman": 0.997517,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_24 ↔ channel_40",
+          "raw_pearson": 0.997861,
+          "abs_raw_pearson": 0.997861,
+          "diff_pearson": -0.002575,
+          "abs_diff_pearson": 0.002575,
+          "spearman": 0.997453,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_24 ↔ channel_33",
+          "raw_pearson": 0.997856,
+          "abs_raw_pearson": 0.997856,
+          "diff_pearson": 0.000894,
+          "abs_diff_pearson": 0.000894,
+          "spearman": 0.997534,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_15 ↔ channel_23",
+          "raw_pearson": 0.997677,
+          "abs_raw_pearson": 0.997677,
+          "diff_pearson": 0.00181,
+          "abs_diff_pearson": 0.00181,
+          "spearman": 0.997018,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_30 ↔ channel_38",
+          "raw_pearson": 0.99761,
+          "abs_raw_pearson": 0.99761,
+          "diff_pearson": -0.003969,
+          "abs_diff_pearson": 0.003969,
+          "spearman": 0.997211,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_31 ↔ channel_39",
+          "raw_pearson": 0.997548,
+          "abs_raw_pearson": 0.997548,
+          "diff_pearson": -0.004225,
+          "abs_diff_pearson": 0.004225,
+          "spearman": 0.99527,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_2 ↔ channel_3",
+          "raw_pearson": 0.997539,
+          "abs_raw_pearson": 0.997539,
+          "diff_pearson": 0.994677,
+          "abs_diff_pearson": 0.994677,
+          "spearman": 0.392191,
+          "min_update_fraction": 0.350568,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_22 ↔ channel_39",
+          "raw_pearson": 0.997533,
+          "abs_raw_pearson": 0.997533,
+          "diff_pearson": -0.001525,
+          "abs_diff_pearson": 0.001525,
+          "spearman": 0.995273,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_67 ↔ channel_69",
+          "raw_pearson": 0.997257,
+          "abs_raw_pearson": 0.997257,
+          "diff_pearson": 0.988016,
+          "abs_diff_pearson": 0.988016,
+          "spearman": -0.077203,
+          "min_update_fraction": 0.200592,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_14 ↔ channel_21",
+          "raw_pearson": 0.997072,
+          "abs_raw_pearson": 0.997072,
+          "diff_pearson": -0.002998,
+          "abs_diff_pearson": 0.002998,
+          "spearman": 0.996682,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_6 ↔ channel_7",
+          "raw_pearson": 0.996453,
+          "abs_raw_pearson": 0.996453,
+          "diff_pearson": 0.991162,
+          "abs_diff_pearson": 0.991162,
+          "spearman": 0.816502,
+          "min_update_fraction": 0.19985,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_20 ↔ channel_27",
+          "raw_pearson": 0.99596,
+          "abs_raw_pearson": 0.99596,
+          "diff_pearson": -0.00085,
+          "abs_diff_pearson": 0.00085,
+          "spearman": 0.995598,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_1 ↔ channel_2",
+          "raw_pearson": 0.995957,
+          "abs_raw_pearson": 0.995957,
+          "diff_pearson": 0.991401,
+          "abs_diff_pearson": 0.991401,
+          "spearman": 0.854517,
+          "min_update_fraction": 0.350568,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_5 ↔ channel_6",
+          "raw_pearson": 0.995808,
+          "abs_raw_pearson": 0.995808,
+          "diff_pearson": 0.990911,
+          "abs_diff_pearson": 0.990911,
+          "spearman": 0.942812,
+          "min_update_fraction": 0.19985,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_1 ↔ channel_3",
+          "raw_pearson": 0.995084,
+          "abs_raw_pearson": 0.995084,
+          "diff_pearson": 0.992605,
+          "abs_diff_pearson": 0.992605,
+          "spearman": 0.370506,
+          "min_update_fraction": 0.350568,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_49 ↔ channel_52",
+          "raw_pearson": 0.994844,
+          "abs_raw_pearson": 0.994844,
+          "diff_pearson": 0.003306,
+          "abs_diff_pearson": 0.003306,
+          "spearman": 0.989133,
+          "min_update_fraction": 0.33397,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_58 ↔ channel_60",
+          "raw_pearson": 0.994616,
+          "abs_raw_pearson": 0.994616,
+          "diff_pearson": -0.000719,
+          "abs_diff_pearson": 0.000719,
+          "spearman": 0.994355,
+          "min_update_fraction": 0.998518,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_4 ↔ channel_6",
+          "raw_pearson": 0.993463,
+          "abs_raw_pearson": 0.993463,
+          "diff_pearson": 0.98562,
+          "abs_diff_pearson": 0.98562,
+          "spearman": 0.816502,
+          "min_update_fraction": 0.19985,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_48 ↔ channel_51",
+          "raw_pearson": 0.99321,
+          "abs_raw_pearson": 0.99321,
+          "diff_pearson": 0.002466,
+          "abs_diff_pearson": 0.002466,
+          "spearman": 0.98831,
+          "min_update_fraction": 0.33397,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_4 ↔ channel_7",
+          "raw_pearson": 0.992947,
+          "abs_raw_pearson": 0.992947,
+          "diff_pearson": 0.987437,
+          "abs_diff_pearson": 0.987437,
+          "spearman": 1.0,
+          "min_update_fraction": 0.19985,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_13 ↔ channel_20",
+          "raw_pearson": 0.99262,
+          "abs_raw_pearson": 0.99262,
+          "diff_pearson": -4e-05,
+          "abs_diff_pearson": 4e-05,
+          "spearman": 0.990418,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_17 ↔ channel_20",
+          "raw_pearson": 0.992528,
+          "abs_raw_pearson": 0.992528,
+          "diff_pearson": 0.019149,
+          "abs_diff_pearson": 0.019149,
+          "spearman": 0.992201,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_47 ↔ channel_50",
+          "raw_pearson": 0.992423,
+          "abs_raw_pearson": 0.992423,
+          "diff_pearson": 0.002972,
+          "abs_diff_pearson": 0.002972,
+          "spearman": 0.986672,
+          "min_update_fraction": 0.33397,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_12 ↔ channel_34",
+          "raw_pearson": 0.992319,
+          "abs_raw_pearson": 0.992319,
+          "diff_pearson": -0.001158,
+          "abs_diff_pearson": 0.001158,
+          "spearman": 0.988731,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_4 ↔ channel_5",
+          "raw_pearson": 0.991952,
+          "abs_raw_pearson": 0.991952,
+          "diff_pearson": 0.985727,
+          "abs_diff_pearson": 0.985727,
+          "spearman": 0.866027,
+          "min_update_fraction": 0.19985,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_13 ↔ channel_27",
+          "raw_pearson": 0.99149,
+          "abs_raw_pearson": 0.99149,
+          "diff_pearson": -0.002086,
+          "abs_diff_pearson": 0.002086,
+          "spearman": 0.98919,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_17 ↔ channel_27",
+          "raw_pearson": 0.991188,
+          "abs_raw_pearson": 0.991188,
+          "diff_pearson": 0.002285,
+          "abs_diff_pearson": 0.002285,
+          "spearman": 0.991072,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_18 ↔ channel_25",
+          "raw_pearson": 0.990491,
+          "abs_raw_pearson": 0.990491,
+          "diff_pearson": 6e-05,
+          "abs_diff_pearson": 6e-05,
+          "spearman": 0.989708,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_13 ↔ channel_34",
+          "raw_pearson": 0.990391,
+          "abs_raw_pearson": 0.990391,
+          "diff_pearson": 0.002211,
+          "abs_diff_pearson": 0.002211,
+          "spearman": 0.985043,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_26 ↔ channel_34",
+          "raw_pearson": 0.990378,
+          "abs_raw_pearson": 0.990378,
+          "diff_pearson": 0.000972,
+          "abs_diff_pearson": 0.000972,
+          "spearman": 0.98857,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_50 ↔ channel_51",
+          "raw_pearson": 0.989652,
+          "abs_raw_pearson": 0.989652,
+          "diff_pearson": 0.005191,
+          "abs_diff_pearson": 0.005191,
+          "spearman": 0.985083,
+          "min_update_fraction": 0.33397,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_47 ↔ channel_48",
+          "raw_pearson": 0.989636,
+          "abs_raw_pearson": 0.989636,
+          "diff_pearson": 0.00362,
+          "abs_diff_pearson": 0.00362,
+          "spearman": 0.984939,
+          "min_update_fraction": 0.998511,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_48 ↔ channel_50",
+          "raw_pearson": 0.989613,
+          "abs_raw_pearson": 0.989613,
+          "diff_pearson": 0.00041,
+          "abs_diff_pearson": 0.00041,
+          "spearman": 0.985166,
+          "min_update_fraction": 0.33397,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_47 ↔ channel_51",
+          "raw_pearson": 0.989589,
+          "abs_raw_pearson": 0.989589,
+          "diff_pearson": -0.000237,
+          "abs_diff_pearson": 0.000237,
+          "spearman": 0.984898,
+          "min_update_fraction": 0.33397,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_25 ↔ channel_27",
+          "raw_pearson": 0.989475,
+          "abs_raw_pearson": 0.989475,
+          "diff_pearson": -0.000696,
+          "abs_diff_pearson": 0.000696,
+          "spearman": 0.989793,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_12 ↔ channel_37",
+          "raw_pearson": 0.989317,
+          "abs_raw_pearson": 0.989317,
+          "diff_pearson": 0.000113,
+          "abs_diff_pearson": 0.000113,
+          "spearman": 0.988413,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_13 ↔ channel_17",
+          "raw_pearson": 0.989039,
+          "abs_raw_pearson": 0.989039,
+          "diff_pearson": 0.002228,
+          "abs_diff_pearson": 0.002228,
+          "spearman": 0.986833,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_12 ↔ channel_13",
+          "raw_pearson": 0.988973,
+          "abs_raw_pearson": 0.988973,
+          "diff_pearson": -0.049495,
+          "abs_diff_pearson": 0.049495,
+          "spearman": 0.982685,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_17 ↔ channel_25",
+          "raw_pearson": 0.988514,
+          "abs_raw_pearson": 0.988514,
+          "diff_pearson": 0.00143,
+          "abs_diff_pearson": 0.00143,
+          "spearman": 0.987318,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_20 ↔ channel_25",
+          "raw_pearson": 0.988311,
+          "abs_raw_pearson": 0.988311,
+          "diff_pearson": 0.000672,
+          "abs_diff_pearson": 0.000672,
+          "spearman": 0.988042,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_57 ↔ channel_59",
+          "raw_pearson": 0.988106,
+          "abs_raw_pearson": 0.988106,
+          "diff_pearson": 0.000301,
+          "abs_diff_pearson": 0.000301,
+          "spearman": 0.995157,
+          "min_update_fraction": 0.998518,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_18 ↔ channel_27",
+          "raw_pearson": 0.987765,
+          "abs_raw_pearson": 0.987765,
+          "diff_pearson": 0.001106,
+          "abs_diff_pearson": 0.001106,
+          "spearman": 0.988023,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_57 ↔ channel_58",
+          "raw_pearson": 0.987165,
+          "abs_raw_pearson": 0.987165,
+          "diff_pearson": 0.000368,
+          "abs_diff_pearson": 0.000368,
+          "spearman": 0.994152,
+          "min_update_fraction": 0.998518,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_14 ↔ channel_29",
+          "raw_pearson": 0.986756,
+          "abs_raw_pearson": 0.986756,
+          "diff_pearson": -0.001237,
+          "abs_diff_pearson": 0.001237,
+          "spearman": 0.983644,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_18 ↔ channel_20",
+          "raw_pearson": 0.986496,
+          "abs_raw_pearson": 0.986496,
+          "diff_pearson": 0.002285,
+          "abs_diff_pearson": 0.002285,
+          "spearman": 0.986262,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_35 ↔ channel_37",
+          "raw_pearson": 0.985875,
+          "abs_raw_pearson": 0.985875,
+          "diff_pearson": -0.006054,
+          "abs_diff_pearson": 0.006054,
+          "spearman": 0.986427,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_57 ↔ channel_60",
+          "raw_pearson": 0.985555,
+          "abs_raw_pearson": 0.985555,
+          "diff_pearson": 0.005875,
+          "abs_diff_pearson": 0.005875,
+          "spearman": 0.993769,
+          "min_update_fraction": 0.998518,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_26 ↔ channel_36",
+          "raw_pearson": 0.985429,
+          "abs_raw_pearson": 0.985429,
+          "diff_pearson": -0.001871,
+          "abs_diff_pearson": 0.001871,
+          "spearman": 0.986151,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_20 ↔ channel_34",
+          "raw_pearson": 0.985024,
+          "abs_raw_pearson": 0.985024,
+          "diff_pearson": -5.1e-05,
+          "abs_diff_pearson": 5.1e-05,
+          "spearman": 0.979256,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_17 ↔ channel_18",
+          "raw_pearson": 0.984341,
+          "abs_raw_pearson": 0.984341,
+          "diff_pearson": -0.044665,
+          "abs_diff_pearson": 0.044665,
+          "spearman": 0.982564,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_12 ↔ channel_26",
+          "raw_pearson": 0.983901,
+          "abs_raw_pearson": 0.983901,
+          "diff_pearson": 0.004795,
+          "abs_diff_pearson": 0.004795,
+          "spearman": 0.979469,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_17 ↔ channel_34",
+          "raw_pearson": 0.983887,
+          "abs_raw_pearson": 0.983887,
+          "diff_pearson": 0.002318,
+          "abs_diff_pearson": 0.002318,
+          "spearman": 0.977127,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_27 ↔ channel_34",
+          "raw_pearson": 0.98288,
+          "abs_raw_pearson": 0.98288,
+          "diff_pearson": 0.000208,
+          "abs_diff_pearson": 0.000208,
+          "spearman": 0.977229,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_21 ↔ channel_29",
+          "raw_pearson": 0.982447,
+          "abs_raw_pearson": 0.982447,
+          "diff_pearson": -0.002967,
+          "abs_diff_pearson": 0.002967,
+          "spearman": 0.979371,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_12 ↔ channel_35",
+          "raw_pearson": 0.98003,
+          "abs_raw_pearson": 0.98003,
+          "diff_pearson": 0.00234,
+          "abs_diff_pearson": 0.00234,
+          "spearman": 0.980001,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_13 ↔ channel_37",
+          "raw_pearson": 0.978469,
+          "abs_raw_pearson": 0.978469,
+          "diff_pearson": 0.000353,
+          "abs_diff_pearson": 0.000353,
+          "spearman": 0.974456,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_13 ↔ channel_18",
+          "raw_pearson": 0.978273,
+          "abs_raw_pearson": 0.978273,
+          "diff_pearson": 0.000869,
+          "abs_diff_pearson": 0.000869,
+          "spearman": 0.975857,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_26 ↔ channel_28",
+          "raw_pearson": 0.977691,
+          "abs_raw_pearson": 0.977691,
+          "diff_pearson": 0.013198,
+          "abs_diff_pearson": 0.013198,
+          "spearman": 0.97721,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_12 ↔ channel_20",
+          "raw_pearson": 0.977298,
+          "abs_raw_pearson": 0.977298,
+          "diff_pearson": -0.0004,
+          "abs_diff_pearson": 0.0004,
+          "spearman": 0.967178,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_13 ↔ channel_26",
+          "raw_pearson": 0.976533,
+          "abs_raw_pearson": 0.976533,
+          "diff_pearson": -0.001774,
+          "abs_diff_pearson": 0.001774,
+          "spearman": 0.968834,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_13 ↔ channel_25",
+          "raw_pearson": 0.976451,
+          "abs_raw_pearson": 0.976451,
+          "diff_pearson": 0.001141,
+          "abs_diff_pearson": 0.001141,
+          "spearman": 0.972796,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_12 ↔ channel_27",
+          "raw_pearson": 0.975066,
+          "abs_raw_pearson": 0.975066,
+          "diff_pearson": -0.001976,
+          "abs_diff_pearson": 0.001976,
+          "spearman": 0.964593,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_34 ↔ channel_37",
+          "raw_pearson": 0.974728,
+          "abs_raw_pearson": 0.974728,
+          "diff_pearson": 0.04477,
+          "abs_diff_pearson": 0.04477,
+          "spearman": 0.969992,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_12 ↔ channel_36",
+          "raw_pearson": 0.973853,
+          "abs_raw_pearson": 0.973853,
+          "diff_pearson": 1e-06,
+          "abs_diff_pearson": 1e-06,
+          "spearman": 0.971311,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_34 ↔ channel_36",
+          "raw_pearson": 0.973402,
+          "abs_raw_pearson": 0.973402,
+          "diff_pearson": -0.001325,
+          "abs_diff_pearson": 0.001325,
+          "spearman": 0.973207,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_12 ↔ channel_17",
+          "raw_pearson": 0.97322,
+          "abs_raw_pearson": 0.97322,
+          "diff_pearson": 0.003071,
+          "abs_diff_pearson": 0.003071,
+          "spearman": 0.963916,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_20 ↔ channel_26",
+          "raw_pearson": 0.971569,
+          "abs_raw_pearson": 0.971569,
+          "diff_pearson": -0.000627,
+          "abs_diff_pearson": 0.000627,
+          "spearman": 0.964586,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_28 ↔ channel_34",
+          "raw_pearson": 0.971391,
+          "abs_raw_pearson": 0.971391,
+          "diff_pearson": -0.000111,
+          "abs_diff_pearson": 0.000111,
+          "spearman": 0.969773,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_25 ↔ channel_34",
+          "raw_pearson": 0.970675,
+          "abs_raw_pearson": 0.970675,
+          "diff_pearson": 0.001862,
+          "abs_diff_pearson": 0.001862,
+          "spearman": 0.963842,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_18 ↔ channel_34",
+          "raw_pearson": 0.970504,
+          "abs_raw_pearson": 0.970504,
+          "diff_pearson": 0.002673,
+          "abs_diff_pearson": 0.002673,
+          "spearman": 0.964592,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_66 ↔ channel_69",
+          "raw_pearson": 0.969894,
+          "abs_raw_pearson": 0.969894,
+          "diff_pearson": 0.989524,
+          "abs_diff_pearson": 0.989524,
+          "spearman": 0.111304,
+          "min_update_fraction": 0.200592,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_17 ↔ channel_26",
+          "raw_pearson": 0.969817,
+          "abs_raw_pearson": 0.969817,
+          "diff_pearson": 0.000472,
+          "abs_diff_pearson": 0.000472,
+          "spearman": 0.962496,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_25 ↔ channel_28",
+          "raw_pearson": 0.969417,
+          "abs_raw_pearson": 0.969417,
+          "diff_pearson": 0.040356,
+          "abs_diff_pearson": 0.040356,
+          "spearman": 0.96862,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_20 ↔ channel_28",
+          "raw_pearson": 0.96909,
+          "abs_raw_pearson": 0.96909,
+          "diff_pearson": -0.00049,
+          "abs_diff_pearson": 0.00049,
+          "spearman": 0.965609,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_27 ↔ channel_28",
+          "raw_pearson": 0.96816,
+          "abs_raw_pearson": 0.96816,
+          "diff_pearson": -0.042312,
+          "abs_diff_pearson": 0.042312,
+          "spearman": 0.964719,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_64 ↔ channel_66",
+          "raw_pearson": 0.96778,
+          "abs_raw_pearson": 0.96778,
+          "diff_pearson": 0.994684,
+          "abs_diff_pearson": 0.994684,
+          "spearman": -0.003744,
+          "min_update_fraction": 0.200592,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_65 ↔ channel_66",
+          "raw_pearson": 0.967757,
+          "abs_raw_pearson": 0.967757,
+          "diff_pearson": 0.994392,
+          "abs_diff_pearson": 0.994392,
+          "spearman": -0.001112,
+          "min_update_fraction": 0.200592,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_26 ↔ channel_27",
+          "raw_pearson": 0.967663,
+          "abs_raw_pearson": 0.967663,
+          "diff_pearson": -0.047489,
+          "abs_diff_pearson": 0.047489,
+          "spearman": 0.960965,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_23 ↔ channel_31",
+          "raw_pearson": 0.967227,
+          "abs_raw_pearson": 0.967227,
+          "diff_pearson": 0.001211,
+          "abs_diff_pearson": 0.001211,
+          "spearman": 0.97007,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_22 ↔ channel_23",
+          "raw_pearson": 0.966986,
+          "abs_raw_pearson": 0.966986,
+          "diff_pearson": -0.047436,
+          "abs_diff_pearson": 0.047436,
+          "spearman": 0.970225,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_66 ↔ channel_68",
+          "raw_pearson": 0.96696,
+          "abs_raw_pearson": 0.96696,
+          "diff_pearson": 0.992357,
+          "abs_diff_pearson": 0.992357,
+          "spearman": -0.081315,
+          "min_update_fraction": 0.200592,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_23 ↔ channel_39",
+          "raw_pearson": 0.966774,
+          "abs_raw_pearson": 0.966774,
+          "diff_pearson": 0.003827,
+          "abs_diff_pearson": 0.003827,
+          "spearman": 0.966991,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_15 ↔ channel_31",
+          "raw_pearson": 0.966593,
+          "abs_raw_pearson": 0.966593,
+          "diff_pearson": 0.000179,
+          "abs_diff_pearson": 0.000179,
+          "spearman": 0.970015,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_15 ↔ channel_22",
+          "raw_pearson": 0.96643,
+          "abs_raw_pearson": 0.96643,
+          "diff_pearson": -0.000757,
+          "abs_diff_pearson": 0.000757,
+          "spearman": 0.970314,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_15 ↔ channel_39",
+          "raw_pearson": 0.966157,
+          "abs_raw_pearson": 0.966157,
+          "diff_pearson": -0.001218,
+          "abs_diff_pearson": 0.001218,
+          "spearman": 0.966899,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_19 ↔ channel_37",
+          "raw_pearson": 0.964479,
+          "abs_raw_pearson": 0.964479,
+          "diff_pearson": -0.001833,
+          "abs_diff_pearson": 0.001833,
+          "spearman": 0.962998,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_50 ↔ channel_52",
+          "raw_pearson": 0.964425,
+          "abs_raw_pearson": 0.964425,
+          "diff_pearson": 0.002198,
+          "abs_diff_pearson": 0.002198,
+          "spearman": 0.986936,
+          "min_update_fraction": 0.33397,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_47 ↔ channel_52",
+          "raw_pearson": 0.964395,
+          "abs_raw_pearson": 0.964395,
+          "diff_pearson": -4e-05,
+          "abs_diff_pearson": 4e-05,
+          "spearman": 0.986845,
+          "min_update_fraction": 0.33397,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_47 ↔ channel_49",
+          "raw_pearson": 0.964389,
+          "abs_raw_pearson": 0.964389,
+          "diff_pearson": 0.001328,
+          "abs_diff_pearson": 0.001328,
+          "spearman": 0.98683,
+          "min_update_fraction": 0.998511,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_49 ↔ channel_50",
+          "raw_pearson": 0.964374,
+          "abs_raw_pearson": 0.964374,
+          "diff_pearson": 6.9e-05,
+          "abs_diff_pearson": 6.9e-05,
+          "spearman": 0.986955,
+          "min_update_fraction": 0.33397,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_58 ↔ channel_59",
+          "raw_pearson": 0.964058,
+          "abs_raw_pearson": 0.964058,
+          "diff_pearson": 0.003784,
+          "abs_diff_pearson": 0.003784,
+          "spearman": 0.994373,
+          "min_update_fraction": 0.998518,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_28 ↔ channel_36",
+          "raw_pearson": 0.963974,
+          "abs_raw_pearson": 0.963974,
+          "diff_pearson": 0.001681,
+          "abs_diff_pearson": 0.001681,
+          "spearman": 0.961725,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_34 ↔ channel_35",
+          "raw_pearson": 0.963867,
+          "abs_raw_pearson": 0.963867,
+          "diff_pearson": -0.045596,
+          "abs_diff_pearson": 0.045596,
+          "spearman": 0.958692,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_13 ↔ channel_19",
+          "raw_pearson": 0.962957,
+          "abs_raw_pearson": 0.962957,
+          "diff_pearson": -0.000898,
+          "abs_diff_pearson": 0.000898,
+          "spearman": 0.962849,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_13 ↔ channel_35",
+          "raw_pearson": 0.962885,
+          "abs_raw_pearson": 0.962885,
+          "diff_pearson": -0.000645,
+          "abs_diff_pearson": 0.000645,
+          "spearman": 0.958333,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_17 ↔ channel_28",
+          "raw_pearson": 0.962668,
+          "abs_raw_pearson": 0.962668,
+          "diff_pearson": 0.00086,
+          "abs_diff_pearson": 0.00086,
+          "spearman": 0.960089,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_42 ↔ channel_45",
+          "raw_pearson": 0.962648,
+          "abs_raw_pearson": 0.962648,
+          "diff_pearson": 0.302562,
+          "abs_diff_pearson": 0.302562,
+          "spearman": 0.899509,
+          "min_update_fraction": 0.998578,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_34 ↔ channel_61",
+          "raw_pearson": -0.962211,
+          "abs_raw_pearson": 0.962211,
+          "diff_pearson": 0.0,
+          "abs_diff_pearson": 0.0,
+          "spearman": -0.958598,
+          "min_update_fraction": 0.033278,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_59 ↔ channel_60",
+          "raw_pearson": 0.961207,
+          "abs_raw_pearson": 0.961207,
+          "diff_pearson": -0.003009,
+          "abs_diff_pearson": 0.003009,
+          "spearman": 0.993899,
+          "min_update_fraction": 0.998518,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_26 ↔ channel_37",
+          "raw_pearson": 0.960501,
+          "abs_raw_pearson": 0.960501,
+          "diff_pearson": 0.00219,
+          "abs_diff_pearson": 0.00219,
+          "spearman": 0.955198,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_20 ↔ channel_37",
+          "raw_pearson": 0.959683,
+          "abs_raw_pearson": 0.959683,
+          "diff_pearson": 0.002217,
+          "abs_diff_pearson": 0.002217,
+          "spearman": 0.951398,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_12 ↔ channel_61",
+          "raw_pearson": -0.959568,
+          "abs_raw_pearson": 0.959568,
+          "diff_pearson": 7e-06,
+          "abs_diff_pearson": 7e-06,
+          "spearman": -0.955732,
+          "min_update_fraction": 0.033278,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_18 ↔ channel_28",
+          "raw_pearson": 0.959487,
+          "abs_raw_pearson": 0.959487,
+          "diff_pearson": 0.001105,
+          "abs_diff_pearson": 0.001105,
+          "spearman": 0.95851,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_66 ↔ channel_67",
+          "raw_pearson": 0.959441,
+          "abs_raw_pearson": 0.959441,
+          "diff_pearson": 0.988576,
+          "abs_diff_pearson": 0.988576,
+          "spearman": -0.555657,
+          "min_update_fraction": 0.200592,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_29 ↔ channel_30",
+          "raw_pearson": 0.958794,
+          "abs_raw_pearson": 0.958794,
+          "diff_pearson": -0.001995,
+          "abs_diff_pearson": 0.001995,
+          "spearman": 0.955574,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_29 ↔ channel_38",
+          "raw_pearson": 0.958457,
+          "abs_raw_pearson": 0.958457,
+          "diff_pearson": -0.002928,
+          "abs_diff_pearson": 0.002928,
+          "spearman": 0.955158,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_51 ↔ channel_52",
+          "raw_pearson": 0.957405,
+          "abs_raw_pearson": 0.957405,
+          "diff_pearson": 0.007616,
+          "abs_diff_pearson": 0.007616,
+          "spearman": 0.986588,
+          "min_update_fraction": 0.33397,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_48 ↔ channel_49",
+          "raw_pearson": 0.957359,
+          "abs_raw_pearson": 0.957359,
+          "diff_pearson": 0.004132,
+          "abs_diff_pearson": 0.004132,
+          "spearman": 0.986587,
+          "min_update_fraction": 0.998511,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_48 ↔ channel_52",
+          "raw_pearson": 0.957348,
+          "abs_raw_pearson": 0.957348,
+          "diff_pearson": 9.5e-05,
+          "abs_diff_pearson": 9.5e-05,
+          "spearman": 0.986636,
+          "min_update_fraction": 0.33397,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_49 ↔ channel_51",
+          "raw_pearson": 0.957326,
+          "abs_raw_pearson": 0.957326,
+          "diff_pearson": -0.000328,
+          "abs_diff_pearson": 0.000328,
+          "spearman": 0.986507,
+          "min_update_fraction": 0.33397,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_17 ↔ channel_37",
+          "raw_pearson": 0.95681,
+          "abs_raw_pearson": 0.95681,
+          "diff_pearson": 0.002477,
+          "abs_diff_pearson": 0.002477,
+          "spearman": 0.950089,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_25 ↔ channel_26",
+          "raw_pearson": 0.956101,
+          "abs_raw_pearson": 0.956101,
+          "diff_pearson": -0.047727,
+          "abs_diff_pearson": 0.047727,
+          "spearman": 0.949905,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_12 ↔ channel_18",
+          "raw_pearson": 0.956072,
+          "abs_raw_pearson": 0.956072,
+          "diff_pearson": -0.002504,
+          "abs_diff_pearson": 0.002504,
+          "spearman": 0.947429,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_13 ↔ channel_61",
+          "raw_pearson": -0.955879,
+          "abs_raw_pearson": 0.955879,
+          "diff_pearson": 1.2e-05,
+          "abs_diff_pearson": 1.2e-05,
+          "spearman": -0.952103,
+          "min_update_fraction": 0.033278,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_13 ↔ channel_36",
+          "raw_pearson": 0.954258,
+          "abs_raw_pearson": 0.954258,
+          "diff_pearson": 0.000515,
+          "abs_diff_pearson": 0.000515,
+          "spearman": 0.946593,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_17 ↔ channel_19",
+          "raw_pearson": 0.953951,
+          "abs_raw_pearson": 0.953951,
+          "diff_pearson": -0.00563,
+          "abs_diff_pearson": 0.00563,
+          "spearman": 0.953067,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_19 ↔ channel_27",
+          "raw_pearson": 0.953374,
+          "abs_raw_pearson": 0.953374,
+          "diff_pearson": -7.7e-05,
+          "abs_diff_pearson": 7.7e-05,
+          "spearman": 0.950477,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_19 ↔ channel_20",
+          "raw_pearson": 0.952938,
+          "abs_raw_pearson": 0.952938,
+          "diff_pearson": -0.045889,
+          "abs_diff_pearson": 0.045889,
+          "spearman": 0.950576,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_20 ↔ channel_61",
+          "raw_pearson": -0.951424,
+          "abs_raw_pearson": 0.951424,
+          "diff_pearson": 0.0,
+          "abs_diff_pearson": 0.0,
+          "spearman": -0.94798,
+          "min_update_fraction": 0.033278,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_27 ↔ channel_61",
+          "raw_pearson": -0.950952,
+          "abs_raw_pearson": 0.950952,
+          "diff_pearson": 1.7e-05,
+          "abs_diff_pearson": 1.7e-05,
+          "spearman": -0.948056,
+          "min_update_fraction": 0.033278,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_36 ↔ channel_37",
+          "raw_pearson": 0.950858,
+          "abs_raw_pearson": 0.950858,
+          "diff_pearson": -0.043059,
+          "abs_diff_pearson": 0.043059,
+          "spearman": 0.946802,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_26 ↔ channel_61",
+          "raw_pearson": -0.950627,
+          "abs_raw_pearson": 0.950627,
+          "diff_pearson": 0.0,
+          "abs_diff_pearson": 0.0,
+          "spearman": -0.946869,
+          "min_update_fraction": 0.033278,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_12 ↔ channel_19",
+          "raw_pearson": 0.949373,
+          "abs_raw_pearson": 0.949373,
+          "diff_pearson": -0.000872,
+          "abs_diff_pearson": 0.000872,
+          "spearman": 0.945561,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_17 ↔ channel_61",
+          "raw_pearson": -0.94929,
+          "abs_raw_pearson": 0.94929,
+          "diff_pearson": 0.0,
+          "abs_diff_pearson": 0.0,
+          "spearman": -0.946019,
+          "min_update_fraction": 0.033278,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_26 ↔ channel_35",
+          "raw_pearson": 0.948919,
+          "abs_raw_pearson": 0.948919,
+          "diff_pearson": 0.003437,
+          "abs_diff_pearson": 0.003437,
+          "spearman": 0.944376,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_35 ↔ channel_36",
+          "raw_pearson": 0.946664,
+          "abs_raw_pearson": 0.946664,
+          "diff_pearson": -0.048335,
+          "abs_diff_pearson": 0.048335,
+          "spearman": 0.946245,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_20 ↔ channel_36",
+          "raw_pearson": 0.944083,
+          "abs_raw_pearson": 0.944083,
+          "diff_pearson": -0.0008,
+          "abs_diff_pearson": 0.0008,
+          "spearman": 0.93599,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_19 ↔ channel_35",
+          "raw_pearson": 0.943835,
+          "abs_raw_pearson": 0.943835,
+          "diff_pearson": -0.000651,
+          "abs_diff_pearson": 0.000651,
+          "spearman": 0.943297,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_25 ↔ channel_61",
+          "raw_pearson": -0.942449,
+          "abs_raw_pearson": 0.942449,
+          "diff_pearson": 1.7e-05,
+          "abs_diff_pearson": 1.7e-05,
+          "spearman": -0.939131,
+          "min_update_fraction": 0.033278,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_20 ↔ channel_35",
+          "raw_pearson": 0.938846,
+          "abs_raw_pearson": 0.938846,
+          "diff_pearson": -0.000908,
+          "abs_diff_pearson": 0.000908,
+          "spearman": 0.931233,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_19 ↔ channel_34",
+          "raw_pearson": 0.937047,
+          "abs_raw_pearson": 0.937047,
+          "diff_pearson": 0.000748,
+          "abs_diff_pearson": 0.000748,
+          "spearman": 0.930583,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_13 ↔ channel_23",
+          "raw_pearson": 0.931463,
+          "abs_raw_pearson": 0.931463,
+          "diff_pearson": -0.000465,
+          "abs_diff_pearson": 0.000465,
+          "spearman": 0.931721,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_23 ↔ channel_34",
+          "raw_pearson": 0.931169,
+          "abs_raw_pearson": 0.931169,
+          "diff_pearson": -0.001476,
+          "abs_diff_pearson": 0.001476,
+          "spearman": 0.931834,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_13 ↔ channel_15",
+          "raw_pearson": 0.930869,
+          "abs_raw_pearson": 0.930869,
+          "diff_pearson": 0.01241,
+          "abs_diff_pearson": 0.01241,
+          "spearman": 0.931347,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_15 ↔ channel_34",
+          "raw_pearson": 0.930234,
+          "abs_raw_pearson": 0.930234,
+          "diff_pearson": 0.003856,
+          "abs_diff_pearson": 0.003856,
+          "spearman": 0.930907,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_12 ↔ channel_23",
+          "raw_pearson": 0.928682,
+          "abs_raw_pearson": 0.928682,
+          "diff_pearson": -0.001314,
+          "abs_diff_pearson": 0.001314,
+          "spearman": 0.929408,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_20 ↔ channel_23",
+          "raw_pearson": 0.928593,
+          "abs_raw_pearson": 0.928593,
+          "diff_pearson": 0.003545,
+          "abs_diff_pearson": 0.003545,
+          "spearman": 0.930099,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_15 ↔ channel_20",
+          "raw_pearson": 0.928291,
+          "abs_raw_pearson": 0.928291,
+          "diff_pearson": 0.004264,
+          "abs_diff_pearson": 0.004264,
+          "spearman": 0.93015,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_12 ↔ channel_15",
+          "raw_pearson": 0.927443,
+          "abs_raw_pearson": 0.927443,
+          "diff_pearson": -0.00539,
+          "abs_diff_pearson": 0.00539,
+          "spearman": 0.928035,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_13 ↔ channel_31",
+          "raw_pearson": 0.925211,
+          "abs_raw_pearson": 0.925211,
+          "diff_pearson": -0.00032,
+          "abs_diff_pearson": 0.00032,
+          "spearman": 0.927534,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_31 ↔ channel_34",
+          "raw_pearson": 0.92514,
+          "abs_raw_pearson": 0.92514,
+          "diff_pearson": 0.00129,
+          "abs_diff_pearson": 0.00129,
+          "spearman": 0.92857,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_13 ↔ channel_22",
+          "raw_pearson": 0.924693,
+          "abs_raw_pearson": 0.924693,
+          "diff_pearson": -0.002636,
+          "abs_diff_pearson": 0.002636,
+          "spearman": 0.927051,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_22 ↔ channel_34",
+          "raw_pearson": 0.924677,
+          "abs_raw_pearson": 0.924677,
+          "diff_pearson": -0.001287,
+          "abs_diff_pearson": 0.001287,
+          "spearman": 0.928142,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_12 ↔ channel_31",
+          "raw_pearson": 0.922835,
+          "abs_raw_pearson": 0.922835,
+          "diff_pearson": 0.000569,
+          "abs_diff_pearson": 0.000569,
+          "spearman": 0.926158,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_40 ↔ channel_60",
+          "raw_pearson": 0.92282,
+          "abs_raw_pearson": 0.92282,
+          "diff_pearson": 7.6e-05,
+          "abs_diff_pearson": 7.6e-05,
+          "spearman": 0.974766,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_16 ↔ channel_60",
+          "raw_pearson": 0.922738,
+          "abs_raw_pearson": 0.922738,
+          "diff_pearson": 0.000293,
+          "abs_diff_pearson": 0.000293,
+          "spearman": 0.975225,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_33 ↔ channel_60",
+          "raw_pearson": 0.922736,
+          "abs_raw_pearson": 0.922736,
+          "diff_pearson": 0.000936,
+          "abs_diff_pearson": 0.000936,
+          "spearman": 0.974823,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_32 ↔ channel_60",
+          "raw_pearson": 0.922709,
+          "abs_raw_pearson": 0.922709,
+          "diff_pearson": -0.000409,
+          "abs_diff_pearson": 0.000409,
+          "spearman": 0.975181,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_24 ↔ channel_60",
+          "raw_pearson": 0.922698,
+          "abs_raw_pearson": 0.922698,
+          "diff_pearson": 0.000748,
+          "abs_diff_pearson": 0.000748,
+          "spearman": 0.975201,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_13 ↔ channel_39",
+          "raw_pearson": 0.922573,
+          "abs_raw_pearson": 0.922573,
+          "diff_pearson": -3.2e-05,
+          "abs_diff_pearson": 3.2e-05,
+          "spearman": 0.927037,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_14 ↔ channel_30",
+          "raw_pearson": 0.922437,
+          "abs_raw_pearson": 0.922437,
+          "diff_pearson": -0.002344,
+          "abs_diff_pearson": 0.002344,
+          "spearman": 0.916229,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_12 ↔ channel_22",
+          "raw_pearson": 0.92237,
+          "abs_raw_pearson": 0.92237,
+          "diff_pearson": -0.002798,
+          "abs_diff_pearson": 0.002798,
+          "spearman": 0.925739,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_14 ↔ channel_38",
+          "raw_pearson": 0.922082,
+          "abs_raw_pearson": 0.922082,
+          "diff_pearson": -0.000197,
+          "abs_diff_pearson": 0.000197,
+          "spearman": 0.915754,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_34 ↔ channel_39",
+          "raw_pearson": 0.921843,
+          "abs_raw_pearson": 0.921843,
+          "diff_pearson": 0.007951,
+          "abs_diff_pearson": 0.007951,
+          "spearman": 0.926899,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_20 ↔ channel_31",
+          "raw_pearson": 0.921499,
+          "abs_raw_pearson": 0.921499,
+          "diff_pearson": -0.001688,
+          "abs_diff_pearson": 0.001688,
+          "spearman": 0.924866,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_20 ↔ channel_22",
+          "raw_pearson": 0.921006,
+          "abs_raw_pearson": 0.921006,
+          "diff_pearson": 0.001159,
+          "abs_diff_pearson": 0.001159,
+          "spearman": 0.924448,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_40 ↔ channel_58",
+          "raw_pearson": 0.920534,
+          "abs_raw_pearson": 0.920534,
+          "diff_pearson": 0.000688,
+          "abs_diff_pearson": 0.000688,
+          "spearman": 0.975253,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_30 ↔ channel_40",
+          "raw_pearson": 0.920506,
+          "abs_raw_pearson": 0.920506,
+          "diff_pearson": -0.001918,
+          "abs_diff_pearson": 0.001918,
+          "spearman": 0.919015,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_30 ↔ channel_33",
+          "raw_pearson": 0.920483,
+          "abs_raw_pearson": 0.920483,
+          "diff_pearson": 0.04524,
+          "abs_diff_pearson": 0.04524,
+          "spearman": 0.918943,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_33 ↔ channel_58",
+          "raw_pearson": 0.920447,
+          "abs_raw_pearson": 0.920447,
+          "diff_pearson": -0.000383,
+          "abs_diff_pearson": 0.000383,
+          "spearman": 0.975315,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_16 ↔ channel_58",
+          "raw_pearson": 0.920423,
+          "abs_raw_pearson": 0.920423,
+          "diff_pearson": -2.8e-05,
+          "abs_diff_pearson": 2.8e-05,
+          "spearman": 0.975689,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_32 ↔ channel_58",
+          "raw_pearson": 0.920391,
+          "abs_raw_pearson": 0.920391,
+          "diff_pearson": -1e-05,
+          "abs_diff_pearson": 1e-05,
+          "spearman": 0.975641,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_24 ↔ channel_58",
+          "raw_pearson": 0.920379,
+          "abs_raw_pearson": 0.920379,
+          "diff_pearson": 0.000281,
+          "abs_diff_pearson": 0.000281,
+          "spearman": 0.975664,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_38 ↔ channel_40",
+          "raw_pearson": 0.920074,
+          "abs_raw_pearson": 0.920074,
+          "diff_pearson": -0.011275,
+          "abs_diff_pearson": 0.011275,
+          "spearman": 0.918615,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_33 ↔ channel_38",
+          "raw_pearson": 0.919972,
+          "abs_raw_pearson": 0.919972,
+          "diff_pearson": -0.002643,
+          "abs_diff_pearson": 0.002643,
+          "spearman": 0.918443,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_30 ↔ channel_32",
+          "raw_pearson": 0.919627,
+          "abs_raw_pearson": 0.919627,
+          "diff_pearson": -0.012204,
+          "abs_diff_pearson": 0.012204,
+          "spearman": 0.918339,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_24 ↔ channel_30",
+          "raw_pearson": 0.919529,
+          "abs_raw_pearson": 0.919529,
+          "diff_pearson": -0.003805,
+          "abs_diff_pearson": 0.003805,
+          "spearman": 0.91841,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_16 ↔ channel_30",
+          "raw_pearson": 0.919485,
+          "abs_raw_pearson": 0.919485,
+          "diff_pearson": 0.001756,
+          "abs_diff_pearson": 0.001756,
+          "spearman": 0.918284,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_12 ↔ channel_39",
+          "raw_pearson": 0.919471,
+          "abs_raw_pearson": 0.919471,
+          "diff_pearson": -0.000616,
+          "abs_diff_pearson": 0.000616,
+          "spearman": 0.923991,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_32 ↔ channel_38",
+          "raw_pearson": 0.919226,
+          "abs_raw_pearson": 0.919226,
+          "diff_pearson": -0.002191,
+          "abs_diff_pearson": 0.002191,
+          "spearman": 0.917975,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_24 ↔ channel_38",
+          "raw_pearson": 0.919118,
+          "abs_raw_pearson": 0.919118,
+          "diff_pearson": -0.001661,
+          "abs_diff_pearson": 0.001661,
+          "spearman": 0.918043,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_16 ↔ channel_38",
+          "raw_pearson": 0.919062,
+          "abs_raw_pearson": 0.919062,
+          "diff_pearson": 0.002554,
+          "abs_diff_pearson": 0.002554,
+          "spearman": 0.917906,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_20 ↔ channel_39",
+          "raw_pearson": 0.918829,
+          "abs_raw_pearson": 0.918829,
+          "diff_pearson": 0.000569,
+          "abs_diff_pearson": 0.000569,
+          "spearman": 0.923918,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_21 ↔ channel_30",
+          "raw_pearson": 0.906968,
+          "abs_raw_pearson": 0.906968,
+          "diff_pearson": 0.002529,
+          "abs_diff_pearson": 0.002529,
+          "spearman": 0.901403,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_21 ↔ channel_38",
+          "raw_pearson": 0.906527,
+          "abs_raw_pearson": 0.906527,
+          "diff_pearson": -0.001818,
+          "abs_diff_pearson": 0.001818,
+          "spearman": 0.900852,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_40 ↔ channel_57",
+          "raw_pearson": 0.872486,
+          "abs_raw_pearson": 0.872486,
+          "diff_pearson": 0.000129,
+          "abs_diff_pearson": 0.000129,
+          "spearman": 0.972109,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_16 ↔ channel_57",
+          "raw_pearson": 0.872412,
+          "abs_raw_pearson": 0.872412,
+          "diff_pearson": -0.000139,
+          "abs_diff_pearson": 0.000139,
+          "spearman": 0.97256,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_33 ↔ channel_57",
+          "raw_pearson": 0.87239,
+          "abs_raw_pearson": 0.87239,
+          "diff_pearson": -0.0001,
+          "abs_diff_pearson": 0.0001,
+          "spearman": 0.972162,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_24 ↔ channel_57",
+          "raw_pearson": 0.872372,
+          "abs_raw_pearson": 0.872372,
+          "diff_pearson": -0.000591,
+          "abs_diff_pearson": 0.000591,
+          "spearman": 0.972527,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_32 ↔ channel_57",
+          "raw_pearson": 0.872368,
+          "abs_raw_pearson": 0.872368,
+          "diff_pearson": 0.000617,
+          "abs_diff_pearson": 0.000617,
+          "spearman": 0.972483,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_29 ↔ channel_34",
+          "raw_pearson": 0.838987,
+          "abs_raw_pearson": 0.838987,
+          "diff_pearson": 0.004232,
+          "abs_diff_pearson": 0.004232,
+          "spearman": 0.833089,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_12 ↔ channel_29",
+          "raw_pearson": 0.837009,
+          "abs_raw_pearson": 0.837009,
+          "diff_pearson": 0.000132,
+          "abs_diff_pearson": 0.000132,
+          "spearman": 0.835215,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_13 ↔ channel_29",
+          "raw_pearson": 0.83218,
+          "abs_raw_pearson": 0.83218,
+          "diff_pearson": -0.001204,
+          "abs_diff_pearson": 0.001204,
+          "spearman": 0.828319,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_29 ↔ channel_61",
+          "raw_pearson": -0.831928,
+          "abs_raw_pearson": 0.831928,
+          "diff_pearson": 1.1e-05,
+          "abs_diff_pearson": 1.1e-05,
+          "spearman": -0.830564,
+          "min_update_fraction": 0.033278,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_16 ↔ channel_59",
+          "raw_pearson": 0.81386,
+          "abs_raw_pearson": 0.81386,
+          "diff_pearson": 0.000554,
+          "abs_diff_pearson": 0.000554,
+          "spearman": 0.972592,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_40 ↔ channel_59",
+          "raw_pearson": 0.813854,
+          "abs_raw_pearson": 0.813854,
+          "diff_pearson": -6.8e-05,
+          "abs_diff_pearson": 6.8e-05,
+          "spearman": 0.972075,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_24 ↔ channel_59",
+          "raw_pearson": 0.81382,
+          "abs_raw_pearson": 0.81382,
+          "diff_pearson": 6.9e-05,
+          "abs_diff_pearson": 6.9e-05,
+          "spearman": 0.972566,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_32 ↔ channel_59",
+          "raw_pearson": 0.81379,
+          "abs_raw_pearson": 0.81379,
+          "diff_pearson": 0.000414,
+          "abs_diff_pearson": 0.000414,
+          "spearman": 0.972516,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_33 ↔ channel_59",
+          "raw_pearson": 0.813745,
+          "abs_raw_pearson": 0.813745,
+          "diff_pearson": -0.000191,
+          "abs_diff_pearson": 0.000191,
+          "spearman": 0.972132,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_14 ↔ channel_34",
+          "raw_pearson": 0.788035,
+          "abs_raw_pearson": 0.788035,
+          "diff_pearson": 5.2e-05,
+          "abs_diff_pearson": 5.2e-05,
+          "spearman": 0.781234,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_14 ↔ channel_61",
+          "raw_pearson": -0.787112,
+          "abs_raw_pearson": 0.787112,
+          "diff_pearson": -1.2e-05,
+          "abs_diff_pearson": 1.2e-05,
+          "spearman": -0.781755,
+          "min_update_fraction": 0.033278,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_12 ↔ channel_14",
+          "raw_pearson": 0.785805,
+          "abs_raw_pearson": 0.785805,
+          "diff_pearson": -0.001153,
+          "abs_diff_pearson": 0.001153,
+          "spearman": 0.782893,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_13 ↔ channel_14",
+          "raw_pearson": 0.781508,
+          "abs_raw_pearson": 0.781508,
+          "diff_pearson": -0.003613,
+          "abs_diff_pearson": 0.003613,
+          "spearman": 0.777346,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_21 ↔ channel_61",
+          "raw_pearson": -0.771959,
+          "abs_raw_pearson": 0.771959,
+          "diff_pearson": -6e-06,
+          "abs_diff_pearson": 6e-06,
+          "spearman": -0.768573,
+          "min_update_fraction": 0.033278,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_21 ↔ channel_34",
+          "raw_pearson": 0.77088,
+          "abs_raw_pearson": 0.77088,
+          "diff_pearson": -0.002576,
+          "abs_diff_pearson": 0.002576,
+          "spearman": 0.768109,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_12 ↔ channel_21",
+          "raw_pearson": 0.76865,
+          "abs_raw_pearson": 0.76865,
+          "diff_pearson": 0.002777,
+          "abs_diff_pearson": 0.002777,
+          "spearman": 0.769577,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_13 ↔ channel_21",
+          "raw_pearson": 0.764707,
+          "abs_raw_pearson": 0.764707,
+          "diff_pearson": 0.000314,
+          "abs_diff_pearson": 0.000314,
+          "spearman": 0.764735,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_41 ↔ channel_45",
+          "raw_pearson": 0.697816,
+          "abs_raw_pearson": 0.697816,
+          "diff_pearson": -0.040338,
+          "abs_diff_pearson": 0.040338,
+          "spearman": -0.335191,
+          "min_update_fraction": 0.998578,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_41 ↔ channel_46",
+          "raw_pearson": 0.681282,
+          "abs_raw_pearson": 0.681282,
+          "diff_pearson": -0.206813,
+          "abs_diff_pearson": 0.206813,
+          "spearman": -0.176153,
+          "min_update_fraction": 0.998578,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_40 ↔ channel_50",
+          "raw_pearson": 0.678073,
+          "abs_raw_pearson": 0.678073,
+          "diff_pearson": 7e-05,
+          "abs_diff_pearson": 7e-05,
+          "spearman": 0.819389,
+          "min_update_fraction": 0.33397,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_40 ↔ channel_47",
+          "raw_pearson": 0.67806,
+          "abs_raw_pearson": 0.67806,
+          "diff_pearson": 0.000626,
+          "abs_diff_pearson": 0.000626,
+          "spearman": 0.819346,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_24 ↔ channel_50",
+          "raw_pearson": 0.677859,
+          "abs_raw_pearson": 0.677859,
+          "diff_pearson": 3.4e-05,
+          "abs_diff_pearson": 3.4e-05,
+          "spearman": 0.819418,
+          "min_update_fraction": 0.33397,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_24 ↔ channel_47",
+          "raw_pearson": 0.677842,
+          "abs_raw_pearson": 0.677842,
+          "diff_pearson": 0.00077,
+          "abs_diff_pearson": 0.00077,
+          "spearman": 0.819356,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_16 ↔ channel_50",
+          "raw_pearson": 0.677699,
+          "abs_raw_pearson": 0.677699,
+          "diff_pearson": -1.5e-05,
+          "abs_diff_pearson": 1.5e-05,
+          "spearman": 0.819342,
+          "min_update_fraction": 0.33397,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_16 ↔ channel_47",
+          "raw_pearson": 0.677692,
+          "abs_raw_pearson": 0.677692,
+          "diff_pearson": -0.000219,
+          "abs_diff_pearson": 0.000219,
+          "spearman": 0.819298,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_40 ↔ channel_51",
+          "raw_pearson": 0.65336,
+          "abs_raw_pearson": 0.65336,
+          "diff_pearson": -4e-05,
+          "abs_diff_pearson": 4e-05,
+          "spearman": 0.840218,
+          "min_update_fraction": 0.33397,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_40 ↔ channel_48",
+          "raw_pearson": 0.653336,
+          "abs_raw_pearson": 0.653336,
+          "diff_pearson": -0.000124,
+          "abs_diff_pearson": 0.000124,
+          "spearman": 0.840417,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_24 ↔ channel_51",
+          "raw_pearson": 0.652945,
+          "abs_raw_pearson": 0.652945,
+          "diff_pearson": 6.9e-05,
+          "abs_diff_pearson": 6.9e-05,
+          "spearman": 0.840196,
+          "min_update_fraction": 0.33397,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_24 ↔ channel_48",
+          "raw_pearson": 0.652927,
+          "abs_raw_pearson": 0.652927,
+          "diff_pearson": -0.000175,
+          "abs_diff_pearson": 0.000175,
+          "spearman": 0.840411,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_33 ↔ channel_51",
+          "raw_pearson": 0.652923,
+          "abs_raw_pearson": 0.652923,
+          "diff_pearson": 6e-05,
+          "abs_diff_pearson": 6e-05,
+          "spearman": 0.83997,
+          "min_update_fraction": 0.33397,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_33 ↔ channel_48",
+          "raw_pearson": 0.652904,
+          "abs_raw_pearson": 0.652904,
+          "diff_pearson": 7.9e-05,
+          "abs_diff_pearson": 7.9e-05,
+          "spearman": 0.84016,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_40 ↔ channel_52",
+          "raw_pearson": 0.644804,
+          "abs_raw_pearson": 0.644804,
+          "diff_pearson": -2.3e-05,
+          "abs_diff_pearson": 2.3e-05,
+          "spearman": 0.831995,
+          "min_update_fraction": 0.33397,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_40 ↔ channel_49",
+          "raw_pearson": 0.644765,
+          "abs_raw_pearson": 0.644765,
+          "diff_pearson": 0.000242,
+          "abs_diff_pearson": 0.000242,
+          "spearman": 0.831688,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_24 ↔ channel_52",
+          "raw_pearson": 0.644509,
+          "abs_raw_pearson": 0.644509,
+          "diff_pearson": -1.9e-05,
+          "abs_diff_pearson": 1.9e-05,
+          "spearman": 0.831947,
+          "min_update_fraction": 0.33397,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_24 ↔ channel_49",
+          "raw_pearson": 0.64447,
+          "abs_raw_pearson": 0.64447,
+          "diff_pearson": -0.000157,
+          "abs_diff_pearson": 0.000157,
+          "spearman": 0.831679,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_33 ↔ channel_52",
+          "raw_pearson": 0.644439,
+          "abs_raw_pearson": 0.644439,
+          "diff_pearson": -2.1e-05,
+          "abs_diff_pearson": 2.1e-05,
+          "spearman": 0.831734,
+          "min_update_fraction": 0.33397,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_33 ↔ channel_49",
+          "raw_pearson": 0.6444,
+          "abs_raw_pearson": 0.6444,
+          "diff_pearson": -0.000575,
+          "abs_diff_pearson": 0.000575,
+          "spearman": 0.831441,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_45 ↔ channel_46",
+          "raw_pearson": 0.591428,
+          "abs_raw_pearson": 0.591428,
+          "diff_pearson": -0.186318,
+          "abs_diff_pearson": 0.186318,
+          "spearman": -0.47114,
+          "min_update_fraction": 0.998578,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_41 ↔ channel_42",
+          "raw_pearson": 0.583572,
+          "abs_raw_pearson": 0.583572,
+          "diff_pearson": -0.177544,
+          "abs_diff_pearson": 0.177544,
+          "spearman": -0.490542,
+          "min_update_fraction": 0.998578,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_42 ↔ channel_46",
+          "raw_pearson": 0.562543,
+          "abs_raw_pearson": 0.562543,
+          "diff_pearson": -0.015021,
+          "abs_diff_pearson": 0.015021,
+          "spearman": -0.317041,
+          "min_update_fraction": 0.998578,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_15 ↔ channel_63",
+          "raw_pearson": -0.487246,
+          "abs_raw_pearson": 0.487246,
+          "diff_pearson": 0.0,
+          "abs_diff_pearson": 0.0,
+          "spearman": -0.470536,
+          "min_update_fraction": 0.033278,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_15 ↔ channel_62",
+          "raw_pearson": -0.487051,
+          "abs_raw_pearson": 0.487051,
+          "diff_pearson": 0.0,
+          "abs_diff_pearson": 0.0,
+          "spearman": -0.470767,
+          "min_update_fraction": 0.033278,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_39 ↔ channel_63",
+          "raw_pearson": -0.486564,
+          "abs_raw_pearson": 0.486564,
+          "diff_pearson": -3.8e-05,
+          "abs_diff_pearson": 3.8e-05,
+          "spearman": -0.47145,
+          "min_update_fraction": 0.033278,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_23 ↔ channel_63",
+          "raw_pearson": -0.486401,
+          "abs_raw_pearson": 0.486401,
+          "diff_pearson": 0.0,
+          "abs_diff_pearson": 0.0,
+          "spearman": -0.470074,
+          "min_update_fraction": 0.033278,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_39 ↔ channel_62",
+          "raw_pearson": -0.486366,
+          "abs_raw_pearson": 0.486366,
+          "diff_pearson": -3.8e-05,
+          "abs_diff_pearson": 3.8e-05,
+          "spearman": -0.471792,
+          "min_update_fraction": 0.033278,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_23 ↔ channel_62",
+          "raw_pearson": -0.486204,
+          "abs_raw_pearson": 0.486204,
+          "diff_pearson": 0.0,
+          "abs_diff_pearson": 0.0,
+          "spearman": -0.47031,
+          "min_update_fraction": 0.033278,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_22 ↔ channel_63",
+          "raw_pearson": -0.477972,
+          "abs_raw_pearson": 0.477972,
+          "diff_pearson": 0.0,
+          "abs_diff_pearson": 0.0,
+          "spearman": -0.463587,
+          "min_update_fraction": 0.033278,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_31 ↔ channel_63",
+          "raw_pearson": -0.477842,
+          "abs_raw_pearson": 0.477842,
+          "diff_pearson": -3.9e-05,
+          "abs_diff_pearson": 3.9e-05,
+          "spearman": -0.463375,
+          "min_update_fraction": 0.033278,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_22 ↔ channel_62",
+          "raw_pearson": -0.477796,
+          "abs_raw_pearson": 0.477796,
+          "diff_pearson": 0.0,
+          "abs_diff_pearson": 0.0,
+          "spearman": -0.463933,
+          "min_update_fraction": 0.033278,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_31 ↔ channel_62",
+          "raw_pearson": -0.477666,
+          "abs_raw_pearson": 0.477666,
+          "diff_pearson": -3.8e-05,
+          "abs_diff_pearson": 3.8e-05,
+          "spearman": -0.463728,
+          "min_update_fraction": 0.033278,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_43 ↔ channel_49",
+          "raw_pearson": 0.456638,
+          "abs_raw_pearson": 0.456638,
+          "diff_pearson": 0.001067,
+          "abs_diff_pearson": 0.001067,
+          "spearman": -0.053551,
+          "min_update_fraction": 0.998511,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_43 ↔ channel_52",
+          "raw_pearson": 0.45648,
+          "abs_raw_pearson": 0.45648,
+          "diff_pearson": 0.000136,
+          "abs_diff_pearson": 0.000136,
+          "spearman": -0.053601,
+          "min_update_fraction": 0.33397,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_41 ↔ channel_48",
+          "raw_pearson": 0.451833,
+          "abs_raw_pearson": 0.451833,
+          "diff_pearson": 0.000378,
+          "abs_diff_pearson": 0.000378,
+          "spearman": -0.083736,
+          "min_update_fraction": 0.998511,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_41 ↔ channel_51",
+          "raw_pearson": 0.451712,
+          "abs_raw_pearson": 0.451712,
+          "diff_pearson": 0.000264,
+          "abs_diff_pearson": 0.000264,
+          "spearman": -0.083816,
+          "min_update_fraction": 0.33397,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_45 ↔ channel_51",
+          "raw_pearson": 0.446736,
+          "abs_raw_pearson": 0.446736,
+          "diff_pearson": 0.000205,
+          "abs_diff_pearson": 0.000205,
+          "spearman": -0.078374,
+          "min_update_fraction": 0.33397,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_45 ↔ channel_48",
+          "raw_pearson": 0.44671,
+          "abs_raw_pearson": 0.44671,
+          "diff_pearson": -0.000553,
+          "abs_diff_pearson": 0.000553,
+          "spearman": -0.07841,
+          "min_update_fraction": 0.998511,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_72 ↔ channel_75",
+          "raw_pearson": 0.441973,
+          "abs_raw_pearson": 0.441973,
+          "diff_pearson": 0.754237,
+          "abs_diff_pearson": 0.754237,
+          "spearman": 0.740344,
+          "min_update_fraction": 0.99828,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_46 ↔ channel_48",
+          "raw_pearson": 0.426022,
+          "abs_raw_pearson": 0.426022,
+          "diff_pearson": 0.000856,
+          "abs_diff_pearson": 0.000856,
+          "spearman": -0.04175,
+          "min_update_fraction": 0.998511,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_46 ↔ channel_51",
+          "raw_pearson": 0.42583,
+          "abs_raw_pearson": 0.42583,
+          "diff_pearson": -0.000152,
+          "abs_diff_pearson": 0.000152,
+          "spearman": -0.041957,
+          "min_update_fraction": 0.33397,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_42 ↔ channel_51",
+          "raw_pearson": 0.417562,
+          "abs_raw_pearson": 0.417562,
+          "diff_pearson": 8.5e-05,
+          "abs_diff_pearson": 8.5e-05,
+          "spearman": -0.043055,
+          "min_update_fraction": 0.33397,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_42 ↔ channel_48",
+          "raw_pearson": 0.417518,
+          "abs_raw_pearson": 0.417518,
+          "diff_pearson": -0.000407,
+          "abs_diff_pearson": 0.000407,
+          "spearman": -0.043227,
+          "min_update_fraction": 0.998511,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_41 ↔ channel_50",
+          "raw_pearson": 0.396181,
+          "abs_raw_pearson": 0.396181,
+          "diff_pearson": 0.000441,
+          "abs_diff_pearson": 0.000441,
+          "spearman": -0.088285,
+          "min_update_fraction": 0.33397,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_41 ↔ channel_47",
+          "raw_pearson": 0.396175,
+          "abs_raw_pearson": 0.396175,
+          "diff_pearson": -0.000631,
+          "abs_diff_pearson": 0.000631,
+          "spearman": -0.088901,
+          "min_update_fraction": 0.998511,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_45 ↔ channel_47",
+          "raw_pearson": 0.389974,
+          "abs_raw_pearson": 0.389974,
+          "diff_pearson": -0.000797,
+          "abs_diff_pearson": 0.000797,
+          "spearman": -0.087605,
+          "min_update_fraction": 0.998511,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_45 ↔ channel_50",
+          "raw_pearson": 0.389917,
+          "abs_raw_pearson": 0.389917,
+          "diff_pearson": -0.000802,
+          "abs_diff_pearson": 0.000802,
+          "spearman": -0.087914,
+          "min_update_fraction": 0.33397,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_46 ↔ channel_47",
+          "raw_pearson": 0.372213,
+          "abs_raw_pearson": 0.372213,
+          "diff_pearson": 0.000952,
+          "abs_diff_pearson": 0.000952,
+          "spearman": -0.051193,
+          "min_update_fraction": 0.998511,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_46 ↔ channel_50",
+          "raw_pearson": 0.372201,
+          "abs_raw_pearson": 0.372201,
+          "diff_pearson": -0.000243,
+          "abs_diff_pearson": 0.000243,
+          "spearman": -0.051819,
+          "min_update_fraction": 0.33397,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_42 ↔ channel_47",
+          "raw_pearson": 0.364771,
+          "abs_raw_pearson": 0.364771,
+          "diff_pearson": 0.000701,
+          "abs_diff_pearson": 0.000701,
+          "spearman": -0.051617,
+          "min_update_fraction": 0.998511,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_42 ↔ channel_50",
+          "raw_pearson": 0.364693,
+          "abs_raw_pearson": 0.364693,
+          "diff_pearson": -0.000201,
+          "abs_diff_pearson": 0.000201,
+          "spearman": -0.052151,
+          "min_update_fraction": 0.33397,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_43 ↔ channel_46",
+          "raw_pearson": 0.348388,
+          "abs_raw_pearson": 0.348388,
+          "diff_pearson": 0.335027,
+          "abs_diff_pearson": 0.335027,
+          "spearman": 0.894543,
+          "min_update_fraction": 0.998578,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_71 ↔ channel_72",
+          "raw_pearson": -0.342528,
+          "abs_raw_pearson": 0.342528,
+          "diff_pearson": -0.394774,
+          "abs_diff_pearson": 0.394774,
+          "spearman": -0.328846,
+          "min_update_fraction": 0.99828,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_72 ↔ channel_76",
+          "raw_pearson": -0.340261,
+          "abs_raw_pearson": 0.340261,
+          "diff_pearson": -0.699204,
+          "abs_diff_pearson": 0.699204,
+          "spearman": -0.499975,
+          "min_update_fraction": 0.99828,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_41 ↔ channel_49",
+          "raw_pearson": 0.338781,
+          "abs_raw_pearson": 0.338781,
+          "diff_pearson": 0.000636,
+          "abs_diff_pearson": 0.000636,
+          "spearman": -0.085897,
+          "min_update_fraction": 0.998511,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_45 ↔ channel_52",
+          "raw_pearson": 0.332314,
+          "abs_raw_pearson": 0.332314,
+          "diff_pearson": -0.000177,
+          "abs_diff_pearson": 0.000177,
+          "spearman": -0.084422,
+          "min_update_fraction": 0.33397,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_42 ↔ channel_52",
+          "raw_pearson": 0.312191,
+          "abs_raw_pearson": 0.312191,
+          "diff_pearson": -0.000233,
+          "abs_diff_pearson": 0.000233,
+          "spearman": -0.049182,
+          "min_update_fraction": 0.33397,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_13 ↔ channel_62",
+          "raw_pearson": -0.285824,
+          "abs_raw_pearson": 0.285824,
+          "diff_pearson": 1.4e-05,
+          "abs_diff_pearson": 1.4e-05,
+          "spearman": -0.270345,
+          "min_update_fraction": 0.033278,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_13 ↔ channel_63",
+          "raw_pearson": -0.285324,
+          "abs_raw_pearson": 0.285324,
+          "diff_pearson": 1.4e-05,
+          "abs_diff_pearson": 1.4e-05,
+          "spearman": -0.269623,
+          "min_update_fraction": 0.033278,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_20 ↔ channel_62",
+          "raw_pearson": -0.283149,
+          "abs_raw_pearson": 0.283149,
+          "diff_pearson": 0.0,
+          "abs_diff_pearson": 0.0,
+          "spearman": -0.268428,
+          "min_update_fraction": 0.033278,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_20 ↔ channel_63",
+          "raw_pearson": -0.282665,
+          "abs_raw_pearson": 0.282665,
+          "diff_pearson": 0.0,
+          "abs_diff_pearson": 0.0,
+          "spearman": -0.267707,
+          "min_update_fraction": 0.033278,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_43 ↔ channel_48",
+          "raw_pearson": 0.272372,
+          "abs_raw_pearson": 0.272372,
+          "diff_pearson": 0.001085,
+          "abs_diff_pearson": 0.001085,
+          "spearman": -0.050598,
+          "min_update_fraction": 0.998511,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_43 ↔ channel_51",
+          "raw_pearson": 0.272358,
+          "abs_raw_pearson": 0.272358,
+          "diff_pearson": 0.000108,
+          "abs_diff_pearson": 0.000108,
+          "spearman": -0.050878,
+          "min_update_fraction": 0.33397,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_70 ↔ channel_74",
+          "raw_pearson": -0.26823,
+          "abs_raw_pearson": 0.26823,
+          "diff_pearson": -0.564898,
+          "abs_diff_pearson": 0.564898,
+          "spearman": -0.335085,
+          "min_update_fraction": 0.998281,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_43 ↔ channel_47",
+          "raw_pearson": 0.263237,
+          "abs_raw_pearson": 0.263237,
+          "diff_pearson": 0.001626,
+          "abs_diff_pearson": 0.001626,
+          "spearman": -0.060968,
+          "min_update_fraction": 0.998511,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_43 ↔ channel_50",
+          "raw_pearson": 0.263202,
+          "abs_raw_pearson": 0.263202,
+          "diff_pearson": -6e-05,
+          "abs_diff_pearson": 6e-05,
+          "spearman": -0.061538,
+          "min_update_fraction": 0.33397,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_43 ↔ channel_44",
+          "raw_pearson": -0.245276,
+          "abs_raw_pearson": 0.245276,
+          "diff_pearson": -0.188945,
+          "abs_diff_pearson": 0.188945,
+          "spearman": -0.456713,
+          "min_update_fraction": 0.998578,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_33 ↔ channel_66",
+          "raw_pearson": 0.225031,
+          "abs_raw_pearson": 0.225031,
+          "diff_pearson": -1e-06,
+          "abs_diff_pearson": 1e-06,
+          "spearman": 0.971152,
+          "min_update_fraction": 0.200592,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_40 ↔ channel_66",
+          "raw_pearson": 0.224992,
+          "abs_raw_pearson": 0.224992,
+          "diff_pearson": -2.2e-05,
+          "abs_diff_pearson": 2.2e-05,
+          "spearman": 0.971063,
+          "min_update_fraction": 0.200592,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_16 ↔ channel_66",
+          "raw_pearson": 0.22474,
+          "abs_raw_pearson": 0.22474,
+          "diff_pearson": -1.2e-05,
+          "abs_diff_pearson": 1.2e-05,
+          "spearman": 0.970074,
+          "min_update_fraction": 0.200592,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_71 ↔ channel_76",
+          "raw_pearson": 0.220628,
+          "abs_raw_pearson": 0.220628,
+          "diff_pearson": 0.330046,
+          "abs_diff_pearson": 0.330046,
+          "spearman": 0.368105,
+          "min_update_fraction": 0.998283,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_42 ↔ channel_44",
+          "raw_pearson": -0.217367,
+          "abs_raw_pearson": 0.217367,
+          "diff_pearson": -0.164285,
+          "abs_diff_pearson": 0.164285,
+          "spearman": -0.389265,
+          "min_update_fraction": 0.998578,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_44 ↔ channel_46",
+          "raw_pearson": -0.215829,
+          "abs_raw_pearson": 0.215829,
+          "diff_pearson": -0.131397,
+          "abs_diff_pearson": 0.131397,
+          "spearman": -0.298473,
+          "min_update_fraction": 0.998578,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_71 ↔ channel_75",
+          "raw_pearson": -0.214598,
+          "abs_raw_pearson": 0.214598,
+          "diff_pearson": -0.436842,
+          "abs_diff_pearson": 0.436842,
+          "spearman": -0.349436,
+          "min_update_fraction": 0.998284,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_44 ↔ channel_45",
+          "raw_pearson": -0.19533,
+          "abs_raw_pearson": 0.19533,
+          "diff_pearson": -0.087598,
+          "abs_diff_pearson": 0.087598,
+          "spearman": -0.223404,
+          "min_update_fraction": 0.998578,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_72 ↔ channel_73",
+          "raw_pearson": 0.168183,
+          "abs_raw_pearson": 0.168183,
+          "diff_pearson": 0.145516,
+          "abs_diff_pearson": 0.145516,
+          "spearman": 0.180842,
+          "min_update_fraction": 0.99828,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_75 ↔ channel_76",
+          "raw_pearson": -0.148982,
+          "abs_raw_pearson": 0.148982,
+          "diff_pearson": -0.563108,
+          "abs_diff_pearson": 0.563108,
+          "spearman": -0.335907,
+          "min_update_fraction": 0.998283,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_73 ↔ channel_75",
+          "raw_pearson": 0.139226,
+          "abs_raw_pearson": 0.139226,
+          "diff_pearson": 0.20484,
+          "abs_diff_pearson": 0.20484,
+          "spearman": 0.273781,
+          "min_update_fraction": 0.998283,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_70 ↔ channel_71",
+          "raw_pearson": 0.134972,
+          "abs_raw_pearson": 0.134972,
+          "diff_pearson": 0.080369,
+          "abs_diff_pearson": 0.080369,
+          "spearman": 0.132141,
+          "min_update_fraction": 0.998281,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_70 ↔ channel_72",
+          "raw_pearson": -0.129584,
+          "abs_raw_pearson": 0.129584,
+          "diff_pearson": -0.095382,
+          "abs_diff_pearson": 0.095382,
+          "spearman": -0.087933,
+          "min_update_fraction": 0.99828,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_70 ↔ channel_76",
+          "raw_pearson": 0.124505,
+          "abs_raw_pearson": 0.124505,
+          "diff_pearson": 0.092958,
+          "abs_diff_pearson": 0.092958,
+          "spearman": 0.11533,
+          "min_update_fraction": 0.998281,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_70 ↔ channel_73",
+          "raw_pearson": -0.115042,
+          "abs_raw_pearson": 0.115042,
+          "diff_pearson": 0.04943,
+          "abs_diff_pearson": 0.04943,
+          "spearman": -0.075595,
+          "min_update_fraction": 0.998281,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_19 ↔ channel_44",
+          "raw_pearson": -0.107367,
+          "abs_raw_pearson": 0.107367,
+          "diff_pearson": 0.00072,
+          "abs_diff_pearson": 0.00072,
+          "spearman": -0.026524,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_37 ↔ channel_44",
+          "raw_pearson": -0.101717,
+          "abs_raw_pearson": 0.101717,
+          "diff_pearson": -0.000163,
+          "abs_diff_pearson": 0.000163,
+          "spearman": -0.01288,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_8 ↔ channel_11",
+          "raw_pearson": 0.101146,
+          "abs_raw_pearson": 0.101146,
+          "diff_pearson": 0.169566,
+          "abs_diff_pearson": 0.169566,
+          "spearman": 0.7071,
+          "min_update_fraction": 0.19985,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_36 ↔ channel_44",
+          "raw_pearson": -0.101018,
+          "abs_raw_pearson": 0.101018,
+          "diff_pearson": 0.000221,
+          "abs_diff_pearson": 0.000221,
+          "spearman": 0.014836,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_9 ↔ channel_11",
+          "raw_pearson": 0.098854,
+          "abs_raw_pearson": 0.098854,
+          "diff_pearson": 0.15611,
+          "abs_diff_pearson": 0.15611,
+          "spearman": 0.7071,
+          "min_update_fraction": 0.19985,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_28 ↔ channel_44",
+          "raw_pearson": -0.098318,
+          "abs_raw_pearson": 0.098318,
+          "diff_pearson": 7.5e-05,
+          "abs_diff_pearson": 7.5e-05,
+          "spearman": 0.020971,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_71 ↔ channel_73",
+          "raw_pearson": -0.089002,
+          "abs_raw_pearson": 0.089002,
+          "diff_pearson": -0.09693,
+          "abs_diff_pearson": 0.09693,
+          "spearman": -0.140691,
+          "min_update_fraction": 0.998283,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_73 ↔ channel_76",
+          "raw_pearson": -0.080583,
+          "abs_raw_pearson": 0.080583,
+          "diff_pearson": -0.173981,
+          "abs_diff_pearson": 0.173981,
+          "spearman": -0.131998,
+          "min_update_fraction": 0.998283,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_73 ↔ channel_74",
+          "raw_pearson": -0.074974,
+          "abs_raw_pearson": 0.074974,
+          "diff_pearson": -0.297444,
+          "abs_diff_pearson": 0.297444,
+          "spearman": -0.152129,
+          "min_update_fraction": 0.998281,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_56 ↔ channel_60",
+          "raw_pearson": -0.073749,
+          "abs_raw_pearson": 0.073749,
+          "diff_pearson": -0.002089,
+          "abs_diff_pearson": 0.002089,
+          "spearman": -0.117894,
+          "min_update_fraction": 0.998518,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_56 ↔ channel_58",
+          "raw_pearson": -0.07356,
+          "abs_raw_pearson": 0.07356,
+          "diff_pearson": 0.000969,
+          "abs_diff_pearson": 0.000969,
+          "spearman": -0.117725,
+          "min_update_fraction": 0.998518,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_56 ↔ channel_57",
+          "raw_pearson": -0.073518,
+          "abs_raw_pearson": 0.073518,
+          "diff_pearson": -0.000507,
+          "abs_diff_pearson": 0.000507,
+          "spearman": -0.120875,
+          "min_update_fraction": 0.998518,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_56 ↔ channel_59",
+          "raw_pearson": -0.070431,
+          "abs_raw_pearson": 0.070431,
+          "diff_pearson": -0.001482,
+          "abs_diff_pearson": 0.001482,
+          "spearman": -0.120307,
+          "min_update_fraction": 0.998518,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_16 ↔ channel_56",
+          "raw_pearson": -0.067632,
+          "abs_raw_pearson": 0.067632,
+          "diff_pearson": -0.00078,
+          "abs_diff_pearson": 0.00078,
+          "spearman": -0.107875,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_32 ↔ channel_56",
+          "raw_pearson": -0.067624,
+          "abs_raw_pearson": 0.067624,
+          "diff_pearson": 8e-06,
+          "abs_diff_pearson": 8e-06,
+          "spearman": -0.107879,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_24 ↔ channel_56",
+          "raw_pearson": -0.067622,
+          "abs_raw_pearson": 0.067622,
+          "diff_pearson": 0.00086,
+          "abs_diff_pearson": 0.00086,
+          "spearman": -0.107935,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_40 ↔ channel_56",
+          "raw_pearson": -0.067593,
+          "abs_raw_pearson": 0.067593,
+          "diff_pearson": -2.8e-05,
+          "abs_diff_pearson": 2.8e-05,
+          "spearman": -0.10774,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_8 ↔ channel_10",
+          "raw_pearson": 0.067495,
+          "abs_raw_pearson": 0.067495,
+          "diff_pearson": 0.079231,
+          "abs_diff_pearson": 0.079231,
+          "spearman": 0.7071,
+          "min_update_fraction": 0.19985,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_9 ↔ channel_10",
+          "raw_pearson": 0.066336,
+          "abs_raw_pearson": 0.066336,
+          "diff_pearson": 0.072994,
+          "abs_diff_pearson": 0.072994,
+          "spearman": 0.7071,
+          "min_update_fraction": 0.19985,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_4 ↔ channel_10",
+          "raw_pearson": 0.064438,
+          "abs_raw_pearson": 0.064438,
+          "diff_pearson": 0.088699,
+          "abs_diff_pearson": 0.088699,
+          "spearman": 0.408234,
+          "min_update_fraction": 0.19985,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_70 ↔ channel_75",
+          "raw_pearson": -0.059635,
+          "abs_raw_pearson": 0.059635,
+          "diff_pearson": -0.071826,
+          "abs_diff_pearson": 0.071826,
+          "spearman": -0.057883,
+          "min_update_fraction": 0.998281,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_53 ↔ channel_54",
+          "raw_pearson": -0.058643,
+          "abs_raw_pearson": 0.058643,
+          "diff_pearson": -0.059022,
+          "abs_diff_pearson": 0.059022,
+          "spearman": -0.047193,
+          "min_update_fraction": 0.998518,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_1 ↔ channel_45",
+          "raw_pearson": 0.058383,
+          "abs_raw_pearson": 0.058383,
+          "diff_pearson": 0.000409,
+          "abs_diff_pearson": 0.000409,
+          "spearman": 0.033705,
+          "min_update_fraction": 0.350568,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_3 ↔ channel_45",
+          "raw_pearson": 0.058191,
+          "abs_raw_pearson": 0.058191,
+          "diff_pearson": 0.000411,
+          "abs_diff_pearson": 0.000411,
+          "spearman": 0.018031,
+          "min_update_fraction": 0.350568,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_2 ↔ channel_45",
+          "raw_pearson": 0.057865,
+          "abs_raw_pearson": 0.057865,
+          "diff_pearson": 0.000419,
+          "abs_diff_pearson": 0.000419,
+          "spearman": 0.033902,
+          "min_update_fraction": 0.350568,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_3 ↔ channel_41",
+          "raw_pearson": 0.057258,
+          "abs_raw_pearson": 0.057258,
+          "diff_pearson": 6.1e-05,
+          "abs_diff_pearson": 6.1e-05,
+          "spearman": 0.019666,
+          "min_update_fraction": 0.350568,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_1 ↔ channel_41",
+          "raw_pearson": 0.057173,
+          "abs_raw_pearson": 0.057173,
+          "diff_pearson": 2e-06,
+          "abs_diff_pearson": 2e-06,
+          "spearman": 0.036013,
+          "min_update_fraction": 0.350568,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_10 ↔ channel_11",
+          "raw_pearson": 0.056924,
+          "abs_raw_pearson": 0.056924,
+          "diff_pearson": 0.079449,
+          "abs_diff_pearson": 0.079449,
+          "spearman": 1.0,
+          "min_update_fraction": 0.19985,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_2 ↔ channel_41",
+          "raw_pearson": 0.056871,
+          "abs_raw_pearson": 0.056871,
+          "diff_pearson": 1.1e-05,
+          "abs_diff_pearson": 1.1e-05,
+          "spearman": 0.034911,
+          "min_update_fraction": 0.350568,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_54 ↔ channel_56",
+          "raw_pearson": 0.053581,
+          "abs_raw_pearson": 0.053581,
+          "diff_pearson": 0.052898,
+          "abs_diff_pearson": 0.052898,
+          "spearman": 0.008286,
+          "min_update_fraction": 0.998518,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_1 ↔ channel_42",
+          "raw_pearson": 0.052887,
+          "abs_raw_pearson": 0.052887,
+          "diff_pearson": 0.000569,
+          "abs_diff_pearson": 0.000569,
+          "spearman": 0.03145,
+          "min_update_fraction": 0.350568,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_1 ↔ channel_46",
+          "raw_pearson": 0.052748,
+          "abs_raw_pearson": 0.052748,
+          "diff_pearson": -0.000695,
+          "abs_diff_pearson": 0.000695,
+          "spearman": 0.03254,
+          "min_update_fraction": 0.350568,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_3 ↔ channel_42",
+          "raw_pearson": 0.052675,
+          "abs_raw_pearson": 0.052675,
+          "diff_pearson": 0.00061,
+          "abs_diff_pearson": 0.00061,
+          "spearman": 0.016052,
+          "min_update_fraction": 0.350568,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_3 ↔ channel_46",
+          "raw_pearson": 0.052525,
+          "abs_raw_pearson": 0.052525,
+          "diff_pearson": -0.000702,
+          "abs_diff_pearson": 0.000702,
+          "spearman": 0.007689,
+          "min_update_fraction": 0.350568,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_2 ↔ channel_42",
+          "raw_pearson": 0.052391,
+          "abs_raw_pearson": 0.052391,
+          "diff_pearson": 0.000614,
+          "abs_diff_pearson": 0.000614,
+          "spearman": 0.032299,
+          "min_update_fraction": 0.350568,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_2 ↔ channel_46",
+          "raw_pearson": 0.052357,
+          "abs_raw_pearson": 0.052357,
+          "diff_pearson": -0.000647,
+          "abs_diff_pearson": 0.000647,
+          "spearman": 0.033148,
+          "min_update_fraction": 0.350568,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_3 ↔ channel_48",
+          "raw_pearson": 0.048581,
+          "abs_raw_pearson": 0.048581,
+          "diff_pearson": 0.000167,
+          "abs_diff_pearson": 0.000167,
+          "spearman": 0.022755,
+          "min_update_fraction": 0.350568,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_3 ↔ channel_51",
+          "raw_pearson": 0.048474,
+          "abs_raw_pearson": 0.048474,
+          "diff_pearson": 3e-06,
+          "abs_diff_pearson": 3e-06,
+          "spearman": 0.022587,
+          "min_update_fraction": 0.33397,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_1 ↔ channel_48",
+          "raw_pearson": 0.048462,
+          "abs_raw_pearson": 0.048462,
+          "diff_pearson": 0.00015,
+          "abs_diff_pearson": 0.00015,
+          "spearman": 0.028051,
+          "min_update_fraction": 0.350568,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_1 ↔ channel_51",
+          "raw_pearson": 0.048352,
+          "abs_raw_pearson": 0.048352,
+          "diff_pearson": -1e-06,
+          "abs_diff_pearson": 1e-06,
+          "spearman": 0.028236,
+          "min_update_fraction": 0.33397,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_2 ↔ channel_48",
+          "raw_pearson": 0.047898,
+          "abs_raw_pearson": 0.047898,
+          "diff_pearson": 0.000242,
+          "abs_diff_pearson": 0.000242,
+          "spearman": 0.028113,
+          "min_update_fraction": 0.350568,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_2 ↔ channel_51",
+          "raw_pearson": 0.047791,
+          "abs_raw_pearson": 0.047791,
+          "diff_pearson": 1e-06,
+          "abs_diff_pearson": 1e-06,
+          "spearman": 0.028176,
+          "min_update_fraction": 0.33397,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_71 ↔ channel_74",
+          "raw_pearson": -0.046739,
+          "abs_raw_pearson": 0.046739,
+          "diff_pearson": -0.081653,
+          "abs_diff_pearson": 0.081653,
+          "spearman": -0.087434,
+          "min_update_fraction": 0.998281,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_55 ↔ channel_56",
+          "raw_pearson": -0.046066,
+          "abs_raw_pearson": 0.046066,
+          "diff_pearson": -0.045933,
+          "abs_diff_pearson": 0.045933,
+          "spearman": -0.035105,
+          "min_update_fraction": 0.998518,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_48 ↔ channel_70",
+          "raw_pearson": -0.043701,
+          "abs_raw_pearson": 0.043701,
+          "diff_pearson": -0.000137,
+          "abs_diff_pearson": 0.000137,
+          "spearman": -0.032018,
+          "min_update_fraction": 0.998281,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_51 ↔ channel_70",
+          "raw_pearson": -0.043646,
+          "abs_raw_pearson": 0.043646,
+          "diff_pearson": 0.001754,
+          "abs_diff_pearson": 0.001754,
+          "spearman": -0.032138,
+          "min_update_fraction": 0.33397,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_6 ↔ channel_10",
+          "raw_pearson": 0.040823,
+          "abs_raw_pearson": 0.040823,
+          "diff_pearson": 0.054591,
+          "abs_diff_pearson": 0.054591,
+          "spearman": 0.333325,
+          "min_update_fraction": 0.19985,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_53 ↔ channel_55",
+          "raw_pearson": 0.03844,
+          "abs_raw_pearson": 0.03844,
+          "diff_pearson": 0.037692,
+          "abs_diff_pearson": 0.037692,
+          "spearman": 0.04761,
+          "min_update_fraction": 0.998518,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_6 ↔ channel_11",
+          "raw_pearson": 0.037492,
+          "abs_raw_pearson": 0.037492,
+          "diff_pearson": 0.044167,
+          "abs_diff_pearson": 0.044167,
+          "spearman": 0.333325,
+          "min_update_fraction": 0.19985,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_54 ↔ channel_55",
+          "raw_pearson": -0.036309,
+          "abs_raw_pearson": 0.036309,
+          "diff_pearson": -0.036497,
+          "abs_diff_pearson": 0.036497,
+          "spearman": -0.050595,
+          "min_update_fraction": 0.998518,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_6 ↔ channel_8",
+          "raw_pearson": 0.036222,
+          "abs_raw_pearson": 0.036222,
+          "diff_pearson": 0.039356,
+          "abs_diff_pearson": 0.039356,
+          "spearman": 0.471382,
+          "min_update_fraction": 0.19985,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_6 ↔ channel_9",
+          "raw_pearson": 0.036208,
+          "abs_raw_pearson": 0.036208,
+          "diff_pearson": 0.039093,
+          "abs_diff_pearson": 0.039093,
+          "spearman": 0.471382,
+          "min_update_fraction": 0.19985,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_40 ↔ channel_67",
+          "raw_pearson": -0.030629,
+          "abs_raw_pearson": 0.030629,
+          "diff_pearson": -3.1e-05,
+          "abs_diff_pearson": 3.1e-05,
+          "spearman": -0.560973,
+          "min_update_fraction": 0.200592,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_32 ↔ channel_67",
+          "raw_pearson": -0.030626,
+          "abs_raw_pearson": 0.030626,
+          "diff_pearson": -6e-06,
+          "abs_diff_pearson": 6e-06,
+          "spearman": -0.560392,
+          "min_update_fraction": 0.200592,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_33 ↔ channel_67",
+          "raw_pearson": -0.030581,
+          "abs_raw_pearson": 0.030581,
+          "diff_pearson": -3.3e-05,
+          "abs_diff_pearson": 3.3e-05,
+          "spearman": -0.560872,
+          "min_update_fraction": 0.200592,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_4 ↔ channel_11",
+          "raw_pearson": 0.026148,
+          "abs_raw_pearson": 0.026148,
+          "diff_pearson": 0.038049,
+          "abs_diff_pearson": 0.038049,
+          "spearman": 0.408234,
+          "min_update_fraction": 0.19985,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_7 ↔ channel_10",
+          "raw_pearson": 0.02321,
+          "abs_raw_pearson": 0.02321,
+          "diff_pearson": 0.029941,
+          "abs_diff_pearson": 0.029941,
+          "spearman": 0.408234,
+          "min_update_fraction": 0.19985,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_41 ↔ channel_74",
+          "raw_pearson": 0.022208,
+          "abs_raw_pearson": 0.022208,
+          "diff_pearson": 0.050291,
+          "abs_diff_pearson": 0.050291,
+          "spearman": 0.030916,
+          "min_update_fraction": 0.998281,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_53 ↔ channel_56",
+          "raw_pearson": -0.021684,
+          "abs_raw_pearson": 0.021684,
+          "diff_pearson": -0.021592,
+          "abs_diff_pearson": 0.021592,
+          "spearman": -0.012193,
+          "min_update_fraction": 0.998518,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_46 ↔ channel_74",
+          "raw_pearson": 0.021165,
+          "abs_raw_pearson": 0.021165,
+          "diff_pearson": 0.016526,
+          "abs_diff_pearson": 0.016526,
+          "spearman": 0.030006,
+          "min_update_fraction": 0.998281,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_59 ↔ channel_76",
+          "raw_pearson": 0.019389,
+          "abs_raw_pearson": 0.019389,
+          "diff_pearson": -0.001075,
+          "abs_diff_pearson": 0.001075,
+          "spearman": 0.024929,
+          "min_update_fraction": 0.998283,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_57 ↔ channel_76",
+          "raw_pearson": 0.019175,
+          "abs_raw_pearson": 0.019175,
+          "diff_pearson": 0.000912,
+          "abs_diff_pearson": 0.000912,
+          "spearman": 0.025332,
+          "min_update_fraction": 0.998283,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_63 ↔ channel_71",
+          "raw_pearson": -0.018787,
+          "abs_raw_pearson": 0.018787,
+          "diff_pearson": 0.000106,
+          "abs_diff_pearson": 0.000106,
+          "spearman": -0.020431,
+          "min_update_fraction": 0.033278,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_62 ↔ channel_71",
+          "raw_pearson": -0.018765,
+          "abs_raw_pearson": 0.018765,
+          "diff_pearson": 0.000104,
+          "abs_diff_pearson": 0.000104,
+          "spearman": -0.020303,
+          "min_update_fraction": 0.033278,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_42 ↔ channel_74",
+          "raw_pearson": 0.018354,
+          "abs_raw_pearson": 0.018354,
+          "diff_pearson": 0.012142,
+          "abs_diff_pearson": 0.012142,
+          "spearman": 0.013898,
+          "min_update_fraction": 0.998281,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_45 ↔ channel_72",
+          "raw_pearson": 0.018021,
+          "abs_raw_pearson": 0.018021,
+          "diff_pearson": 0.057611,
+          "abs_diff_pearson": 0.057611,
+          "spearman": 0.028749,
+          "min_update_fraction": 0.99828,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_45 ↔ channel_74",
+          "raw_pearson": 0.017983,
+          "abs_raw_pearson": 0.017983,
+          "diff_pearson": -0.02849,
+          "abs_diff_pearson": 0.02849,
+          "spearman": 0.013414,
+          "min_update_fraction": 0.998281,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_58 ↔ channel_76",
+          "raw_pearson": 0.016936,
+          "abs_raw_pearson": 0.016936,
+          "diff_pearson": 0.000218,
+          "abs_diff_pearson": 0.000218,
+          "spearman": 0.022524,
+          "min_update_fraction": 0.998283,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_13 ↔ channel_53",
+          "raw_pearson": 0.016874,
+          "abs_raw_pearson": 0.016874,
+          "diff_pearson": -8.5e-05,
+          "abs_diff_pearson": 8.5e-05,
+          "spearman": 0.032902,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_63 ↔ channel_75",
+          "raw_pearson": -0.016798,
+          "abs_raw_pearson": 0.016798,
+          "diff_pearson": -0.000259,
+          "abs_diff_pearson": 0.000259,
+          "spearman": -0.032163,
+          "min_update_fraction": 0.033278,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_62 ↔ channel_75",
+          "raw_pearson": -0.016787,
+          "abs_raw_pearson": 0.016787,
+          "diff_pearson": -0.000261,
+          "abs_diff_pearson": 0.000261,
+          "spearman": -0.031889,
+          "min_update_fraction": 0.033278,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_17 ↔ channel_53",
+          "raw_pearson": 0.016735,
+          "abs_raw_pearson": 0.016735,
+          "diff_pearson": -0.000229,
+          "abs_diff_pearson": 0.000229,
+          "spearman": 0.032121,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_20 ↔ channel_53",
+          "raw_pearson": 0.016708,
+          "abs_raw_pearson": 0.016708,
+          "diff_pearson": -0.000106,
+          "abs_diff_pearson": 0.000106,
+          "spearman": 0.031773,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_26 ↔ channel_53",
+          "raw_pearson": 0.01651,
+          "abs_raw_pearson": 0.01651,
+          "diff_pearson": 0.000239,
+          "abs_diff_pearson": 0.000239,
+          "spearman": 0.032029,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_27 ↔ channel_53",
+          "raw_pearson": 0.016374,
+          "abs_raw_pearson": 0.016374,
+          "diff_pearson": 7e-06,
+          "abs_diff_pearson": 7e-06,
+          "spearman": 0.031243,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_59 ↔ channel_73",
+          "raw_pearson": 0.015816,
+          "abs_raw_pearson": 0.015816,
+          "diff_pearson": 3.2e-05,
+          "abs_diff_pearson": 3.2e-05,
+          "spearman": 0.016687,
+          "min_update_fraction": 0.998283,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_57 ↔ channel_73",
+          "raw_pearson": 0.015418,
+          "abs_raw_pearson": 0.015418,
+          "diff_pearson": -0.000112,
+          "abs_diff_pearson": 0.000112,
+          "spearman": 0.016868,
+          "min_update_fraction": 0.998283,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_46 ↔ channel_72",
+          "raw_pearson": 0.015087,
+          "abs_raw_pearson": 0.015087,
+          "diff_pearson": 0.037769,
+          "abs_diff_pearson": 0.037769,
+          "spearman": 0.017884,
+          "min_update_fraction": 0.99828,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_60 ↔ channel_72",
+          "raw_pearson": 0.014375,
+          "abs_raw_pearson": 0.014375,
+          "diff_pearson": -0.000459,
+          "abs_diff_pearson": 0.000459,
+          "spearman": 0.021517,
+          "min_update_fraction": 0.99828,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_45 ↔ channel_75",
+          "raw_pearson": 0.013963,
+          "abs_raw_pearson": 0.013963,
+          "diff_pearson": 0.061468,
+          "abs_diff_pearson": 0.061468,
+          "spearman": 0.048739,
+          "min_update_fraction": 0.998284,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_59 ↔ channel_74",
+          "raw_pearson": 0.013695,
+          "abs_raw_pearson": 0.013695,
+          "diff_pearson": -0.000656,
+          "abs_diff_pearson": 0.000656,
+          "spearman": 0.018437,
+          "min_update_fraction": 0.998281,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_5 ↔ channel_11",
+          "raw_pearson": 0.013384,
+          "abs_raw_pearson": 0.013384,
+          "diff_pearson": 0.022961,
+          "abs_diff_pearson": 0.022961,
+          "spearman": 0.35353,
+          "min_update_fraction": 0.19985,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_7 ↔ channel_11",
+          "raw_pearson": 0.010661,
+          "abs_raw_pearson": 0.010661,
+          "diff_pearson": 0.022086,
+          "abs_diff_pearson": 0.022086,
+          "spearman": 0.408234,
+          "min_update_fraction": 0.19985,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_4 ↔ channel_8",
+          "raw_pearson": 0.010637,
+          "abs_raw_pearson": 0.010637,
+          "diff_pearson": 0.020097,
+          "abs_diff_pearson": 0.020097,
+          "spearman": 0.288653,
+          "min_update_fraction": 0.19985,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_7 ↔ channel_8",
+          "raw_pearson": 0.010582,
+          "abs_raw_pearson": 0.010582,
+          "diff_pearson": 0.019007,
+          "abs_diff_pearson": 0.019007,
+          "spearman": 0.288653,
+          "min_update_fraction": 0.19985,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_7 ↔ channel_9",
+          "raw_pearson": 0.010372,
+          "abs_raw_pearson": 0.010372,
+          "diff_pearson": 0.017547,
+          "abs_diff_pearson": 0.017547,
+          "spearman": 0.288653,
+          "min_update_fraction": 0.19985,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_4 ↔ channel_9",
+          "raw_pearson": 0.010358,
+          "abs_raw_pearson": 0.010358,
+          "diff_pearson": 0.018044,
+          "abs_diff_pearson": 0.018044,
+          "spearman": 0.288653,
+          "min_update_fraction": 0.19985,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_55 ↔ channel_60",
+          "raw_pearson": 0.010182,
+          "abs_raw_pearson": 0.010182,
+          "diff_pearson": 0.005333,
+          "abs_diff_pearson": 0.005333,
+          "spearman": 0.01619,
+          "min_update_fraction": 0.998518,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_55 ↔ channel_57",
+          "raw_pearson": 0.00969,
+          "abs_raw_pearson": 0.00969,
+          "diff_pearson": 0.002998,
+          "abs_diff_pearson": 0.002998,
+          "spearman": 0.015607,
+          "min_update_fraction": 0.998518,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_55 ↔ channel_58",
+          "raw_pearson": 0.009566,
+          "abs_raw_pearson": 0.009566,
+          "diff_pearson": -0.00299,
+          "abs_diff_pearson": 0.00299,
+          "spearman": 0.0156,
+          "min_update_fraction": 0.998518,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_24 ↔ channel_55",
+          "raw_pearson": 0.009532,
+          "abs_raw_pearson": 0.009532,
+          "diff_pearson": 0.001007,
+          "abs_diff_pearson": 0.001007,
+          "spearman": 0.015069,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_32 ↔ channel_55",
+          "raw_pearson": 0.009489,
+          "abs_raw_pearson": 0.009489,
+          "diff_pearson": -0.000432,
+          "abs_diff_pearson": 0.000432,
+          "spearman": 0.014963,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_54 ↔ channel_57",
+          "raw_pearson": -0.008123,
+          "abs_raw_pearson": 0.008123,
+          "diff_pearson": -0.005354,
+          "abs_diff_pearson": 0.005354,
+          "spearman": -0.007117,
+          "min_update_fraction": 0.998518,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_54 ↔ channel_59",
+          "raw_pearson": -0.007943,
+          "abs_raw_pearson": 0.007943,
+          "diff_pearson": -0.001684,
+          "abs_diff_pearson": 0.001684,
+          "spearman": -0.00697,
+          "min_update_fraction": 0.998518,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_54 ↔ channel_58",
+          "raw_pearson": -0.007544,
+          "abs_raw_pearson": 0.007544,
+          "diff_pearson": -0.001361,
+          "abs_diff_pearson": 0.001361,
+          "spearman": -0.006963,
+          "min_update_fraction": 0.998518,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_54 ↔ channel_60",
+          "raw_pearson": -0.007325,
+          "abs_raw_pearson": 0.007325,
+          "diff_pearson": 0.000358,
+          "abs_diff_pearson": 0.000358,
+          "spearman": -0.007036,
+          "min_update_fraction": 0.998518,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_16 ↔ channel_54",
+          "raw_pearson": -0.005901,
+          "abs_raw_pearson": 0.005901,
+          "diff_pearson": 0.000131,
+          "abs_diff_pearson": 0.000131,
+          "spearman": -0.005672,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_5 ↔ channel_9",
+          "raw_pearson": 0.005107,
+          "abs_raw_pearson": 0.005107,
+          "diff_pearson": 0.006877,
+          "abs_diff_pearson": 0.006877,
+          "spearman": 0.24997,
+          "min_update_fraction": 0.19985,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_5 ↔ channel_8",
+          "raw_pearson": 0.005092,
+          "abs_raw_pearson": 0.005092,
+          "diff_pearson": 0.006746,
+          "abs_diff_pearson": 0.006746,
+          "spearman": 0.24997,
+          "min_update_fraction": 0.19985,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_50 ↔ channel_68",
+          "raw_pearson": -0.004307,
+          "abs_raw_pearson": 0.004307,
+          "diff_pearson": -0.000467,
+          "abs_diff_pearson": 0.000467,
+          "spearman": -0.095781,
+          "min_update_fraction": 0.200592,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_47 ↔ channel_68",
+          "raw_pearson": -0.004278,
+          "abs_raw_pearson": 0.004278,
+          "diff_pearson": -1.1e-05,
+          "abs_diff_pearson": 1.1e-05,
+          "spearman": -0.096291,
+          "min_update_fraction": 0.200592,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_48 ↔ channel_68",
+          "raw_pearson": -0.004224,
+          "abs_raw_pearson": 0.004224,
+          "diff_pearson": 0.000102,
+          "abs_diff_pearson": 0.000102,
+          "spearman": -0.095391,
+          "min_update_fraction": 0.200592,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_62 ↔ channel_69",
+          "raw_pearson": -0.004116,
+          "abs_raw_pearson": 0.004116,
+          "diff_pearson": -0.0,
+          "abs_diff_pearson": 0.0,
+          "spearman": -0.022905,
+          "min_update_fraction": 0.033278,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_63 ↔ channel_69",
+          "raw_pearson": -0.004086,
+          "abs_raw_pearson": 0.004086,
+          "diff_pearson": -0.0,
+          "abs_diff_pearson": 0.0,
+          "spearman": -0.022616,
+          "min_update_fraction": 0.033278,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_23 ↔ channel_69",
+          "raw_pearson": 0.002976,
+          "abs_raw_pearson": 0.002976,
+          "diff_pearson": 1.2e-05,
+          "abs_diff_pearson": 1.2e-05,
+          "spearman": 0.093764,
+          "min_update_fraction": 0.200592,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_62 ↔ channel_65",
+          "raw_pearson": -0.002794,
+          "abs_raw_pearson": 0.002794,
+          "diff_pearson": -0.0,
+          "abs_diff_pearson": 0.0,
+          "spearman": -0.001919,
+          "min_update_fraction": 0.033278,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_63 ↔ channel_65",
+          "raw_pearson": -0.002771,
+          "abs_raw_pearson": 0.002771,
+          "diff_pearson": -0.0,
+          "abs_diff_pearson": 0.0,
+          "spearman": -0.001921,
+          "min_update_fraction": 0.033278,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_62 ↔ channel_64",
+          "raw_pearson": -0.002768,
+          "abs_raw_pearson": 0.002768,
+          "diff_pearson": -0.0,
+          "abs_diff_pearson": 0.0,
+          "spearman": 0.001278,
+          "min_update_fraction": 0.033278,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_63 ↔ channel_64",
+          "raw_pearson": -0.002746,
+          "abs_raw_pearson": 0.002746,
+          "diff_pearson": -0.0,
+          "abs_diff_pearson": 0.0,
+          "spearman": 0.001277,
+          "min_update_fraction": 0.033278,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_61 ↔ channel_64",
+          "raw_pearson": 0.002421,
+          "abs_raw_pearson": 0.002421,
+          "diff_pearson": -0.0,
+          "abs_diff_pearson": 0.0,
+          "spearman": 0.002744,
+          "min_update_fraction": 0.033278,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_61 ↔ channel_65",
+          "raw_pearson": 0.002406,
+          "abs_raw_pearson": 0.002406,
+          "diff_pearson": -1.2e-05,
+          "abs_diff_pearson": 1.2e-05,
+          "spearman": 0.000664,
+          "min_update_fraction": 0.033278,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_6 ↔ channel_19",
+          "raw_pearson": -0.002099,
+          "abs_raw_pearson": 0.002099,
+          "diff_pearson": 2e-06,
+          "abs_diff_pearson": 2e-06,
+          "spearman": -0.000119,
+          "min_update_fraction": 0.19985,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_4 ↔ channel_19",
+          "raw_pearson": -0.002083,
+          "abs_raw_pearson": 0.002083,
+          "diff_pearson": -5e-06,
+          "abs_diff_pearson": 5e-06,
+          "spearman": 0.000505,
+          "min_update_fraction": 0.19985,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_7 ↔ channel_19",
+          "raw_pearson": -0.002055,
+          "abs_raw_pearson": 0.002055,
+          "diff_pearson": -1e-06,
+          "abs_diff_pearson": 1e-06,
+          "spearman": 0.000505,
+          "min_update_fraction": 0.19985,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_5 ↔ channel_19",
+          "raw_pearson": -0.002051,
+          "abs_raw_pearson": 0.002051,
+          "diff_pearson": 0.0,
+          "abs_diff_pearson": 0.0,
+          "spearman": 5.2e-05,
+          "min_update_fraction": 0.19985,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_10 ↔ channel_41",
+          "raw_pearson": 0.001748,
+          "abs_raw_pearson": 0.001748,
+          "diff_pearson": -0.000353,
+          "abs_diff_pearson": 0.000353,
+          "spearman": 0.004247,
+          "min_update_fraction": 0.19985,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_11 ↔ channel_46",
+          "raw_pearson": 0.001748,
+          "abs_raw_pearson": 0.001748,
+          "diff_pearson": 0.001114,
+          "abs_diff_pearson": 0.001114,
+          "spearman": 0.003826,
+          "min_update_fraction": 0.19985,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_5 ↔ channel_37",
+          "raw_pearson": -0.001723,
+          "abs_raw_pearson": 0.001723,
+          "diff_pearson": -0.000136,
+          "abs_diff_pearson": 0.000136,
+          "spearman": 0.000656,
+          "min_update_fraction": 0.19985,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_10 ↔ channel_32",
+          "raw_pearson": 0.001694,
+          "abs_raw_pearson": 0.001694,
+          "diff_pearson": -0.000314,
+          "abs_diff_pearson": 0.000314,
+          "spearman": 0.002731,
+          "min_update_fraction": 0.19985,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_8 ↔ channel_41",
+          "raw_pearson": 0.001562,
+          "abs_raw_pearson": 0.001562,
+          "diff_pearson": 0.002627,
+          "abs_diff_pearson": 0.002627,
+          "spearman": 0.004518,
+          "min_update_fraction": 0.19985,
+          "raw_only_suspect": false
+        },
+        {
+          "edge": "channel_9 ↔ channel_41",
+          "raw_pearson": 0.001557,
+          "abs_raw_pearson": 0.001557,
+          "diff_pearson": 0.00268,
+          "abs_diff_pearson": 0.00268,
+          "spearman": 0.004518,
+          "min_update_fraction": 0.19985,
+          "raw_only_suspect": false
+        }
+      ],
+      "suspect_edges": [
+        {
+          "edge": "channel_16 ↔ channel_32",
+          "raw_pearson": 0.998112,
+          "diff_pearson": -0.000832,
+          "spearman": 0.997838,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_24 ↔ channel_32",
+          "raw_pearson": 0.998059,
+          "diff_pearson": -0.00049,
+          "spearman": 0.997844,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_22 ↔ channel_31",
+          "raw_pearson": 0.998014,
+          "diff_pearson": -0.003465,
+          "spearman": 0.996791,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_16 ↔ channel_24",
+          "raw_pearson": 0.997989,
+          "diff_pearson": -0.000122,
+          "spearman": 0.997773,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_32 ↔ channel_40",
+          "raw_pearson": 0.997959,
+          "diff_pearson": 0.000332,
+          "spearman": 0.997512,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_16 ↔ channel_40",
+          "raw_pearson": 0.997941,
+          "diff_pearson": -0.001308,
+          "spearman": 0.997476,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_16 ↔ channel_33",
+          "raw_pearson": 0.997939,
+          "diff_pearson": 0.002051,
+          "spearman": 0.997557,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_24 ↔ channel_40",
+          "raw_pearson": 0.997861,
+          "diff_pearson": -0.002575,
+          "spearman": 0.997453,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_24 ↔ channel_33",
+          "raw_pearson": 0.997856,
+          "diff_pearson": 0.000894,
+          "spearman": 0.997534,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_15 ↔ channel_23",
+          "raw_pearson": 0.997677,
+          "diff_pearson": 0.00181,
+          "spearman": 0.997018,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_22 ↔ channel_39",
+          "raw_pearson": 0.997533,
+          "diff_pearson": -0.001525,
+          "spearman": 0.995273,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_20 ↔ channel_27",
+          "raw_pearson": 0.99596,
+          "diff_pearson": -0.00085,
+          "spearman": 0.995598,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_58 ↔ channel_60",
+          "raw_pearson": 0.994616,
+          "diff_pearson": -0.000719,
+          "spearman": 0.994355,
+          "min_update_fraction": 0.998518,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_13 ↔ channel_20",
+          "raw_pearson": 0.99262,
+          "diff_pearson": -4e-05,
+          "spearman": 0.990418,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        },
+        {
+          "edge": "channel_12 ↔ channel_34",
+          "raw_pearson": 0.992319,
+          "diff_pearson": -0.001158,
+          "spearman": 0.988731,
+          "min_update_fraction": 0.334995,
+          "raw_only_suspect": true
+        }
+      ],
+      "reconstruction_wide": [
+        {
+          "mask_label": "时间块缺失 50%",
+          "Spearman Top-8": 0.950624,
+          "一阶差分 Pearson Top-8": 0.958761,
+          "原值 Pearson Top-8": 0.951987,
+          "打乱原值图": 0.977314,
+          "随机 Top-8": 0.967238,
+          "零值基线": 0.949821
+        },
+        {
+          "mask_label": "矩形缺失 50%",
+          "Spearman Top-8": 0.870848,
+          "一阶差分 Pearson Top-8": 0.843995,
+          "原值 Pearson Top-8": 0.914271,
+          "打乱原值图": 0.900978,
+          "随机 Top-8": 0.937666,
+          "零值基线": 0.945087
+        },
+        {
+          "mask_label": "通道丢失 50%",
+          "Spearman Top-8": 0.761265,
+          "一阶差分 Pearson Top-8": 0.754271,
+          "原值 Pearson Top-8": 0.864256,
+          "打乱原值图": 0.856794,
+          "随机 Top-8": 0.882378,
+          "零值基线": 0.946191
+        }
+      ],
+      "graph_summary": [
+        {
+          "method": "raw_pearson",
+          "method_label": "原值 Pearson Top-8",
+          "directed_neighbors_per_channel": 8,
+          "undirected_edges": 421,
+          "degree_min": 8,
+          "degree_median": 9.0,
+          "degree_max": 24,
+          "edge_abs_correlation_min": 0.001557,
+          "edge_abs_correlation_median": 0.787112,
+          "edge_abs_correlation_max": 0.99998
+        },
+        {
+          "method": "diff_pearson",
+          "method_label": "一阶差分 Pearson Top-8",
+          "directed_neighbors_per_channel": 8,
+          "undirected_edges": 388,
+          "degree_min": 8,
+          "degree_median": 9.0,
+          "degree_max": 19,
+          "edge_abs_correlation_min": 0.000307,
+          "edge_abs_correlation_median": 0.004871,
+          "edge_abs_correlation_max": 0.999914
+        },
+        {
+          "method": "spearman",
+          "method_label": "Spearman Top-8",
+          "directed_neighbors_per_channel": 8,
+          "undirected_edges": 420,
+          "degree_min": 8,
+          "degree_median": 10.0,
+          "degree_max": 21,
+          "edge_abs_correlation_min": 0.00422,
+          "edge_abs_correlation_median": 0.831801,
+          "edge_abs_correlation_max": 1.0
+        }
+      ]
+    },
+    "accessIssues": []
+  },
+  "sources": [
+    {
+      "id": "stability_source",
+      "label": "连续时段图稳定性",
+      "query": {
+        "engine": "SQLite",
+        "language": "sql",
+        "sql": "SELECT * FROM graph_stability",
+        "description": "连续时段图稳定性",
+        "tables_used": [
+          "phase1_analysis.sqlite:graph_stability"
+        ],
+        "filters": [
+          "ESA Mission 1 training split only",
+          "first 80% chronological build partition",
+          "last 20% chronological validation partition"
+        ],
+        "executed_at": "2026-07-19T14:26:20.339828+08:00"
+      }
+    },
+    {
+      "id": "edge_source",
+      "label": "原值图边的差分与秩相关诊断",
+      "query": {
+        "engine": "SQLite",
+        "language": "sql",
+        "sql": "SELECT * FROM edge_diagnostics",
+        "description": "原值图边的差分与秩相关诊断",
+        "tables_used": [
+          "phase1_analysis.sqlite:edge_diagnostics"
+        ],
+        "filters": [
+          "ESA Mission 1 training split only",
+          "first 80% chronological build partition",
+          "last 20% chronological validation partition"
+        ],
+        "executed_at": "2026-07-19T14:26:20.339828+08:00"
+      }
+    },
+    {
+      "id": "reconstruction_source",
+      "label": "训练集留出段邻居重建代理",
+      "query": {
+        "engine": "SQLite",
+        "language": "sql",
+        "sql": "SELECT * FROM reconstruction_metrics",
+        "description": "训练集留出段邻居重建代理",
+        "tables_used": [
+          "phase1_analysis.sqlite:reconstruction_metrics"
+        ],
+        "filters": [
+          "ESA Mission 1 training split only",
+          "first 80% chronological build partition",
+          "last 20% chronological validation partition"
+        ],
+        "executed_at": "2026-07-19T14:26:20.339828+08:00"
+      }
+    },
+    {
+      "id": "graph_source",
+      "label": "候选图结构统计",
+      "query": {
+        "engine": "SQLite",
+        "language": "sql",
+        "sql": "SELECT * FROM graph_method_summary",
+        "description": "候选图结构统计",
+        "tables_used": [
+          "phase1_analysis.sqlite:graph_method_summary"
+        ],
+        "filters": [
+          "ESA Mission 1 training split only",
+          "first 80% chronological build partition",
+          "last 20% chronological validation partition"
+        ],
+        "executed_at": "2026-07-19T14:26:20.339828+08:00"
+      }
+    }
+  ]
+}

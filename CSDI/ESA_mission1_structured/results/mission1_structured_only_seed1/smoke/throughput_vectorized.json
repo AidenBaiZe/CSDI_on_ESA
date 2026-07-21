@@ -1,0 +1,13 @@
+{
+  "implementation": "vectorized_structured_training_masks",
+  "warmup_steps": 5,
+  "measured_steps": 20,
+  "batch_size": 16,
+  "mean_seconds_per_step": 0.5817052249942207,
+  "min_seconds_per_step": 0.5777848999714479,
+  "max_seconds_per_step": 0.5902776999864727,
+  "peak_gpu_memory_bytes": 3933935616,
+  "last_loss": 0.2735142707824707,
+  "projected_32000_step_hours": 5.17071311105974,
+  "random_point_masks_used": false
+}

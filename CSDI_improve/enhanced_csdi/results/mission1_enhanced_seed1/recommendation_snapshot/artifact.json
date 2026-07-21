@@ -1,0 +1,198 @@
+{
+  "surface": "report",
+  "manifest": {
+    "version": 1,
+    "surface": "report",
+    "title": "Enhanced CSDI V1 优化评估",
+    "description": "基于已完成的 10/11 个 ESA Mission 1 结构化缺失协议，对 Enhanced CSDI V1 的训练、门控和测试表现进行技术评估。",
+    "generatedAt": "2026-07-20T08:20:00+08:00",
+    "charts": [
+      {
+        "id": "protocol_delta_chart",
+        "title": "相对 Structured-only 基线的误差变化",
+        "subtitle": "已完成 10 个协议；负值表示 Enhanced CSDI 更好，正值表示退化。",
+        "type": "bar",
+        "dataset": "protocol_deltas",
+        "sourceId": "diagnostic_snapshot",
+        "valueFormat": "number",
+        "encodings": {
+          "x": {"field": "protocol", "type": "nominal", "label": "协议"},
+          "y": {"field": "delta_pct", "type": "quantitative", "label": "相对变化 (%)"},
+          "color": {"field": "metric", "type": "nominal", "label": "指标"},
+          "tooltip": [
+            {"field": "delta_pct", "type": "quantitative", "label": "变化 (%)", "format": "number"}
+          ]
+        }
+      },
+      {
+        "id": "gate_chart",
+        "title": "残差层学到的分支门控",
+        "subtitle": "图门在第 2–4 层较强，频率门主要集中在第 3 层。",
+        "type": "bar",
+        "dataset": "gate_values",
+        "sourceId": "diagnostic_snapshot",
+        "valueFormat": "number",
+        "encodings": {
+          "x": {"field": "layer", "type": "nominal", "label": "残差层"},
+          "y": {"field": "gate", "type": "quantitative", "label": "tanh(gate)"},
+          "color": {"field": "branch", "type": "nominal", "label": "分支"}
+        }
+      }
+    ],
+    "tables": [
+      {
+        "id": "protocol_table",
+        "title": "协议级对比明细",
+        "subtitle": "2026 年 7 月 20 日快照；gap_sustained 尚未完成。",
+        "dataset": "protocol_summary",
+        "sourceId": "diagnostic_snapshot",
+        "defaultSort": {"field": "rmse_delta_pct", "direction": "asc"},
+        "columns": [
+          {"field": "protocol", "label": "协议", "type": "text"},
+          {"field": "rmse_delta_pct", "label": "RMSE 变化 (%)", "format": "number"},
+          {"field": "mae_delta_pct", "label": "MAE 变化 (%)", "format": "number"},
+          {"field": "crps_delta_pct", "label": "CRPS 变化 (%)", "format": "number"},
+          {"field": "assessment", "label": "判断", "type": "text"}
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "id": "diagnostic_snapshot",
+        "label": "Enhanced 与 Structured-only 训练日志、checkpoint 和固定协议评估结果"
+      }
+    ],
+    "blocks": [
+      {"id": "title", "type": "markdown", "body": "# Enhanced CSDI V1 优化评估"},
+      {
+        "id": "technical_summary",
+        "type": "markdown",
+        "sourceId": "diagnostic_snapshot",
+        "body": "## 技术结论：局部有效，但暂不应作为最终优化模型\n\nEnhanced CSDI V1 完成了稳定训练，并且图分支确实被模型使用；但在已完成的 10 个协议、30 个指标比较中，仅 7 项优于 Structured-only 基线，只有 Time Block 10% 同时改善 RMSE、MAE 和 CRPS。它证明了图关系在特定缺失场景有价值，但当前静态图偏置和频率融合对大面积连续缺失不够稳健。建议保留研究方向，修订为 mask/coverage-aware 动态融合后只训练一个 V2。"
+      },
+      {
+        "id": "performance_heading",
+        "type": "markdown",
+        "sourceId": "diagnostic_snapshot",
+        "body": "## 改善集中在少数场景，重度连续缺失明显退化\n\nChannel Dropout 50% 的 RMSE 降低 13.5%，说明相关通道图能够减少部分大误差；Time Block 10% 的三项指标均改善约 6%–10%。但 Rectangle 和 Time Block 的 50%/90%，以及 gap_onset，均出现较大退化。因此当前模型不能被概括为整体优于基线。"
+      },
+      {"id": "protocol_delta", "type": "chart", "chartId": "protocol_delta_chart"},
+      {
+        "id": "definitions",
+        "type": "markdown",
+        "body": "## 比较口径\n\n所有比较使用相同的 128 个 ESA Mission 1 测试窗口、相同固定条件掩码、50 次概率采样和 Structured-only 基线。RMSE、MAE、CRPS 均为归一化尺度下 all-channels / all-target-points 汇总值。相对变化小于 0 表示 Enhanced CSDI 改善。"
+      },
+      {"id": "protocol_detail", "type": "table", "tableId": "protocol_table"},
+      {
+        "id": "gate_heading",
+        "type": "markdown",
+        "sourceId": "diagnostic_snapshot",
+        "body": "## 模型主要使用图分支，频率信息只在中间层发挥作用\n\n四层图门分别为 0.065、0.731、0.572、0.533；频率门分别约为 0、0.093、0.289、0。图关系不是未被使用，而是融合得过于静态：当相关邻居同时缺失时，固定图偏置仍会鼓励模型关注不可用通道。频率分支同样缺少按局部观测覆盖率主动衰减的机制。"
+      },
+      {"id": "gate_values_block", "type": "chart", "chartId": "gate_chart"},
+      {
+        "id": "training_and_robustness",
+        "type": "markdown",
+        "sourceId": "diagnostic_snapshot",
+        "body": "## 训练稳定，但训练损失没有形成优势\n\nEnhanced 的前 500 步平均 loss 为 0.1651，最后 500 步为 0.06134，下降 62.9%；Structured-only 最后 500 步为 0.06105，两者基本相同。Enhanced 参数量增加约 2.6%，每步耗时增加约 14.3%。两种模型都在 32,000 步中出现 44 个非有限梯度步骤，并由相同的梯度清理机制处理，因此这不是新增分支独有的问题。"
+      },
+      {
+        "id": "recommendation",
+        "type": "markdown",
+        "body": "## 建议：保留图，重做可靠性门控，只训练一个 V2\n\n1. 将静态图偏置改成 availability-aware 图偏置：邻居通道在当前位置或局部窗口不可见时，自动降低该边权。\n2. 将频率条件乘以局部 coverage reliability；低覆盖 STFT 帧直接衰减，而不是只把 coverage 作为一个输入特征。\n3. 把每层标量门改成按通道/时间变化的门控，并保留 CSDI 原路径作为稳定旁路。\n4. 正式主实验使用论文对齐的随机缺失 3%、5%、8%、10%，结构化实验使用 10%、20%、30%；50% 作为压力测试，90% 只放附录。\n5. 重训前先在少量窗口上做 graph-off / frequency-off 快速诊断，以判断重缺失退化主要来自哪一支，不进行大规模消融。"
+      },
+      {
+        "id": "limitations",
+        "type": "markdown",
+        "body": "## 限制与未决问题\n\n当前快照尚缺 gap_sustained，以及 Enhanced 的随机点缺失 3%/5%/8%/10% 结果。现有比较可以否定“V1 全面优于基线”，但不能单独量化图分支和频率分支各自的因果贡献；关闭门控的快速诊断和 V2 重训将提高判断置信度。"
+      }
+    ]
+  },
+  "snapshot": {
+    "version": 1,
+    "generatedAt": "2026-07-20T08:20:00+08:00",
+    "status": "partial",
+    "datasets": {
+      "protocol_deltas": [
+        {"protocol": "Channel 10%", "metric": "RMSE", "delta_pct": 4.30},
+        {"protocol": "Channel 10%", "metric": "MAE", "delta_pct": 7.63},
+        {"protocol": "Channel 10%", "metric": "CRPS", "delta_pct": 7.71},
+        {"protocol": "Channel 50%", "metric": "RMSE", "delta_pct": -13.48},
+        {"protocol": "Channel 50%", "metric": "MAE", "delta_pct": 0.98},
+        {"protocol": "Channel 50%", "metric": "CRPS", "delta_pct": 0.61},
+        {"protocol": "Channel 90%", "metric": "RMSE", "delta_pct": -1.42},
+        {"protocol": "Channel 90%", "metric": "MAE", "delta_pct": 3.38},
+        {"protocol": "Channel 90%", "metric": "CRPS", "delta_pct": 3.65},
+        {"protocol": "Rectangle 10%", "metric": "RMSE", "delta_pct": 0.67},
+        {"protocol": "Rectangle 10%", "metric": "MAE", "delta_pct": -11.60},
+        {"protocol": "Rectangle 10%", "metric": "CRPS", "delta_pct": -14.75},
+        {"protocol": "Rectangle 50%", "metric": "RMSE", "delta_pct": 69.08},
+        {"protocol": "Rectangle 50%", "metric": "MAE", "delta_pct": 21.63},
+        {"protocol": "Rectangle 50%", "metric": "CRPS", "delta_pct": 24.33},
+        {"protocol": "Rectangle 90%", "metric": "RMSE", "delta_pct": 75.04},
+        {"protocol": "Rectangle 90%", "metric": "MAE", "delta_pct": 19.20},
+        {"protocol": "Rectangle 90%", "metric": "CRPS", "delta_pct": 25.23},
+        {"protocol": "Time 10%", "metric": "RMSE", "delta_pct": -10.12},
+        {"protocol": "Time 10%", "metric": "MAE", "delta_pct": -6.36},
+        {"protocol": "Time 10%", "metric": "CRPS", "delta_pct": -10.13},
+        {"protocol": "Time 50%", "metric": "RMSE", "delta_pct": 82.35},
+        {"protocol": "Time 50%", "metric": "MAE", "delta_pct": 15.78},
+        {"protocol": "Time 50%", "metric": "CRPS", "delta_pct": 22.44},
+        {"protocol": "Time 90%", "metric": "RMSE", "delta_pct": 90.83},
+        {"protocol": "Time 90%", "metric": "MAE", "delta_pct": 19.75},
+        {"protocol": "Time 90%", "metric": "CRPS", "delta_pct": 25.20},
+        {"protocol": "Gap onset", "metric": "RMSE", "delta_pct": 103.94},
+        {"protocol": "Gap onset", "metric": "MAE", "delta_pct": 26.38},
+        {"protocol": "Gap onset", "metric": "CRPS", "delta_pct": 35.09}
+      ],
+      "protocol_summary": [
+        {"protocol": "Channel Dropout 10%", "rmse_delta_pct": 4.30, "mae_delta_pct": 7.63, "crps_delta_pct": 7.71, "assessment": "退化"},
+        {"protocol": "Channel Dropout 50%", "rmse_delta_pct": -13.48, "mae_delta_pct": 0.98, "crps_delta_pct": 0.61, "assessment": "仅 RMSE 改善"},
+        {"protocol": "Channel Dropout 90%", "rmse_delta_pct": -1.42, "mae_delta_pct": 3.38, "crps_delta_pct": 3.65, "assessment": "基本持平/略差"},
+        {"protocol": "Rectangle 10%", "rmse_delta_pct": 0.67, "mae_delta_pct": -11.60, "crps_delta_pct": -14.75, "assessment": "MAE/CRPS 改善"},
+        {"protocol": "Rectangle 50%", "rmse_delta_pct": 69.08, "mae_delta_pct": 21.63, "crps_delta_pct": 24.33, "assessment": "明显退化"},
+        {"protocol": "Rectangle 90%", "rmse_delta_pct": 75.04, "mae_delta_pct": 19.20, "crps_delta_pct": 25.23, "assessment": "明显退化"},
+        {"protocol": "Time Block 10%", "rmse_delta_pct": -10.12, "mae_delta_pct": -6.36, "crps_delta_pct": -10.13, "assessment": "全面改善"},
+        {"protocol": "Time Block 50%", "rmse_delta_pct": 82.35, "mae_delta_pct": 15.78, "crps_delta_pct": 22.44, "assessment": "明显退化"},
+        {"protocol": "Time Block 90%", "rmse_delta_pct": 90.83, "mae_delta_pct": 19.75, "crps_delta_pct": 25.20, "assessment": "明显退化"},
+        {"protocol": "Gap onset", "rmse_delta_pct": 103.94, "mae_delta_pct": 26.38, "crps_delta_pct": 35.09, "assessment": "明显退化"}
+      ],
+      "gate_values": [
+        {"layer": "Layer 1", "branch": "Graph", "gate": 0.0654},
+        {"layer": "Layer 2", "branch": "Graph", "gate": 0.7313},
+        {"layer": "Layer 3", "branch": "Graph", "gate": 0.5724},
+        {"layer": "Layer 4", "branch": "Graph", "gate": 0.5333},
+        {"layer": "Layer 1", "branch": "Frequency", "gate": -0.0004},
+        {"layer": "Layer 2", "branch": "Frequency", "gate": 0.0935},
+        {"layer": "Layer 3", "branch": "Frequency", "gate": 0.2891},
+        {"layer": "Layer 4", "branch": "Frequency", "gate": 0.0000}
+      ]
+    },
+    "accessIssues": [
+      {"id": "gap_sustained_pending", "dataset": "protocol_summary", "message": "gap_sustained 仍在运行，未纳入本快照。"},
+      {"id": "random_protocols_not_run", "dataset": "protocol_summary", "message": "Enhanced CSDI 尚未运行随机点缺失 3%/5%/8%/10%。"}
+    ]
+  },
+  "sources": [
+    {
+      "id": "diagnostic_snapshot",
+      "query": {
+        "engine": "local_python",
+        "language": "python",
+        "description": "读取 Enhanced CSDI 与 Structured-only 的逐步训练日志、最终 checkpoint 门控参数和固定协议 JSON，按同名协议计算相对 RMSE/MAE/CRPS 变化。",
+        "executed_at": "2026-07-20T08:20:00+08:00",
+        "tables_used": [
+          "Enhanced CSDI train_log.jsonl",
+          "Structured-only CSDI train_log.jsonl",
+          "Enhanced CSDI checkpoint_step_032000.pth",
+          "Enhanced/Structured-only fixed protocol metric JSON"
+        ],
+        "filters": ["相同 128 个 ESA Mission 1 测试窗口", "50 个扩散采样", "归一化尺度", "all channels / all target points"],
+        "metric_definitions": {
+          "relative_change_pct": "100 * (Enhanced metric / Structured-only metric - 1); negative means improvement",
+          "gate": "tanh of the learned residual-layer scalar gate"
+        }
+      }
+    }
+  ]
+}

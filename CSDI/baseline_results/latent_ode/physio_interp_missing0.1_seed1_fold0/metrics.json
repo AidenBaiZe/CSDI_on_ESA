@@ -1,0 +1,108 @@
+{
+  "status": "evaluated_checkpoint",
+  "eval_only": true,
+  "checkpoint": "F:\\2026\u5c0f\u5b66\u671f\\CSDI\\baseline_results\\latent_ode\\physio_interp_missing0.1_seed1_fold0\\best_model.pt",
+  "early_stopped": true,
+  "stopped_epoch": 8,
+  "best_epoch": 8,
+  "best_valid_crps": 0.685527,
+  "history": [
+    {
+      "epoch": 0,
+      "train_loss": 2904.675173,
+      "valid": {
+        "crps": 0.774478
+      },
+      "best_valid_crps": 0.774478,
+      "no_improve": 0
+    },
+    {
+      "epoch": 1,
+      "train_loss": 2327.938514,
+      "valid": {
+        "crps": 0.743192
+      },
+      "best_valid_crps": 0.743192,
+      "no_improve": 0
+    },
+    {
+      "epoch": 2,
+      "train_loss": 2047.337638,
+      "valid": {
+        "crps": 0.730218
+      },
+      "best_valid_crps": 0.730218,
+      "no_improve": 0
+    },
+    {
+      "epoch": 3,
+      "train_loss": 1893.798189,
+      "valid": {
+        "crps": 0.71803
+      },
+      "best_valid_crps": 0.71803,
+      "no_improve": 0
+    },
+    {
+      "epoch": 4,
+      "train_loss": 1788.992307,
+      "valid": {
+        "crps": 0.705947
+      },
+      "best_valid_crps": 0.705947,
+      "no_improve": 0
+    },
+    {
+      "epoch": 5,
+      "train_loss": 1725.371676,
+      "valid": {
+        "crps": 0.699264
+      },
+      "best_valid_crps": 0.699264,
+      "no_improve": 0
+    },
+    {
+      "epoch": 6,
+      "train_loss": 1680.879743,
+      "valid": {
+        "crps": 0.695924
+      },
+      "best_valid_crps": 0.695924,
+      "no_improve": 0
+    },
+    {
+      "epoch": 7,
+      "train_loss": 1631.377204,
+      "valid": {
+        "crps": 0.694108
+      },
+      "best_valid_crps": 0.694108,
+      "no_improve": 0
+    },
+    {
+      "epoch": 8,
+      "train_loss": 1601.520314,
+      "valid": {
+        "crps": 0.685527
+      },
+      "best_valid_crps": 0.685527,
+      "no_improve": 0
+    }
+  ],
+  "test": {
+    "loss": 959.9282646179199,
+    "crps": 0.6961431775437398,
+    "mae": 0.5093289017677307,
+    "mse": 0.5500699877738953,
+    "rmse": 0.7416670329560936,
+    "eval_points": 29732,
+    "num_samples": 100
+  },
+  "paper_reference": {
+    "table": "CSDI Table 4",
+    "baseline": "Latent ODE",
+    "crps": "0.700(0.002)",
+    "appendix_mae": "0.522(0.002)",
+    "appendix_rmse": "0.799(0.012)"
+  }
+}

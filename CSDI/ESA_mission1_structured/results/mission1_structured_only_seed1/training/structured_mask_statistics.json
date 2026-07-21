@@ -1,0 +1,36 @@
+{
+  "family_counts": {
+    "time_block": 171377,
+    "channel_dropout": 170325,
+    "rectangle": 170298
+  },
+  "family_fractions": {
+    "time_block": 0.334720703125,
+    "channel_dropout": 0.332666015625,
+    "rectangle": 0.33261328125
+  },
+  "windows_seen": 512000,
+  "requested_ratio_mean": {
+    "time_block": 0.49984200012778507,
+    "channel_dropout": 0.5008029908593594,
+    "rectangle": 0.5000319183543026
+  },
+  "observed_points_by_family": {
+    "time_block": 1249833686,
+    "channel_dropout": 1242132356,
+    "rectangle": 1241953210
+  },
+  "target_points_by_family": {
+    "time_block": 624704504,
+    "channel_dropout": 622059763,
+    "rectangle": 621045668
+  },
+  "actual_target_fraction_by_family": {
+    "time_block": 0.49983010619542545,
+    "channel_dropout": 0.5007999026796143,
+    "rectangle": 0.5000556083751335
+  },
+  "observed_points": 3733919252,
+  "target_points": 1867809935,
+  "actual_target_fraction": 0.5002277255994608
+}

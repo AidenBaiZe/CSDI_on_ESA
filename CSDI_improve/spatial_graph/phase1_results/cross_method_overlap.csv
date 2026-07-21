@@ -1,0 +1,4 @@
+﻿left_method,right_method,comparison,edge_jaccard,mean_channel_neighbor_jaccard,median_channel_neighbor_jaccard
+raw_pearson,diff_pearson,原值 Pearson Top-8 vs 一阶差分 Pearson Top-8,0.24845679012345678,0.2975737712579818,0.23076923076923078
+raw_pearson,spearman,原值 Pearson Top-8 vs Spearman Top-8,0.6298449612403101,0.7121106963212226,0.7777777777777778
+diff_pearson,spearman,一阶差分 Pearson Top-8 vs Spearman Top-8,0.24884080370942813,0.28828072512283043,0.23076923076923078

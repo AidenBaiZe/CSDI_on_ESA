@@ -1,0 +1,2 @@
+seed	model	data	kernel	beta	z_size	num_epochs	batch_size	learning_rate	window_size	kernel_scales	sigma	length_scale	encoder_depth	encoder_width	decoder_depth	decoder_width	cnn_kernel_size	cnn_sizes	NLL	MSE	last_train_loss	last_val_loss	AUPRC	AUROC	testing	data_dir
+1	gp-vae	physionet	cauchy	0.2	35	40	64	0.001	24	1	1.005	7.0	2	128	2	256	3	[256]	1.409922	0.89343184	21399.568	21390.809	0.26812972685597175	0.6544559868780755	False	F:\2026Ð¡Ñ§ÆÚ\CSDI\baseline_results\gpvae\physio_missing0.9_seed1_fold0_trainrandom\physionet_gpvae.npz

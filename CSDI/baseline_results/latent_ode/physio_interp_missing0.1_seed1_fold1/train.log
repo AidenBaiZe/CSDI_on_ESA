@@ -1,0 +1,18 @@
+epoch=0 train_loss=2978.564920 valid_crps=0.773930 best=0.773930 no_improve=0
+epoch=1 train_loss=2379.227807 valid_crps=0.743236 best=0.743236 no_improve=0
+epoch=2 train_loss=2052.997733 valid_crps=0.730783 best=0.730783 no_improve=0
+epoch=3 train_loss=1892.742279 valid_crps=0.717470 best=0.717470 no_improve=0
+epoch=4 train_loss=1810.316463 valid_crps=0.707717 best=0.707717 no_improve=0
+epoch=5 train_loss=1763.108185 valid_crps=0.700214 best=0.700214 no_improve=0
+epoch=6 train_loss=1729.238623 valid_crps=0.695629 best=0.695629 no_improve=0
+epoch=7 train_loss=1675.364729 valid_crps=0.692034 best=0.692034 no_improve=0
+epoch=8 train_loss=1652.724147 valid_crps=0.690207 best=0.690207 no_improve=0
+{
+  "loss": 962.7592277526855,
+  "crps": 0.6907901697604586,
+  "mae": 0.5051763653755188,
+  "mse": 0.5409233570098877,
+  "rmse": 0.7354749193615563,
+  "eval_points": 28885,
+  "num_samples": 100
+}

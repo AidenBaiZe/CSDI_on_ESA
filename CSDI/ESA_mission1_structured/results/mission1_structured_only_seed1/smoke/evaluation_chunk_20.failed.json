@@ -1,0 +1,5 @@
+{
+  "chunk_size": 20,
+  "returncode": 4294967295,
+  "reason": "GPU memory pressure caused severe throughput collapse; isolated subprocess was terminated after more than 10 minutes for one batch"
+}

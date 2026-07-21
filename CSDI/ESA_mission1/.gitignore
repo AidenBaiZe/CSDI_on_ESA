@@ -1,0 +1,7 @@
+__pycache__/
+tests/__pycache__/
+data/interim/
+data/processed/
+results/
+*.pyc
+

@@ -1,0 +1,202 @@
+{
+  "process_isolation": true,
+  "children": [
+    {
+      "mode": "smoke-cpu",
+      "chunk_size": null,
+      "returncode": 0,
+      "reused": true
+    },
+    {
+      "mode": "smoke-train",
+      "chunk_size": null,
+      "returncode": 0,
+      "reused": true
+    },
+    {
+      "mode": "smoke-eval-chunk",
+      "chunk_size": 5,
+      "returncode": 0,
+      "reused": true
+    },
+    {
+      "mode": "smoke-eval-chunk",
+      "chunk_size": 10,
+      "returncode": 0,
+      "reused": true
+    },
+    {
+      "mode": "smoke-eval-chunk",
+      "chunk_size": 20,
+      "returncode": 1,
+      "reused": true
+    }
+  ],
+  "cpu": {
+    "loss": 1.0119881629943848,
+    "seconds": 1.4719657999812625,
+    "mask_statistics": {
+      "family_counts": {
+        "time_block": 0,
+        "channel_dropout": 0,
+        "rectangle": 1
+      },
+      "family_fractions": {
+        "time_block": 0.0,
+        "channel_dropout": 0.0,
+        "rectangle": 1.0
+      },
+      "windows_seen": 1,
+      "requested_ratio_mean": {
+        "time_block": 0.0,
+        "channel_dropout": 0.0,
+        "rectangle": 0.7261067032814026
+      },
+      "observed_points_by_family": {
+        "time_block": 0,
+        "channel_dropout": 0,
+        "rectangle": 7296
+      },
+      "target_points_by_family": {
+        "time_block": 0,
+        "channel_dropout": 0,
+        "rectangle": 5330
+      },
+      "actual_target_fraction_by_family": {
+        "time_block": 0.0,
+        "channel_dropout": 0.0,
+        "rectangle": 0.7305372807017544
+      },
+      "observed_points": 7296,
+      "target_points": 5330,
+      "actual_target_fraction": 0.7305372807017544
+    }
+  },
+  "gpu_training": {
+    "training": {
+      "start_step": 0,
+      "final_step": 3,
+      "batch_size": 16,
+      "samples_seen_total": 48,
+      "duration_seconds_this_run": 6.440362700028345,
+      "seconds_per_step_this_run": 2.146787566676115,
+      "peak_gpu_memory_bytes": 3933935616,
+      "fixed_final_checkpoint": "F:\\2026小学期\\CSDI\\ESA_mission1_structured\\results\\mission1_structured_only_seed1\\smoke\\gpu_training\\checkpoint_step_000003.pth",
+      "validation_used": false,
+      "best_checkpoint_selection_used": false,
+      "gradient_clip_norm": 1.0,
+      "sanitize_nonfinite_gradients": true
+    },
+    "mask_statistics": {
+      "family_counts": {
+        "time_block": 12,
+        "channel_dropout": 18,
+        "rectangle": 18
+      },
+      "family_fractions": {
+        "time_block": 0.25,
+        "channel_dropout": 0.375,
+        "rectangle": 0.375
+      },
+      "windows_seen": 48,
+      "requested_ratio_mean": {
+        "time_block": 0.39820029586553574,
+        "channel_dropout": 0.416922726151016,
+        "rectangle": 0.664787181549602
+      },
+      "observed_points_by_family": {
+        "time_block": 87552,
+        "channel_dropout": 131328,
+        "rectangle": 131328
+      },
+      "target_points_by_family": {
+        "time_block": 34884,
+        "channel_dropout": 54912,
+        "rectangle": 87319
+      },
+      "actual_target_fraction_by_family": {
+        "time_block": 0.3984375,
+        "channel_dropout": 0.41812865497076024,
+        "rectangle": 0.6648924829434698
+      },
+      "observed_points": 350208,
+      "target_points": 177115,
+      "actual_target_fraction": 0.5057423017178363
+    },
+    "checkpoint": "F:\\2026小学期\\CSDI\\ESA_mission1_structured\\results\\mission1_structured_only_seed1\\smoke\\gpu_training\\checkpoint_step_000003.pth"
+  },
+  "successful_evaluation_chunks": [
+    {
+      "missing_ratio": 0.5,
+      "nsample": 50,
+      "sample_chunk_size": 5,
+      "processed_batches": 1,
+      "processed_windows": 8,
+      "duration_seconds": 211.78878170001553,
+      "seconds_per_window": 26.47359771250194,
+      "projected_seconds_for_256_windows": 6777.241014400497,
+      "peak_gpu_memory_bytes": 1360050176,
+      "headline_normalized": {
+        "missing_ratio": 0.5,
+        "method": "csdi",
+        "scale": "normalized",
+        "bucket": "all",
+        "group": "all_channels",
+        "channels": 76,
+        "eval_points": 29184,
+        "rmse": 36.88316920340839,
+        "mae": 29.179029732419732,
+        "crps": 47.39376925453474
+      },
+      "chunk_size": 5,
+      "within_memory_limit": true
+    },
+    {
+      "missing_ratio": 0.5,
+      "nsample": 50,
+      "sample_chunk_size": 10,
+      "processed_batches": 1,
+      "processed_windows": 8,
+      "duration_seconds": 241.40318570000818,
+      "seconds_per_window": 30.175398212501022,
+      "projected_seconds_for_256_windows": 7724.901942400262,
+      "peak_gpu_memory_bytes": 2658146304,
+      "headline_normalized": {
+        "missing_ratio": 0.5,
+        "method": "csdi",
+        "scale": "normalized",
+        "bucket": "all",
+        "group": "all_channels",
+        "channels": 76,
+        "eval_points": 29184,
+        "rmse": 37.13133606874019,
+        "mae": 29.431576143231307,
+        "crps": 47.46630749125669
+      },
+      "chunk_size": 10,
+      "within_memory_limit": true
+    }
+  ],
+  "failed_evaluation_chunks": [
+    {
+      "chunk_size": 20,
+      "returncode": 4294967295,
+      "reason": "GPU memory pressure caused severe throughput collapse; isolated subprocess was terminated after more than 10 minutes for one batch"
+    }
+  ],
+  "selected_chunk_size": 10,
+  "memory_limit_bytes": 6979321856,
+  "vectorized_training_throughput": {
+    "implementation": "vectorized_structured_training_masks",
+    "warmup_steps": 5,
+    "measured_steps": 20,
+    "batch_size": 16,
+    "mean_seconds_per_step": 0.5817052249942207,
+    "min_seconds_per_step": 0.5777848999714479,
+    "max_seconds_per_step": 0.5902776999864727,
+    "peak_gpu_memory_bytes": 3933935616,
+    "last_loss": 0.2735142707824707,
+    "projected_32000_step_hours": 5.17071311105974,
+    "random_point_masks_used": false
+  }
+}

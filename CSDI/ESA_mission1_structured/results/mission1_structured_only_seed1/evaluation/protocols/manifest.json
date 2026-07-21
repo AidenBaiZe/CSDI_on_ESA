@@ -1,0 +1,314 @@
+{
+  "window_count": 128,
+  "training_random_point_masks": false,
+  "same_windows_as_random_experiment": true,
+  "controlled_protocols_are_nested": true,
+  "reference_random_protocol": "F:\\2026小学期\\CSDI\\ESA_mission1\\results\\mission1_random_seed1\\evaluation\\protocols\\missing_10.npz",
+  "records": [
+    {
+      "key": "time_block_missing_10",
+      "mask_family": "time_block",
+      "severity": "10%",
+      "requested_missing_ratio": 0.1,
+      "seed": 2101,
+      "nested": true,
+      "path": "F:\\2026小学期\\CSDI\\ESA_mission1_structured\\results\\mission1_structured_only_seed1\\evaluation\\protocols\\time_block_missing_10.npz",
+      "windows": 128,
+      "target_points": 97280,
+      "observed_points": 933888,
+      "actual_missing_ratio": 0.10416666666666667
+    },
+    {
+      "key": "time_block_missing_50",
+      "mask_family": "time_block",
+      "severity": "50%",
+      "requested_missing_ratio": 0.5,
+      "seed": 2101,
+      "nested": true,
+      "path": "F:\\2026小学期\\CSDI\\ESA_mission1_structured\\results\\mission1_structured_only_seed1\\evaluation\\protocols\\time_block_missing_50.npz",
+      "windows": 128,
+      "target_points": 466944,
+      "observed_points": 933888,
+      "actual_missing_ratio": 0.5
+    },
+    {
+      "key": "time_block_missing_90",
+      "mask_family": "time_block",
+      "severity": "90%",
+      "requested_missing_ratio": 0.9,
+      "seed": 2101,
+      "nested": true,
+      "path": "F:\\2026小学期\\CSDI\\ESA_mission1_structured\\results\\mission1_structured_only_seed1\\evaluation\\protocols\\time_block_missing_90.npz",
+      "windows": 128,
+      "target_points": 836608,
+      "observed_points": 933888,
+      "actual_missing_ratio": 0.8958333333333334
+    },
+    {
+      "key": "channel_dropout_missing_10",
+      "mask_family": "channel_dropout",
+      "severity": "10%",
+      "requested_missing_ratio": 0.1,
+      "seed": 2201,
+      "nested": true,
+      "path": "F:\\2026小学期\\CSDI\\ESA_mission1_structured\\results\\mission1_structured_only_seed1\\evaluation\\protocols\\channel_dropout_missing_10.npz",
+      "windows": 128,
+      "target_points": 98304,
+      "observed_points": 933888,
+      "actual_missing_ratio": 0.10526315789473684
+    },
+    {
+      "key": "channel_dropout_missing_50",
+      "mask_family": "channel_dropout",
+      "severity": "50%",
+      "requested_missing_ratio": 0.5,
+      "seed": 2201,
+      "nested": true,
+      "path": "F:\\2026小学期\\CSDI\\ESA_mission1_structured\\results\\mission1_structured_only_seed1\\evaluation\\protocols\\channel_dropout_missing_50.npz",
+      "windows": 128,
+      "target_points": 466944,
+      "observed_points": 933888,
+      "actual_missing_ratio": 0.5
+    },
+    {
+      "key": "channel_dropout_missing_90",
+      "mask_family": "channel_dropout",
+      "severity": "90%",
+      "requested_missing_ratio": 0.9,
+      "seed": 2201,
+      "nested": true,
+      "path": "F:\\2026小学期\\CSDI\\ESA_mission1_structured\\results\\mission1_structured_only_seed1\\evaluation\\protocols\\channel_dropout_missing_90.npz",
+      "windows": 128,
+      "target_points": 835584,
+      "observed_points": 933888,
+      "actual_missing_ratio": 0.8947368421052632
+    },
+    {
+      "key": "rectangle_missing_10",
+      "mask_family": "rectangle",
+      "severity": "10%",
+      "requested_missing_ratio": 0.1,
+      "seed": 2301,
+      "nested": true,
+      "path": "F:\\2026小学期\\CSDI\\ESA_mission1_structured\\results\\mission1_structured_only_seed1\\evaluation\\protocols\\rectangle_missing_10.npz",
+      "windows": 128,
+      "target_points": 92160,
+      "observed_points": 933888,
+      "actual_missing_ratio": 0.09868421052631579
+    },
+    {
+      "key": "rectangle_missing_50",
+      "mask_family": "rectangle",
+      "severity": "50%",
+      "requested_missing_ratio": 0.5,
+      "seed": 2301,
+      "nested": true,
+      "path": "F:\\2026小学期\\CSDI\\ESA_mission1_structured\\results\\mission1_structured_only_seed1\\evaluation\\protocols\\rectangle_missing_50.npz",
+      "windows": 128,
+      "target_points": 470016,
+      "observed_points": 933888,
+      "actual_missing_ratio": 0.5032894736842105
+    },
+    {
+      "key": "rectangle_missing_90",
+      "mask_family": "rectangle",
+      "severity": "90%",
+      "requested_missing_ratio": 0.9,
+      "seed": 2301,
+      "nested": true,
+      "path": "F:\\2026小学期\\CSDI\\ESA_mission1_structured\\results\\mission1_structured_only_seed1\\evaluation\\protocols\\rectangle_missing_90.npz",
+      "windows": 128,
+      "target_points": 838656,
+      "observed_points": 933888,
+      "actual_missing_ratio": 0.8980263157894737
+    },
+    {
+      "key": "gap_onset",
+      "mask_family": "real_gap_case",
+      "severity": "onset",
+      "requested_missing_ratio": -1.0,
+      "seed": 0,
+      "nested": false,
+      "path": "F:\\2026小学期\\CSDI\\ESA_mission1_structured\\results\\mission1_structured_only_seed1\\evaluation\\protocols\\gap_onset.npz",
+      "windows": 128,
+      "target_points": 319488,
+      "observed_points": 933888,
+      "actual_missing_ratio": 0.34210526315789475
+    },
+    {
+      "key": "gap_sustained",
+      "mask_family": "real_gap_case",
+      "severity": "sustained",
+      "requested_missing_ratio": -1.0,
+      "seed": 0,
+      "nested": false,
+      "path": "F:\\2026小学期\\CSDI\\ESA_mission1_structured\\results\\mission1_structured_only_seed1\\evaluation\\protocols\\gap_sustained.npz",
+      "windows": 128,
+      "target_points": 638976,
+      "observed_points": 933888,
+      "actual_missing_ratio": 0.6842105263157895
+    },
+    {
+      "key": "random_missing_10",
+      "mask_family": "random",
+      "severity": "10%",
+      "requested_missing_ratio": 0.1,
+      "actual_missing_ratio": 0.10005482456140351,
+      "path": "F:\\2026小学期\\CSDI\\ESA_mission1\\results\\mission1_random_seed1\\evaluation\\protocols\\missing_10.npz",
+      "windows": 128,
+      "target_points": 93440,
+      "observed_points": 933888,
+      "seed": 1101,
+      "nested": false,
+      "evaluation_only": true
+    },
+    {
+      "key": "random_missing_50",
+      "mask_family": "random",
+      "severity": "50%",
+      "requested_missing_ratio": 0.5,
+      "actual_missing_ratio": 0.5,
+      "path": "F:\\2026小学期\\CSDI\\ESA_mission1\\results\\mission1_random_seed1\\evaluation\\protocols\\missing_50.npz",
+      "windows": 128,
+      "target_points": 466944,
+      "observed_points": 933888,
+      "seed": 1501,
+      "nested": false,
+      "evaluation_only": true
+    },
+    {
+      "key": "random_missing_90",
+      "mask_family": "random",
+      "severity": "90%",
+      "requested_missing_ratio": 0.9,
+      "actual_missing_ratio": 0.8999451754385965,
+      "path": "F:\\2026小学期\\CSDI\\ESA_mission1\\results\\mission1_random_seed1\\evaluation\\protocols\\missing_90.npz",
+      "windows": 128,
+      "target_points": 840448,
+      "observed_points": 933888,
+      "seed": 1901,
+      "nested": false,
+      "evaluation_only": true
+    }
+  ],
+  "nesting_checks": {
+    "time_block": {
+      "0.1_subset_0.5": true,
+      "0.5_subset_0.9": true
+    },
+    "channel_dropout": {
+      "0.1_subset_0.5": true,
+      "0.5_subset_0.9": true
+    },
+    "rectangle": {
+      "0.1_subset_0.5": true,
+      "0.5_subset_0.9": true
+    }
+  },
+  "geometry": {
+    "time_block": {
+      "0.1": {
+        "time_length": 10,
+        "selected_channel_count": 76
+      },
+      "0.5": {
+        "time_length": 48,
+        "selected_channel_count": 76
+      },
+      "0.9": {
+        "time_length": 86,
+        "selected_channel_count": 76
+      }
+    },
+    "channel_dropout": {
+      "0.1": {
+        "time_length": 96,
+        "selected_channel_count": 8
+      },
+      "0.5": {
+        "time_length": 96,
+        "selected_channel_count": 38
+      },
+      "0.9": {
+        "time_length": 96,
+        "selected_channel_count": 68
+      }
+    },
+    "rectangle": {
+      "0.1": {
+        "time_length": 30,
+        "selected_channel_count": 24
+      },
+      "0.5": {
+        "time_length": 68,
+        "selected_channel_count": 54
+      },
+      "0.9": {
+        "time_length": 91,
+        "selected_channel_count": 72
+      }
+    }
+  },
+  "real_gap_source": {
+    "training_gap_events": 4,
+    "affected_channels": [
+      "channel_12",
+      "channel_13",
+      "channel_14",
+      "channel_15",
+      "channel_16",
+      "channel_17",
+      "channel_18",
+      "channel_19",
+      "channel_20",
+      "channel_21",
+      "channel_22",
+      "channel_23",
+      "channel_24",
+      "channel_25",
+      "channel_26",
+      "channel_27",
+      "channel_28",
+      "channel_29",
+      "channel_30",
+      "channel_31",
+      "channel_32",
+      "channel_33",
+      "channel_34",
+      "channel_35",
+      "channel_36",
+      "channel_37",
+      "channel_38",
+      "channel_39",
+      "channel_40",
+      "channel_41",
+      "channel_42",
+      "channel_43",
+      "channel_44",
+      "channel_45",
+      "channel_46",
+      "channel_47",
+      "channel_48",
+      "channel_49",
+      "channel_50",
+      "channel_51",
+      "channel_52",
+      "channel_57",
+      "channel_58",
+      "channel_59",
+      "channel_60",
+      "channel_70",
+      "channel_71",
+      "channel_72",
+      "channel_73",
+      "channel_74",
+      "channel_75",
+      "channel_76"
+    ],
+    "affected_channel_count": 52,
+    "duration_seconds_min": 2790.0,
+    "duration_seconds_median": 34155.0,
+    "duration_seconds_max": 70920.0,
+    "test_gap_events": 0
+  }
+}

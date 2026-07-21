@@ -1,0 +1,51 @@
+# Local/editor state
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+.codex/
+.pytest_cache/
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+env/
+node_modules/
+
+# Raw and processed datasets
+**/data/
+**/datasets/
+**/save/
+**/tmp_csdi_source/
+
+# Large installers and archives
+*.exe
+*.dll
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.gz
+*.7z
+*.rar
+
+# Model checkpoints and serialized tensors
+*.pth
+*.pt
+*.ckpt
+*.h5
+*.hdf5
+*.pkl
+*.pk
+*.npy
+*.npz
+*.data-*-of-*
+*.index
+
+# Large per-step/per-sample training streams
+*.jsonl
+CSDI/esa_csdi_experiment/baseline_seed1.stderr.log
+

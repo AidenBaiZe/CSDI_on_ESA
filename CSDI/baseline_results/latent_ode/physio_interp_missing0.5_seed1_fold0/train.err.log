@@ -1,0 +1,2 @@
+D:\python\Lib\site-packages\torchdiffeq\_impl\misc.py:306: UserWarning: t is not on the same device as y0. Coercing to y0.device.
+  warnings.warn("t is not on the same device as y0. Coercing to y0.device.")

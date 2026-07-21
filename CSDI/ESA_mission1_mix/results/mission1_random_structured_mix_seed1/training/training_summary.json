@@ -1,0 +1,14 @@
+{
+  "start_step": 0,
+  "final_step": 32000,
+  "batch_size": 16,
+  "samples_seen_total": 512000,
+  "duration_seconds_this_run": 20396.568254399997,
+  "seconds_per_step_this_run": 0.6373927579499999,
+  "peak_gpu_memory_bytes": 3933935616,
+  "fixed_final_checkpoint": "F:\\2026小学期\\CSDI\\ESA_mission1_mix\\results\\mission1_random_structured_mix_seed1\\training\\checkpoint_step_032000.pth",
+  "validation_used": false,
+  "best_checkpoint_selection_used": false,
+  "gradient_clip_norm": 1.0,
+  "sanitize_nonfinite_gradients": true
+}

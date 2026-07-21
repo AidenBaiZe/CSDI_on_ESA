@@ -1,0 +1,173 @@
+{
+  "recommendation": "Switch to ESA Mission 2 channels 9, 10, 13, 14, 74, 86 and use the full 2000-01-01 to 2003-06-30 range.",
+  "recommended_missing_rate": 0.015517420617646055,
+  "recommended_partial_windows": 3689,
+  "recommended_fully_missing_windows": 0,
+  "recommended_sync_share": 0.00552249344361509,
+  "mean_absolute_pairwise_correlation": 0.15119721816339632,
+  "median_absolute_pairwise_correlation": 0.027714585133148974,
+  "estimated_size_multiple_vs_current": 4.186884107468124,
+  "options": [
+    {
+      "timepoints": 878400,
+      "missing_rate": 0.0181483379,
+      "affected_timepoint_rate": 0.0186942168,
+      "all_channel_sync_share": 0.9492113757,
+      "candidate_windows": 18299,
+      "partial_windows": 55,
+      "fully_missing_windows": 310,
+      "affected_windows": 365,
+      "full_share_affected": 0.8493150685,
+      "mean_missing_rate_affected": 0.909902968,
+      "option": "M1 当前 10个月",
+      "channels": "41, 42, 43, 44, 45, 46",
+      "start": "2000-01-01 00:00:30",
+      "end": "2000-11-01 00:00:00",
+      "duration_months": 10.0
+    },
+    {
+      "timepoints": 3677759,
+      "missing_rate": 0.0154157736,
+      "affected_timepoint_rate": 0.0156810166,
+      "all_channel_sync_share": 0.9674706525,
+      "candidate_windows": 76618,
+      "partial_windows": 196,
+      "fully_missing_windows": 1109,
+      "affected_windows": 1305,
+      "full_share_affected": 0.8498084291,
+      "mean_missing_rate_affected": 0.9051005747,
+      "option": "M1 扩至 42个月",
+      "channels": "41, 42, 43, 44, 45, 46",
+      "start": "2000-01-01 00:00:30",
+      "end": "2003-06-30 23:59:30",
+      "duration_months": 41.9
+    },
+    {
+      "timepoints": 14728319,
+      "missing_rate": 0.0154009769,
+      "affected_timepoint_rate": 0.0154922636,
+      "all_channel_sync_share": 0.9885044374,
+      "candidate_windows": 306838,
+      "partial_windows": 504,
+      "fully_missing_windows": 4554,
+      "affected_windows": 5058,
+      "full_share_affected": 0.9003558719,
+      "mean_missing_rate_affected": 0.9342893271,
+      "option": "M1 扩至 14年",
+      "channels": "41, 42, 43, 44, 45, 46",
+      "start": "2000-01-01 00:00:30",
+      "end": "2013-12-31 23:59:30",
+      "duration_months": 168.0
+    },
+    {
+      "timepoints": 3677759,
+      "missing_rate": 0.0220048404,
+      "affected_timepoint_rate": 0.0319825198,
+      "all_channel_sync_share": 0.3176392573,
+      "candidate_windows": 76618,
+      "partial_windows": 3044,
+      "fully_missing_windows": 612,
+      "affected_windows": 3656,
+      "full_share_affected": 0.1673960613,
+      "mean_missing_rate_affected": 0.4611625866,
+      "option": "M2 同组高频通道",
+      "channels": "9, 10, 12, 13, 14, 20",
+      "start": "2000-01-01 00:00:30",
+      "end": "2003-06-30 23:59:30",
+      "duration_months": 41.9
+    },
+    {
+      "timepoints": 3677759,
+      "missing_rate": 0.0155174206,
+      "affected_timepoint_rate": 0.0323479597,
+      "all_channel_sync_share": 0.0055224934,
+      "candidate_windows": 76618,
+      "partial_windows": 3689,
+      "fully_missing_windows": 0,
+      "affected_windows": 3689,
+      "full_share_affected": 0.0,
+      "mean_missing_rate_affected": 0.3222945092,
+      "option": "M2 推荐六通道",
+      "channels": "9, 10, 13, 14, 74, 86",
+      "start": "2000-01-01 00:00:30",
+      "end": "2003-06-30 23:59:30",
+      "duration_months": 41.9
+    }
+  ],
+  "splits": [
+    {
+      "option": "M1 当前 10个月",
+      "split": "训练集",
+      "missing_rate": 0.0209211553,
+      "partial_windows": 30,
+      "fully_missing_windows": 254,
+      "affected_windows": 284
+    },
+    {
+      "option": "M1 当前 10个月",
+      "split": "验证集",
+      "missing_rate": 0.0,
+      "partial_windows": 0,
+      "fully_missing_windows": 0,
+      "affected_windows": 0
+    },
+    {
+      "option": "M1 当前 10个月",
+      "split": "测试集",
+      "missing_rate": 0.023356861,
+      "partial_windows": 25,
+      "fully_missing_windows": 56,
+      "affected_windows": 81
+    },
+    {
+      "option": "M2 推荐六通道",
+      "split": "训练集",
+      "missing_rate": 0.0147222176,
+      "partial_windows": 2556,
+      "fully_missing_windows": 0,
+      "affected_windows": 2556
+    },
+    {
+      "option": "M2 推荐六通道",
+      "split": "验证集",
+      "missing_rate": 0.0147079261,
+      "partial_windows": 547,
+      "fully_missing_windows": 0,
+      "affected_windows": 547
+    },
+    {
+      "option": "M2 推荐六通道",
+      "split": "测试集",
+      "missing_rate": 0.0200378612,
+      "partial_windows": 584,
+      "fully_missing_windows": 0,
+      "affected_windows": 584
+    }
+  ],
+  "mission_quality": [
+    {
+      "mission": "Mission 1",
+      "label_rows": 3589,
+      "events": 200,
+      "missing_channel_labels": 0,
+      "negative_duration_labels": 0,
+      "assessment": "标签可用，但当前通道缺失高度同步且长块化"
+    },
+    {
+      "mission": "Mission 2",
+      "label_rows": 11167,
+      "events": 644,
+      "missing_channel_labels": 0,
+      "negative_duration_labels": 0,
+      "assessment": "标签干净，事件密集且多数短于 6 小时"
+    },
+    {
+      "mission": "Mission 3",
+      "label_rows": 2586,
+      "events": 586,
+      "missing_channel_labels": 156,
+      "negative_duration_labels": 18,
+      "assessment": "通信中断丰富，但需先修复标签质量问题"
+    }
+  ]
+}

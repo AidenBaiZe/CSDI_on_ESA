@@ -1,0 +1,51 @@
+{
+  "created_at": "2026-07-08T18:29:17",
+  "args": {
+    "missing_ratio": 0.9,
+    "seed": 1,
+    "nfold": 0,
+    "output_dir": "baseline_results\\mtgp\\physio_missing0.9_seed1_fold0\\run_steps50_samples100",
+    "rank": 10,
+    "training_steps": 50,
+    "lr": 0.1,
+    "num_samples": 100,
+    "max_records": null,
+    "device": "cuda:0",
+    "dtype": "float32",
+    "save_predictions": true
+  },
+  "command": [
+    "repro_baselines\\mtgp\\run_mtgp_physio.py",
+    "--missing-ratio",
+    "0.9",
+    "--seed",
+    "1",
+    "--nfold",
+    "0",
+    "--output-dir",
+    "baseline_results\\mtgp\\physio_missing0.9_seed1_fold0\\run_steps50_samples100",
+    "--training-steps",
+    "50",
+    "--num-samples",
+    "100",
+    "--device",
+    "cuda:0",
+    "--save-predictions"
+  ],
+  "csdi_commit": "7f24a436f08d98853a6b43d4f7f04e5a65ecdf27",
+  "environment": {
+    "python": "3.12.1 (tags/v3.12.1:2305ca5, Dec  7 2023, 22:03:25) [MSC v.1937 64 bit (AMD64)]",
+    "executable": "D:\\python\\python.exe",
+    "platform": "Windows-11-10.0.26120-SP0",
+    "torch": "2.11.0+cu128",
+    "cuda_available": true,
+    "device": "cuda:0",
+    "gpytorch": "1.15.2"
+  },
+  "splits": {
+    "train": 2797,
+    "valid": 401,
+    "test": 799
+  },
+  "kernel": "ScaleKernel(RBFKernel(time) * IndexKernel(feature, rank=10))"
+}

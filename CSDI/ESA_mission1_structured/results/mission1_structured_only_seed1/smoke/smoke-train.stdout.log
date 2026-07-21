@@ -1,0 +1,53 @@
+{
+  "training": {
+    "start_step": 0,
+    "final_step": 3,
+    "batch_size": 16,
+    "samples_seen_total": 48,
+    "duration_seconds_this_run": 6.440362700028345,
+    "seconds_per_step_this_run": 2.146787566676115,
+    "peak_gpu_memory_bytes": 3933935616,
+    "fixed_final_checkpoint": "F:\\2026小学期\\CSDI\\ESA_mission1_structured\\results\\mission1_structured_only_seed1\\smoke\\gpu_training\\checkpoint_step_000003.pth",
+    "validation_used": false,
+    "best_checkpoint_selection_used": false,
+    "gradient_clip_norm": 1.0,
+    "sanitize_nonfinite_gradients": true
+  },
+  "mask_statistics": {
+    "family_counts": {
+      "time_block": 12,
+      "channel_dropout": 18,
+      "rectangle": 18
+    },
+    "family_fractions": {
+      "time_block": 0.25,
+      "channel_dropout": 0.375,
+      "rectangle": 0.375
+    },
+    "windows_seen": 48,
+    "requested_ratio_mean": {
+      "time_block": 0.39820029586553574,
+      "channel_dropout": 0.416922726151016,
+      "rectangle": 0.664787181549602
+    },
+    "observed_points_by_family": {
+      "time_block": 87552,
+      "channel_dropout": 131328,
+      "rectangle": 131328
+    },
+    "target_points_by_family": {
+      "time_block": 34884,
+      "channel_dropout": 54912,
+      "rectangle": 87319
+    },
+    "actual_target_fraction_by_family": {
+      "time_block": 0.3984375,
+      "channel_dropout": 0.41812865497076024,
+      "rectangle": 0.6648924829434698
+    },
+    "observed_points": 350208,
+    "target_points": 177115,
+    "actual_target_fraction": 0.5057423017178363
+  },
+  "checkpoint": "F:\\2026小学期\\CSDI\\ESA_mission1_structured\\results\\mission1_structured_only_seed1\\smoke\\gpu_training\\checkpoint_step_000003.pth"
+}

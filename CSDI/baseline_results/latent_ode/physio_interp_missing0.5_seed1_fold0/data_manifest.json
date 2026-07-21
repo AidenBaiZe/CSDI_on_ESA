@@ -1,0 +1,53 @@
+{
+  "num_records": 3997,
+  "raw_set_a_records": 4000,
+  "skipped_record_ids": [
+    "140501",
+    "140936",
+    "141264"
+  ],
+  "splits": {
+    "train": {
+      "num_records": 2797,
+      "observed_timepoints": 205295,
+      "cond_timepoints": 103346,
+      "cond_timepoint_ratio": 0.5034024209065004,
+      "eval_timepoints": 205295,
+      "eval_timepoint_ratio": 1.0,
+      "observed_values": 1101804,
+      "cond_values": 554439,
+      "cond_value_ratio": 0.5032101898341266,
+      "eval_values": 1101804,
+      "eval_value_ratio": 1.0
+    },
+    "valid": {
+      "num_records": 401,
+      "observed_timepoints": 29476,
+      "cond_timepoints": 14842,
+      "cond_timepoint_ratio": 0.5035282942054553,
+      "eval_timepoints": 14634,
+      "eval_timepoint_ratio": 0.4964717057945447,
+      "observed_values": 157055,
+      "cond_values": 78717,
+      "cond_value_ratio": 0.5012065836808761,
+      "eval_values": 78338,
+      "eval_value_ratio": 0.4987934163191239
+    },
+    "test": {
+      "num_records": 799,
+      "observed_timepoints": 59181,
+      "cond_timepoints": 29790,
+      "cond_timepoint_ratio": 0.5033710143458204,
+      "eval_timepoints": 29391,
+      "eval_timepoint_ratio": 0.49662898565417957,
+      "observed_values": 315068,
+      "cond_values": 159033,
+      "cond_value_ratio": 0.5047577030990136,
+      "eval_values": 156035,
+      "eval_value_ratio": 0.4952422969009865
+    }
+  },
+  "missing_ratio": 0.5,
+  "seed": 1,
+  "nfold": 0
+}

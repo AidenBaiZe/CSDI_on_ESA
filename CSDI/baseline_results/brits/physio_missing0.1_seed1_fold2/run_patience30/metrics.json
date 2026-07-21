@@ -1,0 +1,24 @@
+{
+  "early_stopped": true,
+  "stopped_epoch": 90,
+  "best_epoch": 60,
+  "best_valid_mae": 0.27689460437375807,
+  "max_epochs": 300,
+  "patience": 30,
+  "min_delta": 0.0,
+  "valid": {
+    "mae": 0.27689460437375807,
+    "mre": 0.4008096097910743,
+    "auc": 0.8034319196428572,
+    "eval_points": 12883,
+    "num_records": 400
+  },
+  "test": {
+    "mae": 0.2762607895404398,
+    "mre": 0.3979384600669478,
+    "auc": 0.7869857142857143,
+    "eval_points": 25802,
+    "num_records": 800
+  },
+  "target_paper_mae_10_missing": 0.284
+}

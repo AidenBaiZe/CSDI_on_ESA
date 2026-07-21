@@ -1,0 +1,53 @@
+data:
+  processed_dir: "../../CSDI/ESA_mission1/data/processed"
+  window_length: 96
+  stride: 48
+  channel_count: 76
+
+models:
+  graph_path: "results/mission1_graph_seed1/graph/train_pearson_top8.npz"
+  structured_output_dir: "results/mission1_graph_seed1/training"
+
+graph:
+  top_k: 8
+  min_abs_correlation: 0.0
+  correlation_chunk_size: 131072
+  bias_scale: 2.0
+
+train:
+  seed: 1
+  device: "cuda:0"
+  steps: 32000
+  batch_size: 16
+  lr: 1.0e-3
+  gradient_clip_norm: 1.0
+  sanitize_nonfinite_gradients: true
+  lr_milestones: [24000, 28800]
+  checkpoint_interval: 3200
+  log_interval: 1
+
+structured_mask:
+  family_probabilities:
+    time_block: 0.3333333333333333
+    channel_dropout: 0.3333333333333333
+    rectangle: 0.3333333333333334
+  min_ratio: 0.1
+  max_ratio: 0.9
+
+diffusion:
+  layers: 4
+  channels: 64
+  nheads: 8
+  diffusion_embedding_dim: 128
+  beta_start: 0.0001
+  beta_end: 0.5
+  num_steps: 50
+  schedule: "quad"
+  is_linear: false
+  graph_bias_scale: 2.0
+
+model:
+  is_unconditional: false
+  timeemb: 128
+  featureemb: 16
+  target_strategy: "structured_only"

@@ -1,0 +1,49 @@
+{
+  "status": "passed",
+  "device": "cuda:0",
+  "losses": [
+    1.0372834205627441,
+    1.0073351860046387
+  ],
+  "sample_shape": [
+    2,
+    1,
+    76,
+    96
+  ],
+  "observed_shape": [
+    2,
+    76,
+    96
+  ],
+  "target_points": 2432,
+  "finite_samples": true,
+  "configured_model": {
+    "parameter_count": 425353,
+    "prediction_shape": [
+      2,
+      76,
+      96
+    ],
+    "finite_prediction": true
+  },
+  "graph_gate_has_gradient": true,
+  "frequency_gate_has_gradient": true,
+  "diagnostics": {
+    "graph_gate_by_layer": [
+      -0.0007284559542313218
+    ],
+    "frequency_gate_by_layer": [
+      0.0007435492589138448
+    ],
+    "frequency": {
+      "output_dim": 8,
+      "n_fft": 64,
+      "hop_length": 16
+    },
+    "graph": {
+      "channel_count": 76,
+      "directed_edges": 608
+    }
+  }
+}

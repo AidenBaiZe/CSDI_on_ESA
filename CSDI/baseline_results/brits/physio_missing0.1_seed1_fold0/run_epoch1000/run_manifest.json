@@ -1,0 +1,43 @@
+{
+  "command": "-",
+  "data_dir": "F:\\2026\u5c0f\u5b66\u671f\\CSDI\\baseline_results\\brits\\physio_missing0.1_seed1_fold0",
+  "brits_dir": "F:\\2026\u5c0f\u5b66\u671f\\CSDI\\external\\BRITS",
+  "brits_commit": "fc0a3a472a6d99a6934e471d40c25ed0b029b501",
+  "csdi_commit": "7f24a436f08d98853a6b43d4f7f04e5a65ecdf27",
+  "csdi_status_short": "M exe_physio.py\n?? 7-NeurIPS-2021-csdi-conditional-score-based-diffusion-models-for-probabilistic-time-series-imputation-Paper.pdf\n?? __pycache__/\n?? baseline_results/\n?? data/STMVL-Release.zip\n?? data/electricity_nips-20260706T061432Z-3-001/\n?? data/physio/\n?? data/physio_missing0.1_seed1.pk\n?? data/pm25/\n?? data/set-a.tar.gz\n?? datasets/\n?? external/\n?? repro_baselines/\n?? save/physio_fold0_20260706_141903/\n?? save/physio_fold0_20260706_142027/\n?? save/physio_fold0_20260706_142050/\n?? save/physio_fold0_20260706_143156/",
+  "python": "3.12.1 (tags/v3.12.1:2305ca5, Dec  7 2023, 22:03:25) [MSC v.1937 64 bit (AMD64)]",
+  "torch": "2.11.0+cu128",
+  "cuda_available": true,
+  "cuda_device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "args": {
+    "data_dir": "F:\\2026\u5c0f\u5b66\u671f\\CSDI\\baseline_results\\brits\\physio_missing0.1_seed1_fold0",
+    "output_dir": "F:\\2026\u5c0f\u5b66\u671f\\CSDI\\baseline_results\\brits\\physio_missing0.1_seed1_fold0\\run_epoch1000",
+    "brits_dir": "external/BRITS",
+    "epochs": 1000,
+    "batch_size": 64,
+    "hid_size": 108,
+    "impute_weight": 0.3,
+    "label_weight": 1.0,
+    "lr": 0.001,
+    "seed": 1,
+    "device": "cuda:0",
+    "num_workers": 0,
+    "early_stopped": true,
+    "stopped_after_epoch": 118
+  },
+  "best_epoch": 63,
+  "best_valid": {
+    "mae": 0.27332728644572424,
+    "mre": 0.3870168325348853,
+    "auc": 0.8096866096866097,
+    "eval_points": 12937,
+    "num_records": 401
+  },
+  "final_test": {
+    "mae": 0.28291652027922853,
+    "mre": 0.4014363709710363,
+    "auc": 0.7897409094302993,
+    "eval_points": 25718,
+    "num_records": 799
+  }
+}

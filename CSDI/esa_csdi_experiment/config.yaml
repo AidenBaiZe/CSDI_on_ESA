@@ -1,0 +1,47 @@
+data:
+  artifact: "../esa_csdi_preprocessing/data/processed/mission1_ch41_46_10m_30s/aligned.npz"
+  manifest: "../esa_csdi_preprocessing/data/processed/mission1_ch41_46_10m_30s/manifest.json"
+  window_length: 96
+  stride: 48
+  validation_missing_ratio: 0.5
+  evaluation_missing_ratios: [0.1, 0.5, 0.9]
+  mask_seed: 2026
+
+train:
+  epochs: 200
+  batch_size: 16
+  lr: 1.0e-3
+  itr_per_epoch: 1.0e+8
+  valid_epoch_interval: 20
+  valid_batches: 8
+
+evaluation:
+  batch_size: 64
+  nsample: 100
+  sample_chunk_size: 10
+
+smoke:
+  epochs: 2
+  train_batches_per_epoch: 10
+  valid_batches: 1
+  eval_batches: 1
+  nsample: 5
+  sample_chunk_size: 5
+  missing_ratios: [0.1]
+
+diffusion:
+  layers: 4
+  channels: 64
+  nheads: 8
+  diffusion_embedding_dim: 128
+  beta_start: 0.0001
+  beta_end: 0.5
+  num_steps: 50
+  schedule: "quad"
+  is_linear: false
+
+model:
+  is_unconditional: false
+  timeemb: 128
+  featureemb: 16
+  target_strategy: "random"

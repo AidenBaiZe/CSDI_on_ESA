@@ -1,0 +1,105 @@
+{
+  "model_kind": "enhanced_csdi",
+  "checkpoint": "F:\\2026小学期\\CSDI_improve\\enhanced_csdi\\results\\mission1_enhanced_seed1\\training\\checkpoint_step_032000.pth",
+  "protocol_count": 4,
+  "nsample": 50,
+  "sample_chunk_size": 5,
+  "evaluations": [
+    {
+      "index": 1,
+      "total": 4,
+      "protocol_key": "random_missing_03",
+      "headline_normalized": {
+        "missing_ratio": 0.03,
+        "method": "csdi",
+        "scale": "normalized",
+        "bucket": "all",
+        "group": "all_channels",
+        "channels": 76,
+        "eval_points": 28032,
+        "rmse": 3.4345252297489526,
+        "mae": 0.45683368676332503,
+        "crps": 0.3620612504702116,
+        "model_kind": "enhanced_csdi",
+        "protocol_key": "random_missing_03",
+        "mask_family": "random",
+        "severity": "3%",
+        "requested_missing_ratio": 0.03,
+        "actual_missing_ratio": 0.030016447368421052
+      },
+      "path": "F:\\2026小学期\\CSDI_improve\\enhanced_csdi\\results\\mission1_enhanced_seed1\\evaluation\\metrics\\light_random\\enhanced_csdi\\random_missing_03.json"
+    },
+    {
+      "index": 2,
+      "total": 4,
+      "protocol_key": "random_missing_05",
+      "headline_normalized": {
+        "missing_ratio": 0.05,
+        "method": "csdi",
+        "scale": "normalized",
+        "bucket": "all",
+        "group": "all_channels",
+        "channels": 76,
+        "eval_points": 46720,
+        "rmse": 2.720014192591344,
+        "mae": 0.3633626546492999,
+        "crps": 0.28578114154348394,
+        "model_kind": "enhanced_csdi",
+        "protocol_key": "random_missing_05",
+        "mask_family": "random",
+        "severity": "5%",
+        "requested_missing_ratio": 0.05,
+        "actual_missing_ratio": 0.050027412280701754
+      },
+      "path": "F:\\2026小学期\\CSDI_improve\\enhanced_csdi\\results\\mission1_enhanced_seed1\\evaluation\\metrics\\light_random\\enhanced_csdi\\random_missing_05.json"
+    },
+    {
+      "index": 3,
+      "total": 4,
+      "protocol_key": "random_missing_08",
+      "headline_normalized": {
+        "missing_ratio": 0.08,
+        "method": "csdi",
+        "scale": "normalized",
+        "bucket": "all",
+        "group": "all_channels",
+        "channels": 76,
+        "eval_points": 74752,
+        "rmse": 2.346685201925896,
+        "mae": 0.31648774878858477,
+        "crps": 0.24632632925231357,
+        "model_kind": "enhanced_csdi",
+        "protocol_key": "random_missing_08",
+        "mask_family": "random",
+        "severity": "8%",
+        "requested_missing_ratio": 0.08,
+        "actual_missing_ratio": 0.0800438596491228
+      },
+      "path": "F:\\2026小学期\\CSDI_improve\\enhanced_csdi\\results\\mission1_enhanced_seed1\\evaluation\\metrics\\light_random\\enhanced_csdi\\random_missing_08.json"
+    },
+    {
+      "index": 4,
+      "total": 4,
+      "protocol_key": "random_missing_10",
+      "headline_normalized": {
+        "missing_ratio": 0.1,
+        "method": "csdi",
+        "scale": "normalized",
+        "bucket": "all",
+        "group": "all_channels",
+        "channels": 76,
+        "eval_points": 93440,
+        "rmse": 2.2533585322001,
+        "mae": 0.31152371350916125,
+        "crps": 0.24139049051436254,
+        "model_kind": "enhanced_csdi",
+        "protocol_key": "random_missing_10",
+        "mask_family": "random",
+        "severity": "10%",
+        "requested_missing_ratio": 0.1,
+        "actual_missing_ratio": 0.10005482456140351
+      },
+      "path": "F:\\2026小学期\\CSDI_improve\\enhanced_csdi\\results\\mission1_enhanced_seed1\\evaluation\\metrics\\light_random\\enhanced_csdi\\random_missing_10.json"
+    }
+  ]
+}

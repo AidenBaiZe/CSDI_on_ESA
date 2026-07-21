@@ -1,0 +1,17 @@
+{
+  "train_timepoints": 7364161,
+  "test_timepoints": 7364161,
+  "channels": 76,
+  "window_length": 96,
+  "formal_windows": 128,
+  "random_checkpoint": "F:\\2026小学期\\CSDI\\ESA_mission1\\results\\mission1_random_seed1\\training\\checkpoint_step_032000.pth",
+  "random_checkpoint_sha256": "be42f3431d112e1da7b3cdd138bc1d2b57b82c4a15fc75a003e8d45f4affc650",
+  "structured_training_steps": 32000,
+  "structured_training_families": [
+    "time_block",
+    "channel_dropout",
+    "rectangle"
+  ],
+  "random_point_masks_used_for_training": false,
+  "validation_used": false
+}

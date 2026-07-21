@@ -1,0 +1,4 @@
+﻿split,timepoints,anomaly_count,rare_count,abnormal_count,abnormal_rate,affected_timepoints
+训练集,614880,65198,11988,77186,0.020921697458582706,12956
+验证集,131760,0,0,0,0.0,0
+测试集,131760,18195,276,18471,0.02336445051608986,3468

@@ -1,0 +1,41 @@
+{
+  "status": "completed",
+  "created_at": "2026-07-08T10:32:00",
+  "checkpoint_dir": "F:\\2026\u5c0f\u5b66\u671f\\CSDI\\baseline_results\\gpvae\\physio_missing0.1_seed1_fold1\\run_table2_crps100_decoder_sample\\models\\260707_run_table2_crps100_decoder_sample",
+  "checkpoint": "F:\\2026\u5c0f\u5b66\u671f\\CSDI\\baseline_results\\gpvae\\physio_missing0.1_seed1_fold1\\run_table2_crps100_decoder_sample\\models\\260707_run_table2_crps100_decoder_sample\\ckpt-41",
+  "data_file": "F:\\2026\u5c0f\u5b66\u671f\\CSDI\\baseline_results\\gpvae\\physio_missing0.5_seed1_fold1\\physionet_gpvae.npz",
+  "samples_path": "F:\\2026\u5c0f\u5b66\u671f\\CSDI\\baseline_results\\gpvae\\physio_missing0.5_seed1_fold1\\eval_from_missing0.1_checkpoint_crps100\\imputed_samples_no_gt.npy",
+  "test": {
+    "mae": 0.5398281812667847,
+    "mse": 0.6266766786575317,
+    "crps": 0.6187555728496034,
+    "eval_points": 130694,
+    "num_samples": 100
+  },
+  "args": {
+    "data_file": "F:\\2026\u5c0f\u5b66\u671f\\CSDI\\baseline_results\\gpvae\\physio_missing0.5_seed1_fold1\\physionet_gpvae.npz",
+    "checkpoint_dir": "F:\\2026\u5c0f\u5b66\u671f\\CSDI\\baseline_results\\gpvae\\physio_missing0.1_seed1_fold1\\run_table2_crps100_decoder_sample\\models\\260707_run_table2_crps100_decoder_sample",
+    "output_dir": "F:\\2026\u5c0f\u5b66\u671f\\CSDI\\baseline_results\\gpvae\\physio_missing0.5_seed1_fold1\\eval_from_missing0.1_checkpoint_crps100",
+    "seed": 1,
+    "num_samples": 100,
+    "batch_size": 64,
+    "latent_dim": 35,
+    "encoder_sizes": "128,128",
+    "decoder_sizes": "256,256",
+    "window_size": 24,
+    "sigma": 1.005,
+    "length_scale": 7.0,
+    "beta": 0.2,
+    "kernel": "cauchy",
+    "intra_op_threads": 4,
+    "inter_op_threads": 2,
+    "omp_num_threads": 4
+  },
+  "environment": {
+    "python": "3.7.1 (default, Oct 28 2018, 08:39:03) [MSC v.1912 64 bit (AMD64)]",
+    "executable": "F:\\csdi_miniconda\\envs\\gpvae-tf115\\python.exe",
+    "platform": "Windows-10-10.0.26100-SP0",
+    "tensorflow": "1.15.0",
+    "gpu_available": false
+  }
+}

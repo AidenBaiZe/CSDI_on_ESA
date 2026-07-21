@@ -1,0 +1,286 @@
+Testing:  False 	 Seed: 1
+Full exp name:  260707_run_table2_crps100_decoder_sample
+GPU support:  False
+Training...
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv1d (Conv1D)              multiple                  107648    
+_________________________________________________________________
+dense (Dense)                multiple                  16512     
+_________________________________________________________________
+dense_1 (Dense)              multiple                  13545     
+=================================================================
+Total params: 137,705
+Trainable params: 137,705
+Non-trainable params: 0
+_________________________________________________________________
+Encoder:  None
+Model: "sequential_1"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+dense_2 (Dense)              multiple                  9216      
+_________________________________________________________________
+dense_3 (Dense)              multiple                  65792     
+_________________________________________________________________
+dense_4 (Dense)              multiple                  8995      
+=================================================================
+Total params: 84,003
+Trainable params: 84,003
+Non-trainable params: 0
+_________________________________________________________________
+Decoder:  None
+================================================
+Learning rate: 0.001 | Global gradient norm: 7525.17
+Step 0) Time = 2.327298
+Train loss = 58826.695 | NLL = 239.004 | KL = 292938.438
+Validation loss = 58884.273 | NLL = 227.161 | KL = 293285.562
+MSE miss: 0.9335 | AUROC: 0.6407
+================================================
+Learning rate: 0.001 | Global gradient norm: 2252.18
+Step 43) Time = 74.754500
+Train loss = 24104.830 | NLL = 203.942 | KL = 119504.453
+Validation loss = 23273.092 | NLL = 212.030 | KL = 115305.305
+MSE miss: 0.6800 | AUROC: 0.6488
+================================================
+Learning rate: 0.001 | Global gradient norm: 752.23
+Step 86) Time = 77.944936
+Train loss = 22023.002 | NLL = 202.357 | KL = 109103.219
+Validation loss = 21720.918 | NLL = 197.945 | KL = 107614.859
+MSE miss: 0.6538 | AUROC: 0.7024
+================================================
+Learning rate: 0.001 | Global gradient norm: 630.64
+Step 129) Time = 80.672211
+Train loss = 21765.277 | NLL = 229.127 | KL = 107680.758
+Validation loss = 21818.311 | NLL = 205.368 | KL = 108064.703
+MSE miss: 0.6489 | AUROC: 0.7476
+================================================
+Learning rate: 0.001 | Global gradient norm: 326.22
+Step 172) Time = 78.520208
+Train loss = 21561.672 | NLL = 221.030 | KL = 106703.203
+Validation loss = 21635.492 | NLL = 204.686 | KL = 107154.031
+MSE miss: 0.6405 | AUROC: 0.7682
+================================================
+Learning rate: 0.001 | Global gradient norm: 131.68
+Step 215) Time = 78.329422
+Train loss = 21438.732 | NLL = 209.895 | KL = 106144.188
+Validation loss = 21472.809 | NLL = 200.966 | KL = 106359.195
+MSE miss: 0.6403 | AUROC: 0.7412
+================================================
+Learning rate: 0.001 | Global gradient norm: 116.17
+Step 258) Time = 82.084559
+Train loss = 21415.225 | NLL = 206.863 | KL = 106041.797
+Validation loss = 21413.045 | NLL = 199.092 | KL = 106069.758
+MSE miss: 0.6374 | AUROC: 0.7636
+================================================
+Learning rate: 0.001 | Global gradient norm: 228.16
+Step 301) Time = 84.858949
+Train loss = 21416.859 | NLL = 189.867 | KL = 106134.953
+Validation loss = 21399.146 | NLL = 192.975 | KL = 106030.859
+MSE miss: 0.6435 | AUROC: 0.7776
+================================================
+Learning rate: 0.001 | Global gradient norm: 162.21
+Step 344) Time = 90.327031
+Train loss = 21404.883 | NLL = 190.031 | KL = 106074.242
+Validation loss = 21418.922 | NLL = 208.350 | KL = 106052.844
+MSE miss: 0.6368 | AUROC: 0.7600
+================================================
+Learning rate: 0.001 | Global gradient norm: 166.95
+Step 387) Time = 121.367628
+Train loss = 21397.637 | NLL = 201.287 | KL = 105981.750
+Validation loss = 21384.783 | NLL = 196.265 | KL = 105942.594
+MSE miss: 0.6473 | AUROC: 0.8017
+================================================
+Learning rate: 0.001 | Global gradient norm: 101.49
+Step 430) Time = 117.966462
+Train loss = 21393.898 | NLL = 208.419 | KL = 105927.391
+Validation loss = 21414.979 | NLL = 202.160 | KL = 106064.094
+MSE miss: 0.6296 | AUROC: 0.7910
+================================================
+Learning rate: 0.0005 | Global gradient norm: 93.32
+Step 473) Time = 87.110631
+Train loss = 21395.176 | NLL = 201.601 | KL = 105967.875
+Validation loss = 21405.387 | NLL = 201.217 | KL = 106020.859
+MSE miss: 0.6245 | AUROC: 0.7951
+================================================
+Learning rate: 0.0005 | Global gradient norm: 96.97
+Step 516) Time = 79.887726
+Train loss = 21380.570 | NLL = 196.097 | KL = 105922.359
+Validation loss = 21388.141 | NLL = 197.799 | KL = 105951.711
+MSE miss: 0.6249 | AUROC: 0.8179
+================================================
+Learning rate: 0.0005 | Global gradient norm: 97.25
+Step 559) Time = 79.594676
+Train loss = 21381.410 | NLL = 194.940 | KL = 105932.352
+Validation loss = 21377.113 | NLL = 195.433 | KL = 105908.406
+MSE miss: 0.6222 | AUROC: 0.8037
+================================================
+Learning rate: 0.0005 | Global gradient norm: 70.55
+Step 602) Time = 78.817825
+Train loss = 21393.105 | NLL = 210.918 | KL = 105910.930
+Validation loss = 21371.953 | NLL = 189.344 | KL = 105913.039
+MSE miss: 0.6157 | AUROC: 0.8068
+================================================
+Learning rate: 0.0005 | Global gradient norm: 77.73
+Step 645) Time = 78.807598
+Train loss = 21391.107 | NLL = 213.170 | KL = 105889.688
+Validation loss = 21393.441 | NLL = 205.810 | KL = 105938.156
+MSE miss: 0.6175 | AUROC: 0.8136
+================================================
+Learning rate: 0.0005 | Global gradient norm: 88.57
+Step 688) Time = 78.651782
+Train loss = 21378.805 | NLL = 198.844 | KL = 105899.812
+Validation loss = 21371.750 | NLL = 192.935 | KL = 105894.086
+MSE miss: 0.6147 | AUROC: 0.7956
+================================================
+Learning rate: 0.0005 | Global gradient norm: 91.11
+Step 731) Time = 78.680189
+Train loss = 21375.662 | NLL = 196.954 | KL = 105893.531
+Validation loss = 21394.215 | NLL = 200.690 | KL = 105967.625
+MSE miss: 0.6171 | AUROC: 0.7946
+================================================
+Learning rate: 0.0005 | Global gradient norm: 137.38
+Step 774) Time = 79.017915
+Train loss = 21383.121 | NLL = 202.582 | KL = 105902.688
+Validation loss = 21387.293 | NLL = 198.811 | KL = 105942.406
+MSE miss: 0.6082 | AUROC: 0.8029
+================================================
+Learning rate: 0.0005 | Global gradient norm: 53.15
+Step 817) Time = 77.597136
+Train loss = 21380.836 | NLL = 203.602 | KL = 105886.172
+Validation loss = 21377.371 | NLL = 195.750 | KL = 105908.102
+MSE miss: 0.6088 | AUROC: 0.7791
+================================================
+Learning rate: 0.0005 | Global gradient norm: 131.57
+Step 860) Time = 77.768004
+Train loss = 21377.332 | NLL = 200.572 | KL = 105883.805
+Validation loss = 21370.994 | NLL = 193.293 | KL = 105888.508
+MSE miss: 0.6083 | AUROC: 0.7905
+================================================
+Learning rate: 0.00025 | Global gradient norm: 109.71
+Step 903) Time = 76.997301
+Train loss = 21380.225 | NLL = 202.146 | KL = 105890.391
+Validation loss = 21365.609 | NLL = 187.412 | KL = 105890.977
+MSE miss: 0.6043 | AUROC: 0.7786
+================================================
+Learning rate: 0.00025 | Global gradient norm: 122.21
+Step 946) Time = 77.663915
+Train loss = 21376.260 | NLL = 199.139 | KL = 105885.609
+Validation loss = 21385.824 | NLL = 204.183 | KL = 105908.195
+MSE miss: 0.6022 | AUROC: 0.7930
+================================================
+Learning rate: 0.00025 | Global gradient norm: 83.29
+Step 989) Time = 76.754677
+Train loss = 21369.504 | NLL = 193.502 | KL = 105880.016
+Validation loss = 21366.469 | NLL = 190.315 | KL = 105880.773
+MSE miss: 0.6036 | AUROC: 0.7908
+================================================
+Learning rate: 0.00025 | Global gradient norm: 74.93
+Step 1032) Time = 76.845155
+Train loss = 21362.174 | NLL = 185.411 | KL = 105883.805
+Validation loss = 21384.816 | NLL = 198.589 | KL = 105931.141
+MSE miss: 0.6023 | AUROC: 0.7872
+================================================
+Learning rate: 0.00025 | Global gradient norm: 48.26
+Step 1075) Time = 77.147800
+Train loss = 21374.998 | NLL = 196.989 | KL = 105890.039
+Validation loss = 21380.500 | NLL = 197.354 | KL = 105915.727
+MSE miss: 0.5989 | AUROC: 0.7753
+================================================
+Learning rate: 0.00025 | Global gradient norm: 110.26
+Step 1118) Time = 76.058347
+Train loss = 21370.074 | NLL = 191.444 | KL = 105893.156
+Validation loss = 21374.420 | NLL = 195.206 | KL = 105896.062
+MSE miss: 0.6078 | AUROC: 0.7920
+================================================
+Learning rate: 0.00025 | Global gradient norm: 70.72
+Step 1161) Time = 75.981967
+Train loss = 21372.297 | NLL = 194.456 | KL = 105889.203
+Validation loss = 21366.561 | NLL = 190.318 | KL = 105881.195
+MSE miss: 0.5989 | AUROC: 0.7732
+================================================
+Learning rate: 0.00025 | Global gradient norm: 133.69
+Step 1204) Time = 76.563765
+Train loss = 21376.861 | NLL = 199.021 | KL = 105889.195
+Validation loss = 21362.613 | NLL = 185.669 | KL = 105884.727
+MSE miss: 0.6024 | AUROC: 0.7859
+================================================
+Learning rate: 0.00025 | Global gradient norm: 371.04
+Step 1247) Time = 75.970217
+Train loss = 21390.252 | NLL = 212.499 | KL = 105888.766
+Validation loss = 21382.387 | NLL = 202.956 | KL = 105897.141
+MSE miss: 0.5974 | AUROC: 0.7816
+================================================
+Learning rate: 0.00025 | Global gradient norm: 57.12
+Step 1290) Time = 75.555569
+Train loss = 21370.195 | NLL = 194.241 | KL = 105879.766
+Validation loss = 21365.160 | NLL = 190.021 | KL = 105875.680
+MSE miss: 0.5966 | AUROC: 0.7727
+================================================
+Learning rate: 0.000125 | Global gradient norm: 64.56
+Step 1333) Time = 76.181030
+Train loss = 21374.594 | NLL = 199.510 | KL = 105875.414
+Validation loss = 21381.002 | NLL = 197.961 | KL = 105915.203
+MSE miss: 0.5948 | AUROC: 0.7760
+================================================
+Learning rate: 0.000125 | Global gradient norm: 77.87
+Step 1376) Time = 75.597201
+Train loss = 21381.180 | NLL = 204.087 | KL = 105885.469
+Validation loss = 21377.145 | NLL = 196.523 | KL = 105903.109
+MSE miss: 0.5944 | AUROC: 0.7689
+================================================
+Learning rate: 0.000125 | Global gradient norm: 60.87
+Step 1419) Time = 71.222952
+Train loss = 21379.543 | NLL = 202.388 | KL = 105885.766
+Validation loss = 21371.975 | NLL = 194.442 | KL = 105887.672
+MSE miss: 0.5917 | AUROC: 0.7791
+================================================
+Learning rate: 0.000125 | Global gradient norm: 69.88
+Step 1462) Time = 69.408845
+Train loss = 21366.402 | NLL = 192.427 | KL = 105869.891
+Validation loss = 21365.986 | NLL = 190.414 | KL = 105877.867
+MSE miss: 0.5928 | AUROC: 0.7722
+================================================
+Learning rate: 0.000125 | Global gradient norm: 58.29
+Step 1505) Time = 69.791042
+Train loss = 21363.820 | NLL = 187.155 | KL = 105883.320
+Validation loss = 21360.527 | NLL = 184.595 | KL = 105879.672
+MSE miss: 0.5922 | AUROC: 0.7709
+================================================
+Learning rate: 0.000125 | Global gradient norm: 97.46
+Step 1548) Time = 69.015220
+Train loss = 21364.977 | NLL = 188.862 | KL = 105880.562
+Validation loss = 21380.168 | NLL = 201.781 | KL = 105891.930
+MSE miss: 0.5903 | AUROC: 0.7646
+================================================
+Learning rate: 0.000125 | Global gradient norm: 143.68
+Step 1591) Time = 69.045882
+Train loss = 21385.695 | NLL = 209.676 | KL = 105880.094
+Validation loss = 21364.014 | NLL = 189.328 | KL = 105873.422
+MSE miss: 0.5920 | AUROC: 0.7613
+================================================
+Learning rate: 0.000125 | Global gradient norm: 73.72
+Step 1634) Time = 70.476982
+Train loss = 21371.996 | NLL = 194.997 | KL = 105884.984
+Validation loss = 21378.957 | NLL = 197.313 | KL = 105908.219
+MSE miss: 0.5907 | AUROC: 0.7628
+================================================
+Learning rate: 0.000125 | Global gradient norm: 72.68
+Step 1677) Time = 71.702806
+Train loss = 21358.412 | NLL = 183.740 | KL = 105873.352
+Validation loss = 21374.693 | NLL = 195.134 | KL = 105897.797
+MSE miss: 0.5890 | AUROC: 0.7605
+================================================
+Learning rate: 0.000125 | Global gradient norm: 80.48
+Step 1720) Time = 70.395002
+Train loss = 21370.492 | NLL = 195.373 | KL = 105875.602
+Validation loss = 21370.939 | NLL = 194.123 | KL = 105884.070
+MSE miss: 0.5881 | AUROC: 0.7577
+Evaluation...
+NLL miss: 1.2430
+MSE miss: 0.5951
+AUROC: 0.6973
+AUPRC: 0.3107
+Training finished.

@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "F:\2026小学期\CSDI\repro_baselines\gpvae\run_gpvae_physio.py", line 237, in <module>
+    main()
+  File "F:\2026小学期\CSDI\repro_baselines\gpvae\run_gpvae_physio.py", line 207, in main
+    results = read_results_tsv(run_dir / "results.tsv")
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\2026小学期\CSDI\repro_baselines\gpvae\run_gpvae_physio.py", line 52, in read_results_tsv
+    rows = list(csv.DictReader(f, delimiter="\t"))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\python\Lib\csv.py", line 115, in __next__
+    self.fieldnames
+  File "D:\python\Lib\csv.py", line 102, in fieldnames
+    self._fieldnames = next(self.reader)
+                       ^^^^^^^^^^^^^^^^^
+  File "<frozen codecs>", line 322, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xc6 in position 442: invalid continuation byte

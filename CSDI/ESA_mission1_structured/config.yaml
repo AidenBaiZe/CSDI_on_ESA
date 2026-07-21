@@ -1,0 +1,77 @@
+data:
+  processed_dir: "../ESA_mission1/data/processed"
+  window_length: 96
+  stride: 48
+  channel_count: 76
+  gap_labels: "../esa_csdi_preprocessing/data/interim/ESA-Mission1/labels.csv"
+  anomaly_types: "../esa_csdi_preprocessing/data/interim/ESA-Mission1/anomaly_types.csv"
+
+models:
+  random_checkpoint: "../ESA_mission1/results/mission1_random_seed1/training/checkpoint_step_032000.pth"
+  random_protocol_dir: "../ESA_mission1/results/mission1_random_seed1/evaluation/protocols"
+  structured_output_dir: "results/mission1_structured_only_seed1/training"
+
+train:
+  seed: 1
+  device: "cuda:0"
+  steps: 32000
+  batch_size: 16
+  lr: 1.0e-3
+  gradient_clip_norm: 1.0
+  sanitize_nonfinite_gradients: true
+  lr_milestones: [24000, 28800]
+  checkpoint_interval: 3200
+  log_interval: 1
+
+structured_mask:
+  family_probabilities:
+    time_block: 0.3333333333333333
+    channel_dropout: 0.3333333333333333
+    rectangle: 0.3333333333333334
+  min_ratio: 0.1
+  max_ratio: 0.9
+
+evaluation:
+  output_dir: "results/mission1_structured_only_seed1/evaluation"
+  result_root: "results/mission1_structured_only_seed1"
+  window_count: 128
+  missing_ratios: [0.1, 0.5, 0.9]
+  families: ["time_block", "channel_dropout", "rectangle"]
+  family_seeds:
+    time_block: 2101
+    channel_dropout: 2201
+    rectangle: 2301
+  random_baseline_protocols:
+    - "time_block_missing_50"
+    - "channel_dropout_missing_50"
+    - "rectangle_missing_50"
+    - "gap_onset"
+    - "gap_sustained"
+  batch_size: 8
+  nsample: 50
+  sample_chunk_size: 20
+  max_peak_memory_bytes: 6979321856
+  quantiles: [0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40, 0.45, 0.50, 0.55, 0.60, 0.65, 0.70, 0.75, 0.80, 0.85, 0.90, 0.95]
+
+smoke:
+  train_steps: 3
+  evaluation_windows: 8
+  nsample: 2
+  chunk_size: 2
+
+diffusion:
+  layers: 4
+  channels: 64
+  nheads: 8
+  diffusion_embedding_dim: 128
+  beta_start: 0.0001
+  beta_end: 0.5
+  num_steps: 50
+  schedule: "quad"
+  is_linear: false
+
+model:
+  is_unconditional: false
+  timeemb: 128
+  featureemb: 16
+  target_strategy: "structured_only"

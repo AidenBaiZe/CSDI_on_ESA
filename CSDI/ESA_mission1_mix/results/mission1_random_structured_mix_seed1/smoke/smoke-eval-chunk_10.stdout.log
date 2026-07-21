@@ -1,0 +1,25 @@
+{
+  "missing_ratio": 0.5,
+  "nsample": 50,
+  "sample_chunk_size": 10,
+  "processed_batches": 1,
+  "processed_windows": 8,
+  "duration_seconds": 237.71122430000014,
+  "seconds_per_window": 29.713903037500017,
+  "projected_seconds_for_256_windows": 7606.7591776000045,
+  "peak_gpu_memory_bytes": 2658146304,
+  "headline_normalized": {
+    "missing_ratio": 0.5,
+    "method": "csdi",
+    "scale": "normalized",
+    "bucket": "all",
+    "group": "all_channels",
+    "channels": 76,
+    "eval_points": 29184,
+    "rmse": 36.8366522472098,
+    "mae": 29.197177117330988,
+    "crps": 47.330785267020644
+  },
+  "chunk_size": 10,
+  "within_memory_limit": true
+}

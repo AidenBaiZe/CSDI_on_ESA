@@ -1,0 +1,22 @@
+F:\2026小学期\CSDI\diff_models.py:12: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.self_attn.batch_first was not True(use batch_first for better inference performance)
+  return nn.TransformerEncoder(encoder_layer, num_layers=layers)
+train 0->3:   0%|          | 0/3 [00:00<?, ?it/s]train 0->3:   0%|          | 0/3 [00:07<?, ?it/s, loss=1.0178, lr=1.0e-03]train 0->3:  33%|███▎      | 1/3 [00:07<00:14,  7.34s/it, loss=1.0178, lr=1.0e-03]train 0->3:  33%|███▎      | 1/3 [00:08<00:14,  7.34s/it, loss=0.9930, lr=1.0e-03]train 0->3:  33%|███▎      | 1/3 [00:10<00:14,  7.34s/it, loss=0.9744, lr=1.0e-03]train 0->3:  67%|██████▋   | 2/3 [00:10<00:05,  5.32s/it, loss=0.9744, lr=1.0e-03]
+evaluate missing=50%:   0%|          | 0/16 [00:00<?, ?it/s]fatal   : Memory allocation failure
+evaluate missing=50%:   0%|          | 0/16 [00:09<?, ?it/s]
+Traceback (most recent call last):
+  File "F:\2026小学期\CSDI\ESA_mission1_structured\run_structured.py", line 709, in <module>
+    main()
+  File "F:\2026小学期\CSDI\ESA_mission1_structured\run_structured.py", line 693, in main
+    run_smoke(config, config_path)
+  File "F:\2026小学期\CSDI\ESA_mission1_structured\run_structured.py", line 467, in run_smoke
+    eval_result = evaluate_model(
+                  ^^^^^^^^^^^^^^^
+  File "F:\2026小学期\CSDI\ESA_mission1\experiment.py", line 559, in evaluate_model
+    sorted_samples = torch.sort(samples, dim=1).values
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.AcceleratorError: CUDA error: unknown error
+Search for `cudaErrorUnknown' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+

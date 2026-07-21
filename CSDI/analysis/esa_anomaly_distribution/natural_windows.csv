@@ -1,0 +1,4 @@
+﻿split,candidate_windows,windows_with_missing,partial_missing_windows,fully_missing_windows,affected_window_rate,median_missing_rate_affected,mean_missing_rate_affected,max_missing_rate
+训练集,12809,285,31,254,0.022249980482473262,1.0,0.9403752436647174,1.0
+验证集,2744,0,0,0,0.0,0.0,0.0,0.0
+测试集,2744,81,25,56,0.029518950437317785,1.0,0.791795267489712,1.0

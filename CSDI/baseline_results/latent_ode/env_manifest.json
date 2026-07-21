@@ -1,0 +1,15 @@
+{
+  "created_at": "2026-07-10T10:13:04",
+  "csdi_commit": "7f24a436f08d98853a6b43d4f7f04e5a65ecdf27",
+  "latent_ode_commit": "c0682d4f52b806fb88d965755892eadd9783f936",
+  "environment": {
+    "python": "3.12.1 (tags/v3.12.1:2305ca5, Dec  7 2023, 22:03:25) [MSC v.1937 64 bit (AMD64)]",
+    "executable": "D:\\python\\python.exe",
+    "platform": "Windows-11-10.0.26120-SP0",
+    "torch": "2.11.0+cu128",
+    "cuda_available": true,
+    "cuda_device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "device": "cuda:0",
+    "torchdiffeq": "0.2.5"
+  }
+}

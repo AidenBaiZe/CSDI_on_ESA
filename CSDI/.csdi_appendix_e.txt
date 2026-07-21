@@ -1,0 +1,305 @@
+=== PAGE 5 ===
+Figure 2: The self-supervised training procedure of CSDI. On the middle left rectangle, the green and
+white areas represent observed and missing values, respectively. The observed values are separated
+into red imputation targets xta
+0 and blue conditional observations xco
+0 , and used for training of ϵθ.
+The colored areas in each rectangle mean the existence of values.
+Table 1: Imputation targets xta
+0 and conditional observations xco
+0 for CSDI at training and sampling.
+imputation targets xta
+0 conditional observations xco
+0
+sampling (imputation) all missing values all observed values
+training a subset of the observed values
+(sampled by a target choice strategy)
+the remaining
+observed values
+where the dimension of ϵ corresponds to that of the imputation targets xta
+0 .
+However, this training procedure has an issue. Since we do not know the ground-truth missing values
+in practice, it is not clear how to select xco
+0 and xta
+0 from a training sample x0. To address this
+issue, we develop a self-supervised learning method inspired by masked language modeling [28]. We
+illustrate the training procedure in Figure 2. Given a sample x0, we separate observed values of x0
+into two parts, and set one of them as imputation targets xta
+0 and the other as conditional observations
+xco
+0 . We choose the targets xta
+0 through a target choice strategy, which is discussed in Section 4.3.
+Then, we sample noisy targets xta
+t and train ϵθ by solving Eq. (7). We summarize how we set xco
+0
+and xta
+0 for training and sampling in Table 1. We also provide the algorithm of training and sampling
+in Appendix B.1.
+4.3 Choice of imputation targets in self-supervised learning
+In the proposed self-supervised learning, the choice of imputation targets is important. We provide
+four target choice strategies depending on what is known about the missing patterns in the test dataset.
+We describe the algorithm for these strategies in Appendix B.2.
+(1) Random strategy : this strategy is used when we do not know about missing patterns, and randomly
+chooses a certain percentage of observed values as imputation targets. The percentage is sampled
+from [0%, 100%] to adapt to various missing ratios in the test dataset.
+(2) Historical strategy: this strategy exploits missing patterns in the training dataset. Given a
+training sample x0, we randomly draw another sample ˜x0 from the training dataset. Then, we set
+the intersection of the observed indices of x0 and the missing indices of ˜x0 as imputation targets.
+The motivation of this strategy comes from structured missing patterns in the real world. For
+example, missing values often appear consecutively in time series data. When missing patterns in the
+training and test dataset are highly correlated, this strategy helps the model learn a good conditional
+distribution.
+5
+
+=== PAGE 6 ===
+(3) Mix strategy: this strategy is the mix of the above two strategies. The historical strategy may
+lead to overﬁtting to missing patterns in the training dataset. The Mix strategy can beneﬁt from
+generalization by the random strategy and structured missing patterns by the historical strategy.
+(4) Test pattern strategy: when we know the missing patterns in the test dataset, we just set the patterns
+as imputation targets. For example, this strategy is used for time series forecasting, since the missing
+patterns in the test dataset are ﬁxed to given future time points.
+5 Implementation of CSDI for time series imputation
+Figure 3: The architecture of 2D attention. Given a tensor withK features,L length, andC channels,
+the temporal Transformer layer takes tensors with (1,L,C ) shape as inputs and learns temporal
+dependency. The feature Transformer layer takes tensors with (K, 1,C ) shape as inputs and learns
+feature dependency. The output shape of each layer is the same as the input shape.
+In this section, we implement CSDI for time series imputation. For the implementation, we need the
+inputs and the architecture of ϵθ.
+First, we describe how we process time series data as inputs for CSDI. As deﬁned in Section 3.1, a
+time series is denoted as {X, M, s}, and the sample spaceX of X is RK×L. We want to handle X
+in the sample space RK×L for learning dependencies in a time series using a neural network, but
+the conditional denoising function ϵθ takes inputs xta
+t and xco
+0 in varying sample spaces that are a
+part ofX as shown in white areas of xta
+t and xco
+0 in Figure 2. To address this issue, we adjust the
+conditional denoising function ϵθ to inputs in the ﬁxed sample space RK×L. Concretely, we ﬁx the
+shape of the inputs xta
+t and xco
+0 to (K×L) by applying zero padding to xta
+t and xco
+0 . In other words,
+we set zero values to white areas for xta
+t and xco
+0 in Figure 2. To indicate which indices are padded,
+we introduce the conditional mask mco∈{ 0, 1}K×L as an additional input to ϵθ, which corresponds
+to xco
+0 and takes value 1 for indices of conditional observations. For ease of handling, we also ﬁx the
+output shape in the sample space RK×L by applying zero padding. Then, the conditional denoising
+function ϵθ(xta
+t ,t| xco
+0 , mco) can be written as ϵθ : (RK×L× R| RK×L×{ 0, 1}K×L)→ RK×L.
+We discuss the effect of this adjustment on training and sampling in Appendix D.
+Under the adjustment, we set conditional observations xco
+0 and imputation targets xta
+0 for time series
+imputation by following Table 1. At sampling time, since conditional observations xco
+0 are all
+observed values, we set mco = M and xco
+0 = mco⊙ X where⊙ represents element-wise products.
+For training, we sample xta
+0 and xco
+0 through a target choice strategy, and set the indices of xco
+0 as
+mco. Then, xco
+0 is written as xco
+0 = mco⊙ X and xta
+0 is obtained as xta
+0 = (M− mco)⊙ X.
+Next, we describe the architecture of ϵθ. We adopt the architecture in DiffWave [ 13] as the base,
+which is composed of multiple residual layers with residual channelC. We reﬁne this architecture
+for time series imputation. We set the diffusion stepT = 50. We discuss the main differences from
+DiffWave (see Appendix E.1 for the whole architecture and details).
+Attention mechanism To capture temporal and feature dependencies of multivariate time series,
+we utilize a two dimensional attention mechanism in each residual layer instead of a convolution
+architecture. As shown in Figure 3, we introduce temporal Transformer layer and a feature Trans-
+former layer, which are 1-layer Transformer encoders. The temporal Transformer layer takes tensors
+for each feature as inputs to learn temporal dependency, whereas the feature Transformer layer takes
+tensors for each time point as inputs to learn temporal dependency.
+Note that while the lengthL can be different for each time series as mentioned in Section 3.1, the
+attention mechanism allows the model to handle various lengths. For batch training, we apply zero
+padding to each sequence so that the lengths of the sequences are the same.
+6
+
+=== PAGE 7 ===
+Side information In addition to the arguments of ϵθ, we provide some side information as ad-
+ditional inputs to the model. First, we use time embedding of s ={s1:L} to learn the temporal
+dependency. Following previous studies [ 29, 30], we use 128-dimensions temporal embedding.
+Second, we exploit categorical feature embedding forK features, where the dimension is 16.
+6 Experimental results
+In this section, we demonstrate the effectiveness of CSDI for time series imputation. Since CSDI
+can be applied to other related tasks such as interpolation and forecasting, we also evaluate CSDI for
+these tasks to show the ﬂexibility of CSDI. Due to the page limitation, we provide the detailed setup
+for experiments including train/validation/test splits and hyperparameters in Appendix E.2.
+6.1 Time series imputation
+Dataset and experiment settings We run experiments for two datasets. The ﬁrst one is the
+healthcare dataset in PhysioNet Challenge 2012 [1], which consists of 4000 clinical time series with
+35 variables for 48 hours from intensive care unit (ICU). Following previous studies [7, 8], we process
+the dataset to hourly time series with 48 time steps. The processed dataset contains around 80%
+missing values. Since the dataset has no ground-truth, we randomly choose 10/50/90% of observed
+values as ground-truth on the test data.
+The second one is the air quality dataset [ 2]. Following previous studies [ 7, 21], we use hourly
+sampled PM2.5 measurements from 36 stations in Beijing for 12 months and set 36 consecutive
+time steps as one time series. There are around 13% missing values and the missing patterns are not
+random. The dataset contains artiﬁcial ground-truth, whose missing patterns are also structured.
+For both dataset, we run each experiment ﬁve times. As the target choice strategy for training, we
+adopt the random strategy for the healthcare dataset and the mix of the random and historical strategy
+for the air quality dataset, based on the missing patterns of each dataset.
+Results of probabilistic imputation CSDI is compared with three baselines. 1) Multitask GP [31]:
+the method learns the covariance between timepoints and features simultaneously. 2) GP-V AE [10]:
+the method showed the state-of-the-art results for probabilistic imputation. 3) V-RIN [32]: a deter-
+ministic imputation method that uses the uncertainty quantiﬁed by V AE to improve imputation. For
+V-RIN, we regard the quantiﬁed uncertainty as probabilistic imputation. In addition, we compare
+CSDI with imputation using the unconditional diffusion model in order to show the effectiveness of
+the conditional one (see Appendix C for training and imputation with the unconditional diffusion
+model).
+We ﬁrst show quantitative results. We adopt the continuous ranked probability score (CRPS) [33] as
+the metric, which is freuquently used for evaluating probabilistic time series forecasting and measures
+the compatibility of an estimated probability distribution with an observation. We generate 100
+samples to approximate the probability distribution over missing values and report the normalized
+average of CRPS for all missing values following previous studies [34] (see Appendix E.3 for details
+of the computation).
+Table 2: Comparing CRPS for probabilistic imputation baselines and CSDI (lower is better). We
+report the mean and the standard error of CRPS for ﬁve trials.
+healthcare air quality
+10% missing 50% missing 90% missing
+Multitask GP [31] 0.489(0.005) 0 .581(0.003) 0 .942(0.010) 0 .301(0.003)
+GP-V AE [10] 0.574(0.003) 0 .774(0.004) 0 .998(0.001) 0 .397(0.009)
+V-RIN [32] 0.808(0.008) 0 .831(0.005) 0 .922(0.003) 0 .526(0.025)
+unconditional 0.360(0.007) 0 .458(0.008) 0 .671(0.007) 0 .135(0.001)
+CSDI (proposed) 0.238(0.001) 0.330(0.002) 0.522(0.002) 0.108(0.001)
+7
+
+=== PAGE 8 ===
+Figure 4: Examples of probabilistic time series imputation for the healthcare dataset with 50%
+missing (left) and the air quality dataset (right). The red crosses show the observed values and the
+blue circles show the ground-truth imputation targets. For each method, median values of imputations
+are shown as the line and 5% and 95% quantiles are shown as the shade.
+Table 2 represents CRPS for each method. CSDI reduces CRPS by 40-65% compared to the existing
+baselines for both datasets. This indicates that CSDI generates more realistic distributions than other
+methods. We also observe that the imputation with CSDI outperforms that with the unconditional
+model. This suggests CSDI beneﬁts from explicitly modeling the conditional distribution.
+We provide imputation examples in Figure 4. For the air quality dataset, CSDI (green solid line)
+provides accurate imputations with high conﬁdence, while those by GP-V AE (gray dashed line) are
+far from ground-truth. CSDI also gives reasonable imputations for the healthcare dataset. These
+results indicate that CSDI exploits temporal and feature dependencies to provide accurate imputations.
+We give more examples in Appendix G.
+Table 3: Comparing MAE for deterministic imputation methods and CSDI. We report the mean and
+the standard error for ﬁve trials. The asterisks mean the results of the method are cited from the
+original paper.
+healthcare air quality
+10% missing 50% missing 90% missing
+V-RIN [32] 0.271(0.001) 0 .365(0.002) 0 .606(0.006) 25 .4(0.62)
+BRITS [7] 0.284(0.001) 0 .368(0.002) 0 .517(0.002) 14 .11(0.26)
+BRITS [7] (*) 0.278 − − 11.56
+GLIMA [21] (*) 0.265 − − 10.54
+RDIS [20] 0.319(0.002) 0 .419(0.002) 0 .631(0.002) 22 .11(0.35)
+unconditional 0.326(0.008) 0 .417(0.010) 0 .625(0.010) 12 .13(0.07)
+CSDI (proposed) 0.217(0.001) 0.301(0.002) 0.481(0.003) 9.60(0.04)
+Results of deterministic imputation We demonstrate that CSDI also provides accurate determin-
+istic imputations, which are obtained as the median of 100 generated samples. We compare CSDI
+with four baselines developed for deterministic imputation including GLIMA [21], which combined
+recurrent imputations with an attention mechanism to capture temporal and feature dependencies and
+showed the state-of-the-art performance. These methods are based on autoregressive models. We use
+the original implementations except RDIS.
+We evaluate each method by the mean absolute error (MAE). In Table 3,CSDI improves MAE by
+5-20% compared to the baselines. This suggests that the conditional diffusion model is effective to
+learn temporal and feature dependencies for imputation. For the healthcare dataset, the gap between
+the baselines and CSDI is particularly signiﬁcant when the missing ratio is small, because more
+observed values help CSDI capture dependencies.
+8
+
+=== PAGE 9 ===
+Table 4: Comparing the state-of-the-art interpolation methods with CSDI for the healthcare dataset.
+We report the mean and the standard error of CRPS for ﬁve trials.
+10% missing 50% missing 90% missing
+Latent ODE [35] 0.700(0.002) 0 .676(0.003) 0 .761(0.010)
+mTANs [22] 0.526(0.004) 0 .567(0.003) 0 .689(0.015)
+CSDI (proposed) 0.380(0.002) 0.418(0.001) 0.556(0.003)
+6.2 Interpolation of irregularly sampled time series
+Dataset and experiment settings We use the same healthcare dataset as the previous section, but
+process the dataset as irregularly sampled time series, following previous studies [22, 35]. Since the
+dataset has no ground-truth, we randomly choose 10/50/90% of time points and use observed values
+at these time points as ground-truth on the test data. As the target choice strategy for training, we
+adopt the random strategy, which is adjusted for interpolation so that some time points are sampled.
+Results We compare CSDI with two baselines including mTANs [22], which utilized an attention
+mechanism and showed state-of-the-art results for the interpolation of irregularly sampled time series.
+We generate 100 samples to approximate the probability distribution as with the previous section.
+The result is shown in Table 4. CSDI outperforms the baselines for all cases.
+Table 5: Comparing probabilistic forecasting methods with CSDI. We report the mean and the
+standard error of CRPS-sum for three trials. The baseline results are cited from the original paper.
+’TransMAF’ is the abbreviation for ’Transformer MAF’.
+solar electricity trafﬁc taxi wiki
+GP-copula [34] 0.337(0.024) 0 .024(0.002) 0 .078(0.002) 0 .208(0.183) 0 .086(0.004)
+TransMAF [36] 0.301(0.014) 0 .021(0.000) 0 .056(0.001) 0 .179(0.002) 0 .063(0.003)
+TLAE [37] 0.124(0.033) 0 .040(0.002) 0 .069(0.001) 0 .130(0.006) 0 .241(0.001)
+TimeGrad [25] 0.287(0.020) 0 .021(0.001) 0 .044(0.006) 0.114(0.020) 0 .049(0.002)
+CSDI (proposed) 0.298(0.004) 0.017(0.000) 0.020(0.001) 0 .123(0.003) 0.047(0.003)
+6.3 Time series Forecasting
+Dataset and Experiment settings We use ﬁve datasets that are commonly used for evaluating
+probabilistic time series forecasting. Each dataset is composed of around 100 to 2000 features. We
+predict all features at future time steps using past time series. We use the same prediction steps as
+previous studies [34, 37]. For the target choice strategy, we adopt the Test pattern strategy.
+Results We compareCSDI with four baselines. Speciﬁcally, TimeGrad [25] combined the diffusion
+model with a RNN-based encoder. We evaluate each method for CRPS-sum, which is CRPS for
+the distribution of the sum of all time series across K features and accounts for joint effect (see
+Appendix E.3 for details).
+In Table 5, CSDI outperforms the baselines for electricity and trafﬁc datasets, and is competitive
+with the baselines as a whole. The advantage of CSDI over baselines for forecasting is smaller than
+that for imputation in Section 6.1. We hypothesize it is because the datasets for forecasting seldom
+contains missing values and are suitable for existing encoders including RNNs. For imputation, it is
+relatively difﬁcult for RNNs to handle time series due to missing values.
+7 Conclusion
+In this paper, we have proposed CSDI, a novel approach to impute multivariate time series with
+conditional diffusion models. We have shown that CSDI outperforms the existing probabilistic and
+deterministic imputation methods.
+9
+
+=== PAGE 13 ===
+Checklist
+1. For all authors...
+(a) Do the main claims made in the abstract and introduction accurately reﬂect the paper’s
+contributions and scope? [Yes] We described our proposed method and empirical
+results in the abstract and introduction.
+(b) Did you describe the limitations of your work? [Yes] We have mentioned some
+limitations of our work in Section 7.
+(c) Did you discuss any potential negative societal impacts of your work? [Yes] Please see
+Appendix H.
+(d) Have you read the ethics review guidelines and ensured that your paper conforms to
+them? [Yes] We have read the guidelines and ensured that our paper conforms to them.
+2. If you are including theoretical results...
+(a) Did you state the full set of assumptions of all theoretical results? [N/A]
+(b) Did you include complete proofs of all theoretical results? [N/A]
+3. If you ran experiments...
+(a) Did you include the code, data, and instructions needed to reproduce the main experi-
+mental results (either in the supplemental material or as a URL)? [Yes] Please see the
+abstract.
+(b) Did you specify all the training details (e.g., data splits, hyperparameters, how they
+were chosen)? [Yes] Please see Section 6 and Appendix E.2.
+(c) Did you report error bars (e.g., with respect to the random seed after running experi-
+ments multiple times)? [Yes] We gave error bars in ﬁgures and the standard errors in
+tables.
+(d) Did you include the total amount of compute and the type of resources used (e.g., type
+of GPUs, internal cluster, or cloud provider)? [No] We did not focus on computational
+time.
+4. If you are using existing assets (e.g., code, data, models) or curating/releasing new assets...
+(a) If your work uses existing assets, did you cite the creators? [Yes] We cited packages
+we used. We also cited papers which provided datasets.
+(b) Did you mention the license of the assets? [No] We only used open dataset. Please
+refer to citations for details on licensing.
+(c) Did you include any new assets either in the supplemental material or as a URL? [No]
+We did not release new assets.
+(d) Did you discuss whether and how consent was obtained from people whose data you’re
+using/curating? [No] We only used open dataset.
+(e) Did you discuss whether the data you are using/curating contains personally identiﬁable
+information or offensive content? [No] The datasets we used are open numerical time
+series dataset and do not contain personally identiﬁable information.
+5. If you used crowdsourcing or conducted research with human subjects...
+(a) Did you include the full text of instructions given to participants and screenshots, if
+applicable? [N/A]
+(b) Did you describe any potential participant risks, with links to Institutional Review
+Board (IRB) approvals, if applicable? [N/A]
+(c) Did you include the estimated hourly wage paid to participants and the total amount
+spent on participant compensation? [N/A]
+13

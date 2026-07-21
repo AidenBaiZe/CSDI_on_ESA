@@ -1,0 +1,10 @@
+{
+  "archive_path": "../datasets/ESA Anomaly Dataset/ESA-Mission2.zip",
+  "mission": "ESA-Mission2",
+  "channels": [9, 10, 13, 14, 74, 86],
+  "start_time": "2000-01-01T00:00:00",
+  "end_time": "2003-06-30T23:59:59",
+  "resample_seconds": 30,
+  "split_ratios": [0.7, 0.15, 0.15],
+  "output_name": "mission2_ch9_10_13_14_74_86_42m_30s"
+}

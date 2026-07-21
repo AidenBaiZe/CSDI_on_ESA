@@ -1,0 +1,48 @@
+{
+  "created_at": "2026-07-07",
+  "purpose": "GP-VAE original TensorFlow 1.15 environment for healthcare baseline reproduction",
+  "workspace": "F:\\2026小学期\\CSDI",
+  "conda": {
+    "installer": "F:\\2026小学期\\CSDI\\Miniconda3-latest-Windows-x86_64.exe",
+    "requested_prefix": "F:\\2026小学期\\CSDI\\.miniconda",
+    "actual_prefix": "F:\\csdi_miniconda",
+    "env_name": "gpvae-tf115",
+    "env_prefix": "F:\\csdi_miniconda\\envs\\gpvae-tf115",
+    "conda_exe": "F:\\csdi_miniconda\\Scripts\\conda.exe",
+    "note": "The Miniconda Windows installer refused the requested non-ASCII workspace path, so the local conda installation was placed at an ASCII-only path without modifying the system PATH."
+  },
+  "gpvae_repo": {
+    "url": "https://github.com/ratschlab/GP-VAE.git",
+    "path": "F:\\2026小学期\\CSDI\\external\\GP-VAE",
+    "commit": "6e06c93d37d07ede2eb1f578b577c80a59846e2c",
+    "status": "clean"
+  },
+  "versions": {
+    "python": "3.7.1",
+    "tensorflow": "1.15.0",
+    "tensorflow_estimator": "1.15.1",
+    "tensorflow_probability": "0.7.0",
+    "numpy": "1.16.5",
+    "scipy": "1.2.0",
+    "scikit_learn": "0.23.2",
+    "pandas": "1.1.5",
+    "matplotlib": "3.3.2",
+    "absl_py": "0.15.0"
+  },
+  "dependency_notes": [
+    "The original requirements.txt pins absl-py==0.7.0 and numpy==1.16.4.",
+    "Conda's Windows TensorFlow 1.15.0 package requires absl-py>=0.7.1 and numpy>=1.16.5, so absl-py and numpy were relaxed to satisfy TensorFlow 1.15.0 while keeping the original TensorFlow and TensorFlow Probability versions.",
+    "tensorflow-estimator was pinned to 1.15.1 because conda initially installed tensorflow-estimator 2.6.0, which is incompatible with TensorFlow 1.15 contrib imports.",
+    "tensorflow-gpu==1.15.0 was not installed; the environment uses the CPU/MKL TensorFlow 1.15.0 package first, because Windows TF1 GPU requires an old CUDA/cuDNN stack."
+  ],
+  "verification": {
+    "conda_env_list": "F:\\csdi_miniconda\\Scripts\\conda.exe env list includes gpvae-tf115",
+    "import_command": "F:\\csdi_miniconda\\Scripts\\conda.exe run -n gpvae-tf115 python -c \"import tensorflow as tf; print(tf.__version__); import tensorflow_probability as tfp; print(tfp.__version__)\"",
+    "import_result": "tensorflow 1.15.0, tensorflow_probability 0.7.0",
+    "gpvae_entrypoint_check": "train.py --help successfully printed GP-VAE flags"
+  },
+  "usage": {
+    "python": "F:\\csdi_miniconda\\Scripts\\conda.exe run -n gpvae-tf115 python",
+    "example_help": "F:\\csdi_miniconda\\Scripts\\conda.exe run -n gpvae-tf115 python F:\\2026小学期\\CSDI\\external\\GP-VAE\\train.py --help"
+  }
+}

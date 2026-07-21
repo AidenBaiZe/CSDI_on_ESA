@@ -1,0 +1,1113 @@
+{
+  "overall": {
+    "timepoints": 878400,
+    "scalar_values": 5270400,
+    "observed_zero_count": 0,
+    "anomaly_count": 83393,
+    "rare_count": 12264,
+    "communication_gap_count": 0,
+    "abnormal_scalar_count": 95657,
+    "abnormal_scalar_rate": 0.018149855798421374,
+    "abnormal_timepoint_count": 16424,
+    "abnormal_timepoint_rate": 0.018697632058287797
+  },
+  "channels": [
+    {
+      "channel": "通道 41",
+      "normal_count": 862577,
+      "anomaly_count": 13813,
+      "rare_count": 2010,
+      "abnormal_count": 15823,
+      "abnormal_rate": 0.018013433515482697,
+      "episode_count": 13,
+      "median_duration_minutes": 43.5,
+      "mean_duration_minutes": 608.5769230769231,
+      "max_duration_hours": 47.041666666666664
+    },
+    {
+      "channel": "通道 42",
+      "normal_count": 862737,
+      "anomaly_count": 13625,
+      "rare_count": 2038,
+      "abnormal_count": 15663,
+      "abnormal_rate": 0.017831284153005465,
+      "episode_count": 14,
+      "median_duration_minutes": 25.75,
+      "mean_duration_minutes": 559.3928571428571,
+      "max_duration_hours": 47.041666666666664
+    },
+    {
+      "channel": "通道 43",
+      "normal_count": 862086,
+      "anomaly_count": 14278,
+      "rare_count": 2036,
+      "abnormal_count": 16314,
+      "abnormal_rate": 0.018572404371584698,
+      "episode_count": 15,
+      "median_duration_minutes": 8.5,
+      "mean_duration_minutes": 543.8,
+      "max_duration_hours": 47.041666666666664
+    },
+    {
+      "channel": "通道 44",
+      "normal_count": 862197,
+      "anomaly_count": 14084,
+      "rare_count": 2119,
+      "abnormal_count": 16203,
+      "abnormal_rate": 0.01844603825136612,
+      "episode_count": 13,
+      "median_duration_minutes": 43.5,
+      "mean_duration_minutes": 623.1923076923077,
+      "max_duration_hours": 47.041666666666664
+    },
+    {
+      "channel": "通道 45",
+      "normal_count": 862548,
+      "anomaly_count": 13809,
+      "rare_count": 2043,
+      "abnormal_count": 15852,
+      "abnormal_rate": 0.018046448087431693,
+      "episode_count": 13,
+      "median_duration_minutes": 43.5,
+      "mean_duration_minutes": 609.6923076923077,
+      "max_duration_hours": 47.041666666666664
+    },
+    {
+      "channel": "通道 46",
+      "normal_count": 862598,
+      "anomaly_count": 13784,
+      "rare_count": 2018,
+      "abnormal_count": 15802,
+      "abnormal_rate": 0.017989526411657557,
+      "episode_count": 14,
+      "median_duration_minutes": 27.75,
+      "mean_duration_minutes": 564.3571428571429,
+      "max_duration_hours": 47.041666666666664
+    }
+  ],
+  "episodes": [
+    {
+      "channel": "channel_41",
+      "start": "2000-02-10T01:32:00",
+      "end": "2000-02-10T01:35:00",
+      "duration_minutes": 3.5,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_41",
+      "start": "2000-02-10T15:58:30",
+      "end": "2000-02-10T20:25:00",
+      "duration_minutes": 267.0,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_41",
+      "start": "2000-03-19T06:01:30",
+      "end": "2000-03-20T23:13:30",
+      "duration_minutes": 2472.5,
+      "label_types": "异常"
+    },
+    {
+      "channel": "channel_41",
+      "start": "2000-04-23T15:16:00",
+      "end": "2000-04-25T14:18:00",
+      "duration_minutes": 2822.5,
+      "label_types": "异常"
+    },
+    {
+      "channel": "channel_41",
+      "start": "2000-06-25T00:51:30",
+      "end": "2000-06-25T03:07:00",
+      "duration_minutes": 136.0,
+      "label_types": "异常"
+    },
+    {
+      "channel": "channel_41",
+      "start": "2000-07-27T19:49:00",
+      "end": "2000-07-28T06:55:30",
+      "duration_minutes": 667.0,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_41",
+      "start": "2000-07-31T03:33:30",
+      "end": "2000-07-31T04:16:30",
+      "duration_minutes": 43.5,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_41",
+      "start": "2000-10-10T00:35:00",
+      "end": "2000-10-11T01:10:00",
+      "duration_minutes": 1475.5,
+      "label_types": "异常"
+    },
+    {
+      "channel": "channel_41",
+      "start": "2000-10-13T22:41:30",
+      "end": "2000-10-13T22:49:00",
+      "duration_minutes": 8.0,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_41",
+      "start": "2000-10-13T23:19:30",
+      "end": "2000-10-13T23:25:00",
+      "duration_minutes": 6.0,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_41",
+      "start": "2000-10-13T23:39:30",
+      "end": "2000-10-13T23:40:00",
+      "duration_minutes": 1.0,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_41",
+      "start": "2000-10-13T23:47:00",
+      "end": "2000-10-13T23:47:00",
+      "duration_minutes": 0.5,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_41",
+      "start": "2000-10-22T22:58:00",
+      "end": "2000-10-22T23:06:00",
+      "duration_minutes": 8.5,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_42",
+      "start": "2000-02-10T01:32:00",
+      "end": "2000-02-10T01:35:00",
+      "duration_minutes": 3.5,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_42",
+      "start": "2000-02-10T15:43:00",
+      "end": "2000-02-10T20:23:30",
+      "duration_minutes": 281.0,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_42",
+      "start": "2000-03-19T06:01:30",
+      "end": "2000-03-20T23:13:30",
+      "duration_minutes": 2472.5,
+      "label_types": "异常"
+    },
+    {
+      "channel": "channel_42",
+      "start": "2000-04-23T15:16:00",
+      "end": "2000-04-25T14:18:00",
+      "duration_minutes": 2822.5,
+      "label_types": "异常"
+    },
+    {
+      "channel": "channel_42",
+      "start": "2000-06-25T00:51:00",
+      "end": "2000-06-25T03:06:00",
+      "duration_minutes": 135.5,
+      "label_types": "异常"
+    },
+    {
+      "channel": "channel_42",
+      "start": "2000-07-27T19:49:00",
+      "end": "2000-07-28T06:55:30",
+      "duration_minutes": 667.0,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_42",
+      "start": "2000-07-31T03:33:30",
+      "end": "2000-07-31T04:16:30",
+      "duration_minutes": 43.5,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_42",
+      "start": "2000-10-10T01:10:00",
+      "end": "2000-10-11T00:11:30",
+      "duration_minutes": 1382.0,
+      "label_types": "异常"
+    },
+    {
+      "channel": "channel_42",
+      "start": "2000-10-13T22:41:30",
+      "end": "2000-10-13T22:49:00",
+      "duration_minutes": 8.0,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_42",
+      "start": "2000-10-13T23:19:30",
+      "end": "2000-10-13T23:24:30",
+      "duration_minutes": 5.5,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_42",
+      "start": "2000-10-13T23:39:30",
+      "end": "2000-10-13T23:40:00",
+      "duration_minutes": 1.0,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_42",
+      "start": "2000-10-13T23:47:00",
+      "end": "2000-10-13T23:47:00",
+      "duration_minutes": 0.5,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_42",
+      "start": "2000-10-14T00:17:30",
+      "end": "2000-10-14T00:18:00",
+      "duration_minutes": 1.0,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_42",
+      "start": "2000-10-22T22:58:00",
+      "end": "2000-10-22T23:05:30",
+      "duration_minutes": 8.0,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_43",
+      "start": "2000-02-10T01:32:00",
+      "end": "2000-02-10T01:35:00",
+      "duration_minutes": 3.5,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_43",
+      "start": "2000-02-10T01:53:00",
+      "end": "2000-02-10T01:53:00",
+      "duration_minutes": 0.5,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_43",
+      "start": "2000-02-10T01:55:00",
+      "end": "2000-02-10T01:55:00",
+      "duration_minutes": 0.5,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_43",
+      "start": "2000-02-10T15:41:30",
+      "end": "2000-02-10T20:25:00",
+      "duration_minutes": 284.0,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_43",
+      "start": "2000-03-19T06:01:30",
+      "end": "2000-03-20T23:13:30",
+      "duration_minutes": 2472.5,
+      "label_types": "异常"
+    },
+    {
+      "channel": "channel_43",
+      "start": "2000-04-23T15:16:00",
+      "end": "2000-04-25T14:18:00",
+      "duration_minutes": 2822.5,
+      "label_types": "异常"
+    },
+    {
+      "channel": "channel_43",
+      "start": "2000-06-25T00:47:00",
+      "end": "2000-06-25T03:07:00",
+      "duration_minutes": 140.5,
+      "label_types": "异常"
+    },
+    {
+      "channel": "channel_43",
+      "start": "2000-07-27T19:49:00",
+      "end": "2000-07-28T06:55:30",
+      "duration_minutes": 667.0,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_43",
+      "start": "2000-07-31T03:33:30",
+      "end": "2000-07-31T04:16:30",
+      "duration_minutes": 43.5,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_43",
+      "start": "2000-10-10T00:23:30",
+      "end": "2000-10-11T04:46:30",
+      "duration_minutes": 1703.5,
+      "label_types": "异常"
+    },
+    {
+      "channel": "channel_43",
+      "start": "2000-10-13T22:42:00",
+      "end": "2000-10-13T22:49:00",
+      "duration_minutes": 7.5,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_43",
+      "start": "2000-10-13T23:19:30",
+      "end": "2000-10-13T23:21:00",
+      "duration_minutes": 2.0,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_43",
+      "start": "2000-10-13T23:40:00",
+      "end": "2000-10-13T23:40:00",
+      "duration_minutes": 0.5,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_43",
+      "start": "2000-10-13T23:47:00",
+      "end": "2000-10-13T23:47:00",
+      "duration_minutes": 0.5,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_43",
+      "start": "2000-10-22T22:58:00",
+      "end": "2000-10-22T23:06:00",
+      "duration_minutes": 8.5,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_44",
+      "start": "2000-02-10T01:31:30",
+      "end": "2000-02-10T01:35:00",
+      "duration_minutes": 4.0,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_44",
+      "start": "2000-02-10T15:11:00",
+      "end": "2000-02-10T20:33:00",
+      "duration_minutes": 322.5,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_44",
+      "start": "2000-03-19T06:01:30",
+      "end": "2000-03-20T23:13:30",
+      "duration_minutes": 2472.5,
+      "label_types": "异常"
+    },
+    {
+      "channel": "channel_44",
+      "start": "2000-04-23T15:16:00",
+      "end": "2000-04-25T14:18:00",
+      "duration_minutes": 2822.5,
+      "label_types": "异常"
+    },
+    {
+      "channel": "channel_44",
+      "start": "2000-06-25T00:44:30",
+      "end": "2000-06-25T03:07:00",
+      "duration_minutes": 143.0,
+      "label_types": "异常"
+    },
+    {
+      "channel": "channel_44",
+      "start": "2000-07-27T19:49:00",
+      "end": "2000-07-28T06:55:30",
+      "duration_minutes": 667.0,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_44",
+      "start": "2000-07-31T03:33:30",
+      "end": "2000-07-31T04:16:30",
+      "duration_minutes": 43.5,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_44",
+      "start": "2000-10-10T00:41:00",
+      "end": "2000-10-11T03:24:30",
+      "duration_minutes": 1604.0,
+      "label_types": "异常"
+    },
+    {
+      "channel": "channel_44",
+      "start": "2000-10-13T22:42:00",
+      "end": "2000-10-13T22:48:30",
+      "duration_minutes": 7.0,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_44",
+      "start": "2000-10-13T23:19:30",
+      "end": "2000-10-13T23:24:30",
+      "duration_minutes": 5.5,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_44",
+      "start": "2000-10-13T23:39:30",
+      "end": "2000-10-13T23:40:00",
+      "duration_minutes": 1.0,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_44",
+      "start": "2000-10-13T23:47:00",
+      "end": "2000-10-13T23:47:00",
+      "duration_minutes": 0.5,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_44",
+      "start": "2000-10-22T22:58:00",
+      "end": "2000-10-22T23:06:00",
+      "duration_minutes": 8.5,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_45",
+      "start": "2000-02-10T01:32:00",
+      "end": "2000-02-10T01:35:00",
+      "duration_minutes": 3.5,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_45",
+      "start": "2000-02-10T15:41:30",
+      "end": "2000-02-10T20:25:00",
+      "duration_minutes": 284.0,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_45",
+      "start": "2000-03-19T06:01:30",
+      "end": "2000-03-20T23:13:30",
+      "duration_minutes": 2472.5,
+      "label_types": "异常"
+    },
+    {
+      "channel": "channel_45",
+      "start": "2000-04-23T15:16:00",
+      "end": "2000-04-25T14:18:00",
+      "duration_minutes": 2822.5,
+      "label_types": "异常"
+    },
+    {
+      "channel": "channel_45",
+      "start": "2000-06-25T00:49:00",
+      "end": "2000-06-25T03:09:00",
+      "duration_minutes": 140.5,
+      "label_types": "异常"
+    },
+    {
+      "channel": "channel_45",
+      "start": "2000-07-27T19:49:30",
+      "end": "2000-07-28T06:55:30",
+      "duration_minutes": 666.5,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_45",
+      "start": "2000-07-31T03:33:30",
+      "end": "2000-07-31T04:16:30",
+      "duration_minutes": 43.5,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_45",
+      "start": "2000-10-10T00:47:00",
+      "end": "2000-10-11T01:15:30",
+      "duration_minutes": 1469.0,
+      "label_types": "异常"
+    },
+    {
+      "channel": "channel_45",
+      "start": "2000-10-13T22:41:30",
+      "end": "2000-10-13T22:49:30",
+      "duration_minutes": 8.5,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_45",
+      "start": "2000-10-13T23:19:30",
+      "end": "2000-10-13T23:24:30",
+      "duration_minutes": 5.5,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_45",
+      "start": "2000-10-13T23:39:30",
+      "end": "2000-10-13T23:40:00",
+      "duration_minutes": 1.0,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_45",
+      "start": "2000-10-13T23:47:00",
+      "end": "2000-10-13T23:47:00",
+      "duration_minutes": 0.5,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_45",
+      "start": "2000-10-22T22:58:00",
+      "end": "2000-10-22T23:06:00",
+      "duration_minutes": 8.5,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_46",
+      "start": "2000-02-10T01:32:00",
+      "end": "2000-02-10T01:35:00",
+      "duration_minutes": 3.5,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_46",
+      "start": "2000-02-10T15:41:30",
+      "end": "2000-02-10T20:11:30",
+      "duration_minutes": 270.5,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_46",
+      "start": "2000-03-19T06:01:30",
+      "end": "2000-03-20T23:13:30",
+      "duration_minutes": 2472.5,
+      "label_types": "异常"
+    },
+    {
+      "channel": "channel_46",
+      "start": "2000-04-23T15:16:00",
+      "end": "2000-04-25T14:18:00",
+      "duration_minutes": 2822.5,
+      "label_types": "异常"
+    },
+    {
+      "channel": "channel_46",
+      "start": "2000-06-25T00:52:00",
+      "end": "2000-06-25T03:05:00",
+      "duration_minutes": 133.5,
+      "label_types": "异常"
+    },
+    {
+      "channel": "channel_46",
+      "start": "2000-07-27T19:49:00",
+      "end": "2000-07-28T06:55:30",
+      "duration_minutes": 667.0,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_46",
+      "start": "2000-07-31T03:33:30",
+      "end": "2000-07-31T04:16:30",
+      "duration_minutes": 43.5,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_46",
+      "start": "2000-10-10T00:58:30",
+      "end": "2000-10-11T01:21:30",
+      "duration_minutes": 1463.5,
+      "label_types": "异常"
+    },
+    {
+      "channel": "channel_46",
+      "start": "2000-10-13T22:43:00",
+      "end": "2000-10-13T22:54:30",
+      "duration_minutes": 12.0,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_46",
+      "start": "2000-10-13T23:19:30",
+      "end": "2000-10-13T23:21:00",
+      "duration_minutes": 2.0,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_46",
+      "start": "2000-10-13T23:39:30",
+      "end": "2000-10-13T23:40:00",
+      "duration_minutes": 1.0,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_46",
+      "start": "2000-10-13T23:47:00",
+      "end": "2000-10-13T23:47:00",
+      "duration_minutes": 0.5,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_46",
+      "start": "2000-10-14T00:17:30",
+      "end": "2000-10-14T00:18:00",
+      "duration_minutes": 1.0,
+      "label_types": "稀有事件"
+    },
+    {
+      "channel": "channel_46",
+      "start": "2000-10-22T22:58:30",
+      "end": "2000-10-22T23:06:00",
+      "duration_minutes": 8.0,
+      "label_types": "稀有事件"
+    }
+  ],
+  "monthly": [
+    {
+      "month": "2000-01",
+      "timepoints": 89279,
+      "anomaly_count": 0,
+      "rare_count": 0,
+      "abnormal_count": 0,
+      "abnormal_rate": 0.0,
+      "affected_timepoints": 0,
+      "affected_timepoint_rate": 0.0
+    },
+    {
+      "month": "2000-02",
+      "timepoints": 83520,
+      "anomaly_count": 0,
+      "rare_count": 3463,
+      "abnormal_count": 3463,
+      "abnormal_rate": 0.006910520434227331,
+      "affected_timepoints": 655,
+      "affected_timepoint_rate": 0.007842432950191571
+    },
+    {
+      "month": "2000-03",
+      "timepoints": 89280,
+      "anomaly_count": 29670,
+      "rare_count": 0,
+      "abnormal_count": 29670,
+      "abnormal_rate": 0.05538754480286738,
+      "affected_timepoints": 4945,
+      "affected_timepoint_rate": 0.05538754480286738
+    },
+    {
+      "month": "2000-04",
+      "timepoints": 86400,
+      "anomaly_count": 33870,
+      "rare_count": 0,
+      "abnormal_count": 33870,
+      "abnormal_rate": 0.06533564814814814,
+      "affected_timepoints": 5645,
+      "affected_timepoint_rate": 0.06533564814814814
+    },
+    {
+      "month": "2000-05",
+      "timepoints": 89280,
+      "anomaly_count": 0,
+      "rare_count": 0,
+      "abnormal_count": 0,
+      "abnormal_rate": 0.0,
+      "affected_timepoints": 0,
+      "affected_timepoint_rate": 0.0
+    },
+    {
+      "month": "2000-06",
+      "timepoints": 86400,
+      "anomaly_count": 1658,
+      "rare_count": 0,
+      "abnormal_count": 1658,
+      "abnormal_rate": 0.0031983024691358023,
+      "affected_timepoints": 290,
+      "affected_timepoint_rate": 0.0033564814814814816
+    },
+    {
+      "month": "2000-07",
+      "timepoints": 89280,
+      "anomaly_count": 0,
+      "rare_count": 8525,
+      "abnormal_count": 8525,
+      "abnormal_rate": 0.015914351851851853,
+      "affected_timepoints": 1421,
+      "affected_timepoint_rate": 0.01591621863799283
+    },
+    {
+      "month": "2000-08",
+      "timepoints": 89280,
+      "anomaly_count": 0,
+      "rare_count": 0,
+      "abnormal_count": 0,
+      "abnormal_rate": 0.0,
+      "affected_timepoints": 0,
+      "affected_timepoint_rate": 0.0
+    },
+    {
+      "month": "2000-09",
+      "timepoints": 86400,
+      "anomaly_count": 0,
+      "rare_count": 0,
+      "abnormal_count": 0,
+      "abnormal_rate": 0.0,
+      "affected_timepoints": 0,
+      "affected_timepoint_rate": 0.0
+    },
+    {
+      "month": "2000-10",
+      "timepoints": 89280,
+      "anomaly_count": 18195,
+      "rare_count": 276,
+      "abnormal_count": 18471,
+      "abnormal_rate": 0.03448140681003584,
+      "affected_timepoints": 3468,
+      "affected_timepoint_rate": 0.038844086021505374
+    },
+    {
+      "month": "2000-11",
+      "timepoints": 1,
+      "anomaly_count": 0,
+      "rare_count": 0,
+      "abnormal_count": 0,
+      "abnormal_rate": 0.0,
+      "affected_timepoints": 0,
+      "affected_timepoint_rate": 0.0
+    }
+  ],
+  "splits": [
+    {
+      "split": "训练集",
+      "timepoints": 614880,
+      "anomaly_count": 65198,
+      "rare_count": 11988,
+      "abnormal_count": 77186,
+      "abnormal_rate": 0.020921697458582706,
+      "affected_timepoints": 12956
+    },
+    {
+      "split": "验证集",
+      "timepoints": 131760,
+      "anomaly_count": 0,
+      "rare_count": 0,
+      "abnormal_count": 0,
+      "abnormal_rate": 0.0,
+      "affected_timepoints": 0
+    },
+    {
+      "split": "测试集",
+      "timepoints": 131760,
+      "anomaly_count": 18195,
+      "rare_count": 276,
+      "abnormal_count": 18471,
+      "abnormal_rate": 0.02336445051608986,
+      "affected_timepoints": 3468
+    }
+  ],
+  "simultaneous": [
+    {
+      "abnormal_channels": 1,
+      "timepoints": 287,
+      "share_of_abnormal_timepoints": 0.01747442766682903
+    },
+    {
+      "abnormal_channels": 2,
+      "timepoints": 265,
+      "share_of_abnormal_timepoints": 0.01613492450073064
+    },
+    {
+      "abnormal_channels": 3,
+      "timepoints": 29,
+      "share_of_abnormal_timepoints": 0.0017657087189478812
+    },
+    {
+      "abnormal_channels": 4,
+      "timepoints": 50,
+      "share_of_abnormal_timepoints": 0.0030443253774963468
+    },
+    {
+      "abnormal_channels": 5,
+      "timepoints": 205,
+      "share_of_abnormal_timepoints": 0.012481734047735022
+    },
+    {
+      "abnormal_channels": 6,
+      "timepoints": 15588,
+      "share_of_abnormal_timepoints": 0.9490988796882611
+    }
+  ],
+  "windows": [
+    {
+      "split": "训练集",
+      "candidate_windows": 12809,
+      "usable_clean_windows": 12524,
+      "excluded_windows": 285,
+      "excluded_rate": 0.022249980482473286
+    },
+    {
+      "split": "验证集",
+      "candidate_windows": 2744,
+      "usable_clean_windows": 2744,
+      "excluded_windows": 0,
+      "excluded_rate": 0.0
+    },
+    {
+      "split": "测试集",
+      "candidate_windows": 2744,
+      "usable_clean_windows": 2663,
+      "excluded_windows": 81,
+      "excluded_rate": 0.02951895043731778
+    }
+  ],
+  "natural_windows": [
+    {
+      "split": "训练集",
+      "candidate_windows": 12809,
+      "windows_with_missing": 285,
+      "partial_missing_windows": 31,
+      "fully_missing_windows": 254,
+      "affected_window_rate": 0.022249980482473262,
+      "median_missing_rate_affected": 1.0,
+      "mean_missing_rate_affected": 0.9403752436647174,
+      "max_missing_rate": 1.0
+    },
+    {
+      "split": "验证集",
+      "candidate_windows": 2744,
+      "windows_with_missing": 0,
+      "partial_missing_windows": 0,
+      "fully_missing_windows": 0,
+      "affected_window_rate": 0.0,
+      "median_missing_rate_affected": 0.0,
+      "mean_missing_rate_affected": 0.0,
+      "max_missing_rate": 0.0
+    },
+    {
+      "split": "测试集",
+      "candidate_windows": 2744,
+      "windows_with_missing": 81,
+      "partial_missing_windows": 25,
+      "fully_missing_windows": 56,
+      "affected_window_rate": 0.029518950437317785,
+      "median_missing_rate_affected": 1.0,
+      "mean_missing_rate_affected": 0.791795267489712,
+      "max_missing_rate": 1.0
+    }
+  ],
+  "artificial": [
+    {
+      "requested_ratio": 0.1,
+      "actual_ratio": 0.10069444444444445,
+      "windows": 2663,
+      "masked_per_window": 58,
+      "total_masked_window_cells": 154454,
+      "channel": "通道 41",
+      "channel_masked_count": 25621,
+      "channel_share": 0.165881103759048,
+      "position_min_count": 1508,
+      "position_max_count": 1708
+    },
+    {
+      "requested_ratio": 0.1,
+      "actual_ratio": 0.10069444444444445,
+      "windows": 2663,
+      "masked_per_window": 58,
+      "total_masked_window_cells": 154454,
+      "channel": "通道 42",
+      "channel_masked_count": 25615,
+      "channel_share": 0.16584225724163829,
+      "position_min_count": 1508,
+      "position_max_count": 1708
+    },
+    {
+      "requested_ratio": 0.1,
+      "actual_ratio": 0.10069444444444445,
+      "windows": 2663,
+      "masked_per_window": 58,
+      "total_masked_window_cells": 154454,
+      "channel": "通道 43",
+      "channel_masked_count": 25700,
+      "channel_share": 0.16639258290494258,
+      "position_min_count": 1508,
+      "position_max_count": 1708
+    },
+    {
+      "requested_ratio": 0.1,
+      "actual_ratio": 0.10069444444444445,
+      "windows": 2663,
+      "masked_per_window": 58,
+      "total_masked_window_cells": 154454,
+      "channel": "通道 44",
+      "channel_masked_count": 25616,
+      "channel_share": 0.16584873166120656,
+      "position_min_count": 1508,
+      "position_max_count": 1708
+    },
+    {
+      "requested_ratio": 0.1,
+      "actual_ratio": 0.10069444444444445,
+      "windows": 2663,
+      "masked_per_window": 58,
+      "total_masked_window_cells": 154454,
+      "channel": "通道 45",
+      "channel_masked_count": 26114,
+      "channel_share": 0.16907299260621286,
+      "position_min_count": 1508,
+      "position_max_count": 1708
+    },
+    {
+      "requested_ratio": 0.1,
+      "actual_ratio": 0.10069444444444445,
+      "windows": 2663,
+      "masked_per_window": 58,
+      "total_masked_window_cells": 154454,
+      "channel": "通道 46",
+      "channel_masked_count": 25788,
+      "channel_share": 0.16696233182695172,
+      "position_min_count": 1508,
+      "position_max_count": 1708
+    },
+    {
+      "requested_ratio": 0.5,
+      "actual_ratio": 0.5,
+      "windows": 2663,
+      "masked_per_window": 288,
+      "total_masked_window_cells": 766944,
+      "channel": "通道 41",
+      "channel_masked_count": 127740,
+      "channel_share": 0.16655714106896982,
+      "position_min_count": 7839,
+      "position_max_count": 8166
+    },
+    {
+      "requested_ratio": 0.5,
+      "actual_ratio": 0.5,
+      "windows": 2663,
+      "masked_per_window": 288,
+      "total_masked_window_cells": 766944,
+      "channel": "通道 42",
+      "channel_masked_count": 127638,
+      "channel_share": 0.16642414570033798,
+      "position_min_count": 7839,
+      "position_max_count": 8166
+    },
+    {
+      "requested_ratio": 0.5,
+      "actual_ratio": 0.5,
+      "windows": 2663,
+      "masked_per_window": 288,
+      "total_masked_window_cells": 766944,
+      "channel": "通道 43",
+      "channel_masked_count": 127708,
+      "channel_share": 0.166515417031752,
+      "position_min_count": 7839,
+      "position_max_count": 8166
+    },
+    {
+      "requested_ratio": 0.5,
+      "actual_ratio": 0.5,
+      "windows": 2663,
+      "masked_per_window": 288,
+      "total_masked_window_cells": 766944,
+      "channel": "通道 44",
+      "channel_masked_count": 127998,
+      "channel_share": 0.16689354111903867,
+      "position_min_count": 7839,
+      "position_max_count": 8166
+    },
+    {
+      "requested_ratio": 0.5,
+      "actual_ratio": 0.5,
+      "windows": 2663,
+      "masked_per_window": 288,
+      "total_masked_window_cells": 766944,
+      "channel": "通道 45",
+      "channel_masked_count": 127954,
+      "channel_share": 0.16683617056786415,
+      "position_min_count": 7839,
+      "position_max_count": 8166
+    },
+    {
+      "requested_ratio": 0.5,
+      "actual_ratio": 0.5,
+      "windows": 2663,
+      "masked_per_window": 288,
+      "total_masked_window_cells": 766944,
+      "channel": "通道 46",
+      "channel_masked_count": 127906,
+      "channel_share": 0.1667735845120374,
+      "position_min_count": 7839,
+      "position_max_count": 8166
+    },
+    {
+      "requested_ratio": 0.9,
+      "actual_ratio": 0.8993055555555556,
+      "windows": 2663,
+      "masked_per_window": 518,
+      "total_masked_window_cells": 1379434,
+      "channel": "通道 41",
+      "channel_masked_count": 229858,
+      "channel_share": 0.1666321114312102,
+      "position_min_count": 14277,
+      "position_max_count": 14450
+    },
+    {
+      "requested_ratio": 0.9,
+      "actual_ratio": 0.8993055555555556,
+      "windows": 2663,
+      "masked_per_window": 518,
+      "total_masked_window_cells": 1379434,
+      "channel": "通道 42",
+      "channel_masked_count": 229959,
+      "channel_share": 0.1667053298671774,
+      "position_min_count": 14277,
+      "position_max_count": 14450
+    },
+    {
+      "requested_ratio": 0.9,
+      "actual_ratio": 0.8993055555555556,
+      "windows": 2663,
+      "masked_per_window": 518,
+      "total_masked_window_cells": 1379434,
+      "channel": "通道 43",
+      "channel_masked_count": 229985,
+      "channel_share": 0.1667241781774264,
+      "position_min_count": 14277,
+      "position_max_count": 14450
+    },
+    {
+      "requested_ratio": 0.9,
+      "actual_ratio": 0.8993055555555556,
+      "windows": 2663,
+      "masked_per_window": 518,
+      "total_masked_window_cells": 1379434,
+      "channel": "通道 44",
+      "channel_masked_count": 229899,
+      "channel_share": 0.16666183376660282,
+      "position_min_count": 14277,
+      "position_max_count": 14450
+    },
+    {
+      "requested_ratio": 0.9,
+      "actual_ratio": 0.8993055555555556,
+      "windows": 2663,
+      "masked_per_window": 518,
+      "total_masked_window_cells": 1379434,
+      "channel": "通道 45",
+      "channel_masked_count": 230082,
+      "channel_share": 0.1667944968733553,
+      "position_min_count": 14277,
+      "position_max_count": 14450
+    },
+    {
+      "requested_ratio": 0.9,
+      "actual_ratio": 0.8993055555555556,
+      "windows": 2663,
+      "masked_per_window": 518,
+      "total_masked_window_cells": 1379434,
+      "channel": "通道 46",
+      "channel_masked_count": 229651,
+      "channel_share": 0.16648204988422788,
+      "position_min_count": 14277,
+      "position_max_count": 14450
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "checkpoint": "F:\\2026小学期\\CSDI_improve\\enhanced_csdi\\results\\mission1_enhanced_seed1\\training\\checkpoint_step_032000.pth",
+  "protocol_key": "channel_dropout_missing_50",
+  "windows": 2,
+  "headline_normalized": {
+    "missing_ratio": 0.5,
+    "method": "csdi",
+    "scale": "normalized",
+    "bucket": "all",
+    "group": "all_channels",
+    "channels": 76,
+    "eval_points": 7296,
+    "rmse": 0.5076605167682161,
+    "mae": 0.29015270769626733,
+    "crps": 0.2504673206399035
+  },
+  "duration_seconds": 3.8774439000044367,
+  "peak_gpu_memory_bytes": 173785088
+}

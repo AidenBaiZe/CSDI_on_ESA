@@ -1,0 +1,37 @@
+OMP: Info #212: KMP_AFFINITY: decoding x2APIC ids.
+OMP: Info #210: KMP_AFFINITY: Affinity capable, using global cpuid leaf 11 info
+OMP: Info #154: KMP_AFFINITY: Initial OS proc set respected: 0-19
+OMP: Info #156: KMP_AFFINITY: 20 available OS procs
+OMP: Info #158: KMP_AFFINITY: Nonuniform topology
+OMP: Info #179: KMP_AFFINITY: 1 packages x 14 cores/pkg x 2 threads/core (14 total cores)
+OMP: Info #214: KMP_AFFINITY: OS proc to physical thread map:
+OMP: Info #171: KMP_AFFINITY: OS proc 0 maps to package 0 core 0 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 1 maps to package 0 core 0 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 2 maps to package 0 core 4 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 3 maps to package 0 core 4 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 4 maps to package 0 core 8 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 5 maps to package 0 core 8 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 6 maps to package 0 core 12 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 7 maps to package 0 core 12 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 8 maps to package 0 core 16 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 9 maps to package 0 core 16 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 10 maps to package 0 core 20 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 11 maps to package 0 core 20 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 12 maps to package 0 core 24 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 13 maps to package 0 core 25 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 14 maps to package 0 core 26 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 15 maps to package 0 core 27 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 16 maps to package 0 core 28 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 17 maps to package 0 core 29 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 18 maps to package 0 core 30 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 19 maps to package 0 core 31 thread 0 
+OMP: Info #250: KMP_AFFINITY: pid 213940 tid 213300 thread 0 bound to OS proc set 0
+OMP: Info #250: KMP_AFFINITY: pid 213940 tid 131856 thread 1 bound to OS proc set 2
+OMP: Info #250: KMP_AFFINITY: pid 213940 tid 98172 thread 2 bound to OS proc set 4
+OMP: Info #250: KMP_AFFINITY: pid 213940 tid 126852 thread 3 bound to OS proc set 6
+2026-07-08 09:52:42.255110: I tensorflow/core/platform/cpu_feature_guard.cc:145] This TensorFlow binary is optimized with Intel(R) MKL-DNN to use the following CPU instructions in performance critical operations:  AVX AVX2
+To enable them in non-MKL-DNN operations, rebuild TensorFlow with the appropriate compiler flags.
+2026-07-08 09:52:42.357999: I tensorflow/core/common_runtime/process_util.cc:115] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
+WARNING:tensorflow:From F:\2026Ð¡Ñ§ÆÚ\CSDI\external\GP-VAE\lib\models.py:119: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where

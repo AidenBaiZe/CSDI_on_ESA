@@ -1,0 +1,8 @@
+{
+  "nsample": 50,
+  "batch_size": 8,
+  "chosen_chunk_size": 5,
+  "formal_window_count": 128,
+  "fallback_triggered": false,
+  "note": "Fixed to the same 128-window, 50-sample protocol used by Enhanced CSDI."
+}

@@ -1,0 +1,46 @@
+{
+  "created_at": "2026-07-15T18:56:20.982321+08:00",
+  "python": "3.12.1 (tags/v3.12.1:2305ca5, Dec  7 2023, 22:03:25) [MSC v.1937 64 bit (AMD64)]",
+  "torch": "2.11.0+cu128",
+  "numpy": "2.4.4",
+  "cuda_available": true,
+  "cuda_device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "files": {
+    "F:\\2026小学期\\CSDI\\ESA_mission1_structured\\config.yaml": {
+      "sha256": "31be9655687eeae0251af07d737b577af6095187bb116f0fb36c401b25a88923",
+      "size_bytes": 2032
+    },
+    "F:\\2026小学期\\CSDI\\ESA_mission1_structured\\masking.py": {
+      "sha256": "728581e3d12a79948f65d27432cefe8fc8f063c06623f41124211f8fd8721c53",
+      "size_bytes": 13636
+    },
+    "F:\\2026小学期\\CSDI\\ESA_mission1_structured\\model.py": {
+      "sha256": "2767d920a0a11a44dfb891b25a0b3b5a3440f0127af467ec657e0d74e0d3d5c5",
+      "size_bytes": 4717
+    },
+    "F:\\2026小学期\\CSDI\\ESA_mission1_structured\\run_structured.py": {
+      "sha256": "744a4215431e15d9315eb3a28e9b874960a1e7d14c3a1f878ef897b5bd1b8675",
+      "size_bytes": 38707
+    },
+    "F:\\2026小学期\\CSDI\\ESA_mission1_structured\\report_structured.py": {
+      "sha256": "5ac68174d5679e2feba5b7bdc6aa71ff93e9f2e6ff21830e33bcb08eb9fe045d",
+      "size_bytes": 19958
+    },
+    "F:\\2026小学期\\CSDI\\main_model.py": {
+      "sha256": "6ed301cda9978809de5d33d6e3331c7ca5f98afc715278046c48581ccd29de13",
+      "size_bytes": 17807
+    },
+    "F:\\2026小学期\\CSDI\\diff_models.py": {
+      "sha256": "3faa98dbca904a468e998f9c341a834ce6a85271db49c3ddca5f03b9daebc7b2",
+      "size_bytes": 6912
+    },
+    "F:\\2026小学期\\CSDI\\ESA_mission1\\dataset_esa.py": {
+      "sha256": "1340803a740ca7a68579eebf032859bd3814d845be871d69f4fb6b22b3229040",
+      "size_bytes": 13915
+    },
+    "F:\\2026小学期\\CSDI\\ESA_mission1\\experiment.py": {
+      "sha256": "f53a0d9839d7008ec153ff8d955dab873b01abf0ae4da51e794f4a49aaa9a559",
+      "size_bytes": 25978
+    }
+  }
+}

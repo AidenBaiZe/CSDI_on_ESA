@@ -1,0 +1,105 @@
+epoch=0 train_loss=60.978102 valid_mae=0.656107 valid_auc=0.456524
+epoch=1 train_loss=57.576184 valid_mae=0.620641 valid_auc=0.481595
+epoch=2 train_loss=55.423207 valid_mae=0.593437 valid_auc=0.522735
+epoch=3 train_loss=53.805548 valid_mae=0.583316 valid_auc=0.535328
+epoch=4 train_loss=52.980727 valid_mae=0.567601 valid_auc=0.549459
+epoch=5 train_loss=52.453473 valid_mae=0.565546 valid_auc=0.553162
+epoch=6 train_loss=51.823470 valid_mae=0.555897 valid_auc=0.560285
+epoch=7 train_loss=51.419352 valid_mae=0.552387 valid_auc=0.575214
+epoch=8 train_loss=51.288511 valid_mae=0.548114 valid_auc=0.589117
+epoch=9 train_loss=51.067486 valid_mae=0.546303 valid_auc=0.637379
+epoch=10 train_loss=50.864190 valid_mae=0.544290 valid_auc=0.602108
+epoch=11 train_loss=50.601695 valid_mae=0.543235 valid_auc=0.611054
+epoch=12 train_loss=50.352630 valid_mae=0.541038 valid_auc=0.640228
+epoch=13 train_loss=50.331218 valid_mae=0.539919 valid_auc=0.645413
+epoch=14 train_loss=50.185983 valid_mae=0.540061 valid_auc=0.627123
+epoch=15 train_loss=50.011412 valid_mae=0.538357 valid_auc=0.688034
+epoch=16 train_loss=49.795142 valid_mae=0.534113 valid_auc=0.691567
+epoch=17 train_loss=49.769388 valid_mae=0.530088 valid_auc=0.699715
+epoch=18 train_loss=49.510028 valid_mae=0.532182 valid_auc=0.694872
+epoch=19 train_loss=49.467754 valid_mae=0.530043 valid_auc=0.683761
+epoch=20 train_loss=49.316609 valid_mae=0.530331 valid_auc=0.696296
+epoch=21 train_loss=49.210066 valid_mae=0.529723 valid_auc=0.719031
+epoch=22 train_loss=49.071740 valid_mae=0.528989 valid_auc=0.696125
+epoch=23 train_loss=48.916858 valid_mae=0.531078 valid_auc=0.723248
+epoch=24 train_loss=49.004383 valid_mae=0.529707 valid_auc=0.713561
+epoch=25 train_loss=48.842283 valid_mae=0.525735 valid_auc=0.726268
+epoch=26 train_loss=48.719030 valid_mae=0.526503 valid_auc=0.730199
+epoch=27 train_loss=48.586137 valid_mae=0.520676 valid_auc=0.734473
+epoch=28 train_loss=48.482245 valid_mae=0.528004 valid_auc=0.725242
+epoch=29 train_loss=48.397425 valid_mae=0.525557 valid_auc=0.736923
+epoch=30 train_loss=48.223615 valid_mae=0.522587 valid_auc=0.727749
+epoch=31 train_loss=48.137099 valid_mae=0.522372 valid_auc=0.729060
+epoch=32 train_loss=48.028747 valid_mae=0.521986 valid_auc=0.722450
+epoch=33 train_loss=47.930917 valid_mae=0.518148 valid_auc=0.699943
+epoch=34 train_loss=47.922975 valid_mae=0.519263 valid_auc=0.724387
+epoch=35 train_loss=47.789909 valid_mae=0.517044 valid_auc=0.715157
+epoch=36 train_loss=47.712925 valid_mae=0.517131 valid_auc=0.734188
+epoch=37 train_loss=47.696222 valid_mae=0.517442 valid_auc=0.717835
+epoch=38 train_loss=47.580086 valid_mae=0.517666 valid_auc=0.732991
+epoch=39 train_loss=47.525792 valid_mae=0.513758 valid_auc=0.731282
+epoch=40 train_loss=47.369184 valid_mae=0.517491 valid_auc=0.746211
+epoch=41 train_loss=47.271170 valid_mae=0.515176 valid_auc=0.734017
+epoch=42 train_loss=47.208077 valid_mae=0.514070 valid_auc=0.755043
+epoch=43 train_loss=47.178795 valid_mae=0.517515 valid_auc=0.758689
+epoch=44 train_loss=47.096370 valid_mae=0.514431 valid_auc=0.748034
+epoch=45 train_loss=46.985361 valid_mae=0.515375 valid_auc=0.750199
+epoch=46 train_loss=46.877804 valid_mae=0.516433 valid_auc=0.740684
+epoch=47 train_loss=46.803362 valid_mae=0.515398 valid_auc=0.721652
+epoch=48 train_loss=46.788910 valid_mae=0.515842 valid_auc=0.743704
+epoch=49 train_loss=46.702104 valid_mae=0.511988 valid_auc=0.753675
+epoch=50 train_loss=46.556660 valid_mae=0.514192 valid_auc=0.748604
+epoch=51 train_loss=46.632179 valid_mae=0.516387 valid_auc=0.754701
+epoch=52 train_loss=46.465523 valid_mae=0.514208 valid_auc=0.766325
+epoch=53 train_loss=46.341564 valid_mae=0.513910 valid_auc=0.752422
+epoch=54 train_loss=46.490782 valid_mae=0.517506 valid_auc=0.735613
+epoch=55 train_loss=46.485402 valid_mae=0.514497 valid_auc=0.735613
+epoch=56 train_loss=46.381813 valid_mae=0.512565 valid_auc=0.722051
+epoch=57 train_loss=46.230556 valid_mae=0.514717 valid_auc=0.743476
+epoch=58 train_loss=46.145394 valid_mae=0.514854 valid_auc=0.756752
+epoch=59 train_loss=46.051140 valid_mae=0.515121 valid_auc=0.729231
+epoch=60 train_loss=45.960417 valid_mae=0.513030 valid_auc=0.736182
+epoch=61 train_loss=45.913302 valid_mae=0.515550 valid_auc=0.724103
+epoch=62 train_loss=45.764405 valid_mae=0.514269 valid_auc=0.745185
+epoch=63 train_loss=45.760709 valid_mae=0.516326 valid_auc=0.751510
+epoch=64 train_loss=45.687598 valid_mae=0.514275 valid_auc=0.756125
+epoch=65 train_loss=45.570585 valid_mae=0.513928 valid_auc=0.751795
+epoch=66 train_loss=45.557746 valid_mae=0.515426 valid_auc=0.751282
+epoch=67 train_loss=45.576559 valid_mae=0.514271 valid_auc=0.745242
+epoch=68 train_loss=45.520573 valid_mae=0.514507 valid_auc=0.727863
+epoch=69 train_loss=45.402124 valid_mae=0.514297 valid_auc=0.753960
+epoch=70 train_loss=45.287254 valid_mae=0.516244 valid_auc=0.728376
+epoch=71 train_loss=45.214936 valid_mae=0.515233 valid_auc=0.737094
+epoch=72 train_loss=45.187406 valid_mae=0.514324 valid_auc=0.721880
+epoch=73 train_loss=45.094999 valid_mae=0.516738 valid_auc=0.749117
+epoch=74 train_loss=44.947012 valid_mae=0.516566 valid_auc=0.729972
+epoch=75 train_loss=44.924072 valid_mae=0.515934 valid_auc=0.723191
+epoch=76 train_loss=44.858172 valid_mae=0.516180 valid_auc=0.745128
+epoch=77 train_loss=44.783278 valid_mae=0.516082 valid_auc=0.759202
+epoch=78 train_loss=44.962092 valid_mae=0.514711 valid_auc=0.730427
+epoch=79 train_loss=44.768896 valid_mae=0.517153 valid_auc=0.745698
+early_stop epoch=79 best_epoch=49 best_valid_mae=0.511988 patience=30
+{
+  "early_stopped": true,
+  "stopped_epoch": 79,
+  "best_epoch": 49,
+  "best_valid_mae": 0.5119878735846026,
+  "max_epochs": 300,
+  "patience": 30,
+  "min_delta": 0.0,
+  "valid": {
+    "mae": 0.5119878735846026,
+    "mre": 0.7234717913137604,
+    "auc": 0.7536752136752136,
+    "eval_points": 117818,
+    "num_records": 401
+  },
+  "test": {
+    "mae": 0.524634782420376,
+    "mre": 0.7416484061640796,
+    "auc": 0.7474053610094825,
+    "eval_points": 234397,
+    "num_records": 799
+  },
+  "target_paper_mae_10_missing": 0.284
+}

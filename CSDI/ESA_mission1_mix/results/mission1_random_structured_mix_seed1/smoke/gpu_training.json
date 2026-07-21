@@ -1,0 +1,59 @@
+{
+  "training": {
+    "start_step": 0,
+    "final_step": 3,
+    "batch_size": 16,
+    "samples_seen_total": 48,
+    "duration_seconds_this_run": 7.30888109999978,
+    "seconds_per_step_this_run": 2.436293699999927,
+    "peak_gpu_memory_bytes": 3933935616,
+    "fixed_final_checkpoint": "F:\\2026小学期\\CSDI\\ESA_mission1_mix\\results\\mission1_random_structured_mix_seed1\\smoke\\gpu_training\\checkpoint_step_000003.pth",
+    "validation_used": false,
+    "best_checkpoint_selection_used": false,
+    "gradient_clip_norm": 1.0,
+    "sanitize_nonfinite_gradients": true
+  },
+  "mask_statistics": {
+    "family_counts": {
+      "random": 32,
+      "time_block": 7,
+      "channel_dropout": 6,
+      "rectangle": 3
+    },
+    "family_fractions": {
+      "random": 0.6666666666666666,
+      "time_block": 0.14583333333333334,
+      "channel_dropout": 0.125,
+      "rectangle": 0.0625
+    },
+    "windows_seen": 48,
+    "sampled_ratio_mean": {
+      "random": 0.5160961505189334,
+      "time_block": 0.4072717396276338,
+      "channel_dropout": 0.5859770079453787,
+      "rectangle": 0.7156304717063904
+    },
+    "observed_points_by_family": {
+      "random": 233472,
+      "time_block": 51072,
+      "channel_dropout": 43776,
+      "rectangle": 21888
+    },
+    "target_points_by_family": {
+      "random": 120494,
+      "time_block": 20824,
+      "channel_dropout": 25632,
+      "rectangle": 15592
+    },
+    "actual_target_fraction_by_family": {
+      "random": 0.5160961485745614,
+      "time_block": 0.40773809523809523,
+      "channel_dropout": 0.5855263157894737,
+      "rectangle": 0.7123538011695907
+    },
+    "observed_points": 350208,
+    "target_points": 182542,
+    "actual_target_fraction": 0.5212388066520468
+  },
+  "checkpoint": "F:\\2026小学期\\CSDI\\ESA_mission1_mix\\results\\mission1_random_structured_mix_seed1\\smoke\\gpu_training\\checkpoint_step_000003.pth"
+}

@@ -1,0 +1,7213 @@
+{
+  "status": "completed",
+  "test": {
+    "mae": 0.7019012570381165,
+    "mse": 1.2491259574890137,
+    "crps": 0.7960012737466444,
+    "eval_points": 234397,
+    "num_samples": 100,
+    "num_records": 799,
+    "failures": 0
+  },
+  "per_record": [
+    {
+      "position": 1,
+      "record_index": 200,
+      "train_points": 5,
+      "eval_points": 43,
+      "loss": null,
+      "mae": 0.5376567244529724,
+      "mse": 0.5321065187454224
+    },
+    {
+      "position": 2,
+      "record_index": 2861,
+      "train_points": 32,
+      "eval_points": 282,
+      "loss": null,
+      "mae": 0.5075918436050415,
+      "mse": 0.44531792402267456
+    },
+    {
+      "position": 3,
+      "record_index": 610,
+      "train_points": 34,
+      "eval_points": 303,
+      "loss": null,
+      "mae": 0.6044846177101135,
+      "mse": 0.7364519834518433
+    },
+    {
+      "position": 4,
+      "record_index": 1918,
+      "train_points": 46,
+      "eval_points": 411,
+      "loss": null,
+      "mae": 0.5240289568901062,
+      "mse": 0.5853399038314819
+    },
+    {
+      "position": 5,
+      "record_index": 3561,
+      "train_points": 35,
+      "eval_points": 309,
+      "loss": null,
+      "mae": 0.5158156156539917,
+      "mse": 0.5946989059448242
+    },
+    {
+      "position": 6,
+      "record_index": 3391,
+      "train_points": 41,
+      "eval_points": 366,
+      "loss": null,
+      "mae": 0.6663264632225037,
+      "mse": 0.8628817796707153
+    },
+    {
+      "position": 7,
+      "record_index": 893,
+      "train_points": 46,
+      "eval_points": 408,
+      "loss": null,
+      "mae": 0.5855499505996704,
+      "mse": 0.6476751565933228
+    },
+    {
+      "position": 8,
+      "record_index": 2115,
+      "train_points": 31,
+      "eval_points": 270,
+      "loss": null,
+      "mae": 0.7835325598716736,
+      "mse": 1.2944860458374023
+    },
+    {
+      "position": 9,
+      "record_index": 1044,
+      "train_points": 44,
+      "eval_points": 390,
+      "loss": null,
+      "mae": 0.8338336944580078,
+      "mse": 1.5494953393936157
+    },
+    {
+      "position": 10,
+      "record_index": 1792,
+      "train_points": 50,
+      "eval_points": 449,
+      "loss": null,
+      "mae": 0.764198899269104,
+      "mse": 1.404343605041504
+    },
+    {
+      "position": 11,
+      "record_index": 102,
+      "train_points": 41,
+      "eval_points": 364,
+      "loss": null,
+      "mae": 0.753363311290741,
+      "mse": 2.8461248874664307
+    },
+    {
+      "position": 12,
+      "record_index": 2336,
+      "train_points": 35,
+      "eval_points": 313,
+      "loss": null,
+      "mae": 0.9119629263877869,
+      "mse": 1.764768123626709
+    },
+    {
+      "position": 13,
+      "record_index": 3704,
+      "train_points": 34,
+      "eval_points": 302,
+      "loss": null,
+      "mae": 0.6451102495193481,
+      "mse": 0.7392045855522156
+    },
+    {
+      "position": 14,
+      "record_index": 941,
+      "train_points": 25,
+      "eval_points": 222,
+      "loss": null,
+      "mae": 0.4563184082508087,
+      "mse": 0.40620020031929016
+    },
+    {
+      "position": 15,
+      "record_index": 2325,
+      "train_points": 21,
+      "eval_points": 186,
+      "loss": null,
+      "mae": 0.6195855736732483,
+      "mse": 0.6307273507118225
+    },
+    {
+      "position": 16,
+      "record_index": 3906,
+      "train_points": 41,
+      "eval_points": 361,
+      "loss": null,
+      "mae": 0.6014223694801331,
+      "mse": 0.810427188873291
+    },
+    {
+      "position": 17,
+      "record_index": 420,
+      "train_points": 34,
+      "eval_points": 301,
+      "loss": null,
+      "mae": 0.556277871131897,
+      "mse": 0.5761390328407288
+    },
+    {
+      "position": 18,
+      "record_index": 1164,
+      "train_points": 37,
+      "eval_points": 329,
+      "loss": null,
+      "mae": 0.890489399433136,
+      "mse": 1.900095820426941
+    },
+    {
+      "position": 19,
+      "record_index": 2097,
+      "train_points": 32,
+      "eval_points": 285,
+      "loss": null,
+      "mae": 0.6080626249313354,
+      "mse": 0.7595990300178528
+    },
+    {
+      "position": 20,
+      "record_index": 2745,
+      "train_points": 32,
+      "eval_points": 280,
+      "loss": null,
+      "mae": 0.5588171482086182,
+      "mse": 0.6852018237113953
+    },
+    {
+      "position": 21,
+      "record_index": 779,
+      "train_points": 32,
+      "eval_points": 284,
+      "loss": null,
+      "mae": 0.6208742260932922,
+      "mse": 0.6725518703460693
+    },
+    {
+      "position": 22,
+      "record_index": 3214,
+      "train_points": 34,
+      "eval_points": 303,
+      "loss": null,
+      "mae": 0.5866878628730774,
+      "mse": 0.7513994574546814
+    },
+    {
+      "position": 23,
+      "record_index": 3167,
+      "train_points": 40,
+      "eval_points": 355,
+      "loss": null,
+      "mae": 0.7909834980964661,
+      "mse": 1.2843928337097168
+    },
+    {
+      "position": 24,
+      "record_index": 557,
+      "train_points": 35,
+      "eval_points": 310,
+      "loss": null,
+      "mae": 0.4996960461139679,
+      "mse": 0.690759003162384
+    },
+    {
+      "position": 25,
+      "record_index": 1552,
+      "train_points": 36,
+      "eval_points": 316,
+      "loss": null,
+      "mae": 0.5696936249732971,
+      "mse": 0.763550877571106
+    },
+    {
+      "position": 26,
+      "record_index": 351,
+      "train_points": 36,
+      "eval_points": 321,
+      "loss": null,
+      "mae": 0.7103119492530823,
+      "mse": 0.9864164590835571
+    },
+    {
+      "position": 27,
+      "record_index": 230,
+      "train_points": 39,
+      "eval_points": 343,
+      "loss": null,
+      "mae": 0.5346861481666565,
+      "mse": 0.5183594822883606
+    },
+    {
+      "position": 28,
+      "record_index": 2510,
+      "train_points": 32,
+      "eval_points": 282,
+      "loss": null,
+      "mae": 1.0349431037902832,
+      "mse": 2.2872607707977295
+    },
+    {
+      "position": 29,
+      "record_index": 3365,
+      "train_points": 30,
+      "eval_points": 261,
+      "loss": null,
+      "mae": 0.5047587156295776,
+      "mse": 0.507298469543457
+    },
+    {
+      "position": 30,
+      "record_index": 3105,
+      "train_points": 27,
+      "eval_points": 238,
+      "loss": null,
+      "mae": 0.6522879600524902,
+      "mse": 0.7837346196174622
+    },
+    {
+      "position": 31,
+      "record_index": 1507,
+      "train_points": 31,
+      "eval_points": 275,
+      "loss": null,
+      "mae": 0.5125418305397034,
+      "mse": 0.4451683461666107
+    },
+    {
+      "position": 32,
+      "record_index": 700,
+      "train_points": 27,
+      "eval_points": 241,
+      "loss": null,
+      "mae": 0.621591329574585,
+      "mse": 0.7562431693077087
+    },
+    {
+      "position": 33,
+      "record_index": 349,
+      "train_points": 39,
+      "eval_points": 348,
+      "loss": null,
+      "mae": 0.6049355864524841,
+      "mse": 0.6428771018981934
+    },
+    {
+      "position": 34,
+      "record_index": 3778,
+      "train_points": 29,
+      "eval_points": 260,
+      "loss": null,
+      "mae": 0.7778220176696777,
+      "mse": 1.2637912034988403
+    },
+    {
+      "position": 35,
+      "record_index": 280,
+      "train_points": 29,
+      "eval_points": 254,
+      "loss": null,
+      "mae": 0.6625808477401733,
+      "mse": 0.8780941963195801
+    },
+    {
+      "position": 36,
+      "record_index": 1805,
+      "train_points": 31,
+      "eval_points": 270,
+      "loss": null,
+      "mae": 0.6583486795425415,
+      "mse": 0.9493770003318787
+    },
+    {
+      "position": 37,
+      "record_index": 630,
+      "train_points": 27,
+      "eval_points": 236,
+      "loss": null,
+      "mae": 0.7253022789955139,
+      "mse": 1.3340262174606323
+    },
+    {
+      "position": 38,
+      "record_index": 1751,
+      "train_points": 37,
+      "eval_points": 326,
+      "loss": null,
+      "mae": 0.7024580836296082,
+      "mse": 1.0374542474746704
+    },
+    {
+      "position": 39,
+      "record_index": 1249,
+      "train_points": 36,
+      "eval_points": 316,
+      "loss": null,
+      "mae": 0.5701819062232971,
+      "mse": 0.7996170520782471
+    },
+    {
+      "position": 40,
+      "record_index": 1236,
+      "train_points": 31,
+      "eval_points": 277,
+      "loss": null,
+      "mae": 0.8027282357215881,
+      "mse": 1.191080093383789
+    },
+    {
+      "position": 41,
+      "record_index": 1163,
+      "train_points": 38,
+      "eval_points": 339,
+      "loss": null,
+      "mae": 0.6976311206817627,
+      "mse": 1.0180695056915283
+    },
+    {
+      "position": 42,
+      "record_index": 1846,
+      "train_points": 30,
+      "eval_points": 261,
+      "loss": null,
+      "mae": 0.8425769209861755,
+      "mse": 1.7437164783477783
+    },
+    {
+      "position": 43,
+      "record_index": 2929,
+      "train_points": 32,
+      "eval_points": 284,
+      "loss": null,
+      "mae": 0.850627601146698,
+      "mse": 1.3638249635696411
+    },
+    {
+      "position": 44,
+      "record_index": 1766,
+      "train_points": 46,
+      "eval_points": 408,
+      "loss": null,
+      "mae": 0.5630466341972351,
+      "mse": 1.426339864730835
+    },
+    {
+      "position": 45,
+      "record_index": 2248,
+      "train_points": 27,
+      "eval_points": 241,
+      "loss": null,
+      "mae": 0.5648148059844971,
+      "mse": 0.6354098916053772
+    },
+    {
+      "position": 46,
+      "record_index": 2430,
+      "train_points": 29,
+      "eval_points": 253,
+      "loss": null,
+      "mae": 0.5319400429725647,
+      "mse": 0.5054289698600769
+    },
+    {
+      "position": 47,
+      "record_index": 2395,
+      "train_points": 36,
+      "eval_points": 321,
+      "loss": null,
+      "mae": 0.585979700088501,
+      "mse": 0.6159394383430481
+    },
+    {
+      "position": 48,
+      "record_index": 3433,
+      "train_points": 35,
+      "eval_points": 312,
+      "loss": null,
+      "mae": 0.7977124452590942,
+      "mse": 1.2911020517349243
+    },
+    {
+      "position": 49,
+      "record_index": 2774,
+      "train_points": 41,
+      "eval_points": 368,
+      "loss": null,
+      "mae": 0.9265719056129456,
+      "mse": 2.7172913551330566
+    },
+    {
+      "position": 50,
+      "record_index": 1435,
+      "train_points": 33,
+      "eval_points": 289,
+      "loss": null,
+      "mae": 0.4599791467189789,
+      "mse": 0.4631830155849457
+    },
+    {
+      "position": 51,
+      "record_index": 1938,
+      "train_points": 36,
+      "eval_points": 316,
+      "loss": null,
+      "mae": 0.5648725032806396,
+      "mse": 0.7128233313560486
+    },
+    {
+      "position": 52,
+      "record_index": 368,
+      "train_points": 31,
+      "eval_points": 270,
+      "loss": null,
+      "mae": 0.8016458749771118,
+      "mse": 1.3029253482818604
+    },
+    {
+      "position": 53,
+      "record_index": 709,
+      "train_points": 32,
+      "eval_points": 286,
+      "loss": null,
+      "mae": 0.4530218839645386,
+      "mse": 0.3660012185573578
+    },
+    {
+      "position": 54,
+      "record_index": 2950,
+      "train_points": 47,
+      "eval_points": 418,
+      "loss": null,
+      "mae": 0.8463647365570068,
+      "mse": 1.3744593858718872
+    },
+    {
+      "position": 55,
+      "record_index": 435,
+      "train_points": 31,
+      "eval_points": 270,
+      "loss": null,
+      "mae": 0.8688768148422241,
+      "mse": 1.538609266281128
+    },
+    {
+      "position": 56,
+      "record_index": 1123,
+      "train_points": 33,
+      "eval_points": 294,
+      "loss": null,
+      "mae": 0.7021960020065308,
+      "mse": 1.2216243743896484
+    },
+    {
+      "position": 57,
+      "record_index": 2429,
+      "train_points": 26,
+      "eval_points": 229,
+      "loss": null,
+      "mae": 0.46965059638023376,
+      "mse": 0.5972752571105957
+    },
+    {
+      "position": 58,
+      "record_index": 1729,
+      "train_points": 29,
+      "eval_points": 257,
+      "loss": null,
+      "mae": 0.7632939219474792,
+      "mse": 1.0292550325393677
+    },
+    {
+      "position": 59,
+      "record_index": 705,
+      "train_points": 31,
+      "eval_points": 276,
+      "loss": null,
+      "mae": 0.7490985989570618,
+      "mse": 0.8891557455062866
+    },
+    {
+      "position": 60,
+      "record_index": 3601,
+      "train_points": 38,
+      "eval_points": 337,
+      "loss": null,
+      "mae": 1.0027987957000732,
+      "mse": 2.4192540645599365
+    },
+    {
+      "position": 61,
+      "record_index": 2743,
+      "train_points": 30,
+      "eval_points": 266,
+      "loss": null,
+      "mae": 0.8569973707199097,
+      "mse": 1.308811902999878
+    },
+    {
+      "position": 62,
+      "record_index": 1145,
+      "train_points": 34,
+      "eval_points": 305,
+      "loss": null,
+      "mae": 0.8069047331809998,
+      "mse": 1.3734519481658936
+    },
+    {
+      "position": 63,
+      "record_index": 587,
+      "train_points": 29,
+      "eval_points": 257,
+      "loss": null,
+      "mae": 0.8300341367721558,
+      "mse": 1.2935582399368286
+    },
+    {
+      "position": 64,
+      "record_index": 1074,
+      "train_points": 36,
+      "eval_points": 320,
+      "loss": null,
+      "mae": 0.5423382520675659,
+      "mse": 0.5663162469863892
+    },
+    {
+      "position": 65,
+      "record_index": 2977,
+      "train_points": 37,
+      "eval_points": 330,
+      "loss": null,
+      "mae": 0.7225393056869507,
+      "mse": 1.564980387687683
+    },
+    {
+      "position": 66,
+      "record_index": 3172,
+      "train_points": 35,
+      "eval_points": 307,
+      "loss": null,
+      "mae": 0.6784880757331848,
+      "mse": 0.884122371673584
+    },
+    {
+      "position": 67,
+      "record_index": 749,
+      "train_points": 34,
+      "eval_points": 304,
+      "loss": null,
+      "mae": 0.5694611668586731,
+      "mse": 0.8329190015792847
+    },
+    {
+      "position": 68,
+      "record_index": 3420,
+      "train_points": 31,
+      "eval_points": 270,
+      "loss": null,
+      "mae": 0.7766698598861694,
+      "mse": 1.2483593225479126
+    },
+    {
+      "position": 69,
+      "record_index": 292,
+      "train_points": 38,
+      "eval_points": 340,
+      "loss": null,
+      "mae": 0.47785088419914246,
+      "mse": 0.3884824514389038
+    },
+    {
+      "position": 70,
+      "record_index": 2369,
+      "train_points": 35,
+      "eval_points": 312,
+      "loss": null,
+      "mae": 0.7789307832717896,
+      "mse": 2.8945186138153076
+    },
+    {
+      "position": 71,
+      "record_index": 1489,
+      "train_points": 30,
+      "eval_points": 261,
+      "loss": null,
+      "mae": 0.9087967276573181,
+      "mse": 1.4725031852722168
+    },
+    {
+      "position": 72,
+      "record_index": 1720,
+      "train_points": 36,
+      "eval_points": 323,
+      "loss": null,
+      "mae": 0.682431161403656,
+      "mse": 1.0322659015655518
+    },
+    {
+      "position": 73,
+      "record_index": 1215,
+      "train_points": 35,
+      "eval_points": 307,
+      "loss": null,
+      "mae": 0.6082186102867126,
+      "mse": 0.7495177388191223
+    },
+    {
+      "position": 74,
+      "record_index": 2888,
+      "train_points": 26,
+      "eval_points": 232,
+      "loss": null,
+      "mae": 0.6185328960418701,
+      "mse": 0.7471123337745667
+    },
+    {
+      "position": 75,
+      "record_index": 1708,
+      "train_points": 37,
+      "eval_points": 325,
+      "loss": null,
+      "mae": 0.7395815849304199,
+      "mse": 1.2228436470031738
+    },
+    {
+      "position": 76,
+      "record_index": 3681,
+      "train_points": 43,
+      "eval_points": 384,
+      "loss": null,
+      "mae": 0.9808443188667297,
+      "mse": 1.9504867792129517
+    },
+    {
+      "position": 77,
+      "record_index": 1956,
+      "train_points": 28,
+      "eval_points": 244,
+      "loss": null,
+      "mae": 0.864628255367279,
+      "mse": 1.439716100692749
+    },
+    {
+      "position": 78,
+      "record_index": 2706,
+      "train_points": 6,
+      "eval_points": 46,
+      "loss": null,
+      "mae": 1.3780878782272339,
+      "mse": 3.057440996170044
+    },
+    {
+      "position": 79,
+      "record_index": 2720,
+      "train_points": 44,
+      "eval_points": 391,
+      "loss": null,
+      "mae": 0.4987453818321228,
+      "mse": 0.6050168871879578
+    },
+    {
+      "position": 80,
+      "record_index": 364,
+      "train_points": 32,
+      "eval_points": 282,
+      "loss": null,
+      "mae": 0.7709577083587646,
+      "mse": 1.7813465595245361
+    },
+    {
+      "position": 81,
+      "record_index": 1732,
+      "train_points": 30,
+      "eval_points": 269,
+      "loss": null,
+      "mae": 0.8510416150093079,
+      "mse": 1.5530039072036743
+    },
+    {
+      "position": 82,
+      "record_index": 299,
+      "train_points": 29,
+      "eval_points": 258,
+      "loss": null,
+      "mae": 0.6581601500511169,
+      "mse": 0.7962659001350403
+    },
+    {
+      "position": 83,
+      "record_index": 398,
+      "train_points": 36,
+      "eval_points": 324,
+      "loss": null,
+      "mae": 0.4580923914909363,
+      "mse": 0.5644512176513672
+    },
+    {
+      "position": 84,
+      "record_index": 891,
+      "train_points": 27,
+      "eval_points": 238,
+      "loss": null,
+      "mae": 0.5514400601387024,
+      "mse": 0.5915576219558716
+    },
+    {
+      "position": 85,
+      "record_index": 701,
+      "train_points": 39,
+      "eval_points": 349,
+      "loss": null,
+      "mae": 0.790647566318512,
+      "mse": 1.4457484483718872
+    },
+    {
+      "position": 86,
+      "record_index": 1856,
+      "train_points": 40,
+      "eval_points": 353,
+      "loss": null,
+      "mae": 0.7591487169265747,
+      "mse": 1.1282556056976318
+    },
+    {
+      "position": 87,
+      "record_index": 1338,
+      "train_points": 32,
+      "eval_points": 283,
+      "loss": null,
+      "mae": 0.9274594187736511,
+      "mse": 1.7330812215805054
+    },
+    {
+      "position": 88,
+      "record_index": 210,
+      "train_points": 48,
+      "eval_points": 429,
+      "loss": null,
+      "mae": 0.6905850768089294,
+      "mse": 0.8173614144325256
+    },
+    {
+      "position": 89,
+      "record_index": 555,
+      "train_points": 26,
+      "eval_points": 229,
+      "loss": null,
+      "mae": 0.5393071174621582,
+      "mse": 0.5014496445655823
+    },
+    {
+      "position": 90,
+      "record_index": 2933,
+      "train_points": 20,
+      "eval_points": 180,
+      "loss": null,
+      "mae": 0.7880140542984009,
+      "mse": 1.0730016231536865
+    },
+    {
+      "position": 91,
+      "record_index": 331,
+      "train_points": 17,
+      "eval_points": 153,
+      "loss": null,
+      "mae": 1.163594365119934,
+      "mse": 4.013118743896484
+    },
+    {
+      "position": 92,
+      "record_index": 1125,
+      "train_points": 23,
+      "eval_points": 202,
+      "loss": null,
+      "mae": 0.6126704216003418,
+      "mse": 0.6478345394134521
+    },
+    {
+      "position": 93,
+      "record_index": 3797,
+      "train_points": 28,
+      "eval_points": 245,
+      "loss": null,
+      "mae": 0.5425767302513123,
+      "mse": 0.5422872304916382
+    },
+    {
+      "position": 94,
+      "record_index": 3653,
+      "train_points": 38,
+      "eval_points": 338,
+      "loss": null,
+      "mae": 0.8333879113197327,
+      "mse": 1.3335660696029663
+    },
+    {
+      "position": 95,
+      "record_index": 2037,
+      "train_points": 48,
+      "eval_points": 429,
+      "loss": null,
+      "mae": 0.5207341909408569,
+      "mse": 0.52666175365448
+    },
+    {
+      "position": 96,
+      "record_index": 2009,
+      "train_points": 41,
+      "eval_points": 368,
+      "loss": null,
+      "mae": 0.6425925493240356,
+      "mse": 0.9782217144966125
+    },
+    {
+      "position": 97,
+      "record_index": 2271,
+      "train_points": 4,
+      "eval_points": 29,
+      "loss": null,
+      "mae": 0.8206738233566284,
+      "mse": 0.9774479866027832
+    },
+    {
+      "position": 98,
+      "record_index": 416,
+      "train_points": 41,
+      "eval_points": 360,
+      "loss": null,
+      "mae": 1.0102194547653198,
+      "mse": 1.8296160697937012
+    },
+    {
+      "position": 99,
+      "record_index": 3607,
+      "train_points": 34,
+      "eval_points": 305,
+      "loss": null,
+      "mae": 0.4967617988586426,
+      "mse": 0.4545614421367645
+    },
+    {
+      "position": 100,
+      "record_index": 1519,
+      "train_points": 37,
+      "eval_points": 328,
+      "loss": null,
+      "mae": 1.205111026763916,
+      "mse": 3.2684061527252197
+    },
+    {
+      "position": 101,
+      "record_index": 1596,
+      "train_points": 29,
+      "eval_points": 260,
+      "loss": null,
+      "mae": 0.6294159889221191,
+      "mse": 0.7444647550582886
+    },
+    {
+      "position": 102,
+      "record_index": 136,
+      "train_points": 20,
+      "eval_points": 172,
+      "loss": null,
+      "mae": 0.48718616366386414,
+      "mse": 0.44329291582107544
+    },
+    {
+      "position": 103,
+      "record_index": 161,
+      "train_points": 33,
+      "eval_points": 289,
+      "loss": null,
+      "mae": 0.8618811368942261,
+      "mse": 2.131253242492676
+    },
+    {
+      "position": 104,
+      "record_index": 1468,
+      "train_points": 29,
+      "eval_points": 259,
+      "loss": null,
+      "mae": 0.46418389678001404,
+      "mse": 0.5963616967201233
+    },
+    {
+      "position": 105,
+      "record_index": 3549,
+      "train_points": 32,
+      "eval_points": 280,
+      "loss": null,
+      "mae": 0.5758712887763977,
+      "mse": 0.6667672395706177
+    },
+    {
+      "position": 106,
+      "record_index": 389,
+      "train_points": 20,
+      "eval_points": 174,
+      "loss": null,
+      "mae": 0.6071692109107971,
+      "mse": 0.7437223196029663
+    },
+    {
+      "position": 107,
+      "record_index": 3195,
+      "train_points": 34,
+      "eval_points": 302,
+      "loss": null,
+      "mae": 0.5404001474380493,
+      "mse": 0.583051860332489
+    },
+    {
+      "position": 108,
+      "record_index": 3706,
+      "train_points": 43,
+      "eval_points": 386,
+      "loss": null,
+      "mae": 0.5499357581138611,
+      "mse": 0.609978199005127
+    },
+    {
+      "position": 109,
+      "record_index": 2930,
+      "train_points": 33,
+      "eval_points": 297,
+      "loss": null,
+      "mae": 0.5507673025131226,
+      "mse": 0.5696604251861572
+    },
+    {
+      "position": 110,
+      "record_index": 3043,
+      "train_points": 21,
+      "eval_points": 180,
+      "loss": null,
+      "mae": 1.3239212036132812,
+      "mse": 3.8540401458740234
+    },
+    {
+      "position": 111,
+      "record_index": 2555,
+      "train_points": 40,
+      "eval_points": 357,
+      "loss": null,
+      "mae": 0.5901063084602356,
+      "mse": 0.9722555875778198
+    },
+    {
+      "position": 112,
+      "record_index": 2579,
+      "train_points": 33,
+      "eval_points": 288,
+      "loss": null,
+      "mae": 0.631007730960846,
+      "mse": 0.7136769890785217
+    },
+    {
+      "position": 113,
+      "record_index": 2448,
+      "train_points": 27,
+      "eval_points": 243,
+      "loss": null,
+      "mae": 0.6579112410545349,
+      "mse": 0.8539677262306213
+    },
+    {
+      "position": 114,
+      "record_index": 3504,
+      "train_points": 30,
+      "eval_points": 270,
+      "loss": null,
+      "mae": 0.6861323714256287,
+      "mse": 0.8155632615089417
+    },
+    {
+      "position": 115,
+      "record_index": 219,
+      "train_points": 32,
+      "eval_points": 286,
+      "loss": null,
+      "mae": 0.4255037307739258,
+      "mse": 0.32236534357070923
+    },
+    {
+      "position": 116,
+      "record_index": 3372,
+      "train_points": 32,
+      "eval_points": 287,
+      "loss": null,
+      "mae": 0.6124352812767029,
+      "mse": 0.700128436088562
+    },
+    {
+      "position": 117,
+      "record_index": 123,
+      "train_points": 36,
+      "eval_points": 317,
+      "loss": null,
+      "mae": 0.6164658665657043,
+      "mse": 0.7083734273910522
+    },
+    {
+      "position": 118,
+      "record_index": 3531,
+      "train_points": 34,
+      "eval_points": 301,
+      "loss": null,
+      "mae": 0.606809675693512,
+      "mse": 0.6629550457000732
+    },
+    {
+      "position": 119,
+      "record_index": 366,
+      "train_points": 33,
+      "eval_points": 288,
+      "loss": null,
+      "mae": 0.40696918964385986,
+      "mse": 0.3271695375442505
+    },
+    {
+      "position": 120,
+      "record_index": 2871,
+      "train_points": 40,
+      "eval_points": 352,
+      "loss": null,
+      "mae": 0.5111411809921265,
+      "mse": 0.6499490141868591
+    },
+    {
+      "position": 121,
+      "record_index": 2744,
+      "train_points": 31,
+      "eval_points": 270,
+      "loss": null,
+      "mae": 0.41832688450813293,
+      "mse": 0.45871177315711975
+    },
+    {
+      "position": 122,
+      "record_index": 3489,
+      "train_points": 20,
+      "eval_points": 174,
+      "loss": null,
+      "mae": 0.6250549554824829,
+      "mse": 0.6687255501747131
+    },
+    {
+      "position": 123,
+      "record_index": 2607,
+      "train_points": 28,
+      "eval_points": 245,
+      "loss": null,
+      "mae": 0.6374316215515137,
+      "mse": 0.7085995078086853
+    },
+    {
+      "position": 124,
+      "record_index": 1452,
+      "train_points": 35,
+      "eval_points": 310,
+      "loss": null,
+      "mae": 0.7967968583106995,
+      "mse": 1.7325040102005005
+    },
+    {
+      "position": 125,
+      "record_index": 1562,
+      "train_points": 27,
+      "eval_points": 237,
+      "loss": null,
+      "mae": 1.021082878112793,
+      "mse": 2.1529479026794434
+    },
+    {
+      "position": 126,
+      "record_index": 1962,
+      "train_points": 26,
+      "eval_points": 226,
+      "loss": null,
+      "mae": 0.7509422898292542,
+      "mse": 0.9809260964393616
+    },
+    {
+      "position": 127,
+      "record_index": 921,
+      "train_points": 28,
+      "eval_points": 251,
+      "loss": null,
+      "mae": 0.7609279751777649,
+      "mse": 1.674931526184082
+    },
+    {
+      "position": 128,
+      "record_index": 490,
+      "train_points": 25,
+      "eval_points": 225,
+      "loss": null,
+      "mae": 0.6517354846000671,
+      "mse": 0.7826083898544312
+    },
+    {
+      "position": 129,
+      "record_index": 1105,
+      "train_points": 30,
+      "eval_points": 268,
+      "loss": null,
+      "mae": 0.5490317940711975,
+      "mse": 0.608594536781311
+    },
+    {
+      "position": 130,
+      "record_index": 784,
+      "train_points": 31,
+      "eval_points": 271,
+      "loss": null,
+      "mae": 0.6196382641792297,
+      "mse": 0.7452746629714966
+    },
+    {
+      "position": 131,
+      "record_index": 2970,
+      "train_points": 34,
+      "eval_points": 297,
+      "loss": null,
+      "mae": 0.6630608439445496,
+      "mse": 1.1177489757537842
+    },
+    {
+      "position": 132,
+      "record_index": 1957,
+      "train_points": 34,
+      "eval_points": 305,
+      "loss": null,
+      "mae": 0.4976533353328705,
+      "mse": 0.473234087228775
+    },
+    {
+      "position": 133,
+      "record_index": 685,
+      "train_points": 28,
+      "eval_points": 247,
+      "loss": null,
+      "mae": 0.8552492260932922,
+      "mse": 1.3018836975097656
+    },
+    {
+      "position": 134,
+      "record_index": 3231,
+      "train_points": 34,
+      "eval_points": 304,
+      "loss": null,
+      "mae": 0.5105712413787842,
+      "mse": 0.6882566809654236
+    },
+    {
+      "position": 135,
+      "record_index": 2816,
+      "train_points": 29,
+      "eval_points": 259,
+      "loss": null,
+      "mae": 0.5305850505828857,
+      "mse": 0.5812582969665527
+    },
+    {
+      "position": 136,
+      "record_index": 3229,
+      "train_points": 36,
+      "eval_points": 316,
+      "loss": null,
+      "mae": 0.6966901421546936,
+      "mse": 2.004409074783325
+    },
+    {
+      "position": 137,
+      "record_index": 1907,
+      "train_points": 31,
+      "eval_points": 279,
+      "loss": null,
+      "mae": 1.0092684030532837,
+      "mse": 1.978248119354248
+    },
+    {
+      "position": 138,
+      "record_index": 2361,
+      "train_points": 36,
+      "eval_points": 321,
+      "loss": null,
+      "mae": 0.6217767000198364,
+      "mse": 0.7695173025131226
+    },
+    {
+      "position": 139,
+      "record_index": 2570,
+      "train_points": 28,
+      "eval_points": 245,
+      "loss": null,
+      "mae": 0.7104087471961975,
+      "mse": 0.9309038519859314
+    },
+    {
+      "position": 140,
+      "record_index": 2656,
+      "train_points": 34,
+      "eval_points": 303,
+      "loss": null,
+      "mae": 0.7996097207069397,
+      "mse": 1.174773097038269
+    },
+    {
+      "position": 141,
+      "record_index": 3899,
+      "train_points": 25,
+      "eval_points": 216,
+      "loss": null,
+      "mae": 0.7358781099319458,
+      "mse": 1.0782623291015625
+    },
+    {
+      "position": 142,
+      "record_index": 481,
+      "train_points": 42,
+      "eval_points": 374,
+      "loss": null,
+      "mae": 0.8068746328353882,
+      "mse": 1.169664978981018
+    },
+    {
+      "position": 143,
+      "record_index": 3880,
+      "train_points": 25,
+      "eval_points": 224,
+      "loss": null,
+      "mae": 0.9329180121421814,
+      "mse": 1.9743801355361938
+    },
+    {
+      "position": 144,
+      "record_index": 17,
+      "train_points": 34,
+      "eval_points": 298,
+      "loss": null,
+      "mae": 0.41915252804756165,
+      "mse": 0.33700597286224365
+    },
+    {
+      "position": 145,
+      "record_index": 968,
+      "train_points": 35,
+      "eval_points": 306,
+      "loss": null,
+      "mae": 0.6093671321868896,
+      "mse": 0.8025955557823181
+    },
+    {
+      "position": 146,
+      "record_index": 1668,
+      "train_points": 32,
+      "eval_points": 280,
+      "loss": null,
+      "mae": 0.6679986119270325,
+      "mse": 0.8041835427284241
+    },
+    {
+      "position": 147,
+      "record_index": 2630,
+      "train_points": 37,
+      "eval_points": 329,
+      "loss": null,
+      "mae": 0.423231303691864,
+      "mse": 0.43727847933769226
+    },
+    {
+      "position": 148,
+      "record_index": 2470,
+      "train_points": 32,
+      "eval_points": 283,
+      "loss": null,
+      "mae": 0.5565233826637268,
+      "mse": 0.8004329800605774
+    },
+    {
+      "position": 149,
+      "record_index": 2236,
+      "train_points": 33,
+      "eval_points": 297,
+      "loss": null,
+      "mae": 0.7225250601768494,
+      "mse": 0.8448016047477722
+    },
+    {
+      "position": 150,
+      "record_index": 393,
+      "train_points": 31,
+      "eval_points": 272,
+      "loss": null,
+      "mae": 0.5730412602424622,
+      "mse": 0.6585935950279236
+    },
+    {
+      "position": 151,
+      "record_index": 1098,
+      "train_points": 39,
+      "eval_points": 351,
+      "loss": null,
+      "mae": 0.5301088690757751,
+      "mse": 0.6395255923271179
+    },
+    {
+      "position": 152,
+      "record_index": 3595,
+      "train_points": 33,
+      "eval_points": 296,
+      "loss": null,
+      "mae": 0.38360586762428284,
+      "mse": 0.30074942111968994
+    },
+    {
+      "position": 153,
+      "record_index": 3634,
+      "train_points": 37,
+      "eval_points": 332,
+      "loss": null,
+      "mae": 0.5642974376678467,
+      "mse": 0.717165470123291
+    },
+    {
+      "position": 154,
+      "record_index": 1281,
+      "train_points": 39,
+      "eval_points": 346,
+      "loss": null,
+      "mae": 0.480849027633667,
+      "mse": 0.547749400138855
+    },
+    {
+      "position": 155,
+      "record_index": 517,
+      "train_points": 27,
+      "eval_points": 238,
+      "loss": null,
+      "mae": 0.7141021490097046,
+      "mse": 1.079359769821167
+    },
+    {
+      "position": 156,
+      "record_index": 487,
+      "train_points": 18,
+      "eval_points": 153,
+      "loss": null,
+      "mae": 0.6174525618553162,
+      "mse": 0.6993919014930725
+    },
+    {
+      "position": 157,
+      "record_index": 796,
+      "train_points": 41,
+      "eval_points": 360,
+      "loss": null,
+      "mae": 0.7841945886611938,
+      "mse": 1.215349555015564
+    },
+    {
+      "position": 158,
+      "record_index": 187,
+      "train_points": 39,
+      "eval_points": 348,
+      "loss": null,
+      "mae": 0.9809145927429199,
+      "mse": 2.3165340423583984
+    },
+    {
+      "position": 159,
+      "record_index": 988,
+      "train_points": 34,
+      "eval_points": 304,
+      "loss": null,
+      "mae": 0.6072745323181152,
+      "mse": 0.7448520064353943
+    },
+    {
+      "position": 160,
+      "record_index": 1947,
+      "train_points": 28,
+      "eval_points": 250,
+      "loss": null,
+      "mae": 0.74872887134552,
+      "mse": 1.1541365385055542
+    },
+    {
+      "position": 161,
+      "record_index": 3457,
+      "train_points": 32,
+      "eval_points": 279,
+      "loss": null,
+      "mae": 0.5817246437072754,
+      "mse": 0.5691609978675842
+    },
+    {
+      "position": 162,
+      "record_index": 3369,
+      "train_points": 31,
+      "eval_points": 277,
+      "loss": null,
+      "mae": 0.6645838618278503,
+      "mse": 0.9160792827606201
+    },
+    {
+      "position": 163,
+      "record_index": 3348,
+      "train_points": 30,
+      "eval_points": 268,
+      "loss": null,
+      "mae": 1.0296895503997803,
+      "mse": 1.924533724784851
+    },
+    {
+      "position": 164,
+      "record_index": 1271,
+      "train_points": 27,
+      "eval_points": 237,
+      "loss": null,
+      "mae": 0.5214136242866516,
+      "mse": 0.6025398373603821
+    },
+    {
+      "position": 165,
+      "record_index": 957,
+      "train_points": 33,
+      "eval_points": 297,
+      "loss": null,
+      "mae": 0.5549208521842957,
+      "mse": 0.5647754073143005
+    },
+    {
+      "position": 166,
+      "record_index": 2611,
+      "train_points": 24,
+      "eval_points": 207,
+      "loss": null,
+      "mae": 0.7887760400772095,
+      "mse": 1.0834667682647705
+    },
+    {
+      "position": 167,
+      "record_index": 1239,
+      "train_points": 34,
+      "eval_points": 305,
+      "loss": null,
+      "mae": 0.4961205720901489,
+      "mse": 0.4288695156574249
+    },
+    {
+      "position": 168,
+      "record_index": 823,
+      "train_points": 32,
+      "eval_points": 282,
+      "loss": null,
+      "mae": 0.5708000063896179,
+      "mse": 0.6573053598403931
+    },
+    {
+      "position": 169,
+      "record_index": 1208,
+      "train_points": 33,
+      "eval_points": 293,
+      "loss": null,
+      "mae": 0.785814106464386,
+      "mse": 1.1073434352874756
+    },
+    {
+      "position": 170,
+      "record_index": 3532,
+      "train_points": 35,
+      "eval_points": 315,
+      "loss": null,
+      "mae": 0.873767077922821,
+      "mse": 1.3963931798934937
+    },
+    {
+      "position": 171,
+      "record_index": 3768,
+      "train_points": 32,
+      "eval_points": 286,
+      "loss": null,
+      "mae": 1.0105518102645874,
+      "mse": 1.824388027191162
+    },
+    {
+      "position": 172,
+      "record_index": 2876,
+      "train_points": 29,
+      "eval_points": 257,
+      "loss": null,
+      "mae": 0.8079005479812622,
+      "mse": 1.21578848361969
+    },
+    {
+      "position": 173,
+      "record_index": 845,
+      "train_points": 29,
+      "eval_points": 261,
+      "loss": null,
+      "mae": 0.43389153480529785,
+      "mse": 0.3685736656188965
+    },
+    {
+      "position": 174,
+      "record_index": 98,
+      "train_points": 40,
+      "eval_points": 359,
+      "loss": null,
+      "mae": 0.9584035277366638,
+      "mse": 2.0109593868255615
+    },
+    {
+      "position": 175,
+      "record_index": 3666,
+      "train_points": 39,
+      "eval_points": 342,
+      "loss": null,
+      "mae": 0.8985479474067688,
+      "mse": 1.917001485824585
+    },
+    {
+      "position": 176,
+      "record_index": 2943,
+      "train_points": 29,
+      "eval_points": 258,
+      "loss": null,
+      "mae": 0.6574017405509949,
+      "mse": 0.8927797675132751
+    },
+    {
+      "position": 177,
+      "record_index": 1463,
+      "train_points": 32,
+      "eval_points": 279,
+      "loss": null,
+      "mae": 0.7400162816047668,
+      "mse": 1.0617655515670776
+    },
+    {
+      "position": 178,
+      "record_index": 589,
+      "train_points": 34,
+      "eval_points": 300,
+      "loss": null,
+      "mae": 0.7553325295448303,
+      "mse": 1.4295610189437866
+    },
+    {
+      "position": 179,
+      "record_index": 1825,
+      "train_points": 31,
+      "eval_points": 276,
+      "loss": null,
+      "mae": 0.6472886204719543,
+      "mse": 0.8093839883804321
+    },
+    {
+      "position": 180,
+      "record_index": 1189,
+      "train_points": 39,
+      "eval_points": 351,
+      "loss": null,
+      "mae": 0.9047726988792419,
+      "mse": 1.5923829078674316
+    },
+    {
+      "position": 181,
+      "record_index": 94,
+      "train_points": 30,
+      "eval_points": 261,
+      "loss": null,
+      "mae": 0.7291145324707031,
+      "mse": 0.9600975513458252
+    },
+    {
+      "position": 182,
+      "record_index": 2627,
+      "train_points": 21,
+      "eval_points": 185,
+      "loss": null,
+      "mae": 0.983424723148346,
+      "mse": 1.7215768098831177
+    },
+    {
+      "position": 183,
+      "record_index": 1410,
+      "train_points": 32,
+      "eval_points": 279,
+      "loss": null,
+      "mae": 0.6166638731956482,
+      "mse": 0.766974687576294
+    },
+    {
+      "position": 184,
+      "record_index": 3057,
+      "train_points": 32,
+      "eval_points": 286,
+      "loss": null,
+      "mae": 0.604354977607727,
+      "mse": 0.7613863348960876
+    },
+    {
+      "position": 185,
+      "record_index": 3061,
+      "train_points": 27,
+      "eval_points": 238,
+      "loss": null,
+      "mae": 0.43642285466194153,
+      "mse": 0.39074385166168213
+    },
+    {
+      "position": 186,
+      "record_index": 3693,
+      "train_points": 30,
+      "eval_points": 262,
+      "loss": null,
+      "mae": 0.4977012872695923,
+      "mse": 0.521261990070343
+    },
+    {
+      "position": 187,
+      "record_index": 518,
+      "train_points": 31,
+      "eval_points": 279,
+      "loss": null,
+      "mae": 0.8020060062408447,
+      "mse": 1.2535375356674194
+    },
+    {
+      "position": 188,
+      "record_index": 1698,
+      "train_points": 27,
+      "eval_points": 240,
+      "loss": null,
+      "mae": 0.8177715539932251,
+      "mse": 1.3110918998718262
+    },
+    {
+      "position": 189,
+      "record_index": 724,
+      "train_points": 28,
+      "eval_points": 248,
+      "loss": null,
+      "mae": 0.8057245016098022,
+      "mse": 1.1571415662765503
+    },
+    {
+      "position": 190,
+      "record_index": 1669,
+      "train_points": 28,
+      "eval_points": 244,
+      "loss": null,
+      "mae": 0.6471413969993591,
+      "mse": 0.795441210269928
+    },
+    {
+      "position": 191,
+      "record_index": 1196,
+      "train_points": 38,
+      "eval_points": 334,
+      "loss": null,
+      "mae": 0.6559547185897827,
+      "mse": 0.6938309669494629
+    },
+    {
+      "position": 192,
+      "record_index": 3728,
+      "train_points": 35,
+      "eval_points": 313,
+      "loss": null,
+      "mae": 0.5212074518203735,
+      "mse": 0.5592639446258545
+    },
+    {
+      "position": 193,
+      "record_index": 3845,
+      "train_points": 38,
+      "eval_points": 337,
+      "loss": null,
+      "mae": 0.6277410984039307,
+      "mse": 0.9265884757041931
+    },
+    {
+      "position": 194,
+      "record_index": 3988,
+      "train_points": 26,
+      "eval_points": 225,
+      "loss": null,
+      "mae": 0.7594623565673828,
+      "mse": 1.0581653118133545
+    },
+    {
+      "position": 195,
+      "record_index": 6,
+      "train_points": 31,
+      "eval_points": 274,
+      "loss": null,
+      "mae": 0.7183749675750732,
+      "mse": 1.0950847864151
+    },
+    {
+      "position": 196,
+      "record_index": 1128,
+      "train_points": 34,
+      "eval_points": 299,
+      "loss": null,
+      "mae": 0.5023113489151001,
+      "mse": 0.5344441533088684
+    },
+    {
+      "position": 197,
+      "record_index": 3275,
+      "train_points": 30,
+      "eval_points": 267,
+      "loss": null,
+      "mae": 0.5075743198394775,
+      "mse": 0.46680179238319397
+    },
+    {
+      "position": 198,
+      "record_index": 3378,
+      "train_points": 41,
+      "eval_points": 363,
+      "loss": null,
+      "mae": 0.8009433150291443,
+      "mse": 1.3115479946136475
+    },
+    {
+      "position": 199,
+      "record_index": 2875,
+      "train_points": 3,
+      "eval_points": 20,
+      "loss": null,
+      "mae": 0.6247320771217346,
+      "mse": 0.5893946886062622
+    },
+    {
+      "position": 200,
+      "record_index": 79,
+      "train_points": 32,
+      "eval_points": 283,
+      "loss": null,
+      "mae": 0.9280526041984558,
+      "mse": 1.7120401859283447
+    },
+    {
+      "position": 201,
+      "record_index": 710,
+      "train_points": 37,
+      "eval_points": 331,
+      "loss": null,
+      "mae": 0.6994956135749817,
+      "mse": 1.1318821907043457
+    },
+    {
+      "position": 202,
+      "record_index": 1565,
+      "train_points": 39,
+      "eval_points": 343,
+      "loss": null,
+      "mae": 0.5231022834777832,
+      "mse": 0.5557739734649658
+    },
+    {
+      "position": 203,
+      "record_index": 495,
+      "train_points": 38,
+      "eval_points": 339,
+      "loss": null,
+      "mae": 0.7593488097190857,
+      "mse": 1.8052607774734497
+    },
+    {
+      "position": 204,
+      "record_index": 203,
+      "train_points": 34,
+      "eval_points": 297,
+      "loss": null,
+      "mae": 1.0292519330978394,
+      "mse": 2.019265651702881
+    },
+    {
+      "position": 205,
+      "record_index": 2688,
+      "train_points": 32,
+      "eval_points": 286,
+      "loss": null,
+      "mae": 0.48565152287483215,
+      "mse": 0.5350837707519531
+    },
+    {
+      "position": 206,
+      "record_index": 19,
+      "train_points": 33,
+      "eval_points": 290,
+      "loss": null,
+      "mae": 0.5964370369911194,
+      "mse": 0.6942179203033447
+    },
+    {
+      "position": 207,
+      "record_index": 3799,
+      "train_points": 40,
+      "eval_points": 353,
+      "loss": null,
+      "mae": 0.7027009725570679,
+      "mse": 0.9939697980880737
+    },
+    {
+      "position": 208,
+      "record_index": 560,
+      "train_points": 30,
+      "eval_points": 268,
+      "loss": null,
+      "mae": 0.4651683568954468,
+      "mse": 0.4256458878517151
+    },
+    {
+      "position": 209,
+      "record_index": 2297,
+      "train_points": 33,
+      "eval_points": 293,
+      "loss": null,
+      "mae": 0.7648965716362,
+      "mse": 1.0888170003890991
+    },
+    {
+      "position": 210,
+      "record_index": 1094,
+      "train_points": 36,
+      "eval_points": 317,
+      "loss": null,
+      "mae": 0.5155556201934814,
+      "mse": 0.5792027115821838
+    },
+    {
+      "position": 211,
+      "record_index": 90,
+      "train_points": 27,
+      "eval_points": 236,
+      "loss": null,
+      "mae": 0.5168821811676025,
+      "mse": 0.5972539782524109
+    },
+    {
+      "position": 212,
+      "record_index": 1227,
+      "train_points": 46,
+      "eval_points": 413,
+      "loss": null,
+      "mae": 0.4918767511844635,
+      "mse": 0.5806807279586792
+    },
+    {
+      "position": 213,
+      "record_index": 1650,
+      "train_points": 31,
+      "eval_points": 276,
+      "loss": null,
+      "mae": 0.48565125465393066,
+      "mse": 0.42428502440452576
+    },
+    {
+      "position": 214,
+      "record_index": 3781,
+      "train_points": 32,
+      "eval_points": 287,
+      "loss": null,
+      "mae": 0.8475474715232849,
+      "mse": 1.5966633558273315
+    },
+    {
+      "position": 215,
+      "record_index": 2855,
+      "train_points": 33,
+      "eval_points": 297,
+      "loss": null,
+      "mae": 0.4723162353038788,
+      "mse": 0.3653624355792999
+    },
+    {
+      "position": 216,
+      "record_index": 1502,
+      "train_points": 34,
+      "eval_points": 301,
+      "loss": null,
+      "mae": 0.6239023804664612,
+      "mse": 0.9305094480514526
+    },
+    {
+      "position": 217,
+      "record_index": 3751,
+      "train_points": 3,
+      "eval_points": 26,
+      "loss": null,
+      "mae": 0.5769090056419373,
+      "mse": 0.5268359780311584
+    },
+    {
+      "position": 218,
+      "record_index": 2117,
+      "train_points": 36,
+      "eval_points": 322,
+      "loss": null,
+      "mae": 0.5168408751487732,
+      "mse": 0.4637978672981262
+    },
+    {
+      "position": 219,
+      "record_index": 453,
+      "train_points": 35,
+      "eval_points": 313,
+      "loss": null,
+      "mae": 0.7582719326019287,
+      "mse": 1.1216109991073608
+    },
+    {
+      "position": 220,
+      "record_index": 2169,
+      "train_points": 32,
+      "eval_points": 281,
+      "loss": null,
+      "mae": 0.8657833933830261,
+      "mse": 1.8928077220916748
+    },
+    {
+      "position": 221,
+      "record_index": 1772,
+      "train_points": 33,
+      "eval_points": 290,
+      "loss": null,
+      "mae": 0.771934986114502,
+      "mse": 1.0836327075958252
+    },
+    {
+      "position": 222,
+      "record_index": 1426,
+      "train_points": 38,
+      "eval_points": 340,
+      "loss": null,
+      "mae": 0.4981316924095154,
+      "mse": 0.6435021758079529
+    },
+    {
+      "position": 223,
+      "record_index": 2458,
+      "train_points": 31,
+      "eval_points": 277,
+      "loss": null,
+      "mae": 0.5675951242446899,
+      "mse": 0.5715370774269104
+    },
+    {
+      "position": 224,
+      "record_index": 2472,
+      "train_points": 37,
+      "eval_points": 331,
+      "loss": null,
+      "mae": 0.7762405872344971,
+      "mse": 1.1437709331512451
+    },
+    {
+      "position": 225,
+      "record_index": 2837,
+      "train_points": 31,
+      "eval_points": 274,
+      "loss": null,
+      "mae": 0.6035333275794983,
+      "mse": 0.7091967463493347
+    },
+    {
+      "position": 226,
+      "record_index": 986,
+      "train_points": 34,
+      "eval_points": 303,
+      "loss": null,
+      "mae": 0.7080115079879761,
+      "mse": 1.1487702131271362
+    },
+    {
+      "position": 227,
+      "record_index": 2765,
+      "train_points": 33,
+      "eval_points": 288,
+      "loss": null,
+      "mae": 0.5386937260627747,
+      "mse": 0.5869947075843811
+    },
+    {
+      "position": 228,
+      "record_index": 1089,
+      "train_points": 39,
+      "eval_points": 345,
+      "loss": null,
+      "mae": 0.6351677775382996,
+      "mse": 0.7249681353569031
+    },
+    {
+      "position": 229,
+      "record_index": 2204,
+      "train_points": 33,
+      "eval_points": 297,
+      "loss": null,
+      "mae": 0.5849699974060059,
+      "mse": 0.6669015884399414
+    },
+    {
+      "position": 230,
+      "record_index": 2756,
+      "train_points": 26,
+      "eval_points": 233,
+      "loss": null,
+      "mae": 1.002528190612793,
+      "mse": 2.1038858890533447
+    },
+    {
+      "position": 231,
+      "record_index": 829,
+      "train_points": 42,
+      "eval_points": 372,
+      "loss": null,
+      "mae": 1.1292943954467773,
+      "mse": 3.2234723567962646
+    },
+    {
+      "position": 232,
+      "record_index": 1773,
+      "train_points": 32,
+      "eval_points": 282,
+      "loss": null,
+      "mae": 0.6455440521240234,
+      "mse": 0.9937998652458191
+    },
+    {
+      "position": 233,
+      "record_index": 996,
+      "train_points": 24,
+      "eval_points": 216,
+      "loss": null,
+      "mae": 0.7015076875686646,
+      "mse": 1.0178762674331665
+    },
+    {
+      "position": 234,
+      "record_index": 644,
+      "train_points": 33,
+      "eval_points": 290,
+      "loss": null,
+      "mae": 0.8519018292427063,
+      "mse": 1.5454338788986206
+    },
+    {
+      "position": 235,
+      "record_index": 2812,
+      "train_points": 39,
+      "eval_points": 347,
+      "loss": null,
+      "mae": 0.6661075353622437,
+      "mse": 0.8524301648139954
+    },
+    {
+      "position": 236,
+      "record_index": 3625,
+      "train_points": 26,
+      "eval_points": 234,
+      "loss": null,
+      "mae": 0.5805315375328064,
+      "mse": 0.7227594256401062
+    },
+    {
+      "position": 237,
+      "record_index": 965,
+      "train_points": 39,
+      "eval_points": 347,
+      "loss": null,
+      "mae": 0.7282705903053284,
+      "mse": 1.1185152530670166
+    },
+    {
+      "position": 238,
+      "record_index": 3076,
+      "train_points": 33,
+      "eval_points": 292,
+      "loss": null,
+      "mae": 0.6540347933769226,
+      "mse": 1.3826645612716675
+    },
+    {
+      "position": 239,
+      "record_index": 1026,
+      "train_points": 20,
+      "eval_points": 180,
+      "loss": null,
+      "mae": 0.6773701906204224,
+      "mse": 0.8553558588027954
+    },
+    {
+      "position": 240,
+      "record_index": 37,
+      "train_points": 29,
+      "eval_points": 252,
+      "loss": null,
+      "mae": 0.7425561547279358,
+      "mse": 0.8399891257286072
+    },
+    {
+      "position": 241,
+      "record_index": 2300,
+      "train_points": 25,
+      "eval_points": 223,
+      "loss": null,
+      "mae": 0.6068615913391113,
+      "mse": 0.7050666809082031
+    },
+    {
+      "position": 242,
+      "record_index": 1333,
+      "train_points": 33,
+      "eval_points": 289,
+      "loss": null,
+      "mae": 0.6533222198486328,
+      "mse": 0.8776072859764099
+    },
+    {
+      "position": 243,
+      "record_index": 3537,
+      "train_points": 35,
+      "eval_points": 313,
+      "loss": null,
+      "mae": 0.49559420347213745,
+      "mse": 0.5499182939529419
+    },
+    {
+      "position": 244,
+      "record_index": 3070,
+      "train_points": 35,
+      "eval_points": 310,
+      "loss": null,
+      "mae": 0.4791877567768097,
+      "mse": 0.38591402769088745
+    },
+    {
+      "position": 245,
+      "record_index": 2954,
+      "train_points": 39,
+      "eval_points": 346,
+      "loss": null,
+      "mae": 0.47501325607299805,
+      "mse": 0.4677010178565979
+    },
+    {
+      "position": 246,
+      "record_index": 3569,
+      "train_points": 32,
+      "eval_points": 285,
+      "loss": null,
+      "mae": 0.6909294724464417,
+      "mse": 1.0043330192565918
+    },
+    {
+      "position": 247,
+      "record_index": 1336,
+      "train_points": 35,
+      "eval_points": 315,
+      "loss": null,
+      "mae": 1.404418706893921,
+      "mse": 4.873447895050049
+    },
+    {
+      "position": 248,
+      "record_index": 3840,
+      "train_points": 36,
+      "eval_points": 323,
+      "loss": null,
+      "mae": 0.4400676190853119,
+      "mse": 0.5343465209007263
+    },
+    {
+      "position": 249,
+      "record_index": 756,
+      "train_points": 28,
+      "eval_points": 252,
+      "loss": null,
+      "mae": 0.9340826272964478,
+      "mse": 1.4401111602783203
+    },
+    {
+      "position": 250,
+      "record_index": 3624,
+      "train_points": 38,
+      "eval_points": 333,
+      "loss": null,
+      "mae": 0.5114725232124329,
+      "mse": 0.5959386825561523
+    },
+    {
+      "position": 251,
+      "record_index": 2925,
+      "train_points": 42,
+      "eval_points": 377,
+      "loss": null,
+      "mae": 0.5644298195838928,
+      "mse": 0.6842651963233948
+    },
+    {
+      "position": 252,
+      "record_index": 3483,
+      "train_points": 23,
+      "eval_points": 202,
+      "loss": null,
+      "mae": 0.8213037252426147,
+      "mse": 1.566009521484375
+    },
+    {
+      "position": 253,
+      "record_index": 231,
+      "train_points": 21,
+      "eval_points": 181,
+      "loss": null,
+      "mae": 0.9368116855621338,
+      "mse": 1.7798347473144531
+    },
+    {
+      "position": 254,
+      "record_index": 3041,
+      "train_points": 37,
+      "eval_points": 332,
+      "loss": null,
+      "mae": 0.684431791305542,
+      "mse": 1.266854166984558
+    },
+    {
+      "position": 255,
+      "record_index": 3140,
+      "train_points": 31,
+      "eval_points": 279,
+      "loss": null,
+      "mae": 0.6844066977500916,
+      "mse": 0.9513918161392212
+    },
+    {
+      "position": 256,
+      "record_index": 1078,
+      "train_points": 32,
+      "eval_points": 288,
+      "loss": null,
+      "mae": 0.5510534048080444,
+      "mse": 0.7894967198371887
+    },
+    {
+      "position": 257,
+      "record_index": 2045,
+      "train_points": 37,
+      "eval_points": 326,
+      "loss": null,
+      "mae": 0.5891067385673523,
+      "mse": 0.7185380458831787
+    },
+    {
+      "position": 258,
+      "record_index": 662,
+      "train_points": 31,
+      "eval_points": 271,
+      "loss": null,
+      "mae": 0.8072879314422607,
+      "mse": 1.2362762689590454
+    },
+    {
+      "position": 259,
+      "record_index": 3806,
+      "train_points": 47,
+      "eval_points": 420,
+      "loss": null,
+      "mae": 0.8470081090927124,
+      "mse": 1.450552225112915
+    },
+    {
+      "position": 260,
+      "record_index": 1448,
+      "train_points": 32,
+      "eval_points": 282,
+      "loss": null,
+      "mae": 0.5061483383178711,
+      "mse": 0.5173581838607788
+    },
+    {
+      "position": 261,
+      "record_index": 1038,
+      "train_points": 34,
+      "eval_points": 302,
+      "loss": null,
+      "mae": 0.851142406463623,
+      "mse": 1.594670057296753
+    },
+    {
+      "position": 262,
+      "record_index": 2573,
+      "train_points": 38,
+      "eval_points": 334,
+      "loss": null,
+      "mae": 0.5062730312347412,
+      "mse": 0.5741361379623413
+    },
+    {
+      "position": 263,
+      "record_index": 3696,
+      "train_points": 39,
+      "eval_points": 350,
+      "loss": null,
+      "mae": 1.0707411766052246,
+      "mse": 2.1691436767578125
+    },
+    {
+      "position": 264,
+      "record_index": 1653,
+      "train_points": 33,
+      "eval_points": 291,
+      "loss": null,
+      "mae": 0.6421778798103333,
+      "mse": 0.7322095036506653
+    },
+    {
+      "position": 265,
+      "record_index": 1808,
+      "train_points": 19,
+      "eval_points": 167,
+      "loss": null,
+      "mae": 0.8181824684143066,
+      "mse": 1.0822404623031616
+    },
+    {
+      "position": 266,
+      "record_index": 563,
+      "train_points": 36,
+      "eval_points": 316,
+      "loss": null,
+      "mae": 0.6593034267425537,
+      "mse": 1.0718482732772827
+    },
+    {
+      "position": 267,
+      "record_index": 1946,
+      "train_points": 38,
+      "eval_points": 338,
+      "loss": null,
+      "mae": 0.6229308247566223,
+      "mse": 1.223846197128296
+    },
+    {
+      "position": 268,
+      "record_index": 345,
+      "train_points": 22,
+      "eval_points": 189,
+      "loss": null,
+      "mae": 0.6228210926055908,
+      "mse": 0.9629514813423157
+    },
+    {
+      "position": 269,
+      "record_index": 3825,
+      "train_points": 42,
+      "eval_points": 372,
+      "loss": null,
+      "mae": 0.6236417889595032,
+      "mse": 0.7745727300643921
+    },
+    {
+      "position": 270,
+      "record_index": 2418,
+      "train_points": 33,
+      "eval_points": 290,
+      "loss": null,
+      "mae": 0.6222770810127258,
+      "mse": 0.7421208024024963
+    },
+    {
+      "position": 271,
+      "record_index": 3341,
+      "train_points": 38,
+      "eval_points": 342,
+      "loss": null,
+      "mae": 0.7886996865272522,
+      "mse": 1.229787826538086
+    },
+    {
+      "position": 272,
+      "record_index": 1587,
+      "train_points": 35,
+      "eval_points": 309,
+      "loss": null,
+      "mae": 0.8023712635040283,
+      "mse": 1.151421308517456
+    },
+    {
+      "position": 273,
+      "record_index": 3679,
+      "train_points": 33,
+      "eval_points": 293,
+      "loss": null,
+      "mae": 0.9143933057785034,
+      "mse": 1.5360780954360962
+    },
+    {
+      "position": 274,
+      "record_index": 2351,
+      "train_points": 27,
+      "eval_points": 235,
+      "loss": null,
+      "mae": 0.585227906703949,
+      "mse": 0.6464824676513672
+    },
+    {
+      "position": 275,
+      "record_index": 201,
+      "train_points": 41,
+      "eval_points": 362,
+      "loss": null,
+      "mae": 0.7193241119384766,
+      "mse": 1.0289918184280396
+    },
+    {
+      "position": 276,
+      "record_index": 1637,
+      "train_points": 38,
+      "eval_points": 337,
+      "loss": null,
+      "mae": 0.7883190512657166,
+      "mse": 1.2926499843597412
+    },
+    {
+      "position": 277,
+      "record_index": 1268,
+      "train_points": 30,
+      "eval_points": 266,
+      "loss": null,
+      "mae": 0.5369390249252319,
+      "mse": 0.520133912563324
+    },
+    {
+      "position": 278,
+      "record_index": 2040,
+      "train_points": 39,
+      "eval_points": 348,
+      "loss": null,
+      "mae": 0.5690151453018188,
+      "mse": 0.6569796204566956
+    },
+    {
+      "position": 279,
+      "record_index": 1702,
+      "train_points": 34,
+      "eval_points": 301,
+      "loss": null,
+      "mae": 0.6270053386688232,
+      "mse": 0.7303162813186646
+    },
+    {
+      "position": 280,
+      "record_index": 534,
+      "train_points": 33,
+      "eval_points": 296,
+      "loss": null,
+      "mae": 0.6937138438224792,
+      "mse": 1.086456537246704
+    },
+    {
+      "position": 281,
+      "record_index": 2800,
+      "train_points": 39,
+      "eval_points": 346,
+      "loss": null,
+      "mae": 0.5428693294525146,
+      "mse": 0.582118570804596
+    },
+    {
+      "position": 282,
+      "record_index": 3833,
+      "train_points": 31,
+      "eval_points": 275,
+      "loss": null,
+      "mae": 0.7719461917877197,
+      "mse": 1.2050708532333374
+    },
+    {
+      "position": 283,
+      "record_index": 1219,
+      "train_points": 30,
+      "eval_points": 268,
+      "loss": null,
+      "mae": 0.6756488084793091,
+      "mse": 0.811748206615448
+    },
+    {
+      "position": 284,
+      "record_index": 2030,
+      "train_points": 23,
+      "eval_points": 206,
+      "loss": null,
+      "mae": 0.5715630054473877,
+      "mse": 0.5181270241737366
+    },
+    {
+      "position": 285,
+      "record_index": 3120,
+      "train_points": 14,
+      "eval_points": 119,
+      "loss": null,
+      "mae": 0.6102483868598938,
+      "mse": 0.9175562858581543
+    },
+    {
+      "position": 286,
+      "record_index": 3721,
+      "train_points": 48,
+      "eval_points": 428,
+      "loss": null,
+      "mae": 0.6411716341972351,
+      "mse": 0.859626054763794
+    },
+    {
+      "position": 287,
+      "record_index": 1776,
+      "train_points": 33,
+      "eval_points": 290,
+      "loss": null,
+      "mae": 0.521136999130249,
+      "mse": 0.6234182119369507
+    },
+    {
+      "position": 288,
+      "record_index": 632,
+      "train_points": 38,
+      "eval_points": 336,
+      "loss": null,
+      "mae": 0.7247070670127869,
+      "mse": 0.921725332736969
+    },
+    {
+      "position": 289,
+      "record_index": 1457,
+      "train_points": 32,
+      "eval_points": 282,
+      "loss": null,
+      "mae": 0.623030960559845,
+      "mse": 0.6744561791419983
+    },
+    {
+      "position": 290,
+      "record_index": 108,
+      "train_points": 33,
+      "eval_points": 291,
+      "loss": null,
+      "mae": 1.809890627861023,
+      "mse": 7.214115619659424
+    },
+    {
+      "position": 291,
+      "record_index": 93,
+      "train_points": 34,
+      "eval_points": 303,
+      "loss": null,
+      "mae": 0.6913960576057434,
+      "mse": 1.1450040340423584
+    },
+    {
+      "position": 292,
+      "record_index": 2454,
+      "train_points": 32,
+      "eval_points": 281,
+      "loss": null,
+      "mae": 1.1463048458099365,
+      "mse": 2.308969020843506
+    },
+    {
+      "position": 293,
+      "record_index": 1518,
+      "train_points": 28,
+      "eval_points": 250,
+      "loss": null,
+      "mae": 0.4085770845413208,
+      "mse": 0.33132416009902954
+    },
+    {
+      "position": 294,
+      "record_index": 1827,
+      "train_points": 32,
+      "eval_points": 283,
+      "loss": null,
+      "mae": 0.5809625387191772,
+      "mse": 0.6684278845787048
+    },
+    {
+      "position": 295,
+      "record_index": 2665,
+      "train_points": 43,
+      "eval_points": 384,
+      "loss": null,
+      "mae": 0.46397149562835693,
+      "mse": 0.543668806552887
+    },
+    {
+      "position": 296,
+      "record_index": 3944,
+      "train_points": 33,
+      "eval_points": 296,
+      "loss": null,
+      "mae": 0.857286810874939,
+      "mse": 1.4483524560928345
+    },
+    {
+      "position": 297,
+      "record_index": 2874,
+      "train_points": 38,
+      "eval_points": 333,
+      "loss": null,
+      "mae": 0.4746077358722687,
+      "mse": 0.45633164048194885
+    },
+    {
+      "position": 298,
+      "record_index": 2805,
+      "train_points": 44,
+      "eval_points": 389,
+      "loss": null,
+      "mae": 0.6320055723190308,
+      "mse": 0.9021685123443604
+    },
+    {
+      "position": 299,
+      "record_index": 1006,
+      "train_points": 23,
+      "eval_points": 204,
+      "loss": null,
+      "mae": 0.470670610666275,
+      "mse": 0.402013897895813
+    },
+    {
+      "position": 300,
+      "record_index": 1020,
+      "train_points": 20,
+      "eval_points": 180,
+      "loss": null,
+      "mae": 0.5790207982063293,
+      "mse": 0.591487467288971
+    },
+    {
+      "position": 301,
+      "record_index": 2437,
+      "train_points": 37,
+      "eval_points": 326,
+      "loss": null,
+      "mae": 1.1165955066680908,
+      "mse": 2.1564462184906006
+    },
+    {
+      "position": 302,
+      "record_index": 1614,
+      "train_points": 31,
+      "eval_points": 272,
+      "loss": null,
+      "mae": 0.6751208305358887,
+      "mse": 0.73764568567276
+    },
+    {
+      "position": 303,
+      "record_index": 1675,
+      "train_points": 32,
+      "eval_points": 281,
+      "loss": null,
+      "mae": 0.8598706722259521,
+      "mse": 1.3455108404159546
+    },
+    {
+      "position": 304,
+      "record_index": 3508,
+      "train_points": 25,
+      "eval_points": 221,
+      "loss": null,
+      "mae": 0.749366044998169,
+      "mse": 1.172903299331665
+    },
+    {
+      "position": 305,
+      "record_index": 906,
+      "train_points": 27,
+      "eval_points": 240,
+      "loss": null,
+      "mae": 0.7257841229438782,
+      "mse": 1.1301840543746948
+    },
+    {
+      "position": 306,
+      "record_index": 2608,
+      "train_points": 47,
+      "eval_points": 422,
+      "loss": null,
+      "mae": 0.8360410332679749,
+      "mse": 2.8689024448394775
+    },
+    {
+      "position": 307,
+      "record_index": 3667,
+      "train_points": 36,
+      "eval_points": 316,
+      "loss": null,
+      "mae": 0.5392729640007019,
+      "mse": 0.6324723362922668
+    },
+    {
+      "position": 308,
+      "record_index": 2860,
+      "train_points": 32,
+      "eval_points": 280,
+      "loss": null,
+      "mae": 0.6774606108665466,
+      "mse": 0.8926526308059692
+    },
+    {
+      "position": 309,
+      "record_index": 1760,
+      "train_points": 40,
+      "eval_points": 351,
+      "loss": null,
+      "mae": 0.6180924773216248,
+      "mse": 0.6896103024482727
+    },
+    {
+      "position": 310,
+      "record_index": 2132,
+      "train_points": 28,
+      "eval_points": 252,
+      "loss": null,
+      "mae": 0.545630931854248,
+      "mse": 0.5663917660713196
+    },
+    {
+      "position": 311,
+      "record_index": 3632,
+      "train_points": 31,
+      "eval_points": 271,
+      "loss": null,
+      "mae": 0.33657509088516235,
+      "mse": 0.2798701822757721
+    },
+    {
+      "position": 312,
+      "record_index": 1537,
+      "train_points": 39,
+      "eval_points": 343,
+      "loss": null,
+      "mae": 0.6353168487548828,
+      "mse": 0.781857967376709
+    },
+    {
+      "position": 313,
+      "record_index": 1430,
+      "train_points": 33,
+      "eval_points": 297,
+      "loss": null,
+      "mae": 0.5458157062530518,
+      "mse": 0.6103577613830566
+    },
+    {
+      "position": 314,
+      "record_index": 1404,
+      "train_points": 40,
+      "eval_points": 353,
+      "loss": null,
+      "mae": 0.6584118008613586,
+      "mse": 0.793422520160675
+    },
+    {
+      "position": 315,
+      "record_index": 1828,
+      "train_points": 45,
+      "eval_points": 397,
+      "loss": null,
+      "mae": 0.4944891631603241,
+      "mse": 0.4742477834224701
+    },
+    {
+      "position": 316,
+      "record_index": 3407,
+      "train_points": 26,
+      "eval_points": 226,
+      "loss": null,
+      "mae": 0.5335505604743958,
+      "mse": 0.4866734743118286
+    },
+    {
+      "position": 317,
+      "record_index": 1050,
+      "train_points": 38,
+      "eval_points": 340,
+      "loss": null,
+      "mae": 0.8297930359840393,
+      "mse": 1.5025851726531982
+    },
+    {
+      "position": 318,
+      "record_index": 169,
+      "train_points": 35,
+      "eval_points": 311,
+      "loss": null,
+      "mae": 0.8693996071815491,
+      "mse": 1.3821607828140259
+    },
+    {
+      "position": 319,
+      "record_index": 1400,
+      "train_points": 37,
+      "eval_points": 327,
+      "loss": null,
+      "mae": 0.6922322511672974,
+      "mse": 1.2018831968307495
+    },
+    {
+      "position": 320,
+      "record_index": 678,
+      "train_points": 29,
+      "eval_points": 254,
+      "loss": null,
+      "mae": 0.9311502575874329,
+      "mse": 1.6042739152908325
+    },
+    {
+      "position": 321,
+      "record_index": 1060,
+      "train_points": 34,
+      "eval_points": 304,
+      "loss": null,
+      "mae": 0.7376452088356018,
+      "mse": 1.0350899696350098
+    },
+    {
+      "position": 322,
+      "record_index": 846,
+      "train_points": 34,
+      "eval_points": 305,
+      "loss": null,
+      "mae": 0.613700807094574,
+      "mse": 0.701444149017334
+    },
+    {
+      "position": 323,
+      "record_index": 2276,
+      "train_points": 22,
+      "eval_points": 192,
+      "loss": null,
+      "mae": 0.6915510296821594,
+      "mse": 1.0753690004348755
+    },
+    {
+      "position": 324,
+      "record_index": 857,
+      "train_points": 48,
+      "eval_points": 424,
+      "loss": null,
+      "mae": 0.599025309085846,
+      "mse": 0.8795468211174011
+    },
+    {
+      "position": 325,
+      "record_index": 836,
+      "train_points": 22,
+      "eval_points": 194,
+      "loss": null,
+      "mae": 0.8125640153884888,
+      "mse": 1.568852186203003
+    },
+    {
+      "position": 326,
+      "record_index": 745,
+      "train_points": 31,
+      "eval_points": 278,
+      "loss": null,
+      "mae": 0.7165914177894592,
+      "mse": 0.7846757173538208
+    },
+    {
+      "position": 327,
+      "record_index": 99,
+      "train_points": 7,
+      "eval_points": 54,
+      "loss": null,
+      "mae": 0.7398747205734253,
+      "mse": 0.9009299278259277
+    },
+    {
+      "position": 328,
+      "record_index": 3466,
+      "train_points": 36,
+      "eval_points": 320,
+      "loss": null,
+      "mae": 0.928066611289978,
+      "mse": 4.803959846496582
+    },
+    {
+      "position": 329,
+      "record_index": 186,
+      "train_points": 30,
+      "eval_points": 265,
+      "loss": null,
+      "mae": 0.905427873134613,
+      "mse": 1.4904264211654663
+    },
+    {
+      "position": 330,
+      "record_index": 1672,
+      "train_points": 30,
+      "eval_points": 263,
+      "loss": null,
+      "mae": 0.4796314835548401,
+      "mse": 0.48507580161094666
+    },
+    {
+      "position": 331,
+      "record_index": 194,
+      "train_points": 34,
+      "eval_points": 305,
+      "loss": null,
+      "mae": 0.7216516733169556,
+      "mse": 1.2390997409820557
+    },
+    {
+      "position": 332,
+      "record_index": 3440,
+      "train_points": 35,
+      "eval_points": 314,
+      "loss": null,
+      "mae": 0.6670966744422913,
+      "mse": 0.9350595474243164
+    },
+    {
+      "position": 333,
+      "record_index": 574,
+      "train_points": 25,
+      "eval_points": 218,
+      "loss": null,
+      "mae": 0.6336084604263306,
+      "mse": 0.7171359062194824
+    },
+    {
+      "position": 334,
+      "record_index": 3556,
+      "train_points": 4,
+      "eval_points": 28,
+      "loss": null,
+      "mae": 1.2514487504959106,
+      "mse": 2.959078073501587
+    },
+    {
+      "position": 335,
+      "record_index": 3890,
+      "train_points": 35,
+      "eval_points": 306,
+      "loss": null,
+      "mae": 0.9333208799362183,
+      "mse": 1.7523006200790405
+    },
+    {
+      "position": 336,
+      "record_index": 3471,
+      "train_points": 51,
+      "eval_points": 458,
+      "loss": null,
+      "mae": 0.4924885332584381,
+      "mse": 0.5375165343284607
+    },
+    {
+      "position": 337,
+      "record_index": 1735,
+      "train_points": 21,
+      "eval_points": 189,
+      "loss": null,
+      "mae": 0.6795010566711426,
+      "mse": 0.7796225547790527
+    },
+    {
+      "position": 338,
+      "record_index": 2927,
+      "train_points": 31,
+      "eval_points": 270,
+      "loss": null,
+      "mae": 0.5572282075881958,
+      "mse": 0.7122317552566528
+    },
+    {
+      "position": 339,
+      "record_index": 486,
+      "train_points": 33,
+      "eval_points": 296,
+      "loss": null,
+      "mae": 0.5054972171783447,
+      "mse": 0.49847468733787537
+    },
+    {
+      "position": 340,
+      "record_index": 1403,
+      "train_points": 37,
+      "eval_points": 332,
+      "loss": null,
+      "mae": 0.5706458687782288,
+      "mse": 0.5877177119255066
+    },
+    {
+      "position": 341,
+      "record_index": 773,
+      "train_points": 34,
+      "eval_points": 301,
+      "loss": null,
+      "mae": 0.7844797372817993,
+      "mse": 1.120316743850708
+    },
+    {
+      "position": 342,
+      "record_index": 895,
+      "train_points": 30,
+      "eval_points": 262,
+      "loss": null,
+      "mae": 0.4633267819881439,
+      "mse": 0.4050584137439728
+    },
+    {
+      "position": 343,
+      "record_index": 813,
+      "train_points": 34,
+      "eval_points": 304,
+      "loss": null,
+      "mae": 0.9437235593795776,
+      "mse": 1.9665776491165161
+    },
+    {
+      "position": 344,
+      "record_index": 525,
+      "train_points": 32,
+      "eval_points": 280,
+      "loss": null,
+      "mae": 0.825383186340332,
+      "mse": 1.1954936981201172
+    },
+    {
+      "position": 345,
+      "record_index": 953,
+      "train_points": 36,
+      "eval_points": 316,
+      "loss": null,
+      "mae": 0.9127323031425476,
+      "mse": 1.8175697326660156
+    },
+    {
+      "position": 346,
+      "record_index": 943,
+      "train_points": 25,
+      "eval_points": 218,
+      "loss": null,
+      "mae": 0.567489504814148,
+      "mse": 0.6450759172439575
+    },
+    {
+      "position": 347,
+      "record_index": 1802,
+      "train_points": 30,
+      "eval_points": 261,
+      "loss": null,
+      "mae": 0.6337129473686218,
+      "mse": 0.7536925077438354
+    },
+    {
+      "position": 348,
+      "record_index": 854,
+      "train_points": 36,
+      "eval_points": 323,
+      "loss": null,
+      "mae": 0.6292324662208557,
+      "mse": 0.7974738478660583
+    },
+    {
+      "position": 349,
+      "record_index": 3861,
+      "train_points": 38,
+      "eval_points": 341,
+      "loss": null,
+      "mae": 1.1263784170150757,
+      "mse": 5.980531692504883
+    },
+    {
+      "position": 350,
+      "record_index": 1906,
+      "train_points": 28,
+      "eval_points": 252,
+      "loss": null,
+      "mae": 0.6036715507507324,
+      "mse": 0.9070409536361694
+    },
+    {
+      "position": 351,
+      "record_index": 3911,
+      "train_points": 31,
+      "eval_points": 278,
+      "loss": null,
+      "mae": 0.36841413378715515,
+      "mse": 0.30066072940826416
+    },
+    {
+      "position": 352,
+      "record_index": 3669,
+      "train_points": 33,
+      "eval_points": 297,
+      "loss": null,
+      "mae": 0.6887907981872559,
+      "mse": 0.8279703855514526
+    },
+    {
+      "position": 353,
+      "record_index": 3662,
+      "train_points": 30,
+      "eval_points": 262,
+      "loss": null,
+      "mae": 0.5546488165855408,
+      "mse": 0.6891165375709534
+    },
+    {
+      "position": 354,
+      "record_index": 3251,
+      "train_points": 43,
+      "eval_points": 381,
+      "loss": null,
+      "mae": 0.9950112700462341,
+      "mse": 1.8546485900878906
+    },
+    {
+      "position": 355,
+      "record_index": 558,
+      "train_points": 34,
+      "eval_points": 300,
+      "loss": null,
+      "mae": 0.5540755987167358,
+      "mse": 0.5753424167633057
+    },
+    {
+      "position": 356,
+      "record_index": 2379,
+      "train_points": 33,
+      "eval_points": 295,
+      "loss": null,
+      "mae": 0.8770947456359863,
+      "mse": 1.494874119758606
+    },
+    {
+      "position": 357,
+      "record_index": 3741,
+      "train_points": 26,
+      "eval_points": 231,
+      "loss": null,
+      "mae": 0.9014360308647156,
+      "mse": 1.6478132009506226
+    },
+    {
+      "position": 358,
+      "record_index": 3596,
+      "train_points": 37,
+      "eval_points": 325,
+      "loss": null,
+      "mae": 0.5722653269767761,
+      "mse": 0.5735140442848206
+    },
+    {
+      "position": 359,
+      "record_index": 359,
+      "train_points": 35,
+      "eval_points": 310,
+      "loss": null,
+      "mae": 0.7281995415687561,
+      "mse": 1.0204205513000488
+    },
+    {
+      "position": 360,
+      "record_index": 1047,
+      "train_points": 38,
+      "eval_points": 341,
+      "loss": null,
+      "mae": 1.1063393354415894,
+      "mse": 2.401757001876831
+    },
+    {
+      "position": 361,
+      "record_index": 2569,
+      "train_points": 32,
+      "eval_points": 281,
+      "loss": null,
+      "mae": 0.6384419202804565,
+      "mse": 0.8596851229667664
+    },
+    {
+      "position": 362,
+      "record_index": 1231,
+      "train_points": 35,
+      "eval_points": 312,
+      "loss": null,
+      "mae": 0.49967560172080994,
+      "mse": 0.6236428022384644
+    },
+    {
+      "position": 363,
+      "record_index": 3641,
+      "train_points": 25,
+      "eval_points": 220,
+      "loss": null,
+      "mae": 0.5702318549156189,
+      "mse": 0.647201418876648
+    },
+    {
+      "position": 364,
+      "record_index": 1950,
+      "train_points": 33,
+      "eval_points": 289,
+      "loss": null,
+      "mae": 0.61124187707901,
+      "mse": 0.7762319445610046
+    },
+    {
+      "position": 365,
+      "record_index": 62,
+      "train_points": 32,
+      "eval_points": 284,
+      "loss": null,
+      "mae": 0.5644282102584839,
+      "mse": 0.6108660101890564
+    },
+    {
+      "position": 366,
+      "record_index": 1301,
+      "train_points": 3,
+      "eval_points": 27,
+      "loss": null,
+      "mae": 0.42238256335258484,
+      "mse": 0.2950953245162964
+    },
+    {
+      "position": 367,
+      "record_index": 3953,
+      "train_points": 37,
+      "eval_points": 331,
+      "loss": null,
+      "mae": 0.9309380650520325,
+      "mse": 22.86577796936035
+    },
+    {
+      "position": 368,
+      "record_index": 2990,
+      "train_points": 38,
+      "eval_points": 336,
+      "loss": null,
+      "mae": 0.6211346983909607,
+      "mse": 0.8268764019012451
+    },
+    {
+      "position": 369,
+      "record_index": 2585,
+      "train_points": 26,
+      "eval_points": 229,
+      "loss": null,
+      "mae": 0.4346795082092285,
+      "mse": 0.34943002462387085
+    },
+    {
+      "position": 370,
+      "record_index": 2427,
+      "train_points": 43,
+      "eval_points": 385,
+      "loss": null,
+      "mae": 0.5863077044487,
+      "mse": 0.7376336455345154
+    },
+    {
+      "position": 371,
+      "record_index": 726,
+      "train_points": 37,
+      "eval_points": 326,
+      "loss": null,
+      "mae": 0.5473752617835999,
+      "mse": 0.7678200602531433
+    },
+    {
+      "position": 372,
+      "record_index": 3240,
+      "train_points": 46,
+      "eval_points": 411,
+      "loss": null,
+      "mae": 1.8534752130508423,
+      "mse": 11.427894592285156
+    },
+    {
+      "position": 373,
+      "record_index": 3008,
+      "train_points": 3,
+      "eval_points": 20,
+      "loss": null,
+      "mae": 0.4542781412601471,
+      "mse": 0.3214960992336273
+    },
+    {
+      "position": 374,
+      "record_index": 2721,
+      "train_points": 36,
+      "eval_points": 315,
+      "loss": null,
+      "mae": 0.5308657884597778,
+      "mse": 0.7652266025543213
+    },
+    {
+      "position": 375,
+      "record_index": 3156,
+      "train_points": 35,
+      "eval_points": 310,
+      "loss": null,
+      "mae": 0.6882724761962891,
+      "mse": 0.8187106847763062
+    },
+    {
+      "position": 376,
+      "record_index": 2822,
+      "train_points": 26,
+      "eval_points": 232,
+      "loss": null,
+      "mae": 0.6310297250747681,
+      "mse": 0.8348730802536011
+    },
+    {
+      "position": 377,
+      "record_index": 1875,
+      "train_points": 37,
+      "eval_points": 326,
+      "loss": null,
+      "mae": 0.7012490034103394,
+      "mse": 1.0412741899490356
+    },
+    {
+      "position": 378,
+      "record_index": 2483,
+      "train_points": 35,
+      "eval_points": 309,
+      "loss": null,
+      "mae": 0.5735658407211304,
+      "mse": 0.6578436493873596
+    },
+    {
+      "position": 379,
+      "record_index": 3697,
+      "train_points": 25,
+      "eval_points": 223,
+      "loss": null,
+      "mae": 0.6990940570831299,
+      "mse": 0.9737765192985535
+    },
+    {
+      "position": 380,
+      "record_index": 2710,
+      "train_points": 39,
+      "eval_points": 351,
+      "loss": null,
+      "mae": 0.6771356463432312,
+      "mse": 0.8042702674865723
+    },
+    {
+      "position": 381,
+      "record_index": 3035,
+      "train_points": 47,
+      "eval_points": 414,
+      "loss": null,
+      "mae": 0.5320802330970764,
+      "mse": 0.5451260209083557
+    },
+    {
+      "position": 382,
+      "record_index": 3808,
+      "train_points": 33,
+      "eval_points": 290,
+      "loss": null,
+      "mae": 0.529561460018158,
+      "mse": 0.8360005617141724
+    },
+    {
+      "position": 383,
+      "record_index": 3146,
+      "train_points": 28,
+      "eval_points": 244,
+      "loss": null,
+      "mae": 0.8093563914299011,
+      "mse": 1.5136427879333496
+    },
+    {
+      "position": 384,
+      "record_index": 1377,
+      "train_points": 28,
+      "eval_points": 252,
+      "loss": null,
+      "mae": 0.5568057894706726,
+      "mse": 0.6685136556625366
+    },
+    {
+      "position": 385,
+      "record_index": 2105,
+      "train_points": 32,
+      "eval_points": 286,
+      "loss": null,
+      "mae": 0.5978971123695374,
+      "mse": 0.6780558824539185
+    },
+    {
+      "position": 386,
+      "record_index": 3623,
+      "train_points": 28,
+      "eval_points": 251,
+      "loss": null,
+      "mae": 0.7356561422348022,
+      "mse": 1.520074486732483
+    },
+    {
+      "position": 387,
+      "record_index": 1488,
+      "train_points": 28,
+      "eval_points": 249,
+      "loss": null,
+      "mae": 0.4868506193161011,
+      "mse": 0.5779197216033936
+    },
+    {
+      "position": 388,
+      "record_index": 1417,
+      "train_points": 33,
+      "eval_points": 290,
+      "loss": null,
+      "mae": 0.6218243837356567,
+      "mse": 0.7651799917221069
+    },
+    {
+      "position": 389,
+      "record_index": 13,
+      "train_points": 27,
+      "eval_points": 239,
+      "loss": null,
+      "mae": 0.952878475189209,
+      "mse": 1.651090383529663
+    },
+    {
+      "position": 390,
+      "record_index": 498,
+      "train_points": 33,
+      "eval_points": 296,
+      "loss": null,
+      "mae": 0.9794433116912842,
+      "mse": 1.6770663261413574
+    },
+    {
+      "position": 391,
+      "record_index": 1608,
+      "train_points": 35,
+      "eval_points": 309,
+      "loss": null,
+      "mae": 0.6951040029525757,
+      "mse": 1.0298104286193848
+    },
+    {
+      "position": 392,
+      "record_index": 3068,
+      "train_points": 33,
+      "eval_points": 288,
+      "loss": null,
+      "mae": 1.541757345199585,
+      "mse": 6.147970676422119
+    },
+    {
+      "position": 393,
+      "record_index": 2479,
+      "train_points": 17,
+      "eval_points": 149,
+      "loss": null,
+      "mae": 0.7896716594696045,
+      "mse": 2.016559362411499
+    },
+    {
+      "position": 394,
+      "record_index": 1195,
+      "train_points": 32,
+      "eval_points": 283,
+      "loss": null,
+      "mae": 0.9253494739532471,
+      "mse": 1.8460277318954468
+    },
+    {
+      "position": 395,
+      "record_index": 321,
+      "train_points": 42,
+      "eval_points": 369,
+      "loss": null,
+      "mae": 0.8865014314651489,
+      "mse": 1.6640360355377197
+    },
+    {
+      "position": 396,
+      "record_index": 2969,
+      "train_points": 43,
+      "eval_points": 381,
+      "loss": null,
+      "mae": 0.8962616920471191,
+      "mse": 1.416014552116394
+    },
+    {
+      "position": 397,
+      "record_index": 2422,
+      "train_points": 39,
+      "eval_points": 351,
+      "loss": null,
+      "mae": 0.6746468544006348,
+      "mse": 0.9934461116790771
+    },
+    {
+      "position": 398,
+      "record_index": 2347,
+      "train_points": 40,
+      "eval_points": 352,
+      "loss": null,
+      "mae": 0.7089921832084656,
+      "mse": 1.0086044073104858
+    },
+    {
+      "position": 399,
+      "record_index": 157,
+      "train_points": 35,
+      "eval_points": 306,
+      "loss": null,
+      "mae": 0.6855207681655884,
+      "mse": 0.873437225818634
+    },
+    {
+      "position": 400,
+      "record_index": 3774,
+      "train_points": 29,
+      "eval_points": 255,
+      "loss": null,
+      "mae": 1.5884302854537964,
+      "mse": 4.302624702453613
+    },
+    {
+      "position": 401,
+      "record_index": 2749,
+      "train_points": 30,
+      "eval_points": 267,
+      "loss": null,
+      "mae": 0.6752238869667053,
+      "mse": 4.986747741699219
+    },
+    {
+      "position": 402,
+      "record_index": 2466,
+      "train_points": 22,
+      "eval_points": 193,
+      "loss": null,
+      "mae": 0.5234860181808472,
+      "mse": 0.46483519673347473
+    },
+    {
+      "position": 403,
+      "record_index": 3568,
+      "train_points": 35,
+      "eval_points": 306,
+      "loss": null,
+      "mae": 0.9961540699005127,
+      "mse": 2.379159927368164
+    },
+    {
+      "position": 404,
+      "record_index": 2387,
+      "train_points": 38,
+      "eval_points": 335,
+      "loss": null,
+      "mae": 0.45667561888694763,
+      "mse": 0.45110413432121277
+    },
+    {
+      "position": 405,
+      "record_index": 494,
+      "train_points": 38,
+      "eval_points": 342,
+      "loss": null,
+      "mae": 0.5838676691055298,
+      "mse": 0.6423905491828918
+    },
+    {
+      "position": 406,
+      "record_index": 2401,
+      "train_points": 30,
+      "eval_points": 262,
+      "loss": null,
+      "mae": 1.022983431816101,
+      "mse": 2.579010248184204
+    },
+    {
+      "position": 407,
+      "record_index": 3694,
+      "train_points": 42,
+      "eval_points": 374,
+      "loss": null,
+      "mae": 0.6977072358131409,
+      "mse": 1.1854223012924194
+    },
+    {
+      "position": 408,
+      "record_index": 1073,
+      "train_points": 36,
+      "eval_points": 316,
+      "loss": null,
+      "mae": 0.8026866316795349,
+      "mse": 1.3798589706420898
+    },
+    {
+      "position": 409,
+      "record_index": 1626,
+      "train_points": 29,
+      "eval_points": 258,
+      "loss": null,
+      "mae": 0.43161922693252563,
+      "mse": 0.3422354757785797
+    },
+    {
+      "position": 410,
+      "record_index": 1597,
+      "train_points": 39,
+      "eval_points": 349,
+      "loss": null,
+      "mae": 0.5040384531021118,
+      "mse": 0.5788390636444092
+    },
+    {
+      "position": 411,
+      "record_index": 386,
+      "train_points": 49,
+      "eval_points": 438,
+      "loss": null,
+      "mae": 0.5728587508201599,
+      "mse": 0.7004572749137878
+    },
+    {
+      "position": 412,
+      "record_index": 2168,
+      "train_points": 30,
+      "eval_points": 264,
+      "loss": null,
+      "mae": 0.9333374500274658,
+      "mse": 1.8920307159423828
+    },
+    {
+      "position": 413,
+      "record_index": 3991,
+      "train_points": 36,
+      "eval_points": 324,
+      "loss": null,
+      "mae": 0.6219503283500671,
+      "mse": 0.8159213662147522
+    },
+    {
+      "position": 414,
+      "record_index": 1065,
+      "train_points": 45,
+      "eval_points": 396,
+      "loss": null,
+      "mae": 0.9287114143371582,
+      "mse": 1.7080987691879272
+    },
+    {
+      "position": 415,
+      "record_index": 1561,
+      "train_points": 37,
+      "eval_points": 329,
+      "loss": null,
+      "mae": 0.5616074800491333,
+      "mse": 0.6576039791107178
+    },
+    {
+      "position": 416,
+      "record_index": 1238,
+      "train_points": 14,
+      "eval_points": 123,
+      "loss": null,
+      "mae": 0.8140565752983093,
+      "mse": 1.2101866006851196
+    },
+    {
+      "position": 417,
+      "record_index": 1102,
+      "train_points": 37,
+      "eval_points": 332,
+      "loss": null,
+      "mae": 0.46632590889930725,
+      "mse": 0.46238911151885986
+    },
+    {
+      "position": 418,
+      "record_index": 3390,
+      "train_points": 37,
+      "eval_points": 329,
+      "loss": null,
+      "mae": 0.5796965956687927,
+      "mse": 0.8254059553146362
+    },
+    {
+      "position": 419,
+      "record_index": 3252,
+      "train_points": 42,
+      "eval_points": 375,
+      "loss": null,
+      "mae": 0.7679051160812378,
+      "mse": 1.1055461168289185
+    },
+    {
+      "position": 420,
+      "record_index": 636,
+      "train_points": 31,
+      "eval_points": 277,
+      "loss": null,
+      "mae": 1.2465627193450928,
+      "mse": 3.6764774322509766
+    },
+    {
+      "position": 421,
+      "record_index": 40,
+      "train_points": 31,
+      "eval_points": 279,
+      "loss": null,
+      "mae": 0.5673473477363586,
+      "mse": 0.7360249161720276
+    },
+    {
+      "position": 422,
+      "record_index": 808,
+      "train_points": 29,
+      "eval_points": 256,
+      "loss": null,
+      "mae": 0.5915011167526245,
+      "mse": 0.7240773439407349
+    },
+    {
+      "position": 423,
+      "record_index": 1028,
+      "train_points": 39,
+      "eval_points": 347,
+      "loss": null,
+      "mae": 1.076853632926941,
+      "mse": 2.3078536987304688
+    },
+    {
+      "position": 424,
+      "record_index": 1126,
+      "train_points": 34,
+      "eval_points": 299,
+      "loss": null,
+      "mae": 0.6339565515518188,
+      "mse": 0.6781241297721863
+    },
+    {
+      "position": 425,
+      "record_index": 2053,
+      "train_points": 32,
+      "eval_points": 279,
+      "loss": null,
+      "mae": 0.511548638343811,
+      "mse": 0.4591056704521179
+    },
+    {
+      "position": 426,
+      "record_index": 45,
+      "train_points": 34,
+      "eval_points": 304,
+      "loss": null,
+      "mae": 0.9795905947685242,
+      "mse": 3.2667338848114014
+    },
+    {
+      "position": 427,
+      "record_index": 2823,
+      "train_points": 30,
+      "eval_points": 267,
+      "loss": null,
+      "mae": 0.9887121319770813,
+      "mse": 1.8474514484405518
+    },
+    {
+      "position": 428,
+      "record_index": 2766,
+      "train_points": 32,
+      "eval_points": 281,
+      "loss": null,
+      "mae": 0.48031115531921387,
+      "mse": 0.44103217124938965
+    },
+    {
+      "position": 429,
+      "record_index": 1578,
+      "train_points": 29,
+      "eval_points": 259,
+      "loss": null,
+      "mae": 0.49190664291381836,
+      "mse": 0.4734053611755371
+    },
+    {
+      "position": 430,
+      "record_index": 3719,
+      "train_points": 29,
+      "eval_points": 261,
+      "loss": null,
+      "mae": 0.49783459305763245,
+      "mse": 0.43335020542144775
+    },
+    {
+      "position": 431,
+      "record_index": 3560,
+      "train_points": 32,
+      "eval_points": 286,
+      "loss": null,
+      "mae": 0.7718600630760193,
+      "mse": 0.9674443602561951
+    },
+    {
+      "position": 432,
+      "record_index": 3154,
+      "train_points": 31,
+      "eval_points": 278,
+      "loss": null,
+      "mae": 0.4264242649078369,
+      "mse": 0.35688549280166626
+    },
+    {
+      "position": 433,
+      "record_index": 3183,
+      "train_points": 27,
+      "eval_points": 243,
+      "loss": null,
+      "mae": 0.4500233232975006,
+      "mse": 0.398404985666275
+    },
+    {
+      "position": 434,
+      "record_index": 2842,
+      "train_points": 25,
+      "eval_points": 223,
+      "loss": null,
+      "mae": 0.6179432272911072,
+      "mse": 0.668404221534729
+    },
+    {
+      "position": 435,
+      "record_index": 771,
+      "train_points": 36,
+      "eval_points": 318,
+      "loss": null,
+      "mae": 0.4160013794898987,
+      "mse": 0.45496344566345215
+    },
+    {
+      "position": 436,
+      "record_index": 2390,
+      "train_points": 34,
+      "eval_points": 302,
+      "loss": null,
+      "mae": 0.6612059473991394,
+      "mse": 0.9715776443481445
+    },
+    {
+      "position": 437,
+      "record_index": 1173,
+      "train_points": 34,
+      "eval_points": 302,
+      "loss": null,
+      "mae": 1.3944872617721558,
+      "mse": 3.6881940364837646
+    },
+    {
+      "position": 438,
+      "record_index": 1944,
+      "train_points": 35,
+      "eval_points": 306,
+      "loss": null,
+      "mae": 0.7603738903999329,
+      "mse": 1.1305824518203735
+    },
+    {
+      "position": 439,
+      "record_index": 2739,
+      "train_points": 35,
+      "eval_points": 313,
+      "loss": null,
+      "mae": 0.664078414440155,
+      "mse": 0.831072211265564
+    },
+    {
+      "position": 440,
+      "record_index": 3493,
+      "train_points": 29,
+      "eval_points": 259,
+      "loss": null,
+      "mae": 0.6486064791679382,
+      "mse": 0.7871367335319519
+    },
+    {
+      "position": 441,
+      "record_index": 181,
+      "train_points": 34,
+      "eval_points": 298,
+      "loss": null,
+      "mae": 0.6298719644546509,
+      "mse": 0.7813653349876404
+    },
+    {
+      "position": 442,
+      "record_index": 1674,
+      "train_points": 46,
+      "eval_points": 411,
+      "loss": null,
+      "mae": 1.3497954607009888,
+      "mse": 3.572721242904663
+    },
+    {
+      "position": 443,
+      "record_index": 791,
+      "train_points": 30,
+      "eval_points": 267,
+      "loss": null,
+      "mae": 0.4720597565174103,
+      "mse": 0.40451037883758545
+    },
+    {
+      "position": 444,
+      "record_index": 931,
+      "train_points": 37,
+      "eval_points": 324,
+      "loss": null,
+      "mae": 0.5501936674118042,
+      "mse": 0.579532265663147
+    },
+    {
+      "position": 445,
+      "record_index": 1804,
+      "train_points": 28,
+      "eval_points": 249,
+      "loss": null,
+      "mae": 1.2548214197158813,
+      "mse": 3.681062698364258
+    },
+    {
+      "position": 446,
+      "record_index": 1796,
+      "train_points": 48,
+      "eval_points": 429,
+      "loss": null,
+      "mae": 0.7792021036148071,
+      "mse": 1.1076395511627197
+    },
+    {
+      "position": 447,
+      "record_index": 769,
+      "train_points": 22,
+      "eval_points": 190,
+      "loss": null,
+      "mae": 0.8234503269195557,
+      "mse": 1.4008071422576904
+    },
+    {
+      "position": 448,
+      "record_index": 1526,
+      "train_points": 39,
+      "eval_points": 344,
+      "loss": null,
+      "mae": 0.8277665972709656,
+      "mse": 1.6897838115692139
+    },
+    {
+      "position": 449,
+      "record_index": 2188,
+      "train_points": 42,
+      "eval_points": 374,
+      "loss": null,
+      "mae": 0.721062183380127,
+      "mse": 0.9891165494918823
+    },
+    {
+      "position": 450,
+      "record_index": 778,
+      "train_points": 35,
+      "eval_points": 308,
+      "loss": null,
+      "mae": 0.8131330609321594,
+      "mse": 1.8901305198669434
+    },
+    {
+      "position": 451,
+      "record_index": 605,
+      "train_points": 33,
+      "eval_points": 295,
+      "loss": null,
+      "mae": 0.5484655499458313,
+      "mse": 0.5347863435745239
+    },
+    {
+      "position": 452,
+      "record_index": 2702,
+      "train_points": 32,
+      "eval_points": 283,
+      "loss": null,
+      "mae": 0.676330029964447,
+      "mse": 0.9531471133232117
+    },
+    {
+      "position": 453,
+      "record_index": 661,
+      "train_points": 34,
+      "eval_points": 303,
+      "loss": null,
+      "mae": 0.6952742338180542,
+      "mse": 1.1517363786697388
+    },
+    {
+      "position": 454,
+      "record_index": 3664,
+      "train_points": 26,
+      "eval_points": 231,
+      "loss": null,
+      "mae": 0.6519402861595154,
+      "mse": 0.8825005888938904
+    },
+    {
+      "position": 455,
+      "record_index": 1114,
+      "train_points": 33,
+      "eval_points": 291,
+      "loss": null,
+      "mae": 0.8306515216827393,
+      "mse": 1.4848732948303223
+    },
+    {
+      "position": 456,
+      "record_index": 3482,
+      "train_points": 38,
+      "eval_points": 333,
+      "loss": null,
+      "mae": 0.5760985612869263,
+      "mse": 0.6367396712303162
+    },
+    {
+      "position": 457,
+      "record_index": 577,
+      "train_points": 21,
+      "eval_points": 180,
+      "loss": null,
+      "mae": 1.120703935623169,
+      "mse": 3.9569101333618164
+    },
+    {
+      "position": 458,
+      "record_index": 2223,
+      "train_points": 31,
+      "eval_points": 275,
+      "loss": null,
+      "mae": 0.5295256972312927,
+      "mse": 0.5804720520973206
+    },
+    {
+      "position": 459,
+      "record_index": 3085,
+      "train_points": 9,
+      "eval_points": 76,
+      "loss": null,
+      "mae": 0.7902576327323914,
+      "mse": 1.1559118032455444
+    },
+    {
+      "position": 460,
+      "record_index": 2792,
+      "train_points": 33,
+      "eval_points": 292,
+      "loss": null,
+      "mae": 1.2004517316818237,
+      "mse": 2.6540300846099854
+    },
+    {
+      "position": 461,
+      "record_index": 1004,
+      "train_points": 30,
+      "eval_points": 268,
+      "loss": null,
+      "mae": 1.141518235206604,
+      "mse": 3.4529125690460205
+    },
+    {
+      "position": 462,
+      "record_index": 666,
+      "train_points": 42,
+      "eval_points": 370,
+      "loss": null,
+      "mae": 1.27302885055542,
+      "mse": 5.3802924156188965
+    },
+    {
+      "position": 463,
+      "record_index": 3437,
+      "train_points": 40,
+      "eval_points": 352,
+      "loss": null,
+      "mae": 0.6150087714195251,
+      "mse": 0.7968516945838928
+    },
+    {
+      "position": 464,
+      "record_index": 3973,
+      "train_points": 34,
+      "eval_points": 302,
+      "loss": null,
+      "mae": 0.6101788878440857,
+      "mse": 0.7883296608924866
+    },
+    {
+      "position": 465,
+      "record_index": 3329,
+      "train_points": 35,
+      "eval_points": 311,
+      "loss": null,
+      "mae": 0.6061466336250305,
+      "mse": 0.7222373485565186
+    },
+    {
+      "position": 466,
+      "record_index": 1862,
+      "train_points": 26,
+      "eval_points": 231,
+      "loss": null,
+      "mae": 0.7731217741966248,
+      "mse": 1.127679467201233
+    },
+    {
+      "position": 467,
+      "record_index": 2889,
+      "train_points": 32,
+      "eval_points": 286,
+      "loss": null,
+      "mae": 0.5436277389526367,
+      "mse": 0.517325222492218
+    },
+    {
+      "position": 468,
+      "record_index": 2879,
+      "train_points": 30,
+      "eval_points": 261,
+      "loss": null,
+      "mae": 0.45802152156829834,
+      "mse": 0.41697031259536743
+    },
+    {
+      "position": 469,
+      "record_index": 3566,
+      "train_points": 40,
+      "eval_points": 357,
+      "loss": null,
+      "mae": 0.5055127143859863,
+      "mse": 0.5256372690200806
+    },
+    {
+      "position": 470,
+      "record_index": 399,
+      "train_points": 32,
+      "eval_points": 284,
+      "loss": null,
+      "mae": 0.9716811776161194,
+      "mse": 2.296588659286499
+    },
+    {
+      "position": 471,
+      "record_index": 3269,
+      "train_points": 35,
+      "eval_points": 306,
+      "loss": null,
+      "mae": 0.7202954888343811,
+      "mse": 1.180336833000183
+    },
+    {
+      "position": 472,
+      "record_index": 2471,
+      "train_points": 35,
+      "eval_points": 308,
+      "loss": null,
+      "mae": 0.6111707091331482,
+      "mse": 0.6713315844535828
+    },
+    {
+      "position": 473,
+      "record_index": 3873,
+      "train_points": 39,
+      "eval_points": 349,
+      "loss": null,
+      "mae": 0.4830048978328705,
+      "mse": 0.44348543882369995
+    },
+    {
+      "position": 474,
+      "record_index": 1185,
+      "train_points": 4,
+      "eval_points": 32,
+      "loss": null,
+      "mae": 1.490037441253662,
+      "mse": 5.4198503494262695
+    },
+    {
+      "position": 475,
+      "record_index": 2942,
+      "train_points": 36,
+      "eval_points": 318,
+      "loss": null,
+      "mae": 0.9398091435432434,
+      "mse": 1.781607747077942
+    },
+    {
+      "position": 476,
+      "record_index": 3164,
+      "train_points": 38,
+      "eval_points": 337,
+      "loss": null,
+      "mae": 0.7180891633033752,
+      "mse": 0.9996871948242188
+    },
+    {
+      "position": 477,
+      "record_index": 110,
+      "train_points": 29,
+      "eval_points": 252,
+      "loss": null,
+      "mae": 0.43975940346717834,
+      "mse": 0.3730330765247345
+    },
+    {
+      "position": 478,
+      "record_index": 880,
+      "train_points": 43,
+      "eval_points": 379,
+      "loss": null,
+      "mae": 0.7179248332977295,
+      "mse": 0.9033343195915222
+    },
+    {
+      "position": 479,
+      "record_index": 2778,
+      "train_points": 31,
+      "eval_points": 279,
+      "loss": null,
+      "mae": 0.7064975500106812,
+      "mse": 0.9779031872749329
+    },
+    {
+      "position": 480,
+      "record_index": 1379,
+      "train_points": 11,
+      "eval_points": 99,
+      "loss": null,
+      "mae": 1.0741249322891235,
+      "mse": 3.9655921459198
+    },
+    {
+      "position": 481,
+      "record_index": 2902,
+      "train_points": 31,
+      "eval_points": 276,
+      "loss": null,
+      "mae": 0.8517618775367737,
+      "mse": 1.4784133434295654
+    },
+    {
+      "position": 482,
+      "record_index": 3801,
+      "train_points": 31,
+      "eval_points": 274,
+      "loss": null,
+      "mae": 0.4770495593547821,
+      "mse": 0.4236811697483063
+    },
+    {
+      "position": 483,
+      "record_index": 314,
+      "train_points": 43,
+      "eval_points": 387,
+      "loss": null,
+      "mae": 0.6291425228118896,
+      "mse": 0.8746293783187866
+    },
+    {
+      "position": 484,
+      "record_index": 3804,
+      "train_points": 38,
+      "eval_points": 334,
+      "loss": null,
+      "mae": 0.6870554685592651,
+      "mse": 1.310430884361267
+    },
+    {
+      "position": 485,
+      "record_index": 3388,
+      "train_points": 37,
+      "eval_points": 327,
+      "loss": null,
+      "mae": 0.8346028327941895,
+      "mse": 2.5581181049346924
+    },
+    {
+      "position": 486,
+      "record_index": 2637,
+      "train_points": 33,
+      "eval_points": 292,
+      "loss": null,
+      "mae": 0.49517518281936646,
+      "mse": 0.5793805718421936
+    },
+    {
+      "position": 487,
+      "record_index": 1012,
+      "train_points": 38,
+      "eval_points": 333,
+      "loss": null,
+      "mae": 0.9118129014968872,
+      "mse": 1.735151767730713
+    },
+    {
+      "position": 488,
+      "record_index": 2270,
+      "train_points": 37,
+      "eval_points": 327,
+      "loss": null,
+      "mae": 0.4459804892539978,
+      "mse": 0.45319658517837524
+    },
+    {
+      "position": 489,
+      "record_index": 1412,
+      "train_points": 28,
+      "eval_points": 248,
+      "loss": null,
+      "mae": 0.9771043658256531,
+      "mse": 1.8272422552108765
+    },
+    {
+      "position": 490,
+      "record_index": 2501,
+      "train_points": 40,
+      "eval_points": 357,
+      "loss": null,
+      "mae": 0.6261382102966309,
+      "mse": 0.760924756526947
+    },
+    {
+      "position": 491,
+      "record_index": 790,
+      "train_points": 32,
+      "eval_points": 281,
+      "loss": null,
+      "mae": 0.690943717956543,
+      "mse": 1.0212421417236328
+    },
+    {
+      "position": 492,
+      "record_index": 1533,
+      "train_points": 27,
+      "eval_points": 240,
+      "loss": null,
+      "mae": 0.5247762799263,
+      "mse": 0.492340624332428
+    },
+    {
+      "position": 493,
+      "record_index": 2610,
+      "train_points": 26,
+      "eval_points": 231,
+      "loss": null,
+      "mae": 0.6098356246948242,
+      "mse": 0.8498680591583252
+    },
+    {
+      "position": 494,
+      "record_index": 1780,
+      "train_points": 44,
+      "eval_points": 388,
+      "loss": null,
+      "mae": 0.6700872182846069,
+      "mse": 1.0817146301269531
+    },
+    {
+      "position": 495,
+      "record_index": 1727,
+      "train_points": 32,
+      "eval_points": 286,
+      "loss": null,
+      "mae": 1.051684021949768,
+      "mse": 2.6522881984710693
+    },
+    {
+      "position": 496,
+      "record_index": 3613,
+      "train_points": 38,
+      "eval_points": 333,
+      "loss": null,
+      "mae": 0.8704038262367249,
+      "mse": 2.5709266662597656
+    },
+    {
+      "position": 497,
+      "record_index": 3743,
+      "train_points": 35,
+      "eval_points": 310,
+      "loss": null,
+      "mae": 0.59438157081604,
+      "mse": 0.6641242504119873
+    },
+    {
+      "position": 498,
+      "record_index": 2992,
+      "train_points": 29,
+      "eval_points": 260,
+      "loss": null,
+      "mae": 1.1973140239715576,
+      "mse": 3.1073157787323
+    },
+    {
+      "position": 499,
+      "record_index": 3784,
+      "train_points": 34,
+      "eval_points": 299,
+      "loss": null,
+      "mae": 0.5649777054786682,
+      "mse": 0.6961350440979004
+    },
+    {
+      "position": 500,
+      "record_index": 913,
+      "train_points": 28,
+      "eval_points": 247,
+      "loss": null,
+      "mae": 1.0477510690689087,
+      "mse": 2.0442612171173096
+    },
+    {
+      "position": 501,
+      "record_index": 1586,
+      "train_points": 30,
+      "eval_points": 261,
+      "loss": null,
+      "mae": 0.8017261624336243,
+      "mse": 1.4290326833724976
+    },
+    {
+      "position": 502,
+      "record_index": 1217,
+      "train_points": 39,
+      "eval_points": 351,
+      "loss": null,
+      "mae": 0.9393094182014465,
+      "mse": 3.559389352798462
+    },
+    {
+      "position": 503,
+      "record_index": 224,
+      "train_points": 51,
+      "eval_points": 458,
+      "loss": null,
+      "mae": 0.5074012875556946,
+      "mse": 0.5429167151451111
+    },
+    {
+      "position": 504,
+      "record_index": 1554,
+      "train_points": 29,
+      "eval_points": 257,
+      "loss": null,
+      "mae": 1.116683006286621,
+      "mse": 2.624729633331299
+    },
+    {
+      "position": 505,
+      "record_index": 3316,
+      "train_points": 34,
+      "eval_points": 302,
+      "loss": null,
+      "mae": 0.7819356322288513,
+      "mse": 1.0399205684661865
+    },
+    {
+      "position": 506,
+      "record_index": 2157,
+      "train_points": 21,
+      "eval_points": 182,
+      "loss": null,
+      "mae": 0.604369580745697,
+      "mse": 0.688090980052948
+    },
+    {
+      "position": 507,
+      "record_index": 758,
+      "train_points": 34,
+      "eval_points": 299,
+      "loss": null,
+      "mae": 0.7754834890365601,
+      "mse": 1.095320224761963
+    },
+    {
+      "position": 508,
+      "record_index": 2130,
+      "train_points": 28,
+      "eval_points": 247,
+      "loss": null,
+      "mae": 0.6787331700325012,
+      "mse": 0.9113344550132751
+    },
+    {
+      "position": 509,
+      "record_index": 792,
+      "train_points": 35,
+      "eval_points": 309,
+      "loss": null,
+      "mae": 0.5855805277824402,
+      "mse": 0.6573126912117004
+    },
+    {
+      "position": 510,
+      "record_index": 3185,
+      "train_points": 36,
+      "eval_points": 322,
+      "loss": null,
+      "mae": 0.5510772466659546,
+      "mse": 0.6730130314826965
+    },
+    {
+      "position": 511,
+      "record_index": 256,
+      "train_points": 32,
+      "eval_points": 279,
+      "loss": null,
+      "mae": 0.4417724013328552,
+      "mse": 0.3998580276966095
+    },
+    {
+      "position": 512,
+      "record_index": 2509,
+      "train_points": 40,
+      "eval_points": 357,
+      "loss": null,
+      "mae": 0.5022622346878052,
+      "mse": 0.5057488679885864
+    },
+    {
+      "position": 513,
+      "record_index": 3628,
+      "train_points": 29,
+      "eval_points": 259,
+      "loss": null,
+      "mae": 0.6054105162620544,
+      "mse": 0.9310083389282227
+    },
+    {
+      "position": 514,
+      "record_index": 804,
+      "train_points": 19,
+      "eval_points": 167,
+      "loss": null,
+      "mae": 0.7041749358177185,
+      "mse": 0.865700364112854
+    },
+    {
+      "position": 515,
+      "record_index": 383,
+      "train_points": 46,
+      "eval_points": 407,
+      "loss": null,
+      "mae": 0.7180705666542053,
+      "mse": 1.2757691144943237
+    },
+    {
+      "position": 516,
+      "record_index": 2352,
+      "train_points": 29,
+      "eval_points": 252,
+      "loss": null,
+      "mae": 0.8907322883605957,
+      "mse": 1.5370495319366455
+    },
+    {
+      "position": 517,
+      "record_index": 2274,
+      "train_points": 36,
+      "eval_points": 318,
+      "loss": null,
+      "mae": 0.8404396772384644,
+      "mse": 1.2587008476257324
+    },
+    {
+      "position": 518,
+      "record_index": 1335,
+      "train_points": 39,
+      "eval_points": 345,
+      "loss": null,
+      "mae": 0.7598915696144104,
+      "mse": 1.0987179279327393
+    },
+    {
+      "position": 519,
+      "record_index": 909,
+      "train_points": 34,
+      "eval_points": 304,
+      "loss": null,
+      "mae": 0.7441138029098511,
+      "mse": 1.3436024188995361
+    },
+    {
+      "position": 520,
+      "record_index": 3587,
+      "train_points": 36,
+      "eval_points": 319,
+      "loss": null,
+      "mae": 0.7027554512023926,
+      "mse": 1.075749397277832
+    },
+    {
+      "position": 521,
+      "record_index": 1030,
+      "train_points": 33,
+      "eval_points": 296,
+      "loss": null,
+      "mae": 0.9244989156723022,
+      "mse": 3.077216148376465
+    },
+    {
+      "position": 522,
+      "record_index": 799,
+      "train_points": 40,
+      "eval_points": 352,
+      "loss": null,
+      "mae": 0.6533836722373962,
+      "mse": 0.9315433502197266
+    },
+    {
+      "position": 523,
+      "record_index": 1535,
+      "train_points": 39,
+      "eval_points": 345,
+      "loss": null,
+      "mae": 0.6916674375534058,
+      "mse": 1.1080204248428345
+    },
+    {
+      "position": 524,
+      "record_index": 3268,
+      "train_points": 35,
+      "eval_points": 313,
+      "loss": null,
+      "mae": 0.6649648547172546,
+      "mse": 0.9029355049133301
+    },
+    {
+      "position": 525,
+      "record_index": 3,
+      "train_points": 31,
+      "eval_points": 279,
+      "loss": null,
+      "mae": 0.5661718845367432,
+      "mse": 0.5406430959701538
+    },
+    {
+      "position": 526,
+      "record_index": 3877,
+      "train_points": 27,
+      "eval_points": 238,
+      "loss": null,
+      "mae": 0.7104387283325195,
+      "mse": 1.0963072776794434
+    },
+    {
+      "position": 527,
+      "record_index": 7,
+      "train_points": 44,
+      "eval_points": 390,
+      "loss": null,
+      "mae": 0.6005644202232361,
+      "mse": 0.7827370762825012
+    },
+    {
+      "position": 528,
+      "record_index": 3897,
+      "train_points": 28,
+      "eval_points": 246,
+      "loss": null,
+      "mae": 0.7438157796859741,
+      "mse": 1.077000617980957
+    },
+    {
+      "position": 529,
+      "record_index": 2410,
+      "train_points": 32,
+      "eval_points": 287,
+      "loss": null,
+      "mae": 0.4185772240161896,
+      "mse": 0.37438881397247314
+    },
+    {
+      "position": 530,
+      "record_index": 403,
+      "train_points": 30,
+      "eval_points": 266,
+      "loss": null,
+      "mae": 0.508266031742096,
+      "mse": 0.44067975878715515
+    },
+    {
+      "position": 531,
+      "record_index": 3415,
+      "train_points": 41,
+      "eval_points": 364,
+      "loss": null,
+      "mae": 1.0170284509658813,
+      "mse": 2.3154735565185547
+    },
+    {
+      "position": 532,
+      "record_index": 2916,
+      "train_points": 50,
+      "eval_points": 443,
+      "loss": null,
+      "mae": 0.7746655344963074,
+      "mse": 1.0729256868362427
+    },
+    {
+      "position": 533,
+      "record_index": 929,
+      "train_points": 35,
+      "eval_points": 310,
+      "loss": null,
+      "mae": 1.164235234260559,
+      "mse": 2.5032033920288086
+    },
+    {
+      "position": 534,
+      "record_index": 3133,
+      "train_points": 37,
+      "eval_points": 327,
+      "loss": null,
+      "mae": 0.7449663281440735,
+      "mse": 1.0522189140319824
+    },
+    {
+      "position": 535,
+      "record_index": 3724,
+      "train_points": 21,
+      "eval_points": 189,
+      "loss": null,
+      "mae": 0.4987334907054901,
+      "mse": 0.5545172095298767
+    },
+    {
+      "position": 536,
+      "record_index": 2462,
+      "train_points": 43,
+      "eval_points": 379,
+      "loss": null,
+      "mae": 0.5305780172348022,
+      "mse": 0.7256671190261841
+    },
+    {
+      "position": 537,
+      "record_index": 2054,
+      "train_points": 3,
+      "eval_points": 20,
+      "loss": null,
+      "mae": 0.3796347975730896,
+      "mse": 0.22159603238105774
+    },
+    {
+      "position": 538,
+      "record_index": 2684,
+      "train_points": 31,
+      "eval_points": 279,
+      "loss": null,
+      "mae": 1.0565030574798584,
+      "mse": 2.36558198928833
+    },
+    {
+      "position": 539,
+      "record_index": 3582,
+      "train_points": 39,
+      "eval_points": 342,
+      "loss": null,
+      "mae": 0.872956395149231,
+      "mse": 1.434345006942749
+    },
+    {
+      "position": 540,
+      "record_index": 3301,
+      "train_points": 21,
+      "eval_points": 187,
+      "loss": null,
+      "mae": 0.7103442549705505,
+      "mse": 0.9777905344963074
+    },
+    {
+      "position": 541,
+      "record_index": 3946,
+      "train_points": 30,
+      "eval_points": 268,
+      "loss": null,
+      "mae": 0.6099144220352173,
+      "mse": 0.7196750640869141
+    },
+    {
+      "position": 542,
+      "record_index": 1933,
+      "train_points": 33,
+      "eval_points": 292,
+      "loss": null,
+      "mae": 0.6381694078445435,
+      "mse": 0.9488226771354675
+    },
+    {
+      "position": 543,
+      "record_index": 1503,
+      "train_points": 33,
+      "eval_points": 293,
+      "loss": null,
+      "mae": 1.1387228965759277,
+      "mse": 2.8766024112701416
+    },
+    {
+      "position": 544,
+      "record_index": 2601,
+      "train_points": 39,
+      "eval_points": 342,
+      "loss": null,
+      "mae": 0.6058311462402344,
+      "mse": 0.734649121761322
+    },
+    {
+      "position": 545,
+      "record_index": 372,
+      "train_points": 40,
+      "eval_points": 359,
+      "loss": null,
+      "mae": 0.7730413675308228,
+      "mse": 1.1343554258346558
+    },
+    {
+      "position": 546,
+      "record_index": 2353,
+      "train_points": 36,
+      "eval_points": 315,
+      "loss": null,
+      "mae": 0.5143104791641235,
+      "mse": 0.5097089409828186
+    },
+    {
+      "position": 547,
+      "record_index": 1993,
+      "train_points": 41,
+      "eval_points": 363,
+      "loss": null,
+      "mae": 0.6253917813301086,
+      "mse": 0.7012088894844055
+    },
+    {
+      "position": 548,
+      "record_index": 3178,
+      "train_points": 45,
+      "eval_points": 400,
+      "loss": null,
+      "mae": 0.8802192211151123,
+      "mse": 1.8987171649932861
+    },
+    {
+      "position": 549,
+      "record_index": 318,
+      "train_points": 47,
+      "eval_points": 422,
+      "loss": null,
+      "mae": 0.8872641324996948,
+      "mse": 1.4720858335494995
+    },
+    {
+      "position": 550,
+      "record_index": 2268,
+      "train_points": 27,
+      "eval_points": 243,
+      "loss": null,
+      "mae": 0.5924858450889587,
+      "mse": 0.7275465130805969
+    },
+    {
+      "position": 551,
+      "record_index": 1719,
+      "train_points": 31,
+      "eval_points": 277,
+      "loss": null,
+      "mae": 0.4846068024635315,
+      "mse": 0.35744762420654297
+    },
+    {
+      "position": 552,
+      "record_index": 1447,
+      "train_points": 28,
+      "eval_points": 246,
+      "loss": null,
+      "mae": 0.7624325752258301,
+      "mse": 1.324900507926941
+    },
+    {
+      "position": 553,
+      "record_index": 2539,
+      "train_points": 36,
+      "eval_points": 318,
+      "loss": null,
+      "mae": 2.249061346054077,
+      "mse": 31.63853645324707
+    },
+    {
+      "position": 554,
+      "record_index": 427,
+      "train_points": 29,
+      "eval_points": 260,
+      "loss": null,
+      "mae": 0.4977503716945648,
+      "mse": 0.436978280544281
+    },
+    {
+      "position": 555,
+      "record_index": 899,
+      "train_points": 35,
+      "eval_points": 309,
+      "loss": null,
+      "mae": 0.7593201994895935,
+      "mse": 1.1702146530151367
+    },
+    {
+      "position": 556,
+      "record_index": 3843,
+      "train_points": 34,
+      "eval_points": 301,
+      "loss": null,
+      "mae": 0.7828477621078491,
+      "mse": 1.3348157405853271
+    },
+    {
+      "position": 557,
+      "record_index": 2010,
+      "train_points": 31,
+      "eval_points": 272,
+      "loss": null,
+      "mae": 0.5446296334266663,
+      "mse": 0.7309430241584778
+    },
+    {
+      "position": 558,
+      "record_index": 3320,
+      "train_points": 33,
+      "eval_points": 291,
+      "loss": null,
+      "mae": 1.0816627740859985,
+      "mse": 1.934145212173462
+    },
+    {
+      "position": 559,
+      "record_index": 2711,
+      "train_points": 34,
+      "eval_points": 304,
+      "loss": null,
+      "mae": 0.5975512862205505,
+      "mse": 0.8456540107727051
+    },
+    {
+      "position": 560,
+      "record_index": 1925,
+      "train_points": 35,
+      "eval_points": 312,
+      "loss": null,
+      "mae": 0.642380952835083,
+      "mse": 0.9219673275947571
+    },
+    {
+      "position": 561,
+      "record_index": 262,
+      "train_points": 39,
+      "eval_points": 348,
+      "loss": null,
+      "mae": 0.9173570871353149,
+      "mse": 5.8570122718811035
+    },
+    {
+      "position": 562,
+      "record_index": 2101,
+      "train_points": 35,
+      "eval_points": 315,
+      "loss": null,
+      "mae": 0.5809054970741272,
+      "mse": 0.6626759171485901
+    },
+    {
+      "position": 563,
+      "record_index": 936,
+      "train_points": 42,
+      "eval_points": 371,
+      "loss": null,
+      "mae": 1.044506311416626,
+      "mse": 4.4614362716674805
+    },
+    {
+      "position": 564,
+      "record_index": 3866,
+      "train_points": 31,
+      "eval_points": 279,
+      "loss": null,
+      "mae": 0.9881515502929688,
+      "mse": 1.9583818912506104
+    },
+    {
+      "position": 565,
+      "record_index": 171,
+      "train_points": 34,
+      "eval_points": 301,
+      "loss": null,
+      "mae": 0.5894553661346436,
+      "mse": 0.6607970595359802
+    },
+    {
+      "position": 566,
+      "record_index": 1559,
+      "train_points": 32,
+      "eval_points": 285,
+      "loss": null,
+      "mae": 0.6776338815689087,
+      "mse": 0.9024108052253723
+    },
+    {
+      "position": 567,
+      "record_index": 1391,
+      "train_points": 43,
+      "eval_points": 379,
+      "loss": null,
+      "mae": 0.6578495502471924,
+      "mse": 0.9202751517295837
+    },
+    {
+      "position": 568,
+      "record_index": 1915,
+      "train_points": 33,
+      "eval_points": 293,
+      "loss": null,
+      "mae": 0.970272958278656,
+      "mse": 1.8391140699386597
+    },
+    {
+      "position": 569,
+      "record_index": 3091,
+      "train_points": 39,
+      "eval_points": 343,
+      "loss": null,
+      "mae": 0.9174575805664062,
+      "mse": 1.7492921352386475
+    },
+    {
+      "position": 570,
+      "record_index": 1814,
+      "train_points": 35,
+      "eval_points": 313,
+      "loss": null,
+      "mae": 0.5591118931770325,
+      "mse": 0.5877145528793335
+    },
+    {
+      "position": 571,
+      "record_index": 1721,
+      "train_points": 42,
+      "eval_points": 375,
+      "loss": null,
+      "mae": 0.5513297319412231,
+      "mse": 0.5938882827758789
+    },
+    {
+      "position": 572,
+      "record_index": 2066,
+      "train_points": 31,
+      "eval_points": 271,
+      "loss": null,
+      "mae": 0.5772771835327148,
+      "mse": 0.6672509908676147
+    },
+    {
+      "position": 573,
+      "record_index": 1142,
+      "train_points": 29,
+      "eval_points": 257,
+      "loss": null,
+      "mae": 0.8657052516937256,
+      "mse": 1.3066874742507935
+    },
+    {
+      "position": 574,
+      "record_index": 2420,
+      "train_points": 50,
+      "eval_points": 441,
+      "loss": null,
+      "mae": 0.659673810005188,
+      "mse": 0.7376553416252136
+    },
+    {
+      "position": 575,
+      "record_index": 2229,
+      "train_points": 35,
+      "eval_points": 307,
+      "loss": null,
+      "mae": 0.7716941237449646,
+      "mse": 1.3415077924728394
+    },
+    {
+      "position": 576,
+      "record_index": 1899,
+      "train_points": 31,
+      "eval_points": 278,
+      "loss": null,
+      "mae": 0.7991260290145874,
+      "mse": 1.7399258613586426
+    },
+    {
+      "position": 577,
+      "record_index": 984,
+      "train_points": 42,
+      "eval_points": 372,
+      "loss": null,
+      "mae": 0.5060737133026123,
+      "mse": 0.47942787408828735
+    },
+    {
+      "position": 578,
+      "record_index": 3263,
+      "train_points": 24,
+      "eval_points": 209,
+      "loss": null,
+      "mae": 0.7913970351219177,
+      "mse": 1.1600664854049683
+    },
+    {
+      "position": 579,
+      "record_index": 394,
+      "train_points": 25,
+      "eval_points": 217,
+      "loss": null,
+      "mae": 0.7474029660224915,
+      "mse": 0.9394776225090027
+    },
+    {
+      "position": 580,
+      "record_index": 3312,
+      "train_points": 46,
+      "eval_points": 407,
+      "loss": null,
+      "mae": 1.3172613382339478,
+      "mse": 3.2000415325164795
+    },
+    {
+      "position": 581,
+      "record_index": 541,
+      "train_points": 34,
+      "eval_points": 298,
+      "loss": null,
+      "mae": 0.5567317008972168,
+      "mse": 0.7035763263702393
+    },
+    {
+      "position": 582,
+      "record_index": 2751,
+      "train_points": 44,
+      "eval_points": 392,
+      "loss": null,
+      "mae": 0.5296574234962463,
+      "mse": 0.647560715675354
+    },
+    {
+      "position": 583,
+      "record_index": 2687,
+      "train_points": 30,
+      "eval_points": 266,
+      "loss": null,
+      "mae": 0.6485294699668884,
+      "mse": 0.8414632081985474
+    },
+    {
+      "position": 584,
+      "record_index": 254,
+      "train_points": 41,
+      "eval_points": 366,
+      "loss": null,
+      "mae": 0.6827489137649536,
+      "mse": 0.9318521022796631
+    },
+    {
+      "position": 585,
+      "record_index": 993,
+      "train_points": 4,
+      "eval_points": 33,
+      "loss": null,
+      "mae": 0.8093449473381042,
+      "mse": 1.556936264038086
+    },
+    {
+      "position": 586,
+      "record_index": 3194,
+      "train_points": 31,
+      "eval_points": 279,
+      "loss": null,
+      "mae": 0.47755274176597595,
+      "mse": 0.47734883427619934
+    },
+    {
+      "position": 587,
+      "record_index": 1642,
+      "train_points": 30,
+      "eval_points": 269,
+      "loss": null,
+      "mae": 0.7506405115127563,
+      "mse": 1.1723514795303345
+    },
+    {
+      "position": 588,
+      "record_index": 126,
+      "train_points": 34,
+      "eval_points": 301,
+      "loss": null,
+      "mae": 0.5708088874816895,
+      "mse": 1.2644606828689575
+    },
+    {
+      "position": 589,
+      "record_index": 1767,
+      "train_points": 32,
+      "eval_points": 281,
+      "loss": null,
+      "mae": 0.6738988161087036,
+      "mse": 0.8699264526367188
+    },
+    {
+      "position": 590,
+      "record_index": 2655,
+      "train_points": 35,
+      "eval_points": 311,
+      "loss": null,
+      "mae": 0.5401250123977661,
+      "mse": 0.6685227155685425
+    },
+    {
+      "position": 591,
+      "record_index": 1156,
+      "train_points": 28,
+      "eval_points": 243,
+      "loss": null,
+      "mae": 0.7115300297737122,
+      "mse": 0.9258315563201904
+    },
+    {
+      "position": 592,
+      "record_index": 3712,
+      "train_points": 33,
+      "eval_points": 296,
+      "loss": null,
+      "mae": 0.3834109902381897,
+      "mse": 0.4398132562637329
+    },
+    {
+      "position": 593,
+      "record_index": 3051,
+      "train_points": 36,
+      "eval_points": 318,
+      "loss": null,
+      "mae": 0.7009894251823425,
+      "mse": 0.9122592806816101
+    },
+    {
+      "position": 594,
+      "record_index": 588,
+      "train_points": 33,
+      "eval_points": 293,
+      "loss": null,
+      "mae": 0.5581899881362915,
+      "mse": 0.5669300556182861
+    },
+    {
+      "position": 595,
+      "record_index": 3856,
+      "train_points": 31,
+      "eval_points": 277,
+      "loss": null,
+      "mae": 0.6201696395874023,
+      "mse": 0.7018367648124695
+    },
+    {
+      "position": 596,
+      "record_index": 3879,
+      "train_points": 28,
+      "eval_points": 249,
+      "loss": null,
+      "mae": 0.7353964447975159,
+      "mse": 0.903091549873352
+    },
+    {
+      "position": 597,
+      "record_index": 1573,
+      "train_points": 29,
+      "eval_points": 260,
+      "loss": null,
+      "mae": 0.48449742794036865,
+      "mse": 0.46155306696891785
+    },
+    {
+      "position": 598,
+      "record_index": 28,
+      "train_points": 35,
+      "eval_points": 313,
+      "loss": null,
+      "mae": 0.46527230739593506,
+      "mse": 0.4463697373867035
+    },
+    {
+      "position": 599,
+      "record_index": 268,
+      "train_points": 35,
+      "eval_points": 312,
+      "loss": null,
+      "mae": 0.5066202878952026,
+      "mse": 0.4642215669155121
+    },
+    {
+      "position": 600,
+      "record_index": 2972,
+      "train_points": 36,
+      "eval_points": 319,
+      "loss": null,
+      "mae": 0.4812702536582947,
+      "mse": 0.41697797179222107
+    },
+    {
+      "position": 601,
+      "record_index": 3045,
+      "train_points": 32,
+      "eval_points": 287,
+      "loss": null,
+      "mae": 0.8214514851570129,
+      "mse": 1.857020378112793
+    },
+    {
+      "position": 602,
+      "record_index": 2388,
+      "train_points": 32,
+      "eval_points": 281,
+      "loss": null,
+      "mae": 0.5962980389595032,
+      "mse": 0.728206992149353
+    },
+    {
+      "position": 603,
+      "record_index": 2209,
+      "train_points": 36,
+      "eval_points": 316,
+      "loss": null,
+      "mae": 0.7049470543861389,
+      "mse": 1.0961532592773438
+    },
+    {
+      "position": 604,
+      "record_index": 2851,
+      "train_points": 31,
+      "eval_points": 270,
+      "loss": null,
+      "mae": 0.47832798957824707,
+      "mse": 0.47837457060813904
+    },
+    {
+      "position": 605,
+      "record_index": 2164,
+      "train_points": 35,
+      "eval_points": 312,
+      "loss": null,
+      "mae": 0.8619279265403748,
+      "mse": 1.4975719451904297
+    },
+    {
+      "position": 606,
+      "record_index": 2790,
+      "train_points": 30,
+      "eval_points": 266,
+      "loss": null,
+      "mae": 0.6802938580513,
+      "mse": 0.8168199062347412
+    },
+    {
+      "position": 607,
+      "record_index": 3282,
+      "train_points": 43,
+      "eval_points": 380,
+      "loss": null,
+      "mae": 0.7131062746047974,
+      "mse": 0.9665027856826782
+    },
+    {
+      "position": 608,
+      "record_index": 1885,
+      "train_points": 31,
+      "eval_points": 279,
+      "loss": null,
+      "mae": 0.6029925346374512,
+      "mse": 0.737373411655426
+    },
+    {
+      "position": 609,
+      "record_index": 598,
+      "train_points": 31,
+      "eval_points": 274,
+      "loss": null,
+      "mae": 0.7754620313644409,
+      "mse": 1.340804100036621
+    },
+    {
+      "position": 610,
+      "record_index": 2062,
+      "train_points": 38,
+      "eval_points": 339,
+      "loss": null,
+      "mae": 0.6114711761474609,
+      "mse": 0.7843199372291565
+    },
+    {
+      "position": 611,
+      "record_index": 1624,
+      "train_points": 32,
+      "eval_points": 279,
+      "loss": null,
+      "mae": 0.5728511214256287,
+      "mse": 0.6434163451194763
+    },
+    {
+      "position": 612,
+      "record_index": 1087,
+      "train_points": 36,
+      "eval_points": 317,
+      "loss": null,
+      "mae": 1.0185943841934204,
+      "mse": 2.286885976791382
+    },
+    {
+      "position": 613,
+      "record_index": 2482,
+      "train_points": 36,
+      "eval_points": 319,
+      "loss": null,
+      "mae": 0.7050462961196899,
+      "mse": 0.8938570022583008
+    },
+    {
+      "position": 614,
+      "record_index": 1501,
+      "train_points": 36,
+      "eval_points": 315,
+      "loss": null,
+      "mae": 0.8827712535858154,
+      "mse": 1.3390593528747559
+    },
+    {
+      "position": 615,
+      "record_index": 2657,
+      "train_points": 27,
+      "eval_points": 237,
+      "loss": null,
+      "mae": 0.5596317052841187,
+      "mse": 0.6264069676399231
+    },
+    {
+      "position": 616,
+      "record_index": 3332,
+      "train_points": 33,
+      "eval_points": 296,
+      "loss": null,
+      "mae": 0.7343149781227112,
+      "mse": 1.2242817878723145
+    },
+    {
+      "position": 617,
+      "record_index": 3148,
+      "train_points": 37,
+      "eval_points": 327,
+      "loss": null,
+      "mae": 0.609255850315094,
+      "mse": 0.7854063510894775
+    },
+    {
+      "position": 618,
+      "record_index": 3509,
+      "train_points": 40,
+      "eval_points": 358,
+      "loss": null,
+      "mae": 0.7414431571960449,
+      "mse": 1.2167563438415527
+    },
+    {
+      "position": 619,
+      "record_index": 2469,
+      "train_points": 34,
+      "eval_points": 304,
+      "loss": null,
+      "mae": 0.5146321654319763,
+      "mse": 0.49513188004493713
+    },
+    {
+      "position": 620,
+      "record_index": 2730,
+      "train_points": 28,
+      "eval_points": 252,
+      "loss": null,
+      "mae": 0.8108792901039124,
+      "mse": 1.719344139099121
+    },
+    {
+      "position": 621,
+      "record_index": 255,
+      "train_points": 11,
+      "eval_points": 90,
+      "loss": null,
+      "mae": 1.1270519495010376,
+      "mse": 2.0139050483703613
+    },
+    {
+      "position": 622,
+      "record_index": 2317,
+      "train_points": 31,
+      "eval_points": 279,
+      "loss": null,
+      "mae": 0.41449877619743347,
+      "mse": 0.3350490927696228
+    },
+    {
+      "position": 623,
+      "record_index": 1422,
+      "train_points": 33,
+      "eval_points": 295,
+      "loss": null,
+      "mae": 0.5396724343299866,
+      "mse": 0.7522286176681519
+    },
+    {
+      "position": 624,
+      "record_index": 1328,
+      "train_points": 29,
+      "eval_points": 260,
+      "loss": null,
+      "mae": 0.7411443591117859,
+      "mse": 1.1149204969406128
+    },
+    {
+      "position": 625,
+      "record_index": 2807,
+      "train_points": 31,
+      "eval_points": 277,
+      "loss": null,
+      "mae": 0.5728102922439575,
+      "mse": 0.6389368176460266
+    },
+    {
+      "position": 626,
+      "record_index": 2275,
+      "train_points": 32,
+      "eval_points": 288,
+      "loss": null,
+      "mae": 0.5187667012214661,
+      "mse": 0.5101180076599121
+    },
+    {
+      "position": 627,
+      "record_index": 107,
+      "train_points": 31,
+      "eval_points": 277,
+      "loss": null,
+      "mae": 0.6377229690551758,
+      "mse": 0.6542270183563232
+    },
+    {
+      "position": 628,
+      "record_index": 3585,
+      "train_points": 31,
+      "eval_points": 276,
+      "loss": null,
+      "mae": 0.5103468298912048,
+      "mse": 0.5777328014373779
+    },
+    {
+      "position": 629,
+      "record_index": 3092,
+      "train_points": 28,
+      "eval_points": 249,
+      "loss": null,
+      "mae": 0.6645638942718506,
+      "mse": 3.0112216472625732
+    },
+    {
+      "position": 630,
+      "record_index": 2701,
+      "train_points": 26,
+      "eval_points": 234,
+      "loss": null,
+      "mae": 0.7938944697380066,
+      "mse": 1.3570345640182495
+    },
+    {
+      "position": 631,
+      "record_index": 1344,
+      "train_points": 36,
+      "eval_points": 316,
+      "loss": null,
+      "mae": 1.0122424364089966,
+      "mse": 1.9495646953582764
+    },
+    {
+      "position": 632,
+      "record_index": 3609,
+      "train_points": 30,
+      "eval_points": 270,
+      "loss": null,
+      "mae": 0.5754832625389099,
+      "mse": 0.5967482924461365
+    },
+    {
+      "position": 633,
+      "record_index": 2606,
+      "train_points": 31,
+      "eval_points": 271,
+      "loss": null,
+      "mae": 0.8476463556289673,
+      "mse": 1.3702815771102905
+    },
+    {
+      "position": 634,
+      "record_index": 2650,
+      "train_points": 33,
+      "eval_points": 296,
+      "loss": null,
+      "mae": 0.5466459393501282,
+      "mse": 0.5928088426589966
+    },
+    {
+      "position": 635,
+      "record_index": 2373,
+      "train_points": 38,
+      "eval_points": 333,
+      "loss": null,
+      "mae": 0.48059701919555664,
+      "mse": 0.4046006202697754
+    },
+    {
+      "position": 636,
+      "record_index": 2645,
+      "train_points": 41,
+      "eval_points": 368,
+      "loss": null,
+      "mae": 0.6921249628067017,
+      "mse": 1.14108407497406
+    },
+    {
+      "position": 637,
+      "record_index": 1648,
+      "train_points": 17,
+      "eval_points": 151,
+      "loss": null,
+      "mae": 0.7174791693687439,
+      "mse": 1.1432360410690308
+    },
+    {
+      "position": 638,
+      "record_index": 1064,
+      "train_points": 31,
+      "eval_points": 274,
+      "loss": null,
+      "mae": 0.5762619972229004,
+      "mse": 0.5461287498474121
+    },
+    {
+      "position": 639,
+      "record_index": 551,
+      "train_points": 29,
+      "eval_points": 259,
+      "loss": null,
+      "mae": 0.5878998041152954,
+      "mse": 0.6617523431777954
+    },
+    {
+      "position": 640,
+      "record_index": 3900,
+      "train_points": 34,
+      "eval_points": 300,
+      "loss": null,
+      "mae": 0.5679104328155518,
+      "mse": 1.0794442892074585
+    },
+    {
+      "position": 641,
+      "record_index": 1734,
+      "train_points": 30,
+      "eval_points": 264,
+      "loss": null,
+      "mae": 0.8197657465934753,
+      "mse": 1.1991405487060547
+    },
+    {
+      "position": 642,
+      "record_index": 3152,
+      "train_points": 25,
+      "eval_points": 225,
+      "loss": null,
+      "mae": 0.6265825629234314,
+      "mse": 0.6976001262664795
+    },
+    {
+      "position": 643,
+      "record_index": 382,
+      "train_points": 36,
+      "eval_points": 317,
+      "loss": null,
+      "mae": 1.1196913719177246,
+      "mse": 2.296156883239746
+    },
+    {
+      "position": 644,
+      "record_index": 75,
+      "train_points": 28,
+      "eval_points": 251,
+      "loss": null,
+      "mae": 1.106546401977539,
+      "mse": 2.1443989276885986
+    },
+    {
+      "position": 645,
+      "record_index": 2696,
+      "train_points": 31,
+      "eval_points": 276,
+      "loss": null,
+      "mae": 0.4742029309272766,
+      "mse": 0.3851277530193329
+    },
+    {
+      "position": 646,
+      "record_index": 3954,
+      "train_points": 30,
+      "eval_points": 262,
+      "loss": null,
+      "mae": 0.7279857397079468,
+      "mse": 0.9256484508514404
+    },
+    {
+      "position": 647,
+      "record_index": 748,
+      "train_points": 50,
+      "eval_points": 445,
+      "loss": null,
+      "mae": 0.661596953868866,
+      "mse": 0.778324544429779
+    },
+    {
+      "position": 648,
+      "record_index": 2661,
+      "train_points": 40,
+      "eval_points": 359,
+      "loss": null,
+      "mae": 0.8525798916816711,
+      "mse": 1.6174068450927734
+    },
+    {
+      "position": 649,
+      "record_index": 2426,
+      "train_points": 35,
+      "eval_points": 306,
+      "loss": null,
+      "mae": 0.6833521723747253,
+      "mse": 0.8642003536224365
+    },
+    {
+      "position": 650,
+      "record_index": 3226,
+      "train_points": 32,
+      "eval_points": 285,
+      "loss": null,
+      "mae": 0.45141667127609253,
+      "mse": 0.34125375747680664
+    },
+    {
+      "position": 651,
+      "record_index": 3253,
+      "train_points": 29,
+      "eval_points": 260,
+      "loss": null,
+      "mae": 0.8037272095680237,
+      "mse": 1.3231933116912842
+    },
+    {
+      "position": 652,
+      "record_index": 2473,
+      "train_points": 29,
+      "eval_points": 261,
+      "loss": null,
+      "mae": 0.6620389223098755,
+      "mse": 0.763972818851471
+    },
+    {
+      "position": 653,
+      "record_index": 188,
+      "train_points": 42,
+      "eval_points": 371,
+      "loss": null,
+      "mae": 0.6875613927841187,
+      "mse": 0.9774000644683838
+    },
+    {
+      "position": 654,
+      "record_index": 3848,
+      "train_points": 56,
+      "eval_points": 499,
+      "loss": null,
+      "mae": 0.7052196264266968,
+      "mse": 0.9838322997093201
+    },
+    {
+      "position": 655,
+      "record_index": 329,
+      "train_points": 35,
+      "eval_points": 315,
+      "loss": null,
+      "mae": 0.5466838479042053,
+      "mse": 0.6942832469940186
+    },
+    {
+      "position": 656,
+      "record_index": 3583,
+      "train_points": 37,
+      "eval_points": 327,
+      "loss": null,
+      "mae": 0.599082350730896,
+      "mse": 0.7423466444015503
+    },
+    {
+      "position": 657,
+      "record_index": 89,
+      "train_points": 40,
+      "eval_points": 356,
+      "loss": null,
+      "mae": 0.45908433198928833,
+      "mse": 0.5524058938026428
+    },
+    {
+      "position": 658,
+      "record_index": 1021,
+      "train_points": 32,
+      "eval_points": 288,
+      "loss": null,
+      "mae": 0.5766562819480896,
+      "mse": 0.5920118689537048
+    },
+    {
+      "position": 659,
+      "record_index": 1683,
+      "train_points": 13,
+      "eval_points": 111,
+      "loss": null,
+      "mae": 0.5861672759056091,
+      "mse": 0.7146807909011841
+    },
+    {
+      "position": 660,
+      "record_index": 297,
+      "train_points": 30,
+      "eval_points": 269,
+      "loss": null,
+      "mae": 0.5879886150360107,
+      "mse": 1.2839702367782593
+    },
+    {
+      "position": 661,
+      "record_index": 2741,
+      "train_points": 37,
+      "eval_points": 331,
+      "loss": null,
+      "mae": 0.6670892834663391,
+      "mse": 0.9301651120185852
+    },
+    {
+      "position": 662,
+      "record_index": 761,
+      "train_points": 39,
+      "eval_points": 349,
+      "loss": null,
+      "mae": 2.363133192062378,
+      "mse": 16.068334579467773
+    },
+    {
+      "position": 663,
+      "record_index": 2095,
+      "train_points": 28,
+      "eval_points": 245,
+      "loss": null,
+      "mae": 0.7245998382568359,
+      "mse": 3.34086275100708
+    },
+    {
+      "position": 664,
+      "record_index": 442,
+      "train_points": 34,
+      "eval_points": 299,
+      "loss": null,
+      "mae": 0.8802048563957214,
+      "mse": 1.251523494720459
+    },
+    {
+      "position": 665,
+      "record_index": 72,
+      "train_points": 38,
+      "eval_points": 341,
+      "loss": null,
+      "mae": 0.4878901541233063,
+      "mse": 0.48899343609809875
+    },
+    {
+      "position": 666,
+      "record_index": 2580,
+      "train_points": 32,
+      "eval_points": 279,
+      "loss": null,
+      "mae": 0.5841274261474609,
+      "mse": 0.5881140232086182
+    },
+    {
+      "position": 667,
+      "record_index": 1768,
+      "train_points": 31,
+      "eval_points": 271,
+      "loss": null,
+      "mae": 0.5087468028068542,
+      "mse": 0.5816001892089844
+    },
+    {
+      "position": 668,
+      "record_index": 457,
+      "train_points": 33,
+      "eval_points": 288,
+      "loss": null,
+      "mae": 0.5977510809898376,
+      "mse": 0.8636643290519714
+    },
+    {
+      "position": 669,
+      "record_index": 1386,
+      "train_points": 40,
+      "eval_points": 352,
+      "loss": null,
+      "mae": 0.8466330170631409,
+      "mse": 1.4136992692947388
+    },
+    {
+      "position": 670,
+      "record_index": 573,
+      "train_points": 35,
+      "eval_points": 313,
+      "loss": null,
+      "mae": 0.7427047491073608,
+      "mse": 1.0374549627304077
+    },
+    {
+      "position": 671,
+      "record_index": 1270,
+      "train_points": 52,
+      "eval_points": 465,
+      "loss": null,
+      "mae": 0.8635575771331787,
+      "mse": 1.7530019283294678
+    },
+    {
+      "position": 672,
+      "record_index": 2392,
+      "train_points": 41,
+      "eval_points": 366,
+      "loss": null,
+      "mae": 0.6879212856292725,
+      "mse": 0.9786353707313538
+    },
+    {
+      "position": 673,
+      "record_index": 1176,
+      "train_points": 41,
+      "eval_points": 369,
+      "loss": null,
+      "mae": 0.49671998620033264,
+      "mse": 0.5345120429992676
+    },
+    {
+      "position": 674,
+      "record_index": 2457,
+      "train_points": 30,
+      "eval_points": 264,
+      "loss": null,
+      "mae": 0.5410555601119995,
+      "mse": 0.8466256856918335
+    },
+    {
+      "position": 675,
+      "record_index": 2323,
+      "train_points": 33,
+      "eval_points": 297,
+      "loss": null,
+      "mae": 0.8614120483398438,
+      "mse": 1.8598459959030151
+    },
+    {
+      "position": 676,
+      "record_index": 83,
+      "train_points": 26,
+      "eval_points": 231,
+      "loss": null,
+      "mae": 0.4520223140716553,
+      "mse": 0.47594621777534485
+    },
+    {
+      "position": 677,
+      "record_index": 1169,
+      "train_points": 36,
+      "eval_points": 322,
+      "loss": null,
+      "mae": 0.5950316190719604,
+      "mse": 0.6394443511962891
+    },
+    {
+      "position": 678,
+      "record_index": 1159,
+      "train_points": 35,
+      "eval_points": 308,
+      "loss": null,
+      "mae": 0.5120142102241516,
+      "mse": 0.5560407638549805
+    },
+    {
+      "position": 679,
+      "record_index": 301,
+      "train_points": 45,
+      "eval_points": 405,
+      "loss": null,
+      "mae": 0.47086331248283386,
+      "mse": 1.6517146825790405
+    },
+    {
+      "position": 680,
+      "record_index": 1644,
+      "train_points": 37,
+      "eval_points": 327,
+      "loss": null,
+      "mae": 0.4838449954986572,
+      "mse": 0.4168480932712555
+    },
+    {
+      "position": 681,
+      "record_index": 881,
+      "train_points": 35,
+      "eval_points": 306,
+      "loss": null,
+      "mae": 0.5015529990196228,
+      "mse": 0.6355817914009094
+    },
+    {
+      "position": 682,
+      "record_index": 1104,
+      "train_points": 35,
+      "eval_points": 312,
+      "loss": null,
+      "mae": 0.5337167382240295,
+      "mse": 0.5106921195983887
+    },
+    {
+      "position": 683,
+      "record_index": 3990,
+      "train_points": 24,
+      "eval_points": 213,
+      "loss": null,
+      "mae": 0.9704300165176392,
+      "mse": 1.7255899906158447
+    },
+    {
+      "position": 684,
+      "record_index": 1329,
+      "train_points": 26,
+      "eval_points": 229,
+      "loss": null,
+      "mae": 0.8327177166938782,
+      "mse": 1.435377836227417
+    },
+    {
+      "position": 685,
+      "record_index": 781,
+      "train_points": 24,
+      "eval_points": 216,
+      "loss": null,
+      "mae": 0.8104685544967651,
+      "mse": 1.0962947607040405
+    },
+    {
+      "position": 686,
+      "record_index": 397,
+      "train_points": 34,
+      "eval_points": 301,
+      "loss": null,
+      "mae": 1.348698616027832,
+      "mse": 4.074028015136719
+    },
+    {
+      "position": 687,
+      "record_index": 1135,
+      "train_points": 28,
+      "eval_points": 246,
+      "loss": null,
+      "mae": 0.4413902759552002,
+      "mse": 0.3540695309638977
+    },
+    {
+      "position": 688,
+      "record_index": 719,
+      "train_points": 36,
+      "eval_points": 318,
+      "loss": null,
+      "mae": 1.0565853118896484,
+      "mse": 2.9691150188446045
+    },
+    {
+      "position": 689,
+      "record_index": 1398,
+      "train_points": 32,
+      "eval_points": 284,
+      "loss": null,
+      "mae": 0.6928534507751465,
+      "mse": 0.8125157952308655
+    },
+    {
+      "position": 690,
+      "record_index": 3708,
+      "train_points": 38,
+      "eval_points": 334,
+      "loss": null,
+      "mae": 0.6376829743385315,
+      "mse": 0.7382820844650269
+    },
+    {
+      "position": 691,
+      "record_index": 3656,
+      "train_points": 33,
+      "eval_points": 296,
+      "loss": null,
+      "mae": 0.5755122303962708,
+      "mse": 0.6082780957221985
+    },
+    {
+      "position": 692,
+      "record_index": 2161,
+      "train_points": 51,
+      "eval_points": 458,
+      "loss": null,
+      "mae": 0.9890230298042297,
+      "mse": 1.758411169052124
+    },
+    {
+      "position": 693,
+      "record_index": 1034,
+      "train_points": 31,
+      "eval_points": 273,
+      "loss": null,
+      "mae": 0.504371702671051,
+      "mse": 0.5131463408470154
+    },
+    {
+      "position": 694,
+      "record_index": 3573,
+      "train_points": 50,
+      "eval_points": 441,
+      "loss": null,
+      "mae": 1.0146725177764893,
+      "mse": 2.4122259616851807
+    },
+    {
+      "position": 695,
+      "record_index": 484,
+      "train_points": 39,
+      "eval_points": 342,
+      "loss": null,
+      "mae": 0.6981984376907349,
+      "mse": 1.2173433303833008
+    },
+    {
+      "position": 696,
+      "record_index": 2893,
+      "train_points": 34,
+      "eval_points": 303,
+      "loss": null,
+      "mae": 0.7628810405731201,
+      "mse": 1.145326018333435
+    },
+    {
+      "position": 697,
+      "record_index": 2306,
+      "train_points": 31,
+      "eval_points": 270,
+      "loss": null,
+      "mae": 0.5477129220962524,
+      "mse": 0.5182687640190125
+    },
+    {
+      "position": 698,
+      "record_index": 3048,
+      "train_points": 26,
+      "eval_points": 226,
+      "loss": null,
+      "mae": 0.7125996351242065,
+      "mse": 0.8570094704627991
+    },
+    {
+      "position": 699,
+      "record_index": 932,
+      "train_points": 28,
+      "eval_points": 249,
+      "loss": null,
+      "mae": 0.6354404091835022,
+      "mse": 0.7238568663597107
+    },
+    {
+      "position": 700,
+      "record_index": 1459,
+      "train_points": 34,
+      "eval_points": 306,
+      "loss": null,
+      "mae": 0.6311015486717224,
+      "mse": 0.944072425365448
+    },
+    {
+      "position": 701,
+      "record_index": 2049,
+      "train_points": 31,
+      "eval_points": 271,
+      "loss": null,
+      "mae": 0.6292990446090698,
+      "mse": 0.7247613072395325
+    },
+    {
+      "position": 702,
+      "record_index": 955,
+      "train_points": 28,
+      "eval_points": 251,
+      "loss": null,
+      "mae": 0.6634202003479004,
+      "mse": 0.7532659769058228
+    },
+    {
+      "position": 703,
+      "record_index": 2918,
+      "train_points": 33,
+      "eval_points": 291,
+      "loss": null,
+      "mae": 0.6631984710693359,
+      "mse": 0.7545241713523865
+    },
+    {
+      "position": 704,
+      "record_index": 1330,
+      "train_points": 29,
+      "eval_points": 259,
+      "loss": null,
+      "mae": 0.6738592982292175,
+      "mse": 0.8943517804145813
+    },
+    {
+      "position": 705,
+      "record_index": 1858,
+      "train_points": 27,
+      "eval_points": 237,
+      "loss": null,
+      "mae": 0.718526303768158,
+      "mse": 5.852088928222656
+    },
+    {
+      "position": 706,
+      "record_index": 1592,
+      "train_points": 31,
+      "eval_points": 279,
+      "loss": null,
+      "mae": 0.7252880930900574,
+      "mse": 1.0656782388687134
+    },
+    {
+      "position": 707,
+      "record_index": 2301,
+      "train_points": 34,
+      "eval_points": 304,
+      "loss": null,
+      "mae": 0.6156252026557922,
+      "mse": 0.8530548214912415
+    },
+    {
+      "position": 708,
+      "record_index": 1794,
+      "train_points": 40,
+      "eval_points": 359,
+      "loss": null,
+      "mae": 0.6461092233657837,
+      "mse": 0.8760501146316528
+    },
+    {
+      "position": 709,
+      "record_index": 1964,
+      "train_points": 31,
+      "eval_points": 270,
+      "loss": null,
+      "mae": 0.8372693061828613,
+      "mse": 1.1660099029541016
+    },
+    {
+      "position": 710,
+      "record_index": 1122,
+      "train_points": 37,
+      "eval_points": 330,
+      "loss": null,
+      "mae": 0.6145814061164856,
+      "mse": 0.6474893093109131
+    },
+    {
+      "position": 711,
+      "record_index": 3777,
+      "train_points": 33,
+      "eval_points": 294,
+      "loss": null,
+      "mae": 0.676749050617218,
+      "mse": 1.0669375658035278
+    },
+    {
+      "position": 712,
+      "record_index": 3096,
+      "train_points": 38,
+      "eval_points": 333,
+      "loss": null,
+      "mae": 0.7472535371780396,
+      "mse": 1.3686603307724
+    },
+    {
+      "position": 713,
+      "record_index": 1342,
+      "train_points": 31,
+      "eval_points": 277,
+      "loss": null,
+      "mae": 1.0676193237304688,
+      "mse": 2.233297348022461
+    },
+    {
+      "position": 714,
+      "record_index": 982,
+      "train_points": 32,
+      "eval_points": 283,
+      "loss": null,
+      "mae": 0.5764575004577637,
+      "mse": 0.697507381439209
+    },
+    {
+      "position": 715,
+      "record_index": 2872,
+      "train_points": 31,
+      "eval_points": 273,
+      "loss": null,
+      "mae": 0.59689861536026,
+      "mse": 0.6769415736198425
+    },
+    {
+      "position": 716,
+      "record_index": 3969,
+      "train_points": 40,
+      "eval_points": 359,
+      "loss": null,
+      "mae": 0.7508701086044312,
+      "mse": 1.0749616622924805
+    },
+    {
+      "position": 717,
+      "record_index": 1961,
+      "train_points": 48,
+      "eval_points": 427,
+      "loss": null,
+      "mae": 0.6317520141601562,
+      "mse": 0.8752745389938354
+    },
+    {
+      "position": 718,
+      "record_index": 1926,
+      "train_points": 48,
+      "eval_points": 424,
+      "loss": null,
+      "mae": 0.47391200065612793,
+      "mse": 0.47413498163223267
+    },
+    {
+      "position": 719,
+      "record_index": 2238,
+      "train_points": 30,
+      "eval_points": 267,
+      "loss": null,
+      "mae": 1.2167291641235352,
+      "mse": 3.1183061599731445
+    },
+    {
+      "position": 720,
+      "record_index": 3464,
+      "train_points": 34,
+      "eval_points": 306,
+      "loss": null,
+      "mae": 0.8280603289604187,
+      "mse": 1.3070658445358276
+    },
+    {
+      "position": 721,
+      "record_index": 205,
+      "train_points": 19,
+      "eval_points": 170,
+      "loss": null,
+      "mae": 0.6744461059570312,
+      "mse": 0.7161974310874939
+    },
+    {
+      "position": 722,
+      "record_index": 1273,
+      "train_points": 32,
+      "eval_points": 286,
+      "loss": null,
+      "mae": 0.6223594546318054,
+      "mse": 0.7189396023750305
+    },
+    {
+      "position": 723,
+      "record_index": 2769,
+      "train_points": 31,
+      "eval_points": 273,
+      "loss": null,
+      "mae": 0.8465248346328735,
+      "mse": 1.3776737451553345
+    },
+    {
+      "position": 724,
+      "record_index": 3771,
+      "train_points": 28,
+      "eval_points": 251,
+      "loss": null,
+      "mae": 0.4031245708465576,
+      "mse": 0.2965547442436218
+    },
+    {
+      "position": 725,
+      "record_index": 3192,
+      "train_points": 44,
+      "eval_points": 390,
+      "loss": null,
+      "mae": 0.6257241368293762,
+      "mse": 0.908707320690155
+    },
+    {
+      "position": 726,
+      "record_index": 3888,
+      "train_points": 5,
+      "eval_points": 40,
+      "loss": null,
+      "mae": 0.4500456750392914,
+      "mse": 0.35317525267601013
+    },
+    {
+      "position": 727,
+      "record_index": 870,
+      "train_points": 37,
+      "eval_points": 332,
+      "loss": null,
+      "mae": 0.5615084767341614,
+      "mse": 0.6406509280204773
+    },
+    {
+      "position": 728,
+      "record_index": 1036,
+      "train_points": 32,
+      "eval_points": 288,
+      "loss": null,
+      "mae": 0.5829727053642273,
+      "mse": 0.6853132247924805
+    },
+    {
+      "position": 729,
+      "record_index": 2755,
+      "train_points": 23,
+      "eval_points": 205,
+      "loss": null,
+      "mae": 0.7528451085090637,
+      "mse": 0.9493817687034607
+    },
+    {
+      "position": 730,
+      "record_index": 2333,
+      "train_points": 33,
+      "eval_points": 289,
+      "loss": null,
+      "mae": 0.6474074721336365,
+      "mse": 0.786769449710846
+    },
+    {
+      "position": 731,
+      "record_index": 1865,
+      "train_points": 36,
+      "eval_points": 318,
+      "loss": null,
+      "mae": 0.7997469305992126,
+      "mse": 1.1412805318832397
+    },
+    {
+      "position": 732,
+      "record_index": 546,
+      "train_points": 55,
+      "eval_points": 488,
+      "loss": null,
+      "mae": 0.6306059956550598,
+      "mse": 0.9168213605880737
+    },
+    {
+      "position": 733,
+      "record_index": 3056,
+      "train_points": 34,
+      "eval_points": 301,
+      "loss": null,
+      "mae": 0.8370871543884277,
+      "mse": 1.2547353506088257
+    },
+    {
+      "position": 734,
+      "record_index": 3005,
+      "train_points": 30,
+      "eval_points": 270,
+      "loss": null,
+      "mae": 0.9718894958496094,
+      "mse": 1.7950814962387085
+    },
+    {
+      "position": 735,
+      "record_index": 2175,
+      "train_points": 40,
+      "eval_points": 352,
+      "loss": null,
+      "mae": 0.630405843257904,
+      "mse": 0.7751837372779846
+    },
+    {
+      "position": 736,
+      "record_index": 720,
+      "train_points": 33,
+      "eval_points": 297,
+      "loss": null,
+      "mae": 1.1758747100830078,
+      "mse": 3.686082363128662
+    },
+    {
+      "position": 737,
+      "record_index": 291,
+      "train_points": 44,
+      "eval_points": 389,
+      "loss": null,
+      "mae": 0.644488513469696,
+      "mse": 2.109177827835083
+    },
+    {
+      "position": 738,
+      "record_index": 540,
+      "train_points": 37,
+      "eval_points": 324,
+      "loss": null,
+      "mae": 0.5917264223098755,
+      "mse": 0.7465078234672546
+    },
+    {
+      "position": 739,
+      "record_index": 1748,
+      "train_points": 24,
+      "eval_points": 216,
+      "loss": null,
+      "mae": 0.6644806265830994,
+      "mse": 0.7540589570999146
+    },
+    {
+      "position": 740,
+      "record_index": 1787,
+      "train_points": 31,
+      "eval_points": 273,
+      "loss": null,
+      "mae": 0.9438076615333557,
+      "mse": 1.7516801357269287
+    },
+    {
+      "position": 741,
+      "record_index": 12,
+      "train_points": 24,
+      "eval_points": 213,
+      "loss": null,
+      "mae": 0.4985516369342804,
+      "mse": 0.46088090538978577
+    },
+    {
+      "position": 742,
+      "record_index": 2589,
+      "train_points": 37,
+      "eval_points": 327,
+      "loss": null,
+      "mae": 1.104207158088684,
+      "mse": 2.1280486583709717
+    },
+    {
+      "position": 743,
+      "record_index": 2983,
+      "train_points": 33,
+      "eval_points": 293,
+      "loss": null,
+      "mae": 0.6116155982017517,
+      "mse": 0.7539591193199158
+    },
+    {
+      "position": 744,
+      "record_index": 3604,
+      "train_points": 43,
+      "eval_points": 381,
+      "loss": null,
+      "mae": 0.7234508395195007,
+      "mse": 0.9802367687225342
+    },
+    {
+      "position": 745,
+      "record_index": 267,
+      "train_points": 38,
+      "eval_points": 333,
+      "loss": null,
+      "mae": 0.4818464517593384,
+      "mse": 0.4636627733707428
+    },
+    {
+      "position": 746,
+      "record_index": 3414,
+      "train_points": 37,
+      "eval_points": 331,
+      "loss": null,
+      "mae": 0.5414637327194214,
+      "mse": 0.7358486652374268
+    },
+    {
+      "position": 747,
+      "record_index": 60,
+      "train_points": 29,
+      "eval_points": 256,
+      "loss": null,
+      "mae": 0.8366880416870117,
+      "mse": 1.364459753036499
+    },
+    {
+      "position": 748,
+      "record_index": 3297,
+      "train_points": 36,
+      "eval_points": 322,
+      "loss": null,
+      "mae": 0.6071370840072632,
+      "mse": 0.7128569483757019
+    },
+    {
+      "position": 749,
+      "record_index": 165,
+      "train_points": 38,
+      "eval_points": 339,
+      "loss": null,
+      "mae": 0.7517277002334595,
+      "mse": 1.2433745861053467
+    },
+    {
+      "position": 750,
+      "record_index": 464,
+      "train_points": 40,
+      "eval_points": 357,
+      "loss": null,
+      "mae": 0.8842190504074097,
+      "mse": 1.922189712524414
+    },
+    {
+      "position": 751,
+      "record_index": 1850,
+      "train_points": 34,
+      "eval_points": 298,
+      "loss": null,
+      "mae": 0.6071824431419373,
+      "mse": 0.6380273103713989
+    },
+    {
+      "position": 752,
+      "record_index": 1408,
+      "train_points": 34,
+      "eval_points": 303,
+      "loss": null,
+      "mae": 0.4775516092777252,
+      "mse": 0.41898661851882935
+    },
+    {
+      "position": 753,
+      "record_index": 2295,
+      "train_points": 52,
+      "eval_points": 461,
+      "loss": null,
+      "mae": 0.7342761158943176,
+      "mse": 1.0897446870803833
+    },
+    {
+      "position": 754,
+      "record_index": 4,
+      "train_points": 31,
+      "eval_points": 272,
+      "loss": null,
+      "mae": 0.5121964812278748,
+      "mse": 0.5072584748268127
+    },
+    {
+      "position": 755,
+      "record_index": 2712,
+      "train_points": 38,
+      "eval_points": 341,
+      "loss": null,
+      "mae": 0.6432538032531738,
+      "mse": 0.9180927276611328
+    },
+    {
+      "position": 756,
+      "record_index": 3887,
+      "train_points": 38,
+      "eval_points": 337,
+      "loss": null,
+      "mae": 0.7215693593025208,
+      "mse": 1.1046735048294067
+    },
+    {
+      "position": 757,
+      "record_index": 902,
+      "train_points": 34,
+      "eval_points": 297,
+      "loss": null,
+      "mae": 0.5330299735069275,
+      "mse": 0.5030949115753174
+    },
+    {
+      "position": 758,
+      "record_index": 535,
+      "train_points": 37,
+      "eval_points": 333,
+      "loss": null,
+      "mae": 0.5118240714073181,
+      "mse": 0.5837616324424744
+    },
+    {
+      "position": 759,
+      "record_index": 2517,
+      "train_points": 29,
+      "eval_points": 254,
+      "loss": null,
+      "mae": 0.510391116142273,
+      "mse": 0.519603967666626
+    },
+    {
+      "position": 760,
+      "record_index": 3273,
+      "train_points": 34,
+      "eval_points": 306,
+      "loss": null,
+      "mae": 0.5403380393981934,
+      "mse": 0.5893017053604126
+    },
+    {
+      "position": 761,
+      "record_index": 330,
+      "train_points": 35,
+      "eval_points": 310,
+      "loss": null,
+      "mae": 0.5239664316177368,
+      "mse": 0.524459719657898
+    },
+    {
+      "position": 762,
+      "record_index": 1896,
+      "train_points": 27,
+      "eval_points": 234,
+      "loss": null,
+      "mae": 0.6401853561401367,
+      "mse": 0.7343155145645142
+    },
+    {
+      "position": 763,
+      "record_index": 2008,
+      "train_points": 30,
+      "eval_points": 270,
+      "loss": null,
+      "mae": 0.7824549078941345,
+      "mse": 1.159192681312561
+    },
+    {
+      "position": 764,
+      "record_index": 581,
+      "train_points": 38,
+      "eval_points": 342,
+      "loss": null,
+      "mae": 0.41540446877479553,
+      "mse": 0.3196258246898651
+    },
+    {
+      "position": 765,
+      "record_index": 2948,
+      "train_points": 35,
+      "eval_points": 315,
+      "loss": null,
+      "mae": 0.6167239546775818,
+      "mse": 0.6537607908248901
+    },
+    {
+      "position": 766,
+      "record_index": 2225,
+      "train_points": 25,
+      "eval_points": 217,
+      "loss": null,
+      "mae": 0.7373907566070557,
+      "mse": 1.5765223503112793
+    },
+    {
+      "position": 767,
+      "record_index": 855,
+      "train_points": 35,
+      "eval_points": 312,
+      "loss": null,
+      "mae": 0.6447984576225281,
+      "mse": 0.9287055730819702
+    },
+    {
+      "position": 768,
+      "record_index": 3277,
+      "train_points": 39,
+      "eval_points": 347,
+      "loss": null,
+      "mae": 0.7057552933692932,
+      "mse": 1.1417316198349
+    },
+    {
+      "position": 769,
+      "record_index": 172,
+      "train_points": 54,
+      "eval_points": 480,
+      "loss": null,
+      "mae": 0.7353271245956421,
+      "mse": 1.18167245388031
+    },
+    {
+      "position": 770,
+      "record_index": 2623,
+      "train_points": 35,
+      "eval_points": 306,
+      "loss": null,
+      "mae": 0.5752133727073669,
+      "mse": 0.6793732047080994
+    },
+    {
+      "position": 771,
+      "record_index": 2403,
+      "train_points": 36,
+      "eval_points": 315,
+      "loss": null,
+      "mae": 0.7285031080245972,
+      "mse": 0.8795140981674194
+    },
+    {
+      "position": 772,
+      "record_index": 1945,
+      "train_points": 35,
+      "eval_points": 306,
+      "loss": null,
+      "mae": 0.48742207884788513,
+      "mse": 0.4560849070549011
+    },
+    {
+      "position": 773,
+      "record_index": 385,
+      "train_points": 35,
+      "eval_points": 307,
+      "loss": null,
+      "mae": 0.5369230508804321,
+      "mse": 0.5102152228355408
+    },
+    {
+      "position": 774,
+      "record_index": 2459,
+      "train_points": 38,
+      "eval_points": 336,
+      "loss": null,
+      "mae": 0.6430610418319702,
+      "mse": 0.8894689679145813
+    },
+    {
+      "position": 775,
+      "record_index": 702,
+      "train_points": 24,
+      "eval_points": 213,
+      "loss": null,
+      "mae": 0.8727968335151672,
+      "mse": 3.51212215423584
+    },
+    {
+      "position": 776,
+      "record_index": 2190,
+      "train_points": 30,
+      "eval_points": 269,
+      "loss": null,
+      "mae": 0.3512410521507263,
+      "mse": 0.21278248727321625
+    },
+    {
+      "position": 777,
+      "record_index": 3181,
+      "train_points": 30,
+      "eval_points": 264,
+      "loss": null,
+      "mae": 0.48018401861190796,
+      "mse": 0.44416484236717224
+    },
+    {
+      "position": 778,
+      "record_index": 2213,
+      "train_points": 35,
+      "eval_points": 312,
+      "loss": null,
+      "mae": 0.6303123235702515,
+      "mse": 1.1962517499923706
+    },
+    {
+      "position": 779,
+      "record_index": 2625,
+      "train_points": 34,
+      "eval_points": 302,
+      "loss": null,
+      "mae": 0.6540274024009705,
+      "mse": 0.9979749321937561
+    },
+    {
+      "position": 780,
+      "record_index": 3957,
+      "train_points": 45,
+      "eval_points": 403,
+      "loss": null,
+      "mae": 1.0266085863113403,
+      "mse": 2.060868501663208
+    },
+    {
+      "position": 781,
+      "record_index": 3830,
+      "train_points": 20,
+      "eval_points": 171,
+      "loss": null,
+      "mae": 0.8872398734092712,
+      "mse": 1.585800051689148
+    },
+    {
+      "position": 782,
+      "record_index": 3429,
+      "train_points": 28,
+      "eval_points": 251,
+      "loss": null,
+      "mae": 0.699554443359375,
+      "mse": 0.9601894021034241
+    },
+    {
+      "position": 783,
+      "record_index": 2029,
+      "train_points": 34,
+      "eval_points": 302,
+      "loss": null,
+      "mae": 0.5527711510658264,
+      "mse": 0.6626623272895813
+    },
+    {
+      "position": 784,
+      "record_index": 1143,
+      "train_points": 37,
+      "eval_points": 332,
+      "loss": null,
+      "mae": 0.9622814655303955,
+      "mse": 2.56964373588562
+    },
+    {
+      "position": 785,
+      "record_index": 1832,
+      "train_points": 30,
+      "eval_points": 266,
+      "loss": null,
+      "mae": 0.7625473141670227,
+      "mse": 1.14264976978302
+    },
+    {
+      "position": 786,
+      "record_index": 1296,
+      "train_points": 30,
+      "eval_points": 267,
+      "loss": null,
+      "mae": 0.7931988835334778,
+      "mse": 1.1925009489059448
+    },
+    {
+      "position": 787,
+      "record_index": 3905,
+      "train_points": 33,
+      "eval_points": 292,
+      "loss": null,
+      "mae": 0.756878674030304,
+      "mse": 0.9898380637168884
+    },
+    {
+      "position": 788,
+      "record_index": 1759,
+      "train_points": 39,
+      "eval_points": 349,
+      "loss": null,
+      "mae": 0.8053862452507019,
+      "mse": 1.5507584810256958
+    },
+    {
+      "position": 789,
+      "record_index": 325,
+      "train_points": 37,
+      "eval_points": 328,
+      "loss": null,
+      "mae": 0.5790154933929443,
+      "mse": 0.6939448118209839
+    },
+    {
+      "position": 790,
+      "record_index": 2771,
+      "train_points": 31,
+      "eval_points": 275,
+      "loss": null,
+      "mae": 0.5035427212715149,
+      "mse": 0.5408622622489929
+    },
+    {
+      "position": 791,
+      "record_index": 2281,
+      "train_points": 43,
+      "eval_points": 385,
+      "loss": null,
+      "mae": 0.6085805892944336,
+      "mse": 0.7743277549743652
+    },
+    {
+      "position": 792,
+      "record_index": 1973,
+      "train_points": 28,
+      "eval_points": 251,
+      "loss": null,
+      "mae": 0.4424455463886261,
+      "mse": 0.43294692039489746
+    },
+    {
+      "position": 793,
+      "record_index": 2481,
+      "train_points": 38,
+      "eval_points": 337,
+      "loss": null,
+      "mae": 0.8984526991844177,
+      "mse": 1.4864202737808228
+    },
+    {
+      "position": 794,
+      "record_index": 2535,
+      "train_points": 43,
+      "eval_points": 386,
+      "loss": null,
+      "mae": 0.5675411820411682,
+      "mse": 0.6670681834220886
+    },
+    {
+      "position": 795,
+      "record_index": 3710,
+      "train_points": 25,
+      "eval_points": 218,
+      "loss": null,
+      "mae": 1.043307900428772,
+      "mse": 1.9889724254608154
+    },
+    {
+      "position": 796,
+      "record_index": 2935,
+      "train_points": 35,
+      "eval_points": 309,
+      "loss": null,
+      "mae": 0.6873176097869873,
+      "mse": 1.0255330801010132
+    },
+    {
+      "position": 797,
+      "record_index": 2526,
+      "train_points": 34,
+      "eval_points": 304,
+      "loss": null,
+      "mae": 0.6979540586471558,
+      "mse": 0.8619003295898438
+    },
+    {
+      "position": 798,
+      "record_index": 1179,
+      "train_points": 29,
+      "eval_points": 260,
+      "loss": null,
+      "mae": 0.8381365537643433,
+      "mse": 1.4758267402648926
+    },
+    {
+      "position": 799,
+      "record_index": 3173,
+      "train_points": 36,
+      "eval_points": 315,
+      "loss": null,
+      "mae": 0.5534392595291138,
+      "mse": 0.6659040451049805
+    }
+  ],
+  "failures": [],
+  "paper_reference": {
+    "table": "CSDI Table 2",
+    "baseline": "Multitask GP",
+    "healthcare_10_percent_missing": "0.489(0.005)",
+    "healthcare_50_percent_missing": "0.581(0.003)",
+    "healthcare_90_percent_missing": "0.942(0.010)"
+  }
+}

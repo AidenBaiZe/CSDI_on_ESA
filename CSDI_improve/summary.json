@@ -1,0 +1,106 @@
+{
+  "generated_at": "2026-07-19T13:30:47.747821+08:00",
+  "source": "ESA Mission 1 processed training split",
+  "selected_horizon_steps": 192,
+  "selected_horizon_minutes": 96.0,
+  "selection_details": {
+    "horizon_steps": 192.0,
+    "candidate_channels": 13.0,
+    "strong_channels": 13.0,
+    "median_score": 0.004229688201554319,
+    "median_spectral_cosine": 0.8922820473547637,
+    "dominant_peak_preservation_rate": 0.24456521739130435
+  },
+  "candidate_channels": 13,
+  "strong_channels": 13,
+  "continuous_candidate_channels": 1,
+  "discrete_candidate_channels": 12,
+  "recommended_parameters": {
+    "context_steps": 192,
+    "context_minutes": 96.0,
+    "n_fft": 64,
+    "hop_length": 16,
+    "frame_minutes": 32.0,
+    "hop_minutes": 8.0,
+    "frequency_bins": 33,
+    "center_false_frames": 9,
+    "recommended": true
+  },
+  "error_associations": [
+    {
+      "group": "all_channels",
+      "error_metric": "mae",
+      "channels": 68,
+      "spearman_rho": 0.39346046104868476,
+      "p_value": 0.0009021762098954342,
+      "selected_horizon_steps": 192
+    },
+    {
+      "group": "all_channels",
+      "error_metric": "rmse",
+      "channels": 68,
+      "spearman_rho": 0.3894328979922994,
+      "p_value": 0.001029181740980379,
+      "selected_horizon_steps": 192
+    },
+    {
+      "group": "continuous",
+      "error_metric": "mae",
+      "channels": 40,
+      "spearman_rho": 0.28484282817134693,
+      "p_value": 0.07483272055154504,
+      "selected_horizon_steps": 192
+    },
+    {
+      "group": "continuous",
+      "error_metric": "rmse",
+      "channels": 40,
+      "spearman_rho": 0.3585171675830462,
+      "p_value": 0.02310675442974514,
+      "selected_horizon_steps": 192
+    },
+    {
+      "group": "discrete_like",
+      "error_metric": "mae",
+      "channels": 28,
+      "spearman_rho": 0.4761904761904762,
+      "p_value": 0.010419963437217608,
+      "selected_horizon_steps": 192
+    },
+    {
+      "group": "discrete_like",
+      "error_metric": "rmse",
+      "channels": 28,
+      "spearman_rho": 0.4559386973180077,
+      "p_value": 0.014750851253266162,
+      "selected_horizon_steps": 192
+    },
+    {
+      "group": "non_differenced",
+      "error_metric": "mae",
+      "channels": 68,
+      "spearman_rho": 0.39346046104868476,
+      "p_value": 0.0009021762098954342,
+      "selected_horizon_steps": 192
+    },
+    {
+      "group": "non_differenced",
+      "error_metric": "rmse",
+      "channels": 68,
+      "spearman_rho": 0.3894328979922994,
+      "p_value": 0.001029181740980379,
+      "selected_horizon_steps": 192
+    }
+  ],
+  "row_counts": {
+    "channel_metadata": 76,
+    "channel_horizon_metrics": 380,
+    "window_spectral_metrics": 35620,
+    "horizon_overview": 5,
+    "mask_robustness": 18,
+    "mask_robustness_detail": 66180,
+    "error_join": 76,
+    "error_associations": 8,
+    "recommended_parameters": 4
+  }
+}
