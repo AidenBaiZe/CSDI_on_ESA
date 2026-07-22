@@ -1,0 +1,32 @@
+Exit code: 0
+Wall time: 0.3 seconds
+Output:
+{
+  "as_of": "2026-07-22T23:54:10+08:00",
+  "dataset": "PhysioNet Challenge 2012 set-a",
+  "seed": 1,
+  "num_samples": 100,
+  "gpvae": {
+    "missing_0.1": {"completed_folds": [0, 1, 2, 3, 4], "expected_folds": 5},
+    "missing_0.5": {"completed_folds": [0, 1, 2, 3], "expected_folds": 5},
+    "missing_0.9": {"completed_folds": [0, 1, 2, 3], "expected_folds": 5}
+  },
+  "latent_ode": {
+    "missing_0.1": {"completed_folds": [0, 1, 2, 3, 4], "expected_folds": 5},
+    "missing_0.5": {"completed_folds": [0, 1, 2, 3], "expected_folds": 5},
+    "missing_0.9": {
+      "completed_folds": [],
+      "expected_folds": 5,
+      "active_fold": 0,
+      "latest_epoch": 6,
+      "best_validation_crps": 0.733041,
+      "test_metrics_available": false
+    }
+  },
+  "excluded_large_artifacts": [
+    "model checkpoints",
+    "generated sample arrays",
+    "prepared dataset arrays"
+  ]
+}
+
